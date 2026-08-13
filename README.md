@@ -117,6 +117,46 @@ lead、drums、bass 等角色。节奏模板可放在顶层 `rhythm_motifs`，cl
 报告保存为 `projects/<song>/complexity-report.json`。Critic 只提出上下文
 相关警告，不会自动把作品写得更密。
 
+### 伴奏 Texture 与连续性
+
+伴奏轨可以选择可执行的 `texture`：`sustain`、`pulse`、
+`broken_chord`、`arpeggio`、`ostinato`、`counterline`、`stab`、`pedal`。
+当 clip 同时提供 `harmony_spans` 时，系统会按对应规则生成 Point、Line 或
+Plane，并用 `continuity` 控制持续、连奏、轻微 overlap、共同音保留和
+voice leading。只有原有 `events` 的旧曲仍完全走原路径。
+
+```json
+"pad": {
+  "role": "harmonic plane",
+  "texture": "sustain",
+  "continuity": {
+    "sustain_ratio": 0.9,
+    "legato_ratio": 0.8,
+    "overlap": 0.08,
+    "common_tone_retention": 0.9,
+    "voice_leading_strength": 0.9
+  },
+  "sections": {
+    "verse": {
+      "loop_bars": 4,
+      "harmony_spans": [
+        {"at": "1:1", "duration": 4, "pitches": ["C3", "E3", "G3"]}
+      ],
+      "texture_pattern": {"register": [55, 76], "voices": 4, "velocity": 42},
+      "events": []
+    }
+  }
+}
+```
+
+检测伴奏是否仍然存在短音断裂、voice leading 跳跃或全轨 Point 化：
+
+```powershell
+.\.venv\Scripts\python.exe scripts\critic_continuity.py <song> --write
+```
+
+详细生成规则与指标见 `references/accompaniment-textures.md`。
+
 ## 音色与混音
 
 `config/instruments.json` 使用 MIDI 标准的 **0-based program number**：

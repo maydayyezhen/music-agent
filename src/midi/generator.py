@@ -6,6 +6,7 @@ from typing import Any
 
 import mido
 
+from src.accompaniment.generator import materialize_clip
 from src.midi.pitches import drum_number, note_number
 
 TICKS_PER_BEAT = 480
@@ -122,8 +123,9 @@ def _expand_track(composition: dict[str, Any], track_data: dict[str, Any]) -> li
         clip = track_data.get("sections", {}).get(name)
         if clip:
             loop_bars = int(clip["loop_bars"])
+            events = materialize_clip(clip, track_data, numerator)
             for loop_start in range(0, section_bars, loop_bars):
-                for event in clip.get("events", []):
+                for event in events:
                     if event.get("type", "note") == "rest":
                         continue
                     local_bar, beat = _parse_position(event["at"])

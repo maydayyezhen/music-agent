@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from src.accompaniment.schema import TEXTURE_TYPES, normalize_continuity, resolve_texture
 from src.complexity import normalize_complexity, resolve_section_complexities
 
 
@@ -21,6 +22,7 @@ def validate_composition(data: dict[str, Any]) -> None:
             raise ValueError(f"composition metadata is missing '{field}'")
     if not isinstance(metadata["tempo"], (int, float)) or metadata["tempo"] <= 0:
         raise ValueError("metadata.tempo must be positive")
+    beats_per_bar = int(str(metadata["time_signature"]).split("/")[0])
 
     sections = data.get("sections")
     if not isinstance(sections, list) or not sections:
@@ -64,6 +66,10 @@ def validate_composition(data: dict[str, Any]) -> None:
     if not isinstance(tracks, dict) or not tracks:
         raise ValueError("composition.tracks must be a non-empty object")
     for track_name, track in tracks.items():
+        if "texture" in track and track["texture"] not in TEXTURE_TYPES:
+            raise ValueError(f"track '{track_name}' texture must be one of {TEXTURE_TYPES}")
+        if "continuity" in track:
+            normalize_continuity(track.get("texture"), track["continuity"])
         track_sections = track.get("sections", {})
         unknown = set(track_sections) - names
         if unknown:
@@ -74,6 +80,16 @@ def validate_composition(data: dict[str, Any]) -> None:
                 raise ValueError(f"{track_name}.{section_name}.loop_bars must be positive")
             for event in clip.get("events", []):
                 _validate_event(track_name, section_name, event, loop_bars)
+            texture = resolve_texture(track, clip)
+            if "continuity" in clip:
+                normalize_continuity(texture, track.get("continuity"), clip["continuity"])
+            harmony_spans = clip.get("harmony_spans", [])
+            if harmony_spans:
+                if texture is None:
+                    raise ValueError(f"{track_name}.{section_name}.harmony_spans require texture")
+                _validate_harmony_spans(track_name, section_name, harmony_spans, loop_bars, beats_per_bar)
+            elif "texture_pattern" in clip and not clip.get("events"):
+                raise ValueError(f"{track_name}.{section_name}.texture_pattern requires harmony_spans or explicit events")
             motif = clip.get("rhythm_motif")
             if motif is not None:
                 if motif not in data.get("rhythm_motifs", {}):
@@ -81,6 +97,33 @@ def validate_composition(data: dict[str, Any]) -> None:
                 variation = clip.get("rhythm_variation", "A")
                 if variation not in {"A", "A'", "B", "B'", "C"}:
                     raise ValueError(f"unsupported rhythm_variation in {track_name}.{section_name}: {variation!r}")
+
+
+def _validate_harmony_spans(track: str, section: str, spans: Any, loop_bars: int, beats_per_bar: int) -> None:
+    if not isinstance(spans, list) or not spans:
+        raise ValueError(f"{track}.{section}.harmony_spans must be a non-empty list")
+    previous = -1.0
+    for span in spans:
+        if not isinstance(span, dict):
+            raise ValueError(f"{track}.{section}.harmony_spans entries must be objects")
+        at = span.get("at")
+        if not isinstance(at, str) or ":" not in at:
+            raise ValueError(f"{track}.{section}.harmony span needs at like '1:1'")
+        bar_text, beat_text = at.split(":", 1)
+        bar, beat = int(bar_text), float(beat_text)
+        position = (bar - 1) * beats_per_bar + beat - 1
+        if not 1 <= bar <= loop_bars or beat < 1 or position < previous:
+            raise ValueError(f"{track}.{section}.harmony_spans must be ordered and inside loop")
+        if not isinstance(span.get("duration"), (int, float)) or span["duration"] <= 0:
+            raise ValueError(f"{track}.{section}.harmony span duration must be positive")
+        if position + float(span["duration"]) > loop_bars * beats_per_bar + 1e-6:
+            raise ValueError(f"{track}.{section}.harmony span extends beyond loop")
+        if not isinstance(span.get("pitches"), list) or len(span["pitches"]) < 2:
+            raise ValueError(f"{track}.{section}.harmony span requires at least two pitches")
+        for pitch in span["pitches"]:
+            from src.midi.pitches import note_number
+            note_number(pitch)
+        previous = position
 
 
 def _validate_rhythm_motifs(motifs: Any) -> None:

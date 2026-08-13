@@ -1,0 +1,194 @@
+{
+  "invariants": {
+    "tempo": 92,
+    "key": "D major",
+    "time_signature": "4/4",
+    "bars": 28,
+    "source_melody_events_preserved": 89,
+    "sections_unchanged": true,
+    "instruments_unchanged": true
+  },
+  "audio": {
+    "before_continuity": {
+      "duration_seconds": 75.0434693877551,
+      "sample_rate": 44100,
+      "channels": 2,
+      "peak_dbfs": -3.085778795293837,
+      "rms_dbfs": -19.58318774472444
+    },
+    "after_continuity": {
+      "duration_seconds": 75.0434693877551,
+      "sample_rate": 44100,
+      "channels": 2,
+      "peak_dbfs": -1.934688761882449,
+      "rms_dbfs": -18.783630656811166
+    }
+  },
+  "midi": {
+    "before_continuity": {
+      "notes": 548,
+      "overlaps": 0,
+      "tiny": 0,
+      "stuck": 0
+    },
+    "after_continuity": {
+      "notes": 611,
+      "overlaps": 0,
+      "tiny": 0,
+      "stuck": 0
+    }
+  },
+  "tracks": {
+    "before_continuity": {
+      "piano": {
+        "average_note_duration": 0.7325478189959599,
+        "short_note_ratio": 0.7133121379696722,
+        "sustain_ratio": 0.0319634703196347,
+        "legato_ratio": 0.3851788432267884,
+        "average_gap_between_notes": 0.2270464478125769,
+        "overlap_ratio": 0.23597792998477934,
+        "voice_leading_distance": 3.6671477495107636,
+        "common_tone_retention": 0.6539628180039139
+      },
+      "bass": {
+        "average_note_duration": 0.8205128205128205,
+        "short_note_ratio": 0.5256410256410257,
+        "sustain_ratio": 0.02564102564102564,
+        "legato_ratio": 0.10683760683760682,
+        "average_gap_between_notes": 0.4190713237321394,
+        "overlap_ratio": 0.0,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0
+      },
+      "guitar": {
+        "average_note_duration": 0.7025000000000001,
+        "short_note_ratio": 0.9666666666666667,
+        "sustain_ratio": 0.03333333333333333,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.8610855356635411,
+        "overlap_ratio": 0.0,
+        "voice_leading_distance": 1.2933333333333332,
+        "common_tone_retention": 0.2122222222222222
+      },
+      "strings": {
+        "average_note_duration": 2.807937356760886,
+        "short_note_ratio": 0.10084033613445377,
+        "sustain_ratio": 0.8456837280366691,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.43483957219251373,
+        "overlap_ratio": 0.0,
+        "voice_leading_distance": 1.2240896358543418,
+        "common_tone_retention": 1.0
+      },
+      "pad": {
+        "average_note_duration": 6.423529411764706,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.3088235294117647,
+        "average_gap_between_notes": 0.15735294117647042,
+        "overlap_ratio": 0.0,
+        "voice_leading_distance": 1.4166666666666665,
+        "common_tone_retention": 0.9411764705882353
+      }
+    },
+    "after_continuity": {
+      "piano": {
+        "average_note_duration": 1.0925185185185184,
+        "short_note_ratio": 0.2962962962962963,
+        "sustain_ratio": 0.07407407407407407,
+        "legato_ratio": 0.4874889243310295,
+        "average_gap_between_notes": 0.5600663139329803,
+        "overlap_ratio": 0.2974304447988659,
+        "voice_leading_distance": 0.8474779541446209,
+        "common_tone_retention": 1.0
+      },
+      "bass": {
+        "average_note_duration": 1.6464705882352941,
+        "short_note_ratio": 0.08823529411764706,
+        "sustain_ratio": 0.4117647058823529,
+        "legato_ratio": 1.0,
+        "average_gap_between_notes": 0.0,
+        "overlap_ratio": 0.47410759175465056,
+        "voice_leading_distance": 0.8436974789915966,
+        "common_tone_retention": 1.0
+      },
+      "guitar": {
+        "average_note_duration": 2.0555411764705886,
+        "short_note_ratio": 0.2823529411764706,
+        "sustain_ratio": 0.2235294117647059,
+        "legato_ratio": 0.5058823529411764,
+        "average_gap_between_notes": 0.704995475113122,
+        "overlap_ratio": 0.4933333333333334,
+        "voice_leading_distance": 0.9761344537815125,
+        "common_tone_retention": 1.0
+      },
+      "strings": {
+        "average_note_duration": 3.2299999999999995,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 0.42105263157894735,
+        "legato_ratio": 0.8070175438596491,
+        "average_gap_between_notes": 0.2894736842105263,
+        "overlap_ratio": 0.42105263157894735,
+        "voice_leading_distance": 1.0,
+        "common_tone_retention": 1.0
+      },
+      "pad": {
+        "average_note_duration": 5.932222222222222,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.9861111111111112,
+        "average_gap_between_notes": 0.0,
+        "overlap_ratio": 0.9861111111111112,
+        "voice_leading_distance": 0.9722222222222222,
+        "common_tone_retention": 1.0
+      }
+    }
+  },
+  "texture_distribution": {
+    "before_continuity": {},
+    "after_continuity": {
+      "sustain": 9,
+      "counterline": 6,
+      "broken_chord": 3,
+      "pulse": 5,
+      "pedal": 1
+    }
+  },
+  "point_line_plane_balance": {
+    "before_continuity": {
+      "point": 11,
+      "line": 2,
+      "plane": 10,
+      "silent": 7
+    },
+    "after_continuity": {
+      "point": 5,
+      "line": 9,
+      "plane": 10,
+      "silent": 6
+    }
+  },
+  "warnings": {
+    "before_continuity": [
+      {
+        "code": "pointillistic_disconnected",
+        "section": "a",
+        "track": "guitar",
+        "message": "accompaniment is overly pointillistic / disconnected"
+      },
+      {
+        "code": "pointillistic_disconnected",
+        "section": "b",
+        "track": "guitar",
+        "message": "accompaniment is overly pointillistic / disconnected"
+      },
+      {
+        "code": "pointillistic_disconnected",
+        "section": "return",
+        "track": "guitar",
+        "message": "accompaniment is overly pointillistic / disconnected"
+      }
+    ],
+    "after_continuity": []
+  }
+}

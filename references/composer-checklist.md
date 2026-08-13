@@ -13,6 +13,19 @@
 
 Complete this after the first full render and before declaring a song finished. Record concrete failures and planned fixes in `projects/<song>/critique.md`. “Intentional because …” is a valid answer when it serves the brief.
 
+## Accompaniment texture and continuity
+
+- [ ] Does each section intentionally combine Point, Line, and Plane where the style permits?
+- [ ] Do accompaniment tracks declare executable textures or contain equally clear explicit-event behavior?
+- [ ] Are `sustain`/`pedal` parts actually sustained instead of retriggered every beat?
+- [ ] Do broken chords, arpeggios, ostinatos, and counterlines read as continuous phrases rather than random chord tones?
+- [ ] Does the bass mix long anchors, movement, approaches, and useful rests?
+- [ ] Does guitar writing resemble strum/held chord/broken chord/offbeat comping rather than piano MIDI with another program?
+- [ ] Do pad and strings retain common tones and use smooth inner-voice motion where appropriate?
+- [ ] Is any long passage accidentally dominated by short equal notes and regular small gaps?
+- [ ] Did `scripts/critic_continuity.py <song> --write` pass or were its warnings addressed in critique?
+- [ ] Did the fix preserve Point activity instead of turning all accompaniment into an undifferentiated long drone?
+
 ## Melody
 
 - [ ] Is there a clear motif with a recognizable rhythmic identity?
