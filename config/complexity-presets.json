@@ -1,0 +1,12 @@
+{
+  "minimal": {"level": "minimal", "rhythm": 1, "harmony": 2, "arrangement": 1, "melodic_ornamentation": 1, "density": 1, "variation": 1},
+  "simple": {"level": "simple", "rhythm": 2, "harmony": 2, "arrangement": 2, "melodic_ornamentation": 2, "density": 2, "variation": 2},
+  "standard": {"level": "standard", "rhythm": 3, "harmony": 3, "arrangement": 3, "melodic_ornamentation": 2, "density": 3, "variation": 3},
+  "rich": {"level": "rich", "rhythm": 4, "harmony": 4, "arrangement": 4, "melodic_ornamentation": 3, "density": 3, "variation": 4},
+  "dense": {"level": "dense", "rhythm": 5, "harmony": 4, "arrangement": 5, "melodic_ornamentation": 4, "density": 5, "variation": 5},
+  "quiet_galgame": {"level": "simple", "rhythm": 2, "harmony": 3, "arrangement": 2, "melodic_ornamentation": 2, "density": 1, "variation": 2},
+  "pop": {"level": "standard", "rhythm": 3, "harmony": 3, "arrangement": 3, "melodic_ornamentation": 2, "density": 3, "variation": 3},
+  "brit_rock": {"level": "rich", "rhythm": 4, "harmony": 2, "arrangement": 4, "melodic_ornamentation": 2, "density": 4, "variation": 4},
+  "minimal_ambient": {"level": "minimal", "rhythm": 1, "harmony": 3, "arrangement": 1, "melodic_ornamentation": 1, "density": 1, "variation": 1},
+  "battle_dense": {"level": "dense", "rhythm": 5, "harmony": 4, "arrangement": 5, "melodic_ornamentation": 4, "density": 5, "variation": 5}
+}

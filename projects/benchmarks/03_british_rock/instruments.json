@@ -1,0 +1,37 @@
+{
+  "guitar_l": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 29,
+    "channel": 1,
+    "gm_name": "Overdriven Guitar"
+  },
+  "guitar_r": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 29,
+    "channel": 2,
+    "gm_name": "Overdriven Guitar"
+  },
+  "bass": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 33,
+    "channel": 3,
+    "gm_name": "Electric Bass (finger)"
+  },
+  "drums": {
+    "engine": "fluidsynth",
+    "channel": 10,
+    "bank": 128,
+    "program": 0,
+    "gm_name": "Standard Drum Kit"
+  },
+  "organ": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 16,
+    "channel": 4,
+    "gm_name": "Drawbar Organ"
+  }
+}

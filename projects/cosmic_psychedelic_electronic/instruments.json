@@ -1,0 +1,9 @@
+{
+  "lead": { "engine": "fluidsynth", "bank": 8, "program": 81, "gm_name": "Doctor Solo" },
+  "acid_bass": { "engine": "fluidsynth", "bank": 8, "program": 38, "gm_name": "Acid Bass" },
+  "bell_piano": { "engine": "fluidsynth", "bank": 12, "program": 0, "gm_name": "Bell Piano" },
+  "solar_pad": { "engine": "fluidsynth", "bank": 11, "program": 89, "gm_name": "Solar Wind" },
+  "chime": { "engine": "fluidsynth", "bank": 11, "program": 98, "gm_name": "Synth Chime" },
+  "night_pad": { "engine": "fluidsynth", "bank": 13, "program": 88, "gm_name": "Night Vision" },
+  "drums": { "engine": "fluidsynth", "channel": 10, "bank": 128, "program": 0, "gm_name": "Standard 1" }
+}

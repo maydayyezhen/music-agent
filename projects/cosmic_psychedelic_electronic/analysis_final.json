@@ -1,0 +1,356 @@
+{
+  "mix": {
+    "duration_seconds": 147.714,
+    "rms_dbfs": -20.64,
+    "peak_dbfs": -2.9,
+    "sections": {
+      "launch": {
+        "rms_dbfs": -25.47,
+        "peak_dbfs": -7.26
+      },
+      "orbital_garden": {
+        "rms_dbfs": -20.19,
+        "peak_dbfs": -3.72
+      },
+      "prism_build": {
+        "rms_dbfs": -19.74,
+        "peak_dbfs": -4.62
+      },
+      "zero_gravity": {
+        "rms_dbfs": -24.64,
+        "peak_dbfs": -11.64
+      },
+      "wormhole": {
+        "rms_dbfs": -20.0,
+        "peak_dbfs": -2.95
+      },
+      "apogee_bloom": {
+        "rms_dbfs": -18.06,
+        "peak_dbfs": -3.72
+      },
+      "reentry": {
+        "rms_dbfs": -23.4,
+        "peak_dbfs": -5.66
+      }
+    }
+  },
+  "stems": {
+    "acid_bass": {
+      "duration_seconds": 147.714,
+      "rms_dbfs": -28.01,
+      "peak_dbfs": -14.71,
+      "sections": {
+        "launch": {
+          "rms_dbfs": -37.5,
+          "peak_dbfs": -21.53
+        },
+        "orbital_garden": {
+          "rms_dbfs": -28.16,
+          "peak_dbfs": -18.42
+        },
+        "prism_build": {
+          "rms_dbfs": -27.02,
+          "peak_dbfs": -17.6
+        },
+        "zero_gravity": {
+          "rms_dbfs": -29.81,
+          "peak_dbfs": -19.11
+        },
+        "wormhole": {
+          "rms_dbfs": -26.45,
+          "peak_dbfs": -16.15
+        },
+        "apogee_bloom": {
+          "rms_dbfs": -26.25,
+          "peak_dbfs": -16.49
+        },
+        "reentry": {
+          "rms_dbfs": -29.38,
+          "peak_dbfs": -18.95
+        }
+      }
+    },
+    "bell_piano": {
+      "duration_seconds": 147.714,
+      "rms_dbfs": -37.33,
+      "peak_dbfs": -22.14,
+      "sections": {
+        "launch": {
+          "rms_dbfs": -37.79,
+          "peak_dbfs": -25.39
+        },
+        "orbital_garden": {
+          "rms_dbfs": -37.95,
+          "peak_dbfs": -25.5
+        },
+        "prism_build": {
+          "rms_dbfs": -36.73,
+          "peak_dbfs": -23.32
+        },
+        "zero_gravity": {
+          "rms_dbfs": -37.61,
+          "peak_dbfs": -25.34
+        },
+        "wormhole": {
+          "rms_dbfs": -35.8,
+          "peak_dbfs": -22.58
+        },
+        "apogee_bloom": {
+          "rms_dbfs": -37.95,
+          "peak_dbfs": -25.49
+        },
+        "reentry": {
+          "rms_dbfs": -37.78,
+          "peak_dbfs": -25.4
+        }
+      }
+    },
+    "chime": {
+      "duration_seconds": 147.714,
+      "rms_dbfs": -38.39,
+      "peak_dbfs": -16.26,
+      "sections": {
+        "launch": {
+          "rms_dbfs": -41.14,
+          "peak_dbfs": -18.25
+        },
+        "orbital_garden": {
+          "rms_dbfs": -40.57,
+          "peak_dbfs": -16.81
+        },
+        "prism_build": {
+          "rms_dbfs": -35.35,
+          "peak_dbfs": -18.88
+        },
+        "zero_gravity": {
+          "rms_dbfs": -41.05,
+          "peak_dbfs": -18.04
+        },
+        "wormhole": {
+          "rms_dbfs": -35.15,
+          "peak_dbfs": -17.57
+        },
+        "apogee_bloom": {
+          "rms_dbfs": -40.56,
+          "peak_dbfs": -16.35
+        },
+        "reentry": {
+          "rms_dbfs": -41.16,
+          "peak_dbfs": -19.56
+        }
+      }
+    },
+    "drums": {
+      "duration_seconds": 147.714,
+      "rms_dbfs": -26.63,
+      "peak_dbfs": -5.88,
+      "sections": {
+        "launch": {
+          "rms_dbfs": -29.02,
+          "peak_dbfs": -9.54
+        },
+        "orbital_garden": {
+          "rms_dbfs": -25.95,
+          "peak_dbfs": -7.36
+        },
+        "prism_build": {
+          "rms_dbfs": -25.44,
+          "peak_dbfs": -8.01
+        },
+        "zero_gravity": {
+          "rms_dbfs": -43.48,
+          "peak_dbfs": -19.95
+        },
+        "wormhole": {
+          "rms_dbfs": -26.95,
+          "peak_dbfs": -8.07
+        },
+        "apogee_bloom": {
+          "rms_dbfs": -23.28,
+          "peak_dbfs": -7.28
+        },
+        "reentry": {
+          "rms_dbfs": -31.74,
+          "peak_dbfs": -9.73
+        }
+      }
+    },
+    "lead": {
+      "duration_seconds": 146.924,
+      "rms_dbfs": -30.05,
+      "peak_dbfs": -10.52,
+      "sections": {
+        "launch": {
+          "rms_dbfs": -36.84,
+          "peak_dbfs": -19.72
+        },
+        "orbital_garden": {
+          "rms_dbfs": -28.73,
+          "peak_dbfs": -16.2
+        },
+        "prism_build": {
+          "rms_dbfs": -29.95,
+          "peak_dbfs": -15.35
+        },
+        "zero_gravity": {
+          "rms_dbfs": -34.14,
+          "peak_dbfs": -20.14
+        },
+        "wormhole": {
+          "rms_dbfs": -30.1,
+          "peak_dbfs": -16.21
+        },
+        "apogee_bloom": {
+          "rms_dbfs": -26.96,
+          "peak_dbfs": -11.96
+        },
+        "reentry": {
+          "rms_dbfs": -34.25,
+          "peak_dbfs": -18.76
+        }
+      }
+    },
+    "night_pad": {
+      "duration_seconds": 147.714,
+      "rms_dbfs": -38.74,
+      "peak_dbfs": -19.65,
+      "sections": {
+        "launch": {
+          "rms_dbfs": -43.34,
+          "peak_dbfs": -28.14
+        },
+        "orbital_garden": {
+          "rms_dbfs": -42.03,
+          "peak_dbfs": -26.15
+        },
+        "prism_build": {
+          "rms_dbfs": -39.92,
+          "peak_dbfs": -24.03
+        },
+        "zero_gravity": {
+          "rms_dbfs": -35.93,
+          "peak_dbfs": -21.09
+        },
+        "wormhole": {
+          "rms_dbfs": -39.61,
+          "peak_dbfs": -25.02
+        },
+        "apogee_bloom": {
+          "rms_dbfs": -35.19,
+          "peak_dbfs": -19.97
+        },
+        "reentry": {
+          "rms_dbfs": -44.39,
+          "peak_dbfs": -28.86
+        }
+      }
+    },
+    "solar_pad": {
+      "duration_seconds": 147.714,
+      "rms_dbfs": -38.15,
+      "peak_dbfs": -19.91,
+      "sections": {
+        "launch": {
+          "rms_dbfs": -41.54,
+          "peak_dbfs": -27.62
+        },
+        "orbital_garden": {
+          "rms_dbfs": -38.42,
+          "peak_dbfs": -24.65
+        },
+        "prism_build": {
+          "rms_dbfs": -38.44,
+          "peak_dbfs": -24.58
+        },
+        "zero_gravity": {
+          "rms_dbfs": -41.45,
+          "peak_dbfs": -27.62
+        },
+        "wormhole": {
+          "rms_dbfs": -38.39,
+          "peak_dbfs": -24.68
+        },
+        "apogee_bloom": {
+          "rms_dbfs": -34.54,
+          "peak_dbfs": -20.71
+        },
+        "reentry": {
+          "rms_dbfs": -41.41,
+          "peak_dbfs": -28.05
+        }
+      }
+    }
+  },
+  "midi": {
+    "acid_bass": {
+      "note_count": 404,
+      "pitch_min": 31,
+      "pitch_max": 51,
+      "velocity_min": 62,
+      "velocity_max": 97,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0,
+      "stuck_notes": 0
+    },
+    "bell_piano": {
+      "note_count": 348,
+      "pitch_min": 55,
+      "pitch_max": 70,
+      "velocity_min": 54,
+      "velocity_max": 68,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0,
+      "stuck_notes": 0
+    },
+    "chime": {
+      "note_count": 128,
+      "pitch_min": 60,
+      "pitch_max": 70,
+      "velocity_min": 58,
+      "velocity_max": 80,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0,
+      "stuck_notes": 0
+    },
+    "drums": {
+      "note_count": 749,
+      "pitch_min": 36,
+      "pitch_max": 50,
+      "velocity_min": 61,
+      "velocity_max": 117,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0,
+      "stuck_notes": 0
+    },
+    "lead": {
+      "note_count": 217,
+      "pitch_min": 57,
+      "pitch_max": 93,
+      "velocity_min": 66,
+      "velocity_max": 120,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0,
+      "stuck_notes": 0
+    },
+    "night_pad": {
+      "note_count": 235,
+      "pitch_min": 57,
+      "pitch_max": 74,
+      "velocity_min": 29,
+      "velocity_max": 52,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0,
+      "stuck_notes": 0
+    },
+    "solar_pad": {
+      "note_count": 272,
+      "pitch_min": 55,
+      "pitch_max": 65,
+      "velocity_min": 35,
+      "velocity_max": 56,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0,
+      "stuck_notes": 0
+    }
+  }
+}

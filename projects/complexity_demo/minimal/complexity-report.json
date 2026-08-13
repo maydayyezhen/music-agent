@@ -1,0 +1,212 @@
+{
+  "global_target": {
+    "intro": {
+      "level": "minimal",
+      "rhythm": 1,
+      "harmony": 2,
+      "arrangement": 1,
+      "melodic_ornamentation": 1,
+      "density": 1,
+      "variation": 1,
+      "budget": 5,
+      "melody_rest_ratio_guide": [
+        0.35,
+        0.65
+      ]
+    },
+    "theme_a": {
+      "level": "minimal",
+      "rhythm": 1,
+      "harmony": 2,
+      "arrangement": 1,
+      "melodic_ornamentation": 1,
+      "density": 1,
+      "variation": 1,
+      "budget": 5,
+      "melody_rest_ratio_guide": [
+        0.35,
+        0.65
+      ]
+    },
+    "theme_b": {
+      "level": "simple",
+      "rhythm": 1,
+      "harmony": 2,
+      "arrangement": 1,
+      "melodic_ornamentation": 1,
+      "density": 1,
+      "variation": 1,
+      "budget": 8,
+      "melody_rest_ratio_guide": [
+        0.25,
+        0.5
+      ]
+    },
+    "outro": {
+      "level": "minimal",
+      "rhythm": 1,
+      "harmony": 2,
+      "arrangement": 1,
+      "melodic_ornamentation": 1,
+      "density": 1,
+      "variation": 1,
+      "budget": 5,
+      "melody_rest_ratio_guide": [
+        0.35,
+        0.65
+      ]
+    }
+  },
+  "track_metrics": {
+    "piano": {
+      "intro": {
+        "note_density": 0.75,
+        "rest_ratio": 0.765625,
+        "duration_entropy": 0.9182958340544896,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 10.666666666666666,
+        "pattern_repetition": 0.0,
+        "event_count": 3
+      },
+      "theme_a": {
+        "note_density": 2.0,
+        "rest_ratio": 0.6031249999999999,
+        "duration_entropy": 1.9056390622295665,
+        "same_grid_ratio": 0.875,
+        "velocity_variance": 28.609375,
+        "pattern_repetition": 0.5,
+        "event_count": 16
+      },
+      "theme_b": {
+        "note_density": 2.0,
+        "rest_ratio": 0.6031249999999999,
+        "duration_entropy": 1.9056390622295665,
+        "same_grid_ratio": 0.875,
+        "velocity_variance": 28.609375,
+        "pattern_repetition": 0.5,
+        "event_count": 16
+      },
+      "outro": {
+        "note_density": 1.0,
+        "rest_ratio": 0.53125,
+        "duration_entropy": 1.5,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 8.75,
+        "pattern_repetition": 0.0,
+        "event_count": 4
+      }
+    },
+    "bass": {
+      "intro": {
+        "note_density": 1.0,
+        "rest_ratio": 0.125,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 4
+      },
+      "theme_a": {
+        "note_density": 1.0,
+        "rest_ratio": 0.125,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.5,
+        "event_count": 8
+      },
+      "theme_b": {
+        "note_density": 1.0,
+        "rest_ratio": 0.125,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.5,
+        "event_count": 8
+      },
+      "outro": {
+        "note_density": 1.0,
+        "rest_ratio": 0.125,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 4
+      }
+    },
+    "pad": {
+      "intro": {
+        "note_density": 2.0,
+        "rest_ratio": 0.0625,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 2
+      },
+      "theme_a": {
+        "note_density": 2.0,
+        "rest_ratio": 0.0625,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.5,
+        "event_count": 4
+      },
+      "theme_b": {
+        "note_density": 2.0,
+        "rest_ratio": 0.0625,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.5,
+        "event_count": 4
+      },
+      "outro": {
+        "note_density": 2.0,
+        "rest_ratio": 0.0625,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 2
+      }
+    }
+  },
+  "section_metrics": {
+    "intro": {
+      "section_density": 2.25,
+      "active_tracks": 3,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.3,
+      "target_budget": 5,
+      "declared_budget_total": 5
+    },
+    "theme_a": {
+      "section_density": 3.5,
+      "active_tracks": 3,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.27037037037037037,
+      "target_budget": 5,
+      "declared_budget_total": 5
+    },
+    "theme_b": {
+      "section_density": 3.5,
+      "active_tracks": 3,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.27037037037037037,
+      "target_budget": 8,
+      "declared_budget_total": 8
+    },
+    "outro": {
+      "section_density": 2.5,
+      "active_tracks": 3,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.5333333333333333,
+      "target_budget": 5,
+      "declared_budget_total": 5
+    }
+  },
+  "warnings": [],
+  "warning_count": 0
+}

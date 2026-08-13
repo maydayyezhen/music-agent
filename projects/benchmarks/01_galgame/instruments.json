@@ -1,0 +1,8 @@
+{
+  "piano": {"engine": "fluidsynth", "bank": 0, "program": 0, "gm_name": "Acoustic Grand Piano"},
+  "bass": {"engine": "fluidsynth", "bank": 0, "program": 33, "gm_name": "Electric Bass (finger)"},
+  "guitar": {"engine": "fluidsynth", "bank": 0, "program": 27, "gm_name": "Electric Guitar (clean)"},
+  "strings": {"engine": "fluidsynth", "bank": 0, "program": 48, "gm_name": "String Ensemble 1"},
+  "pad": {"engine": "fluidsynth", "bank": 0, "program": 89, "gm_name": "Pad 2 (warm)"},
+  "drums": {"engine": "fluidsynth", "channel": 10, "bank": 128, "program": 0, "gm_name": "Standard Drum Kit"}
+}

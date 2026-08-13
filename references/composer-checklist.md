@@ -1,0 +1,93 @@
+# Composer Checklist
+
+## Complexity and rhythm architecture
+
+- [ ] Global level and six dimensions are explicit (or intentionally inherit `standard`).
+- [ ] Section contour and overrides match the emotional/energy contour.
+- [ ] A rhythm motif was designed before pitch expansion.
+- [ ] Each active instrument has its own rhythmic identity.
+- [ ] Section role budgets distribute attention instead of duplicating busyness.
+- [ ] Lead phrases contain deliberate breathing space.
+- [ ] At least one long section avoids continuous all-track activity.
+- [ ] `scripts/critic_complexity.py <song> --write` was reviewed contextually.
+
+Complete this after the first full render and before declaring a song finished. Record concrete failures and planned fixes in `projects/<song>/critique.md`. “Intentional because …” is a valid answer when it serves the brief.
+
+## Melody
+
+- [ ] Is there a clear motif with a recognizable rhythmic identity?
+- [ ] Does the motif repeat enough to register?
+- [ ] Is there meaningful variation rather than unrelated replacement?
+- [ ] Does the chorus have a specific hook and landing point?
+- [ ] Do verse and chorus differ in register, contour, density, or rhythm?
+- [ ] Are question/answer phrases and useful rests audible?
+- [ ] Is the climax placed deliberately?
+- [ ] Is any passage merely scale-safe random wandering?
+
+## Harmony
+
+- [ ] Does the progression support each section's emotional function?
+- [ ] Do tension and release have clear destinations?
+- [ ] Is upper-voice leading smooth where it should be?
+- [ ] Are large leaps, inversions, slash chords, and extensions purposeful?
+- [ ] Do low voicings avoid mud and masking?
+- [ ] Does the harmony develop established material instead of changing randomly every four bars?
+
+## Bass
+
+- [ ] Does the line use more than chord roots?
+- [ ] Do fifths, chord tones, approaches, passing tones, or rests have clear roles?
+- [ ] Does it connect naturally into the next chord?
+- [ ] Does it cooperate with the kick without copying it exactly?
+- [ ] Is it supportive rather than constantly overplaying?
+
+## Guitar
+
+- [ ] Is the guitar rhythm/pitch content distinct from the piano?
+- [ ] Does it resemble a playable guitar role or shape?
+- [ ] Does its articulation change by section (mute, strum, power chord, arpeggio, riff, lead response)?
+- [ ] Does it leave space for the main hook?
+
+## Piano
+
+- [ ] Are left/right-hand or bass/upper-register roles clear?
+- [ ] Are voicings and density appropriate to the section?
+- [ ] Are low chords free of unnecessary mud?
+- [ ] Is the piano doing more than firing uniform chord blocks?
+
+## Strings and pad
+
+- [ ] Are strings more than copied chord notes?
+- [ ] Do they provide counter-line, inner movement, swell, octave support, or a meaningful climax?
+- [ ] Do string entrances/exits contribute to the energy map?
+- [ ] Does the pad add atmosphere/glue without competing with melody or bass?
+- [ ] Would removing either part reveal a real arrangement function?
+
+## Drums and groove
+
+- [ ] Are kick and snare roles coherent?
+- [ ] Do verse, pre-chorus, and chorus differ audibly?
+- [ ] Do hats have accents/variation rather than identical repeated velocity?
+- [ ] Are fills and crashes tied to transitions?
+- [ ] Are ghost notes and extra kicks controlled rather than cluttered?
+- [ ] Is timing humanization appropriate to the genre and instrument?
+
+## Arrangement
+
+- [ ] Do instruments enter and leave, or does everything play continuously?
+- [ ] Does the measured and perceived density follow the energy map?
+- [ ] Is the Verse → Pre → Chorus rise unmistakable?
+- [ ] Is the chorus a payoff rather than merely a louder copy?
+- [ ] If present, does the bridge/breakdown create enough contrast?
+- [ ] Are transitions legible without relying on excessive effects?
+- [ ] Is foreground/background hierarchy clear in every section?
+
+## MIDI and render
+
+- [ ] Are velocities shaped by accents and phrases rather than all equal?
+- [ ] Are durations/articulations varied for musical reasons?
+- [ ] Are timing offsets restrained and anchors preserved?
+- [ ] Are there duplicate, stuck, tiny, overlapping, or out-of-range notes?
+- [ ] Are all intended stems non-silent and the final duration correct?
+- [ ] Is the mix free of clipping, severe masking, and an overlong/sudden tail?
+- [ ] Has the initial render been critiqued and at least one revision rendered?

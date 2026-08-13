@@ -1,0 +1,25 @@
+.venv/
+.venv-vocals/
+__pycache__/
+*.py[cod]
+
+# Recreated by setup scripts; models and runtimes are several GB.
+assets/
+tools/
+
+# Local research checkouts and caches are not project source. Their nested
+# repositories remain untouched and can keep their own Git history.
+work/
+midi-agent-skill-main/
+references/ableton-skills/
+references/hermes-songwriting/
+references/midi-agent-skill/
+
+# Rendered artifacts are reproducible and quickly make the repository huge.
+# This also catches revision folders such as stems_v1 and backend scratch WAVs.
+projects/**/*.wav
+projects/**/*.mid
+
+# Local diagnostic files.
+*.log
+.pytest_cache/

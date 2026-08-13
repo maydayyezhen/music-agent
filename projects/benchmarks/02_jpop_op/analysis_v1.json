@@ -1,0 +1,249 @@
+{
+  "mix": {
+    "duration_seconds": 79.838,
+    "rms_dbfs": -27.45,
+    "peak_dbfs": -10.42,
+    "sections": {
+      "intro": {
+        "rms_dbfs": -29.12,
+        "peak_dbfs": -13.45
+      },
+      "verse": {
+        "rms_dbfs": -28.98,
+        "peak_dbfs": -13.7
+      },
+      "pre_chorus": {
+        "rms_dbfs": -27.47,
+        "peak_dbfs": -12.92
+      },
+      "chorus": {
+        "rms_dbfs": -26.23,
+        "peak_dbfs": -10.74
+      },
+      "outro": {
+        "rms_dbfs": -27.56,
+        "peak_dbfs": -11.04
+      }
+    }
+  },
+  "stems": {
+    "bass": {
+      "duration_seconds": 79.838,
+      "rms_dbfs": -27.16,
+      "peak_dbfs": -15.48,
+      "sections": {
+        "intro": {
+          "rms_dbfs": -29.41,
+          "peak_dbfs": -19.3
+        },
+        "verse": {
+          "rms_dbfs": -27.83,
+          "peak_dbfs": -17.79
+        },
+        "pre_chorus": {
+          "rms_dbfs": -26.89,
+          "peak_dbfs": -16.69
+        },
+        "chorus": {
+          "rms_dbfs": -26.14,
+          "peak_dbfs": -16.08
+        },
+        "outro": {
+          "rms_dbfs": -27.42,
+          "peak_dbfs": -16.96
+        }
+      }
+    },
+    "drums": {
+      "duration_seconds": 79.838,
+      "rms_dbfs": -25.43,
+      "peak_dbfs": -8.42,
+      "sections": {
+        "intro": {
+          "rms_dbfs": -26.22,
+          "peak_dbfs": -9.33
+        },
+        "verse": {
+          "rms_dbfs": -25.74,
+          "peak_dbfs": -8.94
+        },
+        "pre_chorus": {
+          "rms_dbfs": -25.14,
+          "peak_dbfs": -8.94
+        },
+        "chorus": {
+          "rms_dbfs": -24.47,
+          "peak_dbfs": -8.94
+        },
+        "outro": {
+          "rms_dbfs": -26.23,
+          "peak_dbfs": -9.91
+        }
+      }
+    },
+    "guitar": {
+      "duration_seconds": 73.642,
+      "rms_dbfs": -28.31,
+      "peak_dbfs": -8.95,
+      "sections": {
+        "intro": {
+          "rms_dbfs": -34.03,
+          "peak_dbfs": -14.14
+        },
+        "verse": {
+          "rms_dbfs": -33.48,
+          "peak_dbfs": -16.67
+        },
+        "pre_chorus": {
+          "rms_dbfs": -28.19,
+          "peak_dbfs": -13.61
+        },
+        "chorus": {
+          "rms_dbfs": -26.82,
+          "peak_dbfs": -9.9
+        },
+        "outro": {
+          "rms_dbfs": -27.56,
+          "peak_dbfs": -9.96
+        }
+      }
+    },
+    "pad": {
+      "duration_seconds": 79.838,
+      "rms_dbfs": -37.16,
+      "peak_dbfs": -19.1,
+      "sections": {
+        "intro": {
+          "rms_dbfs": -38.82,
+          "peak_dbfs": -24.98
+        },
+        "verse": {
+          "rms_dbfs": -42.0,
+          "peak_dbfs": -26.89
+        },
+        "pre_chorus": {
+          "rms_dbfs": -37.65,
+          "peak_dbfs": -24.32
+        },
+        "chorus": {
+          "rms_dbfs": -34.8,
+          "peak_dbfs": -21.03
+        },
+        "outro": {
+          "rms_dbfs": -38.35,
+          "peak_dbfs": -24.49
+        }
+      }
+    },
+    "piano": {
+      "duration_seconds": 79.838,
+      "rms_dbfs": -27.1,
+      "peak_dbfs": -10.71,
+      "sections": {
+        "intro": {
+          "rms_dbfs": -27.63,
+          "peak_dbfs": -13.38
+        },
+        "verse": {
+          "rms_dbfs": -30.48,
+          "peak_dbfs": -15.21
+        },
+        "pre_chorus": {
+          "rms_dbfs": -29.81,
+          "peak_dbfs": -17.72
+        },
+        "chorus": {
+          "rms_dbfs": -25.5,
+          "peak_dbfs": -11.25
+        },
+        "outro": {
+          "rms_dbfs": -26.23,
+          "peak_dbfs": -11.24
+        }
+      }
+    },
+    "strings": {
+      "duration_seconds": 79.838,
+      "rms_dbfs": -29.94,
+      "peak_dbfs": -13.22,
+      "sections": {
+        "intro": {
+          "rms_dbfs": -90.34,
+          "peak_dbfs": -90.31
+        },
+        "verse": {
+          "rms_dbfs": -90.31,
+          "peak_dbfs": -90.31
+        },
+        "pre_chorus": {
+          "rms_dbfs": -28.8,
+          "peak_dbfs": -13.9
+        },
+        "chorus": {
+          "rms_dbfs": -28.17,
+          "peak_dbfs": -14.1
+        },
+        "outro": {
+          "rms_dbfs": -29.04,
+          "peak_dbfs": -14.68
+        }
+      }
+    }
+  },
+  "midi": {
+    "bass": {
+      "note_count": 384,
+      "pitch_min": 31,
+      "pitch_max": 54,
+      "velocity_min": 70,
+      "velocity_max": 94,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0
+    },
+    "drums": {
+      "note_count": 708,
+      "pitch_min": 36,
+      "pitch_max": 50,
+      "velocity_min": 70,
+      "velocity_max": 112,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0
+    },
+    "guitar": {
+      "note_count": 524,
+      "pitch_min": 42,
+      "pitch_max": 88,
+      "velocity_min": 72,
+      "velocity_max": 96,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0
+    },
+    "pad": {
+      "note_count": 176,
+      "pitch_min": 55,
+      "pitch_max": 86,
+      "velocity_min": 38,
+      "velocity_max": 53,
+      "same_pitch_overlaps": 0,
+      "tiny_notes_lt_5_ticks": 0
+    },
+    "piano": {
+      "note_count": 507,
+      "pitch_min": 38,
+      "pitch_max": 81,
+      "velocity_min": 65,
+      "velocity_max": 114,
+      "same_pitch_overlaps": 7,
+      "tiny_notes_lt_5_ticks": 0
+    },
+    "strings": {
+      "note_count": 143,
+      "pitch_min": 57,
+      "pitch_max": 78,
+      "velocity_min": 57,
+      "velocity_max": 90,
+      "same_pitch_overlaps": 8,
+      "tiny_notes_lt_5_ticks": 0
+    }
+  }
+}

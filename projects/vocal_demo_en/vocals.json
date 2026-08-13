@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "language": "en",
+  "engine": "soulx_singer",
+  "device": "cuda",
+  "mix": { "volume_db": -3.0, "pan": 0.0, "mute": false },
+  "phrases": [
+    {
+      "start_beat": 4,
+      "notes": [
+        { "lyric": "Hold", "pitch": "C4", "duration": 1.0 },
+        { "lyric": "on", "pitch": "D4", "duration": 1.0 },
+        { "lyric": "to", "pitch": "E4", "duration": 1.0 },
+        { "lyric": "light", "pitch": "G4", "duration": 1.0 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "complexity": {
+    "level": "rich",
+    "rhythm": 4,
+    "harmony": 4,
+    "arrangement": 4,
+    "melodic_ornamentation": 3,
+    "density": 3,
+    "variation": 4
+  },
+  "complexity_contour": "verse_chorus",
+  "rhythm_motifs": {
+    "hook_A": [
+      {"offset": 0, "duration": 1},
+      {"offset": 1.5, "duration": 0.5},
+      {"offset": 2, "duration": 1},
+      {"offset": 3, "duration": 0.75}
+    ]
+  },
+  "section_example": {
+    "name": "chorus",
+    "bars": 8,
+    "complexity": {"level": "rich", "density": 3},
+    "complexity_budget": {"lead": 4, "drums": 3, "bass": 2, "chords": 3, "texture": 1}
+  },
+  "clip_example": {
+    "loop_bars": 2,
+    "rhythm_motif": "hook_A",
+    "rhythm_variation": "A'",
+    "events": []
+  }
+}

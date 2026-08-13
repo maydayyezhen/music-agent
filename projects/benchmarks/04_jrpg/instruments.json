@@ -1,0 +1,7 @@
+{
+  "strings": {"engine": "fluidsynth", "bank": 0, "program": 48, "gm_name": "String Ensemble 1"},
+  "brass": {"engine": "fluidsynth", "bank": 0, "program": 61, "gm_name": "Brass Section"},
+  "piano": {"engine": "fluidsynth", "bank": 0, "program": 0, "gm_name": "Acoustic Grand Piano"},
+  "bass": {"engine": "fluidsynth", "bank": 0, "program": 33, "gm_name": "Electric Bass (finger)"},
+  "drums": {"engine": "fluidsynth", "channel": 10, "bank": 128, "program": 0, "gm_name": "Standard Drum Kit"}
+}

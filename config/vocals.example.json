@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "language": "zh",
+  "engine": "espnet_opencpop_visinger",
+  "device": "cuda",
+  "seed": 777,
+  "noise_scale": 0.667,
+  "noise_scale_dur": 0.8,
+  "mix": { "volume_db": -2.0, "pan": 0.0, "mute": false },
+  "phrases": [
+    {
+      "start_beat": 0,
+      "notes": [
+        { "lyric": "你", "pitch": "C4", "duration": 1.0 },
+        { "lyric": "好", "pitch": "D4", "duration": 1.0 },
+        { "lyric": "世", "pitch": "E4", "duration": 1.0 },
+        { "lyric": "界", "pitch": "G4", "duration": 1.0 }
+      ]
+    }
+  ]
+}
