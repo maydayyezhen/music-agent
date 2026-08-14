@@ -1,0 +1,10 @@
+{
+  "schema": "music-agent-chip-performance",
+  "schema_version": 1,
+  "profile": "chiptune_basic",
+  "constraint_mode": "hardware_inspired",
+  "voice_assignments": [],
+  "events": [],
+  "renderer_overrides": {},
+  "notes": "Template only. Add chip-specific performance data here without duplicating the complete composition unless required by a future platform adapter."
+}
