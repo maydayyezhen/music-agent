@@ -15,6 +15,11 @@ from src.skills_v2.acoustic_strumming import (
     list_candidates,
     write_analysis,
 )
+from src.skills_v2.strumming_observability import (
+    annotate_direction_observability,
+    apply_alternate_generation_assumption,
+    can_generate_directional_demo,
+)
 
 
 def _print_candidates(midi_path: Path) -> None:
@@ -30,6 +35,35 @@ def _print_candidates(midi_path: Path) -> None:
             f"{row['chord_note_ratio']:>11.4f} "
             f"{row['selection_score']:>5.2f}"
         )
+
+
+def _append_observability_notes(result: dict, study_dir: Path) -> None:
+    direction = result["observability"]["direction"]
+    path = study_dir / "observations.md"
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write("\n## Direction observability\n\n")
+        handle.write(f"- Status: `{direction['status']}`\n")
+        handle.write(
+            f"- Multi-note strokes: {direction['multi_note_strokes']}\n"
+        )
+        handle.write(
+            "- Measurable direction strokes: "
+            f"{direction['measurable_direction_strokes']}\n"
+        )
+        handle.write(
+            f"- Zero-spread ratio: {direction['zero_spread_ratio']}\n"
+        )
+        handle.write(
+            "- Median / maximum spread in beats: "
+            f"{direction['median_spread_beats']} / "
+            f"{direction['maximum_spread_beats']}\n"
+        )
+        if direction["unlearned_fields"]:
+            handle.write(
+                "- Not learned from this source: "
+                + ", ".join(direction["unlearned_fields"])
+                + "\n"
+            )
 
 
 def main() -> int:
@@ -77,6 +111,15 @@ def main() -> int:
         action="store_true",
         help="skip synthetic four-bar demo generation",
     )
+    analyze_parser.add_argument(
+        "--assume-alternate-demo",
+        action="store_true",
+        help=(
+            "when direction is unobservable, generate a demo under an "
+            "explicit D/U assumption; the assumption is not written into "
+            "the learned model"
+        ),
+    )
 
     generate_parser = subparsers.add_parser(
         "generate",
@@ -86,6 +129,14 @@ def main() -> int:
     generate_parser.add_argument("output", type=Path)
     generate_parser.add_argument("--tempo", type=float, default=104.0)
     generate_parser.add_argument("--program", type=int, default=25)
+    generate_parser.add_argument(
+        "--assume-alternate",
+        action="store_true",
+        help=(
+            "explicitly impose D/U alternation when the model reports "
+            "unobservable direction"
+        ),
+    )
 
     args = parser.parse_args()
     if args.command == "list":
@@ -101,6 +152,7 @@ def main() -> int:
             )
             return 1
         study_dir = ROOT / "studies" / args.study
+        demo_written = False
         try:
             result = analyze_midi(
                 midi_path,
@@ -108,16 +160,29 @@ def main() -> int:
                 channel=args.channel,
                 cluster_window_beats=args.cluster_window_beats,
             )
+            result = annotate_direction_observability(result)
             write_analysis(result, study_dir)
+            _append_observability_notes(result, study_dir)
             if not args.no_demo:
-                generate_demo_midi(
-                    result["model"],
-                    study_dir / "synthetic_demo.mid",
-                )
+                demo_model = result["model"]
+                if not can_generate_directional_demo(demo_model):
+                    if args.assume_alternate_demo:
+                        demo_model = apply_alternate_generation_assumption(
+                            demo_model
+                        )
+                    else:
+                        demo_model = None
+                if demo_model is not None:
+                    generate_demo_midi(
+                        demo_model,
+                        study_dir / "synthetic_demo.mid",
+                    )
+                    demo_written = True
         except Exception as error:
             print(f"[FAIL] {error}", file=sys.stderr)
             return 1
         model = result["model"]
+        direction = result["observability"]["direction"]
         print(f"[OK] study: {study_dir}")
         print(
             "[OK] selected track/channel: "
@@ -130,13 +195,39 @@ def main() -> int:
         )
         print(f"[OK] attack mask: {model['attack_mask']}")
         print(
-            "[OK] alternating direction confidence: "
-            f"{model['motion']['alternate_direction_confidence']:.3f}"
+            "[OK] direction observability: "
+            f"{direction['status']}"
         )
-        print(f"[OK] model: {study_dir / 'model.json'}")
-        if not args.no_demo:
+        print(
+            "[OK] measurable direction strokes: "
+            f"{direction['measurable_direction_strokes']}/"
+            f"{direction['multi_note_strokes']}"
+        )
+        if direction["status"] == "observable":
             print(
-                f"[OK] demo: {study_dir / 'synthetic_demo.mid'}"
+                "[OK] alternating direction confidence: "
+                f"{model['motion']['alternate_direction_confidence']:.3f}"
+            )
+        else:
+            print(
+                "[WARN] down/up direction was not learned from this MIDI"
+            )
+        print(f"[OK] model: {study_dir / 'model.json'}")
+        if demo_written:
+            suffix = (
+                " (explicit alternate-hand assumption)"
+                if args.assume_alternate_demo
+                and not can_generate_directional_demo(result["model"])
+                else ""
+            )
+            print(
+                f"[OK] demo: {study_dir / 'synthetic_demo.mid'}{suffix}"
+            )
+        elif not args.no_demo:
+            print(
+                "[WARN] demo skipped because source direction is "
+                "unobservable; pass --assume-alternate-demo to make an "
+                "explicit hypothesis demo"
             )
         return 0
 
@@ -146,6 +237,14 @@ def main() -> int:
         model = json.loads(
             model_path.read_text(encoding="utf-8")
         )
+        if not can_generate_directional_demo(model):
+            if not args.assume_alternate:
+                raise ValueError(
+                    "model does not contain observable down/up direction; "
+                    "pass --assume-alternate to generate an explicitly "
+                    "hypothetical D/U demo"
+                )
+            model = apply_alternate_generation_assumption(model)
         generate_demo_midi(
             model,
             output_path,
