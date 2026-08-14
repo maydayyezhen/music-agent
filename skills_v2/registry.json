@@ -16,12 +16,13 @@
       ]
     },
     {
-      "id": "acoustic-guitar-continuous-eighth-strumming",
+      "id": "acoustic-guitar-continuous-strumming",
       "path": "skills_v2/acoustic_strumming/SKILL.md",
       "status": "active",
       "triggers": [
         "acoustic guitar strumming",
         "eighth-note strumming",
+        "sixteenth-note strumming",
         "down up strumming",
         "partial strum",
         "air strum",
