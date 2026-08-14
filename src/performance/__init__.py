@@ -11,6 +11,7 @@ from .pmt import (
     encode_notes,
     serialize_tokens,
 )
+from .pmt_midi import generate_pmt_midis, milliseconds_to_ticks
 from .profiles import apply_profile, load_profile
 
 __all__ = [
@@ -23,6 +24,8 @@ __all__ = [
     "build_sidecar",
     "decode_tokens",
     "encode_notes",
+    "generate_pmt_midis",
     "load_profile",
+    "milliseconds_to_ticks",
     "serialize_tokens",
 ]
