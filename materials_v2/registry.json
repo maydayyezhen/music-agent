@@ -108,6 +108,17 @@
       "problem_tags": ["muted-guitar-too-sustained", "muted-guitar-too-full", "random-chug-velocity", "no-phrase-gaps"]
     },
     {
+      "id": "continuous-overdrive-rhythm-bed",
+      "kind": "accompaniment_pattern",
+      "path": "materials_v2/accompaniment_patterns/electric_guitar/continuous_overdrive_rhythm_bed.md",
+      "status": "active",
+      "instruments": ["overdriven_electric_guitar"],
+      "roles": ["rhythmic_accompaniment", "continuous_guitar_bed", "section_layer", "rock_foundation"],
+      "genre_tags": ["pop-rock", "rock"],
+      "texture_tags": ["overdriven", "continuous", "re-articulated", "power-dyad", "sustain-supported", "section-level"],
+      "problem_tags": ["overdrive-too-choppy", "note-gate-misread-as-silence", "isolated-guitar-stabs", "rhythm-guitar-no-body"]
+    },
+    {
       "id": "sustained-overdrive-guitar",
       "kind": "instrument_gesture",
       "path": "materials_v2/instrument_gestures/electric_guitar/sustained_overdrive_guitar.md",
