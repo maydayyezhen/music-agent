@@ -5,25 +5,27 @@ description: Build structured, editable music projects through native artifacts,
 
 # Music Agent Clean Slate
 
-Read only:
+Read:
 
 1. `AGENTS.md`
 2. `docs/clean_slate_bootstrap.md`
-3. the specific skill selected from `skills_v2/`
-4. the specific texture recipe selected from `materials_v2/`, only when timbre or production is part of the task
-5. the active project being edited
-6. implementation code or schema needed to execute the current task
+3. the relevant skill or skills from `skills_v2/`
+4. `materials_v2/registry.json`
+5. any material cards that may help with harmony, voicing, accompaniment, phrasing, timbre or production
+6. the active project being edited
+7. implementation code or schema needed to execute the current task
 
-The previous knowledge and skill library is inactive. Do not search or read it unless the user
-explicitly asks to recover a specific capability.
+The previous knowledge and skill library is inactive. Do not search or read it unless the user explicitly asks to recover a specific capability.
 
-`materials_v2/` is opt-in. Do not load its whole registry or browse every recipe during ordinary
-composition. Select one recipe by instrument and requested texture.
+`materials_v2/` is an active external memory library. It may be browsed during composition even when the user does not name an exact recipe. Start from the registry, retrieve several plausible cards, compare them, and combine compatible ideas.
+
+Do not treat a large material context as a failure. For harmony, accompaniment and timbre, broad exposure is often more useful than asking the model to invent every detail from first principles.
 
 ## Architecture kept during the reset
 
 ```text
 user intent
+-> skills and retrieved material memory
 -> thin Agent operation layer
 -> native/structured project artifacts
 -> adapter or compiler
@@ -31,12 +33,12 @@ user intent
 -> validation and conversion report
 ```
 
-The project facade indexes artifacts and routes adapters. It must not become a new universal music
-format.
+The project facade indexes artifacts and routes adapters. It must not become a new universal music format.
 
 Keep these distinctions:
 
 - authoritative source artifacts;
+- reusable material cards and reference fragments;
 - sidecars that preserve unsupported native data;
 - derived MIDI/audio outputs;
 - conversion reports that disclose quantization, degradation or loss.
@@ -44,28 +46,34 @@ Keep these distinctions:
 ## Default workflow
 
 1. Read the user request.
-2. Inspect only the active project's files and required APIs.
-3. Select a `skills_v2/` Skill when the task needs reusable musical or technical behavior.
-4. Select one `materials_v2/` recipe only when the request includes a timbre, texture or production target.
-5. Write the smallest editable source that can express the request.
-6. Compile, validate and render.
-7. Report concrete failures rather than hiding them with randomization.
-8. Add a new Skill or material recipe only when the task reveals reusable knowledge.
+2. Inspect the active project and required APIs.
+3. Select the relevant `skills_v2/` behavior guidance.
+4. Read `materials_v2/registry.json` and retrieve a useful set of material cards.
+5. Compare and combine material cards instead of forcing a single recipe to solve the whole task.
+6. Write the smallest editable source that can express the request.
+7. Compile, validate and render.
+8. Listen or inspect concrete failures and revise the responsible layer.
+9. Add a new Skill or material card when the task reveals reusable knowledge.
 
-Do not begin by loading genre guides, instrument playbooks, proof songs, motif libraries, prior
-builders or the entire materials library.
+The Agent may browse broadly inside `materials_v2/`. It should still avoid copying one finished source wholesale. Recombine, transpose, revoice, vary, thin, expand and adapt materials to the current project.
 
 ## Skill rebuilding rule
 
-A V2 Skill must be narrow, testable and style-neutral by default. It should contain capability
-facts, contracts, decision procedures, failure modes and validation. Tiny synthetic examples are
-allowed. Finished compositions and fixed musical arcs are not.
+A V2 Skill should teach a reusable operation, decision procedure, failure mode or validation method. Skills can be narrow and style-neutral, while materials provide concrete musical vocabulary and sound references.
 
-## Material rebuilding rule
+## Material library rule
 
-A V2 material recipe describes how an instrument or source should sound for a named texture. It may
-contain source-selection guidance, processing ranges, renderer mappings, failure modes and listening
-checks. It must not contain a finished song's notes, harmony, form or exact performance sequence.
+A V2 material card may describe reusable:
 
-Material recipes provide practical starting ranges, not claims of objective measurement unless a
-measurement process actually exists.
+- chord voicings and voicing families;
+- harmonic colors and chord-motion tendencies;
+- accompaniment patterns and texture grids;
+- instrument gestures and phrasing shapes;
+- orchestration combinations;
+- timbre and production recipes;
+- transition, fill, pickup and cadence devices;
+- small synthetic examples and parameterized fragments.
+
+Material cards may be stylistic and numerous. Their value comes from accumulation, contrast and recombination.
+
+Do not store a complete copyrighted song as a reusable template. A card may record abstracted observations, short lawful examples, parameterized patterns and implementation advice. Approximate settings must be labeled as practical starting points rather than objective measurements unless they were actually measured.
