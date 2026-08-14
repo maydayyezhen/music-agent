@@ -53,6 +53,25 @@
       "study_status": "studied",
       "current_relevance": "active",
       "notes": "Studied for reusable acoustic-strumming behavior only. Main guitar: GM program 24, 2048 notes, 684 exact onset groups, mostly 0.25/0.50-beat attack gaps, common 2-5-note attacks, and most 4/4 bars around 11-12 audible attacks on a sixteenth grid. User identified the rendered character as a useful common warm acoustic-strumming reference. Exact source rhythm, pitches and harmony are not stored in Materials."
+    },
+    {
+      "id": "america-a-horse-with-no-name-midi",
+      "title": "A Horse with No Name",
+      "artist": "America",
+      "source_type": "midi",
+      "expected_local_path": "source_library/midi/AMERICA.A horse with no name.MID",
+      "provided_by_user": true,
+      "research_tags": [
+        "acoustic_guitar",
+        "guitar_strumming",
+        "triplet_grid",
+        "shuffle",
+        "directional_sweep",
+        "western_adjacent"
+      ],
+      "study_status": "studied",
+      "current_relevance": "active",
+      "notes": "Studied for rolling triplet acoustic-strumming behavior. Type-0 MIDI at 192 ticks per beat and 125 BPM. Main steel-string channel used GM program 25 and contained 3074 note-ons. Grouping adjacent note-ons within 12 ticks produced about 1015 strum groups with a median width of 3 notes. Attacks aligned overwhelmingly to beat starts and late-triplet positions. Beat-start groups with recoverable direction were strongly low-to-high, while late-triplet groups were almost entirely high-to-low. Within-stroke spread had a median around 20 ms and 90th percentile around 47.5 ms. Exact harmony, pitches and full source rhythm are not stored in Materials."
     }
   ]
 }
