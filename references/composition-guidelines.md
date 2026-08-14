@@ -1,107 +1,200 @@
-# Composition Guidelines
+# Composition Decision Guide
 
-Read this before creating a song or performing a major rewrite. It is a decision guide for this repository's structured MIDI workflow—not a music grammar checker. The brief wins: experimental, minimal, noisy, dissonant, or non-traditional music may deliberately break these defaults.
+Read `docs/creative_context_policy.md` before creating a new piece.
 
-## Start with an audible idea, not note accumulation
+This document offers decisions and checks for the repository's structured music workflow. It is
+not a universal music grammar and does not define one preferred form, genre or development arc.
+The user brief wins.
 
-Good music is not produced by repeatedly choosing “the next note that sounds plausible.” Establish a small identity first:
+## Start with an audible identity
 
-```text
-motif -> repetition -> variation -> contrast -> return
-```
+A piece needs a perceivable reason to exist, but that identity does not have to be a conventional
+melodic motif.
 
-Before filling tracks, write down the musical brief, structure, energy map, core motif, and harmony. Test the motif over the harmony at a small scale. Only then expand parts and sections.
+Possible starting points include:
 
-## Musical brief and energy map
+- a rhythm or groove;
+- a pitch/interval cell;
+- a chord color or harmonic process;
+- a texture or register relationship;
+- an instrument gesture;
+- a timbral transformation;
+- a drone or repeated note;
+- silence and interruption;
+- a formal process;
+- a lyric/prosodic shape;
+- deliberate noise or instability.
 
-Record genre, mood, key/mode, tempo, length, instruments, production character, and exclusions in `projects/<song>/musical-brief.md`. Translate adjectives into decisions: “urgent” may mean a short pickup, rising contour, tighter subdivisions, and stronger harmonic drive—not simply higher velocity.
+Choose the starting point that matches the brief. Do not automatically apply
+`motif -> repetition -> variation -> contrast -> return` unless that process serves the piece.
+Other valid processes include accumulation, erosion, looping, abrupt replacement, gradual
+transformation, stasis, call-and-response, fragmentation, collage and unresolved continuation.
 
-Assign each section an energy value from 1–10. For every section decide:
+Record the independent idea in `creative-seed.md` before reading complete example projects.
 
-- which instruments enter, leave, or rest;
-- rhythmic density and subdivision;
-- melodic register and phrase activity;
-- harmonic stability, extensions, inversions, and tension;
-- velocity/articulation range and drum intensity;
-- transition into the next section.
+## Brief, form and attention
 
-Energy is perceived contrast, not track count alone. Silence, register, note length, and harmonic rhythm can create as much contrast as adding instruments. Avoid having every track play continuously from bar 1 to the end.
+Record genre or non-genre intent, mood, tonal behavior, tempo behavior, length, instruments,
+production character and exclusions in `musical-brief.md`.
 
-## Melody
+Translate adjectives into musical decisions, but allow more than one translation. For example,
+“urgent” might use a tight pulse, unstable harmony, clipped releases, register pressure, abrupt
+silence or accelerated timbral change. It does not simply mean higher velocity.
 
-- **Motif first:** use a short pitch/rhythm cell that can be recognized after transposition or rhythmic variation.
-- Build phrases as question/answer. An antecedent can rise or remain open; the response can redirect, resolve, or deliberately evade resolution.
-- Repeat enough to establish memory, then vary one dimension at a time: ending, rhythm, interval, octave, harmony, or instrumentation.
-- Give the motif a rhythmic fingerprint; scale-safe wandering without a rhythmic identity is still random wandering.
-- Shape a contour. Reserve the highest or most intense note for a meaningful phrase or section climax rather than reaching it casually.
-- Control register: verse usually leaves room; chorus can rise or widen. This is a default, not a prohibition against inversion.
-- Prefer phrase lengths the listener can parse (often 2, 4, or 8 bars), with pickups or extensions used intentionally.
-- The chorus needs a hook: a concise, repeatable musical event with a clear landing point. It should not merely be the verse melody played louder.
-- Use rests. A motif with space is easier to recognize than a continuous stream of eighth notes.
+Form may be:
+
+- verse/chorus;
+- through-composed;
+- cyclic;
+- additive;
+- subtractive;
+- episodic;
+- A/B or ternary;
+- variation form;
+- ambient process;
+- loop with evolving production;
+- asymmetrical or intentionally ambiguous.
+
+An energy map is optional. A piece may rise, fall, wave, remain flat, reset, fracture or avoid a
+single climax.
+
+## Melody and foreground material
+
+When pitch-based foreground material is used:
+
+- Give it a recognizable identity through rhythm, interval, contour, register, articulation or
+  timbre.
+- Decide whether the listener should remember, follow, inhabit or merely notice it.
+- Repetition may establish identity, hypnosis, insistence or stability.
+- Variation may affect one or many dimensions; it is not mandatory in every return.
+- Rests can create phrasing, but continuous motion is valid when intentional.
+- A phrase may resolve, evade, loop, dissolve or be interrupted.
+- Highest pitch is not automatically the climax. Rhythm, harmony, timbre, density and silence can
+  carry the arrival.
+- A hook is required only when the brief calls for hook-centered writing.
+- Avoid scale-safe wandering without rhythmic, intervallic or textural purpose.
+
+For guitar, strings, winds and other player-like parts, make the foreground compatible with a
+plausible physical or declared experimental technique.
 
 ## Harmony
 
-- Choose progressions for harmonic function: tonic/stability, predominant/motion, dominant/tension, resolution or deliberate non-resolution.
-- Design section-dependent harmony. Verse may sit on longer or inverted chords; pre-chorus can accelerate harmonic rhythm or delay resolution; chorus can clarify the tonic while adding width/color.
-- Connect upper voices smoothly. Retain common tones and prefer stepwise or small movements unless a leap is an expressive event.
-- Use inversions and slash chords to shape the bass and reduce blocky root-position movement.
-- Extensions (6, 7, 9, sus, add9) are color and voice-leading tools, not decorations to add everywhere.
-- Dissonance is valid when voiced, timed, and resolved—or intentionally sustained by the brief. Do not treat every semitone as forbidden.
-- Avoid changing to an unrelated four-bar progression merely to create novelty. Develop or recontextualize established harmonic material.
-- Spread low-register voicings. Dense thirds below middle C quickly become muddy, especially when bass and pad share the area.
+Choose harmony for the piece's behavior rather than for compliance with a default pop function.
+Possible approaches include:
+
+- functional motion and cadences;
+- modal centers;
+- pedal tones and drones;
+- planing;
+- chromatic voice-leading;
+- static sonority;
+- polymodal or polytonal layers;
+- ambiguous roots;
+- non-tertian structures;
+- deliberate dissonance or noise spectra.
+
+When voice-leading matters, retain common tones and control register/spacing. When discontinuity
+is intentional, large shifts and unrelated blocks may be the point.
+
+Extensions, inversions and suspensions are functional/color tools, not decorations to add by
+quota. Dense low voicings should be used consciously because they can obscure bass and attack.
+
+## Rhythm and time
+
+Give each active role a temporal identity. That identity may be steady, syncopated, rubato,
+polyrhythmic, sparse, mechanical, elastic or non-metric.
+
+Avoid making every instrument share the same onset grid unless unison/mechanical behavior is the
+idea. Silence is a first-class structural event, but continuous texture is also valid.
+
+Tempo, meter and quantization may be stable or changing. Preserve the chosen anchors when adding
+performance timing.
 
 ## Instrument-specific writing
 
 ### Bass
 
-**Bass must not remain a chord-root transcription.** Build lines from roots, fifths, other chord tones, passing tones, approach notes, anticipations, and rests. Aim movement toward the next chord. Relate important attacks to the kick, but allow syncopated answers and pickups so the two parts are partners rather than duplicates. Use inversions consciously. Preserve the low-end foundation and avoid constant fills or high-register virtuosity unless requested.
+Bass may provide foundation, counterline, pedal, rhythmic hook, texture or silence. Do not reduce
+it automatically to repeated roots. Roots, fifths, approaches, inversions, passing tones,
+register shifts and rests are available choices. Relationship with kick may be tight, partial or
+independent according to the style.
 
 ### Guitar
 
-**Guitar is not Piano MIDI copied to another program.** Respect playable range and fretboard-like shapes. Choose a section role: open/drop-style voicing, power chord, muted pulse, strum, arpeggio, riff, octave line, or lead response. Change articulation with the arrangement—for example, sparse muted verse comping, sustained pre-chorus chords, then power chords or a hook response in the chorus. Leave physical and rhythmic space between attacks.
+Guitar is not piano MIDI with another program number. Choose a physical/textural role such as
+strum, fingerpicking, riff, muted pulse, arpeggio, octave line, double-stop response, sustained
+feedback, harmonic/noise gesture or lead phrase. Respect tuning and reachable shapes when normal
+playability is intended.
 
-### Piano
+### Piano and keyboards
 
-Separate left- and right-hand functions. The left may use bass-independent shells, octaves, fifths, or occasional approaches; the right may comp, arpeggiate, answer the melody, or carry the motif. Voice chords across registers, vary density with sections, and avoid thick low closed-position blocks. Chord attacks need not all be simultaneous or identical in length.
+Separate hand/register functions when physical piano writing matters. Other keyboard roles may be
+single-line synth, repeated chord machine, cluster texture, arpeggiator, organ plane or sound
+design layer. Chord tones need not attack simultaneously or share duration.
 
 ### Strings
 
-**Strings are not a copy of Piano chord blocks.** Choose sustained harmonic support, octave reinforcement, counter-melody, inner-voice movement, swells, or a climax line. Enter and leave strategically. Keep individual lines singable and within plausible ranges; long notes still need direction through dynamics, suspensions, or movement.
+Strings may sustain harmony, move as independent lines, create texture/noise, reinforce a motif or
+remain silent until a structural event. Do not automatically duplicate keyboard chord blocks.
 
-### Pad
+### Pad and sustained textures
 
-Pad supplies atmosphere, harmonic glue, and section width. Use broad voicings, slow movement, and lower velocities. Keep it out of the bass's muddy register and out of the lead's rhythmic foreground. A pad may disappear in a sparse section so its return feels wider.
+A pad may provide atmosphere, glue, tension, movement or spectral change. It need not play every
+section or retrigger every beat. Keep register and masking intentional.
 
-### Drums
+### Drums and percussion
 
-- Establish the kick/snare relationship and recognizable backbeat first.
-- Choose hi-hat subdivision and accents for the section; repeated hats should not all share the same velocity.
-- Use ghost notes, open hats, syncopation, and extra kicks sparingly to develop groove.
-- Verse, pre-chorus, and chorus need distinct density, cymbal language, and/or kick pattern.
-- Use fills to point toward structural boundaries. A fill is phrasing, not random tom activity.
-- Crashes should confirm important arrivals, not occur mechanically every bar.
-- Keep anchor hits tight; apply more timing variation to hats, ghost notes, guitar/piano comping, and secondary percussion than to the main downbeat.
+Establish the desired pulse language, not a mandatory rock backbeat. Consider limb feasibility
+when modeling a conventional player. Accents, ghost notes, open sounds, fills and crashes should
+have structural or gestural reasons rather than fixed bar quotas.
 
-## Arrangement development
+Electronic or impossible percussion is valid when explicitly intended.
 
-- Establish a hierarchy: lead/hook, harmonic support, groove foundation, texture. Not every track can be foreground.
-- Introduce material in layers. Withhold something valuable—higher register, full hats, strong bass subdivision, strings, or guitar hook—until the section earns it.
-- Pre-chorus should create expectation by rising contour, increasing density/tension, shortening phrases, withholding tonic, or stripping down before impact.
-- Chorus should deliver a perceivable payoff through hook clarity, register, rhythmic drive, width, and/or harmonic release.
-- Transitions can use a pickup, fill, held dominant, crash, rest, inversion, or texture change. Use the smallest device that makes the boundary legible.
-- Repetition creates identity; variation keeps identity alive. Change a few consequential elements rather than replacing everything each section.
+## Arrangement and Point/Line/Plane
 
-## MIDI cleanup and humanization
+Use Point/Line/Plane as an observation tool:
 
-- Vary velocity according to meter, phrase, articulation, and section—not with unbounded randomness.
-- Vary note length to distinguish staccato, muted, connected, and sustained roles.
-- Preserve intentional accents and the first downbeat as anchors.
-- For human-feeling parts, use restrained timing offsets (often a few milliseconds; rarely beyond about 20–25 ms). Avoid independently randomizing chord tones unless a roll is intended.
-- Keep kick and main snare tighter than hats and secondary parts. Do not humanize all instruments with the same algorithm.
-- Check overlaps, stuck notes, tiny accidental notes, out-of-range pitches, and collisions between tracks.
+- **Point:** isolated attack or accent;
+- **Line:** connected motion;
+- **Plane:** sustained or continuous field.
 
-## Render, critique, revise
+No fixed balance is universally correct. Pointillist, drone-based, monophonic and dense
+counterpoint pieces are all valid. Ensure the chosen hierarchy is audible and roles do not
+accidentally mask one another.
 
-The first successful WAV is a draft. Save `composition_v1.json`, render, then inspect the actual audio and complete `references/composer-checklist.md`. Write concrete issues to `projects/<song>/critique.md`; make at least one targeted revision and save it as `composition_v2.json`. Critique decisions, not intentions: “chorus hook is obscured by guitar chord attacks” is actionable; “make it better” is not.
+Introduce, remove or transform layers for musical reasons. Do not assume every piece needs a
+pre-chorus build and chorus payoff.
 
-References are retained under `references/` for deeper reading. See `references/SOURCES.md` for provenance and `AGENTS.md` for progressive disclosure routes.
+## Performance and humanization
+
+Performance detail follows the intended style:
+
+- velocity may follow meter, phrase, gesture, timbre or deliberate machine consistency;
+- durations distinguish connected, muted, sustained and percussive behavior;
+- timing offsets should preserve important anchors;
+- chord tones should move together unless a roll/strum is intended;
+- kick and snare need not always be tighter than other parts outside conventional groove music;
+- humanization is not mandatory for intentionally mechanical music.
+
+Check overlaps, stuck notes, tiny accidental events, impossible ranges and controller conflicts.
+Random timing/velocity cannot rescue weak musical identity.
+
+## Render, critique and revise
+
+The first successful WAV is evidence, not completion.
+
+Save `composition_v1.json`, render, and describe concrete audible results in `critique.md`.
+Revise the smallest layer responsible for the issue. Preserve prior versions.
+
+Critique the current piece against its brief, not against the statistics or form of a proof song.
+Useful observations include:
+
+- the intended identity is or is not perceivable;
+- hierarchy is unclear;
+- a texture masks the foreground;
+- the rhythm lacks the intended weight;
+- the renderer lost an authored articulation;
+- a repeated section changes too much or too little for the declared process.
+
+Before acceptance, perform the reference-divergence check from
+`docs/creative_context_policy.md` for every complete example consulted.
