@@ -28,6 +28,21 @@
         "air strum",
         "strumming accompaniment"
       ]
+    },
+    {
+      "id": "midi-reference-articulation-analysis",
+      "path": "skills_v2/midi_reference_analysis/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "study reference midi",
+        "analyze midi articulation",
+        "note duration",
+        "sustain pedal",
+        "CC64",
+        "legato",
+        "staccato",
+        "instrument continuity"
+      ]
     }
   ]
 }
