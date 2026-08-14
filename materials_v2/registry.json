@@ -115,38 +115,6 @@
       ]
     },
     {
-      "id": "warm-rounded-acoustic-strum",
-      "kind": "timbre_recipe",
-      "path": "materials_v2/timbre_recipes/acoustic_guitar/warm_rounded_acoustic_strum.md",
-      "status": "active",
-      "instruments": [
-        "acoustic_guitar",
-        "nylon_acoustic_guitar",
-        "mellow_steel_string_acoustic"
-      ],
-      "roles": [
-        "rhythmic_accompaniment",
-        "warm_acoustic_bed"
-      ],
-      "genre_tags": [
-        "pop",
-        "acoustic-pop",
-        "folk-pop"
-      ],
-      "texture_tags": [
-        "warm",
-        "rounded",
-        "wood-forward",
-        "soft-edge",
-        "moderate-room"
-      ],
-      "problem_tags": [
-        "acoustic-too-brittle",
-        "excess-pick-click",
-        "acoustic-too-dry"
-      ]
-    },
-    {
       "id": "rolling-triplet-acoustic-strum",
       "kind": "accompaniment_pattern",
       "path": "materials_v2/accompaniment_patterns/acoustic_guitar/rolling_triplet_acoustic_strum.md",
