@@ -15,9 +15,13 @@ Read:
 6. the active project being edited
 7. implementation code or schema needed to execute the current task
 
+Read `source_library/registry.json` only when the task explicitly asks to study, compare, verify or revisit an original reference source.
+
 The previous knowledge and skill library is inactive. Do not search or read it unless the user explicitly asks to recover a specific capability.
 
 `materials_v2/` is an active external memory library. It may be browsed during composition even when the user does not name an exact recipe. Start from the registry, retrieve several plausible cards, compare them, and combine compatible ideas.
+
+`source_library/` is different. It catalogs original user-provided research sources. It is **not** composition memory and should not be browsed by default during creation.
 
 Do not treat a large material context as a failure. For harmony, accompaniment and timbre, broad exposure is often more useful than asking the model to invent every detail from first principles.
 
@@ -33,11 +37,21 @@ user intent
 -> validation and conversion report
 ```
 
+Research sources remain outside that default creative chain:
+
+```text
+source_library
+-> explicit study / comparison
+-> abstract reusable observation
+-> materials_v2 or skills_v2 when justified
+```
+
 The project facade indexes artifacts and routes adapters. It must not become a new universal music format.
 
 Keep these distinctions:
 
-- authoritative source artifacts;
+- original research sources in `source_library/`;
+- authoritative source artifacts for the active project;
 - reusable material cards and reference fragments;
 - sidecars that preserve unsupported native data;
 - derived MIDI/audio outputs;
@@ -54,6 +68,8 @@ Keep these distinctions:
 7. Compile, validate and render.
 8. Listen or inspect concrete failures and revise the responsible layer.
 9. Add a new Skill or material card when the task reveals reusable knowledge.
+
+When the user explicitly asks to study an original source, temporarily enter the source-study path, keep source-specific facts separate from abstractions, and return only reusable knowledge to the material or skill libraries.
 
 The Agent may browse broadly inside `materials_v2/`. It should still avoid copying one finished source wholesale. Recombine, transpose, revoice, vary, thin, expand and adapt materials to the current project.
 
