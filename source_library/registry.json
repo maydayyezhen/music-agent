@@ -72,6 +72,24 @@
       "study_status": "studied",
       "current_relevance": "active",
       "notes": "Studied for rolling triplet acoustic-strumming behavior. Type-0 MIDI at 192 ticks per beat and 125 BPM. Main steel-string channel used GM program 25 and contained 3074 note-ons. Grouping adjacent note-ons within 12 ticks produced about 1015 strum groups with a median width of 3 notes. Attacks aligned overwhelmingly to beat starts and late-triplet positions. Beat-start groups with recoverable direction were strongly low-to-high, while late-triplet groups were almost entirely high-to-low. Within-stroke spread had a median around 20 ms and 90th percentile around 47.5 ms. Exact harmony, pitches and full source rhythm are not stored in Materials."
+    },
+    {
+      "id": "natalie-imbruglia-torn-midi",
+      "title": "Torn",
+      "artist": "Natalie Imbruglia",
+      "source_type": "midi",
+      "expected_local_path": "source_library/midi/natalie_imbruglia-torn(1).mid",
+      "provided_by_user": true,
+      "research_tags": [
+        "acoustic_guitar",
+        "guitar_strumming",
+        "warm_pop_strumming",
+        "sixteenth_grid",
+        "steel_string"
+      ],
+      "study_status": "partially_studied",
+      "current_relevance": "supporting",
+      "notes": "Light corroboration study only. Main acoustic channel used GM program 25 at about 93 BPM. Straight 0.25/0.50-beat spacing was common, full bars commonly contained roughly 8-11 strum groups, broader groups around five notes were common when short within-stroke offsets were clustered, and the MIDI preserved sweep spreads on the order of a few tens of milliseconds. This reinforces the existing warm-pop-sixteenth-strum family rather than creating a new Material. Exact source rhythm, harmony and pitches are not stored in Materials."
     }
   ]
 }
