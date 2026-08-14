@@ -111,6 +111,12 @@ def compile_long_form_lead(phrase: dict[str, Any], beats_per_bar: int,
                 desired = target_pitch
             if bar > peak_bar:
                 desired -= round((bar - peak_bar) * 0.7)
+            is_final = relation["relationship"] == "resolution" and note_index == len(transformed) - 1
+            if is_final:
+                # A declared strong resolution must survive the global contour math.
+                # Setting the motif degree to zero is not sufficient because the
+                # post-peak descent can otherwise move the final note away from tonic.
+                desired = root
             pitch = _nearest_scale_pitch(desired, scale_pcs, low, high)
             chord = _chord_at(phrase, start, beats_per_bar)
             chord_pc = root_pc(chord)
@@ -138,7 +144,6 @@ def compile_long_form_lead(phrase: dict[str, Any], beats_per_bar: int,
                 arts.append(action)
             elif action == "vibrato":
                 arts.append("vibrato")
-            is_final = relation["relationship"] == "resolution" and note_index == len(transformed) - 1
             if is_final:
                 arts.append("resolution")
             string, fret = assign_guitar_note(pitch, tuning, max_fret, preferred_fret)
