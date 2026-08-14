@@ -84,6 +84,28 @@
       "genre_tags": ["pop", "pop-rock", "rock"],
       "texture_tags": ["normal", "supportive", "accompaniment-locked", "eighth-note", "sixteenth-connective", "repetitive", "low-variation"],
       "problem_tags": ["bass-quarter-note-pogo", "bass-too-detached", "bass-ignores-accompaniment", "mechanical-root-fifth-loop", "overactive-bass-fills"]
+    },
+    {
+      "id": "muted-pop-rock-pulse",
+      "kind": "accompaniment_pattern",
+      "path": "materials_v2/accompaniment_patterns/electric_guitar/muted_pop_rock_pulse.md",
+      "status": "active",
+      "instruments": ["muted_electric_guitar"],
+      "roles": ["rhythmic_accompaniment", "section_drive", "build_layer"],
+      "genre_tags": ["pop-rock", "rock"],
+      "texture_tags": ["muted", "palm-muted", "short-gate", "repeated-pulse", "crescendo-block", "compact-dyad"],
+      "problem_tags": ["muted-guitar-too-sustained", "muted-guitar-too-full", "random-chug-velocity", "no-phrase-gaps"]
+    },
+    {
+      "id": "overdriven-power-chord-pulse",
+      "kind": "accompaniment_pattern",
+      "path": "materials_v2/accompaniment_patterns/electric_guitar/overdriven_power_chord_pulse.md",
+      "status": "active",
+      "instruments": ["overdriven_electric_guitar"],
+      "roles": ["rhythmic_accompaniment", "section_lift", "rock_foundation"],
+      "genre_tags": ["pop-rock", "rock"],
+      "texture_tags": ["overdriven", "power-chord", "steady-pulse", "strong-soft-alternation", "short-gate"],
+      "problem_tags": ["electric-guitar-as-piano-chords", "flat-power-chord-pulse", "over-sustained-rhythm-guitar", "random-rhythm-guitar"]
     }
   ]
 }
