@@ -1,0 +1,33 @@
+{
+  "schema": "music-agent-project-facade",
+  "schema_version": 1,
+  "project": {
+    "title": "Untitled Chiptune Project",
+    "status": "template"
+  },
+  "artifacts": {
+    "composition": {
+      "standard": "project composition data",
+      "path": "composition.json",
+      "authority": "authoritative"
+    },
+    "chip_performance": {
+      "standard": "music-agent-chip-performance-v1",
+      "path": "chip-performance.json",
+      "authority": "authoritative"
+    },
+    "execution_midi": {
+      "standard": "MIDI 1.0 Standard MIDI File",
+      "path": "output/full_song.mid",
+      "authority": "derived"
+    },
+    "audio": {
+      "standard": "rendered audio",
+      "path": "output/full_song.wav",
+      "authority": "derived"
+    }
+  },
+  "conversion_reports": [
+    "reports/render.json"
+  ]
+}
