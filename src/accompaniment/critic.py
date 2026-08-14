@@ -31,7 +31,7 @@ def _expanded_events(clip: dict[str, Any], track: dict[str, Any], bars: int, bea
     for loop_start in range(0, bars, loop_bars):
         shift = loop_start * beats_per_bar
         for event in materialized:
-            if event.get("type", "note") == "rest":
+            if event.get("type", "note") in {"rest", "control_change"}:
                 continue
             start = shift + _position(event["at"], beats_per_bar)
             if start >= bars * beats_per_bar:
@@ -121,6 +121,8 @@ def analyze_continuity(composition: dict[str, Any]) -> dict[str, Any]:
             percussion = any(word in role_text for word in ("drum", "percussion", "鼓", "打击"))
             melody = any(word in role_text for word in ("lead melody", "main melody", "主旋律", "hook"))
             texture = resolve_texture(track, clip)
+            semantic_phrase = clip.get("instrument_phrase", {})
+            semantic_type = str(semantic_phrase.get("phrase_type", ""))
             continuity = normalize_continuity(texture, track.get("continuity"), clip.get("continuity")) if texture else None
             generated_events = [event for event in events if event.get("generated_texture")]
             analyzed_events = generated_events if generated_events else events
@@ -169,7 +171,8 @@ def analyze_continuity(composition: dict[str, Any]) -> dict[str, Any]:
             }
             track_metrics.setdefault(track_name, {})[section_name] = metric
 
-            if not percussion and not melody and len(analyzed_events) >= bars * 2 and short_ratio >= 0.70 and metric["duration_entropy"] < 0.75 and metric["average_gap_between_notes"] >= 0.12:
+            intentional_detached = semantic_type in {"palm_muted_eighths", "open_power_chords"}
+            if not percussion and not melody and not intentional_detached and len(analyzed_events) >= bars * 2 and short_ratio >= 0.70 and metric["duration_entropy"] < 0.75 and metric["average_gap_between_notes"] >= 0.12:
                 warnings.append({"code": "pointillistic_disconnected", "section": section_name, "track": track_name, "message": "accompaniment is overly pointillistic / disconnected"})
             if texture in {"sustain", "pedal"} and sustain_ratio < 0.60:
                 warnings.append({"code": "texture_target_mismatch", "section": section_name, "track": track_name, "message": f"{texture} texture lacks sustained durations"})

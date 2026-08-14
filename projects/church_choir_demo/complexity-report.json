@@ -1,0 +1,478 @@
+{
+  "global_target": {
+    "Narthex": {
+      "level": "simple",
+      "rhythm": 2,
+      "harmony": 2,
+      "arrangement": 2,
+      "melodic_ornamentation": 2,
+      "density": 2,
+      "variation": 2,
+      "budget": 8,
+      "melody_rest_ratio_guide": [
+        0.25,
+        0.5
+      ]
+    },
+    "Invocation": {
+      "level": "standard",
+      "rhythm": 3,
+      "harmony": 3,
+      "arrangement": 3,
+      "melodic_ornamentation": 2,
+      "density": 3,
+      "variation": 3,
+      "budget": 11,
+      "melody_rest_ratio_guide": [
+        0.15,
+        0.4
+      ]
+    },
+    "Procession": {
+      "level": "standard",
+      "rhythm": 3,
+      "harmony": 3,
+      "arrangement": 3,
+      "melodic_ornamentation": 2,
+      "density": 3,
+      "variation": 3,
+      "budget": 11,
+      "melody_rest_ratio_guide": [
+        0.15,
+        0.4
+      ]
+    },
+    "Sanctus": {
+      "level": "rich",
+      "rhythm": 4,
+      "harmony": 4,
+      "arrangement": 4,
+      "melodic_ornamentation": 3,
+      "density": 3,
+      "variation": 4,
+      "budget": 15,
+      "melody_rest_ratio_guide": [
+        0.1,
+        0.3
+      ]
+    },
+    "Great Amen": {
+      "level": "rich",
+      "rhythm": 4,
+      "harmony": 4,
+      "arrangement": 4,
+      "melodic_ornamentation": 3,
+      "density": 3,
+      "variation": 4,
+      "budget": 15,
+      "melody_rest_ratio_guide": [
+        0.1,
+        0.3
+      ]
+    },
+    "Benediction": {
+      "level": "simple",
+      "rhythm": 2,
+      "harmony": 2,
+      "arrangement": 2,
+      "melodic_ornamentation": 2,
+      "density": 3,
+      "variation": 2,
+      "budget": 8,
+      "melody_rest_ratio_guide": [
+        0.25,
+        0.5
+      ]
+    }
+  },
+  "track_metrics": {
+    "choir_theme": {
+      "Narthex": {
+        "note_density": 1.0,
+        "rest_ratio": 0.58625,
+        "duration_entropy": 2.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 3.6875,
+        "pattern_repetition": 0.0,
+        "event_count": 4
+      },
+      "Invocation": {
+        "note_density": 3.0,
+        "rest_ratio": 0.15718750000000015,
+        "duration_entropy": 2.5220552088742005,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.6666666666666665,
+        "pattern_repetition": 0.0,
+        "event_count": 24
+      },
+      "Procession": {
+        "note_density": 3.0,
+        "rest_ratio": 0.15718750000000015,
+        "duration_entropy": 2.5220552088742005,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.6666666666666665,
+        "pattern_repetition": 0.0,
+        "event_count": 24
+      },
+      "Sanctus": {
+        "note_density": 3.0,
+        "rest_ratio": 0.15718750000000015,
+        "duration_entropy": 2.5220552088742005,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.6666666666666665,
+        "pattern_repetition": 0.0,
+        "event_count": 24
+      },
+      "Great Amen": {
+        "note_density": 3.0,
+        "rest_ratio": 0.14449999999999985,
+        "duration_entropy": 2.7316112300691393,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 16.91222222222222,
+        "pattern_repetition": 0.0,
+        "event_count": 30
+      },
+      "Benediction": {
+        "note_density": 2.75,
+        "rest_ratio": 0.1568750000000001,
+        "duration_entropy": 2.7016573248619737,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.9359504132231407,
+        "pattern_repetition": 0.0,
+        "event_count": 22
+      }
+    },
+    "choir_inner": {
+      "Narthex": {
+        "note_density": 0.0,
+        "rest_ratio": 1.0,
+        "duration_entropy": 0.0,
+        "same_grid_ratio": 0.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 0
+      },
+      "Invocation": {
+        "note_density": 1.5,
+        "rest_ratio": 0.3025000000000001,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 0.5,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 6
+      },
+      "Procession": {
+        "note_density": 2.0,
+        "rest_ratio": 0.07000000000000006,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 0.5,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 8
+      },
+      "Sanctus": {
+        "note_density": 2.0,
+        "rest_ratio": 0.07000000000000006,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 0.5,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 8
+      },
+      "Great Amen": {
+        "note_density": 2.0,
+        "rest_ratio": 0.07000000000000006,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 0.5,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 10
+      },
+      "Benediction": {
+        "note_density": 2.0,
+        "rest_ratio": 0.07000000000000006,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 0.5,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 8
+      }
+    },
+    "pipe_organ": {
+      "Narthex": {
+        "note_density": 4.0,
+        "rest_ratio": 0.020000000000000018,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 4
+      },
+      "Invocation": {
+        "note_density": 4.0,
+        "rest_ratio": 0.019999999999999796,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 8
+      },
+      "Procession": {
+        "note_density": 4.0,
+        "rest_ratio": 0.019999999999999796,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 8
+      },
+      "Sanctus": {
+        "note_density": 4.0,
+        "rest_ratio": 0.019999999999999796,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 8
+      },
+      "Great Amen": {
+        "note_density": 4.0,
+        "rest_ratio": 0.019999999999999796,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 10
+      },
+      "Benediction": {
+        "note_density": 4.0,
+        "rest_ratio": 0.019999999999999796,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 8
+      }
+    },
+    "double_bass": {
+      "Narthex": {
+        "note_density": 0.0,
+        "rest_ratio": 1.0,
+        "duration_entropy": 0.0,
+        "same_grid_ratio": 0.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 0
+      },
+      "Invocation": {
+        "note_density": 2.375,
+        "rest_ratio": 0.22687500000000005,
+        "duration_entropy": 2.313459750171824,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 13.041551246537393,
+        "pattern_repetition": 0.0,
+        "event_count": 19
+      },
+      "Procession": {
+        "note_density": 2.375,
+        "rest_ratio": 0.22687500000000005,
+        "duration_entropy": 2.313459750171824,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 13.041551246537393,
+        "pattern_repetition": 0.0,
+        "event_count": 19
+      },
+      "Sanctus": {
+        "note_density": 2.375,
+        "rest_ratio": 0.22687500000000005,
+        "duration_entropy": 2.313459750171824,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 13.041551246537393,
+        "pattern_repetition": 0.0,
+        "event_count": 19
+      },
+      "Great Amen": {
+        "note_density": 2.9,
+        "rest_ratio": 0.12449999999999994,
+        "duration_entropy": 2.272881446481777,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 14.118906064209279,
+        "pattern_repetition": 0.0,
+        "event_count": 29
+      },
+      "Benediction": {
+        "note_density": 2.25,
+        "rest_ratio": 0.2534375000000001,
+        "duration_entropy": 2.3082708345352603,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 13.506172839506172,
+        "pattern_repetition": 0.0,
+        "event_count": 18
+      }
+    },
+    "slow_strings": {
+      "Narthex": {
+        "note_density": 0.0,
+        "rest_ratio": 1.0,
+        "duration_entropy": 0.0,
+        "same_grid_ratio": 0.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 0
+      },
+      "Invocation": {
+        "note_density": 0.0,
+        "rest_ratio": 1.0,
+        "duration_entropy": 0.0,
+        "same_grid_ratio": 0.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 0
+      },
+      "Procession": {
+        "note_density": 1.25,
+        "rest_ratio": 0.05625000000000013,
+        "duration_entropy": 1.5219280948873621,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 4.6899999999999995,
+        "pattern_repetition": 0.0,
+        "event_count": 10
+      },
+      "Sanctus": {
+        "note_density": 1.25,
+        "rest_ratio": 0.05625000000000013,
+        "duration_entropy": 1.5219280948873621,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 4.6899999999999995,
+        "pattern_repetition": 0.0,
+        "event_count": 10
+      },
+      "Great Amen": {
+        "note_density": 1.3,
+        "rest_ratio": 0.053750000000000187,
+        "duration_entropy": 2.038159681645953,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 4.236686390532544,
+        "pattern_repetition": 0.0,
+        "event_count": 13
+      },
+      "Benediction": {
+        "note_density": 1.25,
+        "rest_ratio": 0.05625000000000013,
+        "duration_entropy": 1.5219280948873621,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 4.6899999999999995,
+        "pattern_repetition": 0.0,
+        "event_count": 10
+      }
+    },
+    "bell_tower": {
+      "Narthex": {
+        "note_density": 0.5,
+        "rest_ratio": 0.8500000000000001,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 1.0,
+        "pattern_repetition": 0.0,
+        "event_count": 2
+      },
+      "Invocation": {
+        "note_density": 0.25,
+        "rest_ratio": 0.925,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 1.0,
+        "pattern_repetition": 0.0,
+        "event_count": 2
+      },
+      "Procession": {
+        "note_density": 0.25,
+        "rest_ratio": 0.925,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 1.0,
+        "pattern_repetition": 0.0,
+        "event_count": 2
+      },
+      "Sanctus": {
+        "note_density": 0.25,
+        "rest_ratio": 0.925,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 2
+      },
+      "Great Amen": {
+        "note_density": 0.3,
+        "rest_ratio": 0.9099999999999999,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.6666666666666665,
+        "pattern_repetition": 0.0,
+        "event_count": 3
+      },
+      "Benediction": {
+        "note_density": 0.25,
+        "rest_ratio": 0.925,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 1.0,
+        "pattern_repetition": 0.0,
+        "event_count": 2
+      }
+    }
+  },
+  "section_metrics": {
+    "Narthex": {
+      "section_density": 2.5,
+      "active_tracks": 3,
+      "track_overlap_ratio": 0.5,
+      "onset_overlap_ratio": 0.3444444444444444,
+      "target_budget": 8,
+      "declared_budget_total": 6
+    },
+    "Invocation": {
+      "section_density": 7.375,
+      "active_tracks": 5,
+      "track_overlap_ratio": 0.8333333333333334,
+      "onset_overlap_ratio": 0.22893749525328472,
+      "target_budget": 11,
+      "declared_budget_total": 9
+    },
+    "Procession": {
+      "section_density": 8.875,
+      "active_tracks": 6,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.22610231661719074,
+      "target_budget": 11,
+      "declared_budget_total": 11
+    },
+    "Sanctus": {
+      "section_density": 8.875,
+      "active_tracks": 6,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.21263430314917728,
+      "target_budget": 15,
+      "declared_budget_total": 15
+    },
+    "Great Amen": {
+      "section_density": 9.5,
+      "active_tracks": 6,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.21422810463164899,
+      "target_budget": 15,
+      "declared_budget_total": 15
+    },
+    "Benediction": {
+      "section_density": 8.5,
+      "active_tracks": 6,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.23275782188825664,
+      "target_budget": 8,
+      "declared_budget_total": 8
+    }
+  },
+  "warnings": [],
+  "warning_count": 0
+}

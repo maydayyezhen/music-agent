@@ -1,0 +1,39 @@
+{
+  "acoustic_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 25,
+    "gm_name": "Steel Guitar"
+  },
+  "electric_rhythm_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 29,
+    "gm_name": "Overdrive Guitar"
+  },
+  "drawbar_organ": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 16,
+    "gm_name": "Drawbar Organ"
+  },
+  "electric_bass": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 34,
+    "gm_name": "Electric Bass (pick)"
+  },
+  "drums": {
+    "engine": "fluidsynth",
+    "channel": 10,
+    "bank": 128,
+    "program": 16,
+    "gm_name": "Power Drum Kit"
+  },
+  "orchestra_pad": {
+    "engine": "fluidsynth",
+    "bank": 8,
+    "program": 48,
+    "gm_name": "Orchestra Pad"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "label": "final",
+  "mix": {
+    "duration_seconds": 134.42857142857142,
+    "channels": 2,
+    "sample_rate": 44100,
+    "peak_linear": 0.24658203125,
+    "peak_dbfs": -12.160771483702636,
+    "rms_dbfs": -28.027092491449366,
+    "clipped_samples": 0,
+    "non_silent": true,
+    "first_active_second": 0.005714285714285714,
+    "last_active_second": 132.4534693877551,
+    "sections": {
+      "Narthex": {
+        "start_second": 0,
+        "end_second": 11.428571428571429,
+        "peak_dbfs": -17.686213694058136,
+        "rms_dbfs": -32.219362125591516
+      },
+      "Invocation": {
+        "start_second": 11.428571428571429,
+        "end_second": 34.285714285714285,
+        "peak_dbfs": -15.020992240066596,
+        "rms_dbfs": -28.759134837663844
+      },
+      "Procession": {
+        "start_second": 34.285714285714285,
+        "end_second": 57.14285714285714,
+        "peak_dbfs": -14.76771560434577,
+        "rms_dbfs": -27.95404588343328
+      },
+      "Sanctus": {
+        "start_second": 57.14285714285714,
+        "end_second": 80.0,
+        "peak_dbfs": -13.65754320227076,
+        "rms_dbfs": -27.13684430757287
+      },
+      "Great Amen": {
+        "start_second": 80.0,
+        "end_second": 108.57142857142857,
+        "peak_dbfs": -12.160771483702636,
+        "rms_dbfs": -26.188610822722577
+      },
+      "Benediction": {
+        "start_second": 108.57142857142857,
+        "end_second": 131.42857142857142,
+        "peak_dbfs": -15.59382795031958,
+        "rms_dbfs": -29.628555291848137
+      }
+    }
+  },
+  "stems": {
+    "bell_tower": {
+      "duration_seconds": 134.42857142857142,
+      "channels": 2,
+      "sample_rate": 44100,
+      "peak_linear": 0.0965576171875,
+      "peak_dbfs": -20.30426920268158,
+      "rms_dbfs": -47.88515907291295,
+      "clipped_samples": 0,
+      "non_silent": true,
+      "first_active_second": 0.0069387755102040816,
+      "last_active_second": 129.89655328798185
+    },
+    "choir_inner": {
+      "duration_seconds": 134.07201814058956,
+      "channels": 2,
+      "sample_rate": 44100,
+      "peak_linear": 0.165069580078125,
+      "peak_dbfs": -15.64665907035307,
+      "rms_dbfs": -32.29436957202112,
+      "clipped_samples": 0,
+      "non_silent": true,
+      "first_active_second": 17.25281179138322,
+      "last_active_second": 131.53408163265306
+    },
+    "choir_theme": {
+      "duration_seconds": 134.42857142857142,
+      "channels": 2,
+      "sample_rate": 44100,
+      "peak_linear": 0.225128173828125,
+      "peak_dbfs": -12.951403030026768,
+      "rms_dbfs": -32.514924490804454,
+      "clipped_samples": 0,
+      "non_silent": true,
+      "first_active_second": 5.753786848072562,
+      "last_active_second": 131.86426303854876
+    },
+    "double_bass": {
+      "duration_seconds": 132.70204081632653,
+      "channels": 2,
+      "sample_rate": 44100,
+      "peak_linear": 0.08331298828125,
+      "peak_dbfs": -21.58574575837924,
+      "rms_dbfs": -32.908127642342315,
+      "clipped_samples": 0,
+      "non_silent": true,
+      "first_active_second": 11.447256235827664,
+      "last_active_second": 130.35569160997733
+    },
+    "pipe_organ": {
+      "duration_seconds": 134.42857142857142,
+      "channels": 2,
+      "sample_rate": 44100,
+      "peak_linear": 0.278564453125,
+      "peak_dbfs": -11.101486070991193,
+      "rms_dbfs": -25.765402134894686,
+      "clipped_samples": 0,
+      "non_silent": true,
+      "first_active_second": 0.005646258503401361,
+      "last_active_second": 132.08412698412698
+    },
+    "slow_strings": {
+      "duration_seconds": 134.42857142857142,
+      "channels": 2,
+      "sample_rate": 44100,
+      "peak_linear": 0.146026611328125,
+      "peak_dbfs": -16.71135985693711,
+      "rms_dbfs": -35.0976216324997,
+      "clipped_samples": 0,
+      "non_silent": true,
+      "first_active_second": 34.672607709750565,
+      "last_active_second": 132.53233560090703
+    }
+  },
+  "midi": {
+    "bell_tower": {
+      "note_count": 13,
+      "same_pitch_overlaps": 0,
+      "stuck_notes": 0,
+      "tiny_notes_under_24_ticks": 0,
+      "minimum_note_ticks": 576,
+      "maximum_note_ticks": 576,
+      "ticks_per_beat": 480
+    },
+    "choir_inner": {
+      "note_count": 80,
+      "same_pitch_overlaps": 0,
+      "stuck_notes": 0,
+      "tiny_notes_under_24_ticks": 0,
+      "minimum_note_ticks": 1786,
+      "maximum_note_ticks": 1786,
+      "ticks_per_beat": 480
+    },
+    "choir_theme": {
+      "note_count": 128,
+      "same_pitch_overlaps": 0,
+      "stuck_notes": 0,
+      "tiny_notes_under_24_ticks": 0,
+      "minimum_note_ticks": 216,
+      "maximum_note_ticks": 1704,
+      "ticks_per_beat": 480
+    },
+    "double_bass": {
+      "note_count": 104,
+      "same_pitch_overlaps": 0,
+      "stuck_notes": 0,
+      "tiny_notes_under_24_ticks": 0,
+      "minimum_note_ticks": 216,
+      "maximum_note_ticks": 1152,
+      "ticks_per_beat": 480
+    },
+    "pipe_organ": {
+      "note_count": 184,
+      "same_pitch_overlaps": 0,
+      "stuck_notes": 0,
+      "tiny_notes_under_24_ticks": 0,
+      "minimum_note_ticks": 1882,
+      "maximum_note_ticks": 1882,
+      "ticks_per_beat": 480
+    },
+    "slow_strings": {
+      "note_count": 43,
+      "same_pitch_overlaps": 0,
+      "stuck_notes": 0,
+      "tiny_notes_under_24_ticks": 0,
+      "minimum_note_ticks": 576,
+      "maximum_note_ticks": 2184,
+      "ticks_per_beat": 480
+    }
+  }
+}

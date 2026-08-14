@@ -1,0 +1,14 @@
+{
+  "sample_rate": 44100,
+  "soundfont": "assets/soundfonts/GeneralUser-GS.sf2",
+  "fluidsynth_gain": 0.7,
+  "tail_seconds": 2.0,
+  "master_peak_db": -1.0,
+  "mix": {
+    "piano": {
+      "volume_db": -3,
+      "pan": 0,
+      "mute": false
+    }
+  }
+}

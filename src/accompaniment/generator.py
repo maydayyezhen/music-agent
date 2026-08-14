@@ -310,6 +310,14 @@ def generate_bass_line(
 
 def materialize_clip(clip: dict[str, Any], track: dict[str, Any], beats_per_bar: int) -> list[dict[str, Any]]:
     """Return explicit events plus optional texture-generated accompaniment."""
+    if clip.get("instrument_phrase"):
+        from src.instruments import compile_instrument_phrase
+        from src.performance import apply_profile, load_profile
+        events = compile_instrument_phrase(clip["instrument_phrase"], beats_per_bar)
+        profile_name = str(clip.get("sound_library_profile", track.get("sound_library_profile", "general_midi")))
+        compiled, report = apply_profile(events, load_profile(profile_name))
+        clip["_profile_report"] = report
+        return compiled
     events = [deepcopy(event) for event in clip.get("events", [])]
     spans = clip.get("harmony_spans", [])
     if not spans:

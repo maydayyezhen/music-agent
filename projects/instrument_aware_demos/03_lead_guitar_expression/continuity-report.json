@@ -1,0 +1,38 @@
+{
+  "track_metrics": {
+    "lead_guitar": {
+      "lead": {
+        "texture": "implicit",
+        "family": "line",
+        "average_note_duration": 1.5183333333333333,
+        "short_note_ratio": 0.25,
+        "sustain_ratio": 0.25,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 1.1163636363636362,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 3.2516291673878226,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 12,
+        "total_track_event_count": 12,
+        "continuity_target": null
+      }
+    }
+  },
+  "section_metrics": {
+    "lead": {
+      "texture_distribution": {},
+      "point_line_plane_balance": {
+        "point": 0,
+        "line": 1,
+        "plane": 0,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "line"
+      ]
+    }
+  },
+  "warnings": [],
+  "warning_count": 0
+}

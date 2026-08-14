@@ -1,5 +1,8 @@
 # Music Agent project instructions
 
+Read the root `SKILL.md` before new composition work. The project now supports an
+instrument-aware path in addition to legacy exact-note clips.
+
 This repository is a local structured-composition and audio-rendering project. References under `references/` are project reading material, not installed Skills. Do not register them globally, install their MCP integrations, or introduce Ableton/Suno/cloud dependencies.
 
 ## Preserve the rendering pipeline
@@ -9,6 +12,42 @@ Keep the existing boundary intact:
 ```text
 composition.json -> MIDI tracks -> local renderer -> WAV stems -> mix.wav
 ```
+
+For guitar, bass, drums, keyboard and strings, preserve instrument semantics through:
+
+```text
+musical intent -> instrument_phrase -> neutral performance events
+-> sound-library profile -> rendered MIDI events
+```
+
+New player-like parts should prefer `instrument_phrase`; legacy `events` remain supported
+and byte-stable. Never put library-specific keyswitch numbers in composition or instrument
+modules. Read `docs/instrument_research/architecture_proposal.md` and the matching instrument
+research document. Profiles under `profiles/` own keyswitch, CC, pitch-bend and fallback mapping.
+
+Lead melodies that develop across 8–16 bars must use the three-layer flow in
+`docs/long_form_phrase_schema.md`: section arc, phrase relationship graph, then persistent
+melodic-state realization. Formal songs default to `legacy_stable`. Set
+`phrase_generation_mode` to `long_form_experimental` only for an explicit experiment. A breath
+does not reset phrase state.
+Run `scripts/critic_long_form.py <song> --write` before accepting a long-form lead section.
+
+Substantial Electric Lead Guitar work must also read `docs/guitar_native_lead_playbook.md`.
+Do not treat Lead Guitar as a vocal melody with another program number. Design the playable
+motif, fretboard regions, physical transitions, density arc, delayed target and thematic
+return before articulation. Prefer the stable explicit motif path for a controlled formal
+song; use the experimental planner only when the brief explicitly asks to test it. Render the
+existing system first, cite concrete failed bars/events, and modify code only when authored
+guitar intent is lost downstream. `projects/guitar_native_rock_proof/` is the validated
+reference, but its exact pitches, form and density are not a template.
+
+Acoustic Guitar and Electric Rhythm Guitar strumming must read
+`docs/continuous_strumming.md`. Do not reduce a continuous pattern to sounding chord events
+alone: preserve eighth/sixteenth down-up hand motion, including air strokes, across bar and
+chord boundaries. Use `sustained_chord_hit` only when a held attack is intentional; normal
+Verse/Chorus rhythm guitar should use `continuous_strumming` or an equivalent explicit-event
+`strumming_grid`. Vocal activity may thin the voicing or lower dynamics, but must not silently
+reset the right hand.
 
 Composition data, instrument mapping, rendering, and mixing stay decoupled. Prefer narrow changes: musical notes in the song's `composition.json`; timbre in `config/instruments.json`; balance in `config/render.json`.
 
@@ -37,13 +76,14 @@ Before creating a new song or substantially rewriting one, execute these stages 
 11. Test the motif against the harmony before expanding the arrangement.
 12. Write section melodies using repetition, variation, contrast, and return.
 13. Write bass as a continuous phrase using mixed durations, approaches, fifths, pedals, or anticipation—not roots alone.
-14. Write drums with section-specific groove and transitions.
-15. Write piano and guitar as distinct playable parts whose texture can evolve by section.
+14. Write drums with section-specific groove, limb feasibility and transitions.
+15. Write piano and guitar as distinct playable parts whose physical action and texture can evolve by section.
 16. Write strings and pad as support, counter-motion, atmosphere, or climax—not chord-block duplicates; preserve common tones where appropriate.
 17. Apply restrained MIDI cleanup/humanization: purposeful velocity, duration, articulation, and timing variation while preserving anchors.
 18. If vocals were explicitly requested, follow the optional vocal workflow below; otherwise skip it completely.
 19. Save the initial draft as `composition_v1.json`, copy it to `composition.json`, and render it.
 20. Run `scripts/critic_complexity.py <song> --write` and `scripts/critic_continuity.py <song> --write`, then listen when possible and analyze stems/mix for silence, duration, clipping, section energy, density, contrast, and accompaniment continuity.
+    For any semantic phrase, also run `scripts/critic_instruments.py <song> --write` and resolve physical errors before rendering.
 21. Complete `references/composer-checklist.md` and write concrete findings to `projects/<song>/critique.md`.
 22. Make at least one composition revision. Save it as `composition_v2.json` (and later numbered versions); never erase the only prior version.
 23. Copy the selected revision to `composition.json` and render the final candidate.
@@ -83,6 +123,12 @@ Read deeper only when the task needs it:
 - Harmony, voicing, or instrument ranges: `references/ableton-skills/skills/chord-pro/SKILL.md` and, when needed, `references/midi-agent-skill/resources/voice-leading.md`.
 - Drums, groove, or humanization: `references/ableton-skills/skills/groove-builder/SKILL.md` and `references/ableton-skills/skills/midi-cleanup/SKILL.md`.
 - Form, transitions, and section contrast: `references/ableton-skills/skills/arrangement-coach/SKILL.md`.
+- Electric Lead Guitar theme or solo: `docs/guitar_native_lead_playbook.md`, then
+  `docs/instrument_research/electric_lead_guitar.md`. Inspect the validated V1/V2 evidence in
+  `projects/guitar_native_rock_proof/` when continuity or articulation realization is in doubt.
+- Acoustic Guitar or Electric Rhythm Guitar strumming: `docs/continuous_strumming.md`; inspect
+  `projects/strumming_continuity_demo/` and run `tests.test_strumming_continuity` when the part
+  risks becoming one held chord per bar.
 - Full production planning: `references/ableton-skills/skills/producer-mode/SKILL.md`.
 - Hooks, motif, emotional progression, or lyrics/prosody: `references/hermes-songwriting/skills/creative/songwriting-and-ai-music/SKILL.md`. Ignore its Suno/cloud-generation instructions.
 - Structured MIDI, GM programs, and local engineering patterns: `references/midi-agent-skill/SKILL.md`, its `resources/`, and relevant helper code. Treat its rigid dissonance/root-bass rules as beginner safeguards, not universal musical law.

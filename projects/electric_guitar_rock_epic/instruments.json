@@ -1,0 +1,39 @@
+{
+  "lead_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 30,
+    "gm_name": "Distortion Guitar"
+  },
+  "rhythm_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 29,
+    "gm_name": "Overdrive Guitar"
+  },
+  "bass": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 34,
+    "gm_name": "Pick Bass"
+  },
+  "organ": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 18,
+    "gm_name": "Rock Organ"
+  },
+  "strings": {
+    "engine": "fluidsynth",
+    "bank": 8,
+    "program": 48,
+    "gm_name": "Orchestra Pad"
+  },
+  "drums": {
+    "engine": "fluidsynth",
+    "channel": 10,
+    "bank": 128,
+    "program": 16,
+    "gm_name": "Power"
+  }
+}

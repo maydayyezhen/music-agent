@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "title": "Sixteen-Bar Developing Solo",
+  "track_metrics": {
+    "lead_guitar": {
+      "instrument": "electric_lead_guitar",
+      "sections": {
+        "solo": {
+          "instrument": "electric_lead_guitar",
+          "event_count": 28,
+          "note_count": 28,
+          "range": [
+            64,
+            88
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 6,
+          "velocity_stddev": 2.058766720190334,
+          "articulations": {
+            "resolution": 1
+          },
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 1.75,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 6.225000000000001
+          }
+        }
+      }
+    }
+  },
+  "section_density": {
+    "solo": {
+      "events_per_bar": 1.75,
+      "by_track": {
+        "lead_guitar": 1.75
+      },
+      "active_tracks": 1
+    }
+  },
+  "articulation_coverage": {
+    "resolution": 1
+  },
+  "profile_coverage": {
+    "lead_guitar.solo": {
+      "profile": "general_midi",
+      "articulation_coverage": {
+        "resolution": {
+          "mapped": 0,
+          "fallback": 0,
+          "unsupported": 1
+        }
+      }
+    }
+  },
+  "phrase_variation": {
+    "diagnostic_count": 0
+  },
+  "diagnostics": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "info_count": 0
+}

@@ -1,0 +1,33 @@
+{
+  "rhythm_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 29
+  },
+  "lead_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 30
+  },
+  "bass": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 33
+  },
+  "drums": {
+    "engine": "fluidsynth",
+    "channel": 10,
+    "bank": 128,
+    "program": 16
+  },
+  "organ": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 18
+  },
+  "strings": {
+    "engine": "fluidsynth",
+    "bank": 8,
+    "program": 48
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "title": "Eight-Bar Singing Lead",
+  "track_metrics": {
+    "lead_guitar": {
+      "instrument": "electric_lead_guitar",
+      "sections": {
+        "solo": {
+          "instrument": "electric_lead_guitar",
+          "event_count": 20,
+          "note_count": 20,
+          "range": [
+            64,
+            79
+          ],
+          "median_gap_beats": 0.9370000000000012,
+          "velocity_unique": 6,
+          "velocity_stddev": 2.853068523537421,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 2.5,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 8.325000000000001
+          }
+        }
+      }
+    }
+  },
+  "section_density": {
+    "solo": {
+      "events_per_bar": 2.5,
+      "by_track": {
+        "lead_guitar": 2.5
+      },
+      "active_tracks": 1
+    }
+  },
+  "articulation_coverage": {},
+  "profile_coverage": {
+    "lead_guitar.solo": {
+      "profile": "general_midi",
+      "articulation_coverage": {}
+    }
+  },
+  "phrase_variation": {
+    "diagnostic_count": 0
+  },
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "code": "lead_no_expression",
+      "track": "lead_guitar",
+      "section": "solo",
+      "message": "active lead phrase has no expressive transition articulation",
+      "evidence": {}
+    }
+  ],
+  "error_count": 0,
+  "warning_count": 1,
+  "info_count": 0
+}

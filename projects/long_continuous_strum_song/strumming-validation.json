@@ -1,0 +1,4011 @@
+{
+  "schema_version": 1,
+  "title": "Hands Across the Highway",
+  "tracks": {
+    "acoustic_guitar": {
+      "instrument": "acoustic_guitar",
+      "sections": {
+        "intro": {
+          "bars": 4,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 8.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 4,
+          "air_strums": 0,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 8.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "long_verse": {
+          "bars": 12,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 8.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 12,
+          "air_strums": 0,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 8.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 9,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 10,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 11,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 12,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "lift": {
+          "bars": 8,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 8.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 4,
+          "air_strums": 0,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 8.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "first_chorus": {
+          "bars": 12,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 8.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 0,
+          "air_strums": 0,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 8.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 9,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 10,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 11,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 12,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "instrumental_run": {
+          "bars": 8,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 8.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 8,
+          "air_strums": 0,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 8.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "final_chorus": {
+          "bars": 16,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 8.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 0,
+          "air_strums": 0,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 8.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 9,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 10,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 11,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 12,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 13,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 14,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 15,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 16,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "accent_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "full_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "chorus_open",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "outro": {
+          "bars": 4,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 8.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 4,
+          "air_strums": 0,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 8.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        }
+      }
+    },
+    "electric_rhythm_guitar": {
+      "instrument": "electric_rhythm_guitar",
+      "sections": {
+        "long_verse": {
+          "bars": 12,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 6.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 0,
+          "air_strums": 24,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 6.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 9,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 10,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 11,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 12,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "lift": {
+          "bars": 8,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 8.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 8,
+          "air_strums": 0,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 8.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "first_chorus": {
+          "bars": 12,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 6.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 0,
+          "air_strums": 24,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 6.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 9,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 10,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 11,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 12,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "instrumental_run": {
+          "bars": 8,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 7.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 0,
+          "air_strums": 8,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 7.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "bass_note",
+                "air_strum",
+                "partial_strum",
+                "light_upstroke",
+                "bass_note",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 7,
+              "hand_motion_count": 8,
+              "pattern_id": "bass_continuous",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "bass_note",
+                "air_strum",
+                "partial_strum",
+                "light_upstroke",
+                "bass_note",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 7,
+              "hand_motion_count": 8,
+              "pattern_id": "bass_continuous",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "bass_note",
+                "air_strum",
+                "partial_strum",
+                "light_upstroke",
+                "bass_note",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 7,
+              "hand_motion_count": 8,
+              "pattern_id": "bass_continuous",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "bass_note",
+                "air_strum",
+                "partial_strum",
+                "light_upstroke",
+                "bass_note",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 7,
+              "hand_motion_count": 8,
+              "pattern_id": "bass_continuous",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "bass_note",
+                "air_strum",
+                "partial_strum",
+                "light_upstroke",
+                "bass_note",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 7,
+              "hand_motion_count": 8,
+              "pattern_id": "bass_continuous",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "bass_note",
+                "air_strum",
+                "partial_strum",
+                "light_upstroke",
+                "bass_note",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 7,
+              "hand_motion_count": 8,
+              "pattern_id": "bass_continuous",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "bass_note",
+                "air_strum",
+                "partial_strum",
+                "light_upstroke",
+                "bass_note",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 7,
+              "hand_motion_count": 8,
+              "pattern_id": "bass_continuous",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "bass_note",
+                "air_strum",
+                "partial_strum",
+                "light_upstroke",
+                "bass_note",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 7,
+              "hand_motion_count": 8,
+              "pattern_id": "bass_continuous",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "final_chorus": {
+          "bars": 16,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 6.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 0,
+          "air_strums": 32,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 6.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 5,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 6,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 7,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 8,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 9,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 10,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 11,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 12,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 13,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 14,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 15,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 16,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "air_strum",
+                "accent_strum",
+                "light_upstroke",
+                "air_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 6,
+              "hand_motion_count": 8,
+              "pattern_id": "classic_pop",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        },
+        "outro": {
+          "bars": 4,
+          "average_hand_motions_per_bar": 8.0,
+          "average_sounding_strums_per_bar": 8.0,
+          "only_one_strum_bars": [],
+          "only_downbeat_strum_bars": [],
+          "sustained_four_beats_without_followup_bars": [],
+          "ghost_strums": 0,
+          "muted_strums": 4,
+          "air_strums": 0,
+          "upstroke_ratio": 0.5,
+          "bar_pattern_reset_count": 0,
+          "pattern_reset_bars": [],
+          "chord_change_interruption_count": 0,
+          "vocal_active_average_sounding_strums": null,
+          "vocal_rest_average_sounding_strums": 8.0,
+          "sustained_only_section": false,
+          "behaves_like_pad": false,
+          "bar_details": [
+            {
+              "bar": 1,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 2,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 3,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": true
+            },
+            {
+              "bar": 4,
+              "subdivision": "eighth",
+              "hand_motion": [
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up",
+                "down",
+                "up"
+              ],
+              "actions": [
+                "partial_strum",
+                "light_upstroke",
+                "muted_strum",
+                "light_upstroke",
+                "partial_strum",
+                "light_upstroke",
+                "accent_strum",
+                "light_upstroke"
+              ],
+              "sounding_strum_count": 8,
+              "hand_motion_count": 8,
+              "pattern_id": "steady_eighths",
+              "last_hand_direction": "up",
+              "next_expected_direction": "down",
+              "pattern_continues_across_bar": false
+            }
+          ]
+        }
+      }
+    }
+  },
+  "diagnostics": [],
+  "warning_count": 0
+}

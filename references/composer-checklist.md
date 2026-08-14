@@ -59,7 +59,20 @@ Complete this after the first full render and before declaring a song finished. 
 - [ ] Is the guitar rhythm/pitch content distinct from the piano?
 - [ ] Does it resemble a playable guitar role or shape?
 - [ ] Does its articulation change by section (mute, strum, power chord, arpeggio, riff, lead response)?
+- [ ] For continuous Acoustic/Electric Rhythm strumming, does the IR preserve down/up hand motion and air strokes rather than storing sounding notes only?
+- [ ] Do Verse and Chorus meet their intended audible strum density without accidental one-hit/downbeat-only bars?
+- [ ] Does hand direction continue across barlines and chord changes without a hidden pattern reset?
+- [ ] On a sixteenth grid, are all 16 alternating hand positions represented even when some are air strokes?
+- [ ] Do partial strokes retrigger only selected strings while safe unselected strings can keep sustaining?
+- [ ] Does each four-bar unit use related variations of one skeleton instead of unrelated per-bar random patterns?
+- [ ] Does Vocal activity change velocity, openness or string count rather than stopping the strumming hand?
+- [ ] Are any `sustained_chord_hit` bars conscious arrangement planes and documented as exceptions?
 - [ ] Does it leave space for the main hook?
+- [ ] For a substantial Lead Guitar part, was `docs/guitar_native_lead_playbook.md` followed?
+- [ ] Does the lead grow from a playable fretboard motif and connected position movement rather than vocal-style short phrases?
+- [ ] Can every adjacent solo pattern explain its connection through shared pitch, slide/release, retained picking rhythm, sequence, compression, extension, or continued contour?
+- [ ] Is the climax deliberately delayed, followed by continued development or thematic recovery rather than immediate shutdown?
+- [ ] Did the real MIDI preserve any intentional `planned_string` / `planned_fret` and channel-safe bend/slide gestures without different-pitch overlap?
 
 ## Piano
 

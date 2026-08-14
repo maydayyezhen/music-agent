@@ -1,0 +1,926 @@
+{
+  "schema_version": 1,
+  "title": "Hands Across the Highway",
+  "phrases": [
+    {
+      "track": "acoustic_guitar",
+      "section": "intro",
+      "instrument": "acoustic_guitar",
+      "role": "intro long uninterrupted acoustic strumming",
+      "section_function": "intro",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.3,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "steady_eighths"
+      ],
+      "palm_mute": false,
+      "gate": 0.86,
+      "strum_spread": 0.05,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "continuous broad motion",
+        "release": "connected across barlines",
+        "seed": 8563
+      }
+    },
+    {
+      "track": "acoustic_guitar",
+      "section": "long_verse",
+      "instrument": "acoustic_guitar",
+      "role": "long_verse long uninterrupted acoustic strumming",
+      "section_function": "long_verse",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.5,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "steady_eighths"
+      ],
+      "palm_mute": false,
+      "gate": 0.86,
+      "strum_spread": 0.05,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "continuous broad motion",
+        "release": "connected across barlines",
+        "seed": 9083
+      }
+    },
+    {
+      "track": "acoustic_guitar",
+      "section": "lift",
+      "instrument": "acoustic_guitar",
+      "role": "lift long uninterrupted acoustic strumming",
+      "section_function": "lift",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.7,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "steady_eighths",
+        "chorus_open"
+      ],
+      "palm_mute": false,
+      "gate": 0.86,
+      "strum_spread": 0.05,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "continuous broad motion",
+        "release": "connected across barlines",
+        "seed": 8438
+      }
+    },
+    {
+      "track": "acoustic_guitar",
+      "section": "first_chorus",
+      "instrument": "acoustic_guitar",
+      "role": "first_chorus long uninterrupted acoustic strumming",
+      "section_function": "first_chorus",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.8,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "chorus_open"
+      ],
+      "palm_mute": false,
+      "gate": 0.86,
+      "strum_spread": 0.05,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "continuous broad motion",
+        "release": "connected across barlines",
+        "seed": 9314
+      }
+    },
+    {
+      "track": "acoustic_guitar",
+      "section": "instrumental_run",
+      "instrument": "acoustic_guitar",
+      "role": "instrumental_run long uninterrupted acoustic strumming",
+      "section_function": "instrumental_run",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.7,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "steady_eighths"
+      ],
+      "palm_mute": false,
+      "gate": 0.86,
+      "strum_spread": 0.05,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "continuous broad motion",
+        "release": "connected across barlines",
+        "seed": 9761
+      }
+    },
+    {
+      "track": "acoustic_guitar",
+      "section": "final_chorus",
+      "instrument": "acoustic_guitar",
+      "role": "final_chorus long uninterrupted acoustic strumming",
+      "section_function": "final_chorus",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.9,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "chorus_open"
+      ],
+      "palm_mute": false,
+      "gate": 0.86,
+      "strum_spread": 0.05,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "continuous broad motion",
+        "release": "connected across barlines",
+        "seed": 9284
+      }
+    },
+    {
+      "track": "acoustic_guitar",
+      "section": "outro",
+      "instrument": "acoustic_guitar",
+      "role": "outro long uninterrupted acoustic strumming",
+      "section_function": "outro",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.4,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Bm"
+        }
+      ],
+      "strumming_patterns": [
+        "steady_eighths"
+      ],
+      "palm_mute": false,
+      "gate": 0.86,
+      "strum_spread": 0.05,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "continuous broad motion",
+        "release": "connected across barlines",
+        "seed": 8576
+      }
+    },
+    {
+      "track": "electric_rhythm_guitar",
+      "section": "long_verse",
+      "instrument": "electric_rhythm_guitar",
+      "role": "long_verse long uninterrupted electric strumming",
+      "section_function": "long_verse",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.5,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "classic_pop"
+      ],
+      "palm_mute": true,
+      "gate": 0.62,
+      "strum_spread": 0.04,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "controlled power-strum drive",
+        "release": "connected across barlines",
+        "seed": 9830
+      }
+    },
+    {
+      "track": "electric_rhythm_guitar",
+      "section": "lift",
+      "instrument": "electric_rhythm_guitar",
+      "role": "lift long uninterrupted electric strumming",
+      "section_function": "lift",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.7,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "steady_eighths"
+      ],
+      "palm_mute": true,
+      "gate": 0.62,
+      "strum_spread": 0.04,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "controlled power-strum drive",
+        "release": "connected across barlines",
+        "seed": 9185
+      }
+    },
+    {
+      "track": "electric_rhythm_guitar",
+      "section": "first_chorus",
+      "instrument": "electric_rhythm_guitar",
+      "role": "first_chorus long uninterrupted electric strumming",
+      "section_function": "first_chorus",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.8,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "classic_pop"
+      ],
+      "palm_mute": false,
+      "gate": 0.74,
+      "strum_spread": 0.04,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "controlled power-strum drive",
+        "release": "connected across barlines",
+        "seed": 10061
+      }
+    },
+    {
+      "track": "electric_rhythm_guitar",
+      "section": "instrumental_run",
+      "instrument": "electric_rhythm_guitar",
+      "role": "instrumental_run long uninterrupted electric strumming",
+      "section_function": "instrumental_run",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.7,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "bass_continuous"
+      ],
+      "palm_mute": false,
+      "gate": 0.74,
+      "strum_spread": 0.04,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "controlled power-strum drive",
+        "release": "connected across barlines",
+        "seed": 10508
+      }
+    },
+    {
+      "track": "electric_rhythm_guitar",
+      "section": "final_chorus",
+      "instrument": "electric_rhythm_guitar",
+      "role": "final_chorus long uninterrupted electric strumming",
+      "section_function": "final_chorus",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.9,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "strumming_patterns": [
+        "classic_pop"
+      ],
+      "palm_mute": false,
+      "gate": 0.74,
+      "strum_spread": 0.04,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "controlled power-strum drive",
+        "release": "connected across barlines",
+        "seed": 10031
+      }
+    },
+    {
+      "track": "electric_rhythm_guitar",
+      "section": "outro",
+      "instrument": "electric_rhythm_guitar",
+      "role": "outro long uninterrupted electric strumming",
+      "section_function": "outro",
+      "phrase_type": "continuous_strumming",
+      "energy": 0.4,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "Bm"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Bm"
+        }
+      ],
+      "strumming_patterns": [
+        "steady_eighths"
+      ],
+      "palm_mute": false,
+      "gate": 0.74,
+      "strum_spread": 0.04,
+      "performance_intent": {
+        "picking": "alternate",
+        "attack": "controlled power-strum drive",
+        "release": "connected across barlines",
+        "seed": 9323
+      }
+    }
+  ]
+}

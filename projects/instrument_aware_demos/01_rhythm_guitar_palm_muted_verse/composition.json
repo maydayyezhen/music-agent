@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "Palm-Muted Verse Study",
+    "tempo": 104,
+    "time_signature": "4/4",
+    "key": "E minor"
+  },
+  "complexity": "standard",
+  "complexity_contour": "custom",
+  "sections": [
+    {
+      "name": "verse",
+      "bars": 8
+    }
+  ],
+  "tracks": {
+    "rhythm_guitar": {
+      "role": "electric rhythm guitar",
+      "sound_library_profile": "general_midi",
+      "sections": {
+        "verse": {
+          "loop_bars": 8,
+          "sound_library_profile": "general_midi",
+          "instrument_phrase": {
+            "instrument": "electric_rhythm_guitar",
+            "role": "rhythm",
+            "phrase_type": "palm_muted_eighths",
+            "energy": 0.52,
+            "performance_intent": {
+              "attack": "intentional",
+              "release": "phrase_shaped",
+              "humanization": "action_based",
+              "seed": 101
+            },
+            "harmony": [
+              {
+                "at": "1:1",
+                "duration": 4,
+                "chord": "E5"
+              },
+              {
+                "at": "2:1",
+                "duration": 4,
+                "chord": "C5"
+              },
+              {
+                "at": "3:1",
+                "duration": 4,
+                "chord": "G5"
+              },
+              {
+                "at": "4:1",
+                "duration": 4,
+                "chord": "D5"
+              },
+              {
+                "at": "5:1",
+                "duration": 4,
+                "chord": "E5"
+              },
+              {
+                "at": "6:1",
+                "duration": 4,
+                "chord": "C5"
+              },
+              {
+                "at": "7:1",
+                "duration": 4,
+                "chord": "D5"
+              },
+              {
+                "at": "8:1",
+                "duration": 4,
+                "chord": "D5"
+              }
+            ],
+            "subdivision": 0.5,
+            "gate": 0.42,
+            "strum_spread": 0.045,
+            "rest_steps": [
+              7,
+              15,
+              23,
+              31,
+              39,
+              47,
+              55,
+              63
+            ],
+            "articulations": [
+              "palm_mute"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

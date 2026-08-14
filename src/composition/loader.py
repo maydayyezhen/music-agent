@@ -80,6 +80,49 @@ def validate_composition(data: dict[str, Any]) -> None:
                 raise ValueError(f"{track_name}.{section_name}.loop_bars must be positive")
             for event in clip.get("events", []):
                 _validate_event(track_name, section_name, event, loop_bars)
+            phrase = clip.get("instrument_phrase")
+            if phrase is not None:
+                if not isinstance(phrase, dict):
+                    raise ValueError(f"{track_name}.{section_name}.instrument_phrase must be an object")
+                for field in ("instrument", "role", "phrase_type", "energy", "performance_intent"):
+                    if field not in phrase:
+                        raise ValueError(f"{track_name}.{section_name}.instrument_phrase is missing {field!r}")
+                if not isinstance(phrase["energy"], (int, float)) or not 0 <= phrase["energy"] <= 1:
+                    raise ValueError(f"{track_name}.{section_name}.instrument_phrase.energy must be 0..1")
+                if not isinstance(phrase["performance_intent"], dict) or "seed" not in phrase["performance_intent"]:
+                    raise ValueError(f"{track_name}.{section_name}.instrument_phrase.performance_intent needs deterministic seed")
+                if (phrase.get("phrase_type") == "continuous_strumming"
+                        and phrase.get("subdivision", "eighth") not in {"eighth", "sixteenth"}):
+                    raise ValueError(f"{track_name}.{section_name}.instrument_phrase.subdivision must be eighth or sixteenth")
+                if "foreground_aware" in phrase and not isinstance(phrase["foreground_aware"], bool):
+                    raise ValueError(f"{track_name}.{section_name}.instrument_phrase.foreground_aware must be boolean")
+                mode = phrase.get("phrase_generation_mode", "legacy_stable")
+                if mode not in {"legacy_stable", "long_form_experimental", "legacy_short_phrase", "long_form"}:
+                    raise ValueError(
+                        f"{track_name}.{section_name}.phrase_generation_mode must be "
+                        "legacy_stable or long_form_experimental"
+                    )
+                if mode in {"long_form_experimental", "long_form"}:
+                    _validate_long_form_phrase(track_name, section_name, phrase, loop_bars)
+                if clip.get("events"):
+                    raise ValueError(f"{track_name}.{section_name} cannot mix events and instrument_phrase")
+            strumming_grid = clip.get("strumming_grid")
+            if strumming_grid is not None:
+                if not isinstance(strumming_grid, list) or len(strumming_grid) != loop_bars:
+                    raise ValueError(f"{track_name}.{section_name}.strumming_grid needs one entry per loop bar")
+                for expected_bar, item in enumerate(strumming_grid, 1):
+                    if item.get("bar") != expected_bar or item.get("subdivision") not in {"eighth", "sixteenth"}:
+                        raise ValueError(f"{track_name}.{section_name}.strumming_grid has invalid bar/subdivision")
+                    motion, actions = item.get("hand_motion"), item.get("actions")
+                    expected_steps = 8 if item["subdivision"] == "eighth" else 16
+                    if not isinstance(motion, list) or not isinstance(actions, list) or len(motion) != expected_steps or len(actions) != expected_steps:
+                        raise ValueError(f"{track_name}.{section_name}.strumming_grid motion/actions must match subdivision")
+                    if any(direction not in {"down", "up"} for direction in motion):
+                        raise ValueError(f"{track_name}.{section_name}.strumming_grid has invalid hand direction")
+                    allowed_actions = {"full_strum", "partial_strum", "single_string_restrike", "muted_strum",
+                                       "ghost_strum", "air_strum", "accent_strum", "light_upstroke", "bass_note"}
+                    if any(action not in allowed_actions for action in actions):
+                        raise ValueError(f"{track_name}.{section_name}.strumming_grid has invalid strum action")
             texture = resolve_texture(track, clip)
             if "continuity" in clip:
                 normalize_continuity(texture, track.get("continuity"), clip["continuity"])
@@ -97,6 +140,63 @@ def validate_composition(data: dict[str, Any]) -> None:
                 variation = clip.get("rhythm_variation", "A")
                 if variation not in {"A", "A'", "B", "B'", "C"}:
                     raise ValueError(f"unsupported rhythm_variation in {track_name}.{section_name}: {variation!r}")
+
+
+def _validate_long_form_phrase(track: str, section: str, phrase: dict[str, Any], loop_bars: int) -> None:
+    required = ("section_arc", "phrase_relationships", "motif_seed", "long_form_phrase_rules", "harmony")
+    missing = [field for field in required if field not in phrase]
+    if missing:
+        raise ValueError(f"{track}.{section} long_form phrase is missing {missing}")
+    arc = phrase["section_arc"]
+    if not isinstance(arc, dict) or arc.get("bars") != [1, loop_bars]:
+        raise ValueError(f"{track}.{section}.section_arc.bars must cover [1, loop_bars]")
+    for curve in ("energy_curve", "density_curve"):
+        values = arc.get(curve)
+        if not isinstance(values, list) or len(values) != loop_bars or any(not isinstance(value, (int, float)) or not 0 <= value <= 1 for value in values):
+            raise ValueError(f"{track}.{section}.section_arc.{curve} needs one 0..1 value per bar")
+    for field in ("peak_bar", "final_resolution_bar"):
+        if not isinstance(arc.get(field), int) or not 1 <= arc[field] <= loop_bars:
+            raise ValueError(f"{track}.{section}.section_arc.{field} must be inside the section")
+    cadence = arc.get("cadence_plan", {})
+    for field in ("strong_cadences", "weak_cadences", "avoid_resolution_bars"):
+        if not isinstance(cadence.get(field), list) or any(not isinstance(bar, int) or not 1 <= bar <= loop_bars for bar in cadence[field]):
+            raise ValueError(f"{track}.{section}.section_arc.cadence_plan.{field} must be a bar list")
+    target = arc.get("delayed_target", {})
+    if "pitch" not in target or not isinstance(target.get("bar"), int) or not 1 <= target["bar"] <= loop_bars:
+        raise ValueError(f"{track}.{section}.section_arc.delayed_target needs pitch and target bar")
+    from src.midi.pitches import note_number
+    note_number(target["pitch"])
+    relationships = phrase["phrase_relationships"]
+    allowed = {"introduce", "repeat", "variation", "sequence", "extension", "fragmentation", "augmentation", "compression", "continuation", "answer", "climax", "resolution"}
+    if not isinstance(relationships, list) or not relationships:
+        raise ValueError(f"{track}.{section}.phrase_relationships must not be empty")
+    ids = {item.get("phrase_id") for item in relationships}
+    previous_end = 0
+    for index, item in enumerate(relationships):
+        if item.get("relationship") not in allowed or item.get("resolution") not in {"deferred", "weak", "strong"}:
+            raise ValueError(f"{track}.{section} has invalid phrase relationship or resolution")
+        bars = item.get("bars")
+        if not isinstance(bars, list) or len(bars) != 2 or bars[0] != previous_end + 1 or not bars[0] <= bars[1] <= loop_bars:
+            raise ValueError(f"{track}.{section} phrase ranges must be ordered and contiguous")
+        if item.get("continuation_from") is not None and item["continuation_from"] not in ids:
+            raise ValueError(f"{track}.{section} has unknown continuation_from")
+        if item.get("continuation_to") is not None and item["continuation_to"] not in ids:
+            raise ValueError(f"{track}.{section} has unknown continuation_to")
+        if not isinstance(item.get("motif_operations"), list):
+            raise ValueError(f"{track}.{section} motif_operations must be a list")
+        previous_end = bars[1]
+    if previous_end != loop_bars:
+        raise ValueError(f"{track}.{section} phrase relationships must cover the section")
+    motif = phrase["motif_seed"]
+    if not isinstance(motif, list) or len(motif) < 3:
+        raise ValueError(f"{track}.{section}.motif_seed needs at least three notes")
+    for item in motif:
+        if not all(field in item for field in ("offset", "duration", "degree")):
+            raise ValueError(f"{track}.{section}.motif_seed items need offset, duration and degree")
+        if item.get("cross_bar") and not item.get("cross_bar_reason"):
+            raise ValueError(f"{track}.{section} cross-bar motif notes require cross_bar_reason")
+        if item.get("cross_bar_reason") not in {None, "delayed_resolution", "target_sustain", "suspension", "phrase_continuation", "anticipation", "sustained_climax"}:
+            raise ValueError(f"{track}.{section} has unsupported cross_bar_reason")
 
 
 def _validate_harmony_spans(track: str, section: str, spans: Any, loop_bars: int, beats_per_bar: int) -> None:

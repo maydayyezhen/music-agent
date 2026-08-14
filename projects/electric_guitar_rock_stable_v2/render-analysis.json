@@ -1,0 +1,180 @@
+{
+  "mix": {
+    "duration_seconds": 219.3584807256236,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak_linear": 0.21551513671875,
+    "peak_dbfs": -13.330444434652794,
+    "rms_dbfs": -31.10844942087961,
+    "clipped_samples": 0,
+    "sha256": "418eb1dabcb2f33e01f80f4006c593dfcc03600f32c133c1b0f683521f080b2a"
+  },
+  "section_audio": {
+    "intro": {
+      "bars": 8,
+      "rms_dbfs": -35.507132661759144
+    },
+    "verse_1": {
+      "bars": 12,
+      "rms_dbfs": -34.762513707350095
+    },
+    "pre_chorus": {
+      "bars": 8,
+      "rms_dbfs": -31.931561248918335
+    },
+    "chorus_1": {
+      "bars": 16,
+      "rms_dbfs": -29.492578112287575
+    },
+    "verse_2": {
+      "bars": 12,
+      "rms_dbfs": -32.80785411474054
+    },
+    "bridge_relay": {
+      "bars": 16,
+      "rms_dbfs": -31.924319239090167
+    },
+    "final_chorus": {
+      "bars": 16,
+      "rms_dbfs": -28.012323260774785
+    },
+    "outro": {
+      "bars": 8,
+      "rms_dbfs": -33.185354338094825
+    }
+  },
+  "stems": {
+    "bass": {
+      "duration_seconds": 219.3584807256236,
+      "sample_rate": 44100,
+      "channels": 2,
+      "peak_linear": 0.217254638671875,
+      "peak_dbfs": -13.260618840454331,
+      "rms_dbfs": -28.490308498575743,
+      "clipped_samples": 0,
+      "sha256": "3f6db5beaf4130e6888d52b81eb669ce2913b6291b5f0cc124f9ee8bafe65bf3"
+    },
+    "drums": {
+      "duration_seconds": 219.3584807256236,
+      "sample_rate": 44100,
+      "channels": 2,
+      "peak_linear": 0.415771484375,
+      "peak_dbfs": -7.622906000103466,
+      "rms_dbfs": -29.057766239751505,
+      "clipped_samples": 0,
+      "sha256": "339b0b73e0e0ca9e83be56ecb91f61852bf95692498967b989eb53b436be9d97"
+    },
+    "lead_guitar": {
+      "duration_seconds": 218.96417233560092,
+      "sample_rate": 44100,
+      "channels": 2,
+      "peak_linear": 0.1497802734375,
+      "peak_dbfs": -16.490907618095026,
+      "rms_dbfs": -34.37134777602932,
+      "clipped_samples": 0,
+      "sha256": "fddfd221b8bbac2cb5dd76d5753be79fca26d20f56e906c556b13fe375914921"
+    },
+    "organ": {
+      "duration_seconds": 219.3584807256236,
+      "sample_rate": 44100,
+      "channels": 2,
+      "peak_linear": 0.22174072265625,
+      "peak_dbfs": -13.083090828660442,
+      "rms_dbfs": -29.963521246188144,
+      "clipped_samples": 0,
+      "sha256": "5b1c8fe8472b32e42a8b866764646e9023dc171d7f98be9f76c80bcaa8291eb0"
+    },
+    "rhythm_guitar": {
+      "duration_seconds": 219.14993197278912,
+      "sample_rate": 44100,
+      "channels": 2,
+      "peak_linear": 0.377288818359375,
+      "peak_dbfs": -8.466521314309345,
+      "rms_dbfs": -27.325694010725385,
+      "clipped_samples": 0,
+      "sha256": "8eab00d940a42fe9dff17f85ef33debd8d08231f4e594f28158b2635c3d46d5d"
+    },
+    "strings": {
+      "duration_seconds": 219.3584807256236,
+      "sample_rate": 44100,
+      "channels": 2,
+      "peak_linear": 0.31219482421875,
+      "peak_dbfs": -10.111486024951155,
+      "rms_dbfs": -30.3385713685366,
+      "clipped_samples": 0,
+      "sha256": "bd56f6855efd185212089ed0ef13850af7aacd25889996fc19ae6e73d66550c4"
+    }
+  },
+  "midi": {
+    "bass": {
+      "same_pitch_overlap": 0,
+      "different_pitch_overlap": null,
+      "stuck": 0,
+      "unmatched_note_off": 0,
+      "tiny_notes": 0,
+      "pitchbend_messages": 0,
+      "note_on_count": 336,
+      "bridge_note_on_count": null
+    },
+    "drums": {
+      "same_pitch_overlap": 0,
+      "different_pitch_overlap": null,
+      "stuck": 0,
+      "unmatched_note_off": 0,
+      "tiny_notes": 0,
+      "pitchbend_messages": 0,
+      "note_on_count": 1151,
+      "bridge_note_on_count": null
+    },
+    "lead_guitar": {
+      "same_pitch_overlap": 0,
+      "different_pitch_overlap": 0,
+      "stuck": 0,
+      "unmatched_note_off": 0,
+      "tiny_notes": 0,
+      "pitchbend_messages": 0,
+      "note_on_count": 175,
+      "bridge_note_on_count": 0
+    },
+    "organ": {
+      "same_pitch_overlap": 0,
+      "different_pitch_overlap": null,
+      "stuck": 0,
+      "unmatched_note_off": 0,
+      "tiny_notes": 0,
+      "pitchbend_messages": 0,
+      "note_on_count": 191,
+      "bridge_note_on_count": null
+    },
+    "rhythm_guitar": {
+      "same_pitch_overlap": 0,
+      "different_pitch_overlap": null,
+      "stuck": 0,
+      "unmatched_note_off": 0,
+      "tiny_notes": 0,
+      "pitchbend_messages": 0,
+      "note_on_count": 1554,
+      "bridge_note_on_count": null
+    },
+    "strings": {
+      "same_pitch_overlap": 0,
+      "different_pitch_overlap": null,
+      "stuck": 0,
+      "unmatched_note_off": 0,
+      "tiny_notes": 0,
+      "pitchbend_messages": 0,
+      "note_on_count": 174,
+      "bridge_note_on_count": null
+    },
+    "full_song": {
+      "same_pitch_overlap": 0,
+      "different_pitch_overlap": null,
+      "stuck": 0,
+      "unmatched_note_off": 0,
+      "tiny_notes": 0,
+      "pitchbend_messages": 0,
+      "note_on_count": 3581,
+      "bridge_note_on_count": null
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "lead_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 30,
+    "gm_name": "Distortion Guitar"
+  },
+  "rhythm_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 29,
+    "gm_name": "Overdriven Guitar"
+  },
+  "bass": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 33,
+    "gm_name": "Electric Bass finger"
+  },
+  "drums": {
+    "engine": "fluidsynth",
+    "channel": 10,
+    "bank": 128,
+    "program": 16,
+    "gm_name": "Power Drum Kit"
+  },
+  "organ": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 18,
+    "gm_name": "Rock Organ"
+  },
+  "strings": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 48,
+    "gm_name": "String Ensemble 1"
+  }
+}

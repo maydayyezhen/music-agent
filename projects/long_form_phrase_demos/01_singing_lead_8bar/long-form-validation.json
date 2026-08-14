@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "title": "Eight-Bar Singing Lead",
+  "sections": [
+    {
+      "track": "lead_guitar",
+      "section": "solo",
+      "assessment": {
+        "bars": 8,
+        "average_phrase_length_bars": 2,
+        "independent_phrase_resets": 0,
+        "strong_cadences": 1,
+        "strong_cadence_bars": [
+          8
+        ],
+        "cross_bar_notes": 3,
+        "motif_developments": 3,
+        "motif_operations": [
+          "augmentation",
+          "change_ending",
+          "rhythmic_extension",
+          "transpose_up"
+        ],
+        "identical_short_phrase_repetitions": 0,
+        "breath_state_resets": 0,
+        "peak_pitch": 79,
+        "peak_bars": [
+          6
+        ],
+        "planned_peak_bar": 6,
+        "vibrato_bars": [],
+        "boundary_continuations": 3,
+        "full_rest_bars": [],
+        "maximum_consecutive_full_rest_bars": 0,
+        "register_curve_median_midi": [
+          67,
+          69.0,
+          67,
+          71.0,
+          74,
+          76.5,
+          68.0,
+          73
+        ],
+        "register_curve_peak_bar": 6,
+        "articulation_end_concentration_ratio": 0.0,
+        "relationship_counts": {
+          "introduce": 1,
+          "continuation": 1,
+          "variation": 1,
+          "resolution": 1
+        },
+        "continuous_narrative_bars": 8,
+        "sees_full_section_harmony": true
+      },
+      "section_arc": {
+        "section_id": "lead_8_bar_arc",
+        "bars": [
+          1,
+          8
+        ],
+        "opening_register": "mid",
+        "peak_register": "high",
+        "peak_bar": 6,
+        "final_resolution_bar": 8,
+        "energy_curve": [
+          0.36,
+          0.476,
+          0.592,
+          0.708,
+          0.824,
+          0.94,
+          0.68,
+          0.44
+        ],
+        "density_curve": [
+          0.528,
+          0.563,
+          0.598,
+          0.632,
+          0.667,
+          0.702,
+          0.624,
+          0.552
+        ],
+        "cadence_plan": {
+          "strong_cadences": [
+            8
+          ],
+          "weak_cadences": [
+            4
+          ],
+          "avoid_resolution_bars": [
+            2,
+            6
+          ]
+        },
+        "breath_bars": [
+          2,
+          4,
+          6
+        ],
+        "cross_bar_note_bars": [
+          2,
+          4,
+          6,
+          6
+        ],
+        "delayed_target": {
+          "pitch": "B5",
+          "bar": 6
+        }
+      },
+      "phrase_relationships": [
+        {
+          "phrase_id": "A1",
+          "bars": [
+            1,
+            2
+          ],
+          "relationship": "introduce",
+          "continuation_from": null,
+          "continuation_to": "A2",
+          "resolution": "deferred",
+          "motif_operations": []
+        },
+        {
+          "phrase_id": "A2",
+          "bars": [
+            3,
+            4
+          ],
+          "relationship": "continuation",
+          "continuation_from": "A1",
+          "continuation_to": "A3",
+          "resolution": "deferred",
+          "motif_operations": [
+            "rhythmic_extension",
+            "change_ending"
+          ]
+        },
+        {
+          "phrase_id": "A3",
+          "bars": [
+            5,
+            6
+          ],
+          "relationship": "variation",
+          "continuation_from": "A2",
+          "continuation_to": "C",
+          "resolution": "deferred",
+          "motif_operations": [
+            "transpose_up",
+            "change_ending"
+          ]
+        },
+        {
+          "phrase_id": "C",
+          "bars": [
+            7,
+            8
+          ],
+          "relationship": "resolution",
+          "continuation_from": "A3",
+          "continuation_to": null,
+          "resolution": "strong",
+          "motif_operations": [
+            "augmentation"
+          ]
+        }
+      ],
+      "melodic_state_trace": [
+        {
+          "phrase_id": "A1",
+          "point": "start",
+          "active_motif": "motif_A",
+          "motif_version": 0,
+          "current_register": "mid",
+          "direction": "ascending",
+          "tension": 0.36,
+          "resolved": false,
+          "continuation_required": true,
+          "target_pitch": 83,
+          "target_bar": 6,
+          "last_interval": 0,
+          "last_note_function": "chord_tone",
+          "phrase_breath_remaining": 0.0,
+          "cadence_strength": 0.0
+        },
+        {
+          "phrase_id": "A1",
+          "point": "end",
+          "active_motif": "motif_A",
+          "motif_version": 1,
+          "current_register": "mid_high",
+          "direction": "ascending",
+          "tension": 0.476,
+          "resolved": false,
+          "continuation_required": true,
+          "target_pitch": 83,
+          "target_bar": 6,
+          "last_interval": 4,
+          "last_note_function": "non_chord_tone",
+          "phrase_breath_remaining": 0.5,
+          "cadence_strength": 0.15,
+          "rest_type": "breath"
+        },
+        {
+          "phrase_id": "A2",
+          "point": "start",
+          "active_motif": "motif_A",
+          "motif_version": 1,
+          "current_register": "mid_high",
+          "direction": "ascending",
+          "tension": 0.476,
+          "resolved": false,
+          "continuation_required": true,
+          "target_pitch": 83,
+          "target_bar": 6,
+          "last_interval": 4,
+          "last_note_function": "non_chord_tone",
+          "phrase_breath_remaining": 0.5,
+          "cadence_strength": 0.15
+        },
+        {
+          "phrase_id": "A2",
+          "point": "end",
+          "active_motif": "motif_A",
+          "motif_version": 2,
+          "current_register": "mid_high",
+          "direction": "ascending",
+          "tension": 0.708,
+          "resolved": false,
+          "continuation_required": true,
+          "target_pitch": 83,
+          "target_bar": 6,
+          "last_interval": 4,
+          "last_note_function": "non_chord_tone",
+          "phrase_breath_remaining": 0.5,
+          "cadence_strength": 0.15,
+          "rest_type": "breath"
+        },
+        {
+          "phrase_id": "A3",
+          "point": "start",
+          "active_motif": "motif_A",
+          "motif_version": 2,
+          "current_register": "mid_high",
+          "direction": "ascending",
+          "tension": 0.708,
+          "resolved": false,
+          "continuation_required": true,
+          "target_pitch": 83,
+          "target_bar": 6,
+          "last_interval": 4,
+          "last_note_function": "non_chord_tone",
+          "phrase_breath_remaining": 0.5,
+          "cadence_strength": 0.15
+        },
+        {
+          "phrase_id": "A3",
+          "point": "end",
+          "active_motif": "motif_A",
+          "motif_version": 3,
+          "current_register": "high",
+          "direction": "ascending",
+          "tension": 0.94,
+          "resolved": false,
+          "continuation_required": true,
+          "target_pitch": 83,
+          "target_bar": 6,
+          "last_interval": 5,
+          "last_note_function": "chord_tone",
+          "phrase_breath_remaining": 0.5,
+          "cadence_strength": 0.15,
+          "rest_type": "breath"
+        },
+        {
+          "phrase_id": "C",
+          "point": "start",
+          "active_motif": "motif_A",
+          "motif_version": 3,
+          "current_register": "high",
+          "direction": "ascending",
+          "tension": 0.94,
+          "resolved": false,
+          "continuation_required": true,
+          "target_pitch": 83,
+          "target_bar": 6,
+          "last_interval": 5,
+          "last_note_function": "chord_tone",
+          "phrase_breath_remaining": 0.5,
+          "cadence_strength": 0.15
+        },
+        {
+          "phrase_id": "C",
+          "point": "end",
+          "active_motif": "motif_A",
+          "motif_version": 4,
+          "current_register": "mid_high",
+          "direction": "ascending",
+          "tension": 0.44,
+          "resolved": true,
+          "continuation_required": false,
+          "target_pitch": 83,
+          "target_bar": 6,
+          "last_interval": 3,
+          "last_note_function": "chord_tone",
+          "phrase_breath_remaining": 0.0,
+          "cadence_strength": 1.0,
+          "rest_type": "structural_end"
+        }
+      ]
+    }
+  ],
+  "diagnostics": [],
+  "error_count": 0,
+  "warning_count": 0
+}

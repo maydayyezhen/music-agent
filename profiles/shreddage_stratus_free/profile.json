@@ -1,0 +1,11 @@
+{
+  "id": "shreddage_stratus_free",
+  "description": "Capability placeholder. Exact triggers must be filled only from the installed-version manual.",
+  "supports": {"keyswitch": true, "cc": [], "pitch_bend": true, "mpe": false},
+  "pitch_bend_range": 2,
+  "articulations": {
+    "sustain": {"fallback": {"gate_ratio": 1.0, "velocity_delta": 0}},
+    "palm_mute": {"fallback": {"gate_ratio": 0.55, "velocity_delta": -4}},
+    "accent": {"fallback": {"gate_ratio": 1.0, "velocity_delta": 6}}
+  }
+}

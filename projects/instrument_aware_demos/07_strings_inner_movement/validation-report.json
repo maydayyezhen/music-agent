@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "title": "Strings Inner-Movement Study",
+  "track_metrics": {
+    "strings": {
+      "instrument": "strings",
+      "sections": {
+        "arc": {
+          "instrument": "strings",
+          "event_count": 20,
+          "note_count": 20,
+          "range": [
+            55,
+            83
+          ],
+          "median_gap_beats": 4.0,
+          "velocity_unique": 18,
+          "velocity_stddev": 6.42339474110069,
+          "articulations": {
+            "legato": 20,
+            "sustain": 20,
+            "crescendo": 10
+          },
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 2.5,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 7.76
+          }
+        }
+      }
+    }
+  },
+  "section_density": {
+    "arc": {
+      "events_per_bar": 2.5,
+      "by_track": {
+        "strings": 2.5
+      },
+      "active_tracks": 1
+    }
+  },
+  "articulation_coverage": {
+    "legato": 20,
+    "sustain": 20,
+    "crescendo": 10
+  },
+  "profile_coverage": {
+    "strings.arc": {
+      "profile": "general_midi",
+      "articulation_coverage": {
+        "legato": {
+          "mapped": 0,
+          "fallback": 20,
+          "unsupported": 0
+        },
+        "sustain": {
+          "mapped": 0,
+          "fallback": 20,
+          "unsupported": 0
+        },
+        "crescendo": {
+          "mapped": 0,
+          "fallback": 10,
+          "unsupported": 0
+        }
+      }
+    }
+  },
+  "phrase_variation": {
+    "diagnostic_count": 0
+  },
+  "diagnostics": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "info_count": 0
+}

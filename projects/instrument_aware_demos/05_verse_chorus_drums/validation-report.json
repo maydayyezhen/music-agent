@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "title": "Verse Chorus Drum Study",
+  "track_metrics": {
+    "drums": {
+      "instrument": "drum_kit",
+      "sections": {
+        "verse": {
+          "instrument": "drum_kit",
+          "event_count": 78,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 1.0,
+          "velocity_unique": 10,
+          "velocity_stddev": 13.093836473057427,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 9.75,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "chorus": {
+          "instrument": "drum_kit",
+          "event_count": 115,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 10,
+          "velocity_stddev": 16.943794554734293,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 14.375,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        }
+      }
+    }
+  },
+  "section_density": {
+    "verse": {
+      "events_per_bar": 9.75,
+      "by_track": {
+        "drums": 9.75
+      },
+      "active_tracks": 1
+    },
+    "chorus": {
+      "events_per_bar": 14.375,
+      "by_track": {
+        "drums": 14.375
+      },
+      "active_tracks": 1
+    }
+  },
+  "articulation_coverage": {},
+  "profile_coverage": {
+    "drums.verse": {
+      "profile": "general_midi",
+      "articulation_coverage": {}
+    },
+    "drums.chorus": {
+      "profile": "general_midi",
+      "articulation_coverage": {}
+    }
+  },
+  "phrase_variation": {
+    "diagnostic_count": 0
+  },
+  "diagnostics": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "info_count": 0
+}

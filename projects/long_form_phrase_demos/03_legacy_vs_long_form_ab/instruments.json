@@ -1,0 +1,7 @@
+{
+  "lead_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 30
+  }
+}

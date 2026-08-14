@@ -1,0 +1,43 @@
+{
+  "global_target": {
+    "lead": {
+      "level": "standard",
+      "rhythm": 3,
+      "harmony": 3,
+      "arrangement": 3,
+      "melodic_ornamentation": 2,
+      "density": 3,
+      "variation": 3,
+      "budget": 11,
+      "melody_rest_ratio_guide": [
+        0.15,
+        0.4
+      ]
+    }
+  },
+  "track_metrics": {
+    "lead_guitar": {
+      "lead": {
+        "note_density": 1.5,
+        "rest_ratio": 0.4306249999999999,
+        "duration_entropy": 3.2516291673878226,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 20.805555555555554,
+        "pattern_repetition": 0.0,
+        "event_count": 12
+      }
+    }
+  },
+  "section_metrics": {
+    "lead": {
+      "section_density": 1.5,
+      "active_tracks": 1,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.0,
+      "target_budget": 11,
+      "declared_budget_total": 0
+    }
+  },
+  "warnings": [],
+  "warning_count": 0
+}

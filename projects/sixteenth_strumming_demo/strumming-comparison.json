@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "metrics": {
+    "before": {
+      "baseline": {
+        "potential_hand_motions_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "actual_attacks_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "attack_size_ratio": {
+          "single": 0.0,
+          "double": 0.125,
+          "triple": 0.75,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.0,
+        "downbeat_reattack_ratio": 1.0,
+        "cross_bar_sustain_ratio": 0.0,
+        "unique_variants_in_four_bars": 1,
+        "average_velocity": 81.06,
+        "full_strum_attack_ratio": 0.0,
+        "long_hand_gap_count": 0,
+        "event_count": 96
+      },
+      "sixteenth_grid": {
+        "potential_hand_motions_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "actual_attacks_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "attack_size_ratio": {
+          "single": 0.0,
+          "double": 0.125,
+          "triple": 0.75,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.0,
+        "downbeat_reattack_ratio": 1.0,
+        "cross_bar_sustain_ratio": 0.0,
+        "unique_variants_in_four_bars": 1,
+        "average_velocity": 81,
+        "full_strum_attack_ratio": 0.0,
+        "long_hand_gap_count": 0,
+        "event_count": 96
+      },
+      "per_string_sustain": {
+        "potential_hand_motions_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "actual_attacks_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "attack_size_ratio": {
+          "single": 0.0,
+          "double": 0.125,
+          "triple": 0.75,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.0,
+        "downbeat_reattack_ratio": 1.0,
+        "cross_bar_sustain_ratio": 0.0,
+        "unique_variants_in_four_bars": 1,
+        "average_velocity": 81.11,
+        "full_strum_attack_ratio": 0.0,
+        "long_hand_gap_count": 0,
+        "event_count": 96
+      },
+      "foreground_thinning": {
+        "potential_hand_motions_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "actual_attacks_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "attack_size_ratio": {
+          "single": 0.0,
+          "double": 0.125,
+          "triple": 0.75,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.0,
+        "downbeat_reattack_ratio": 1.0,
+        "cross_bar_sustain_ratio": 0.0,
+        "unique_variants_in_four_bars": 1,
+        "average_velocity": 81.09,
+        "full_strum_attack_ratio": 0.0,
+        "long_hand_gap_count": 0,
+        "event_count": 96
+      },
+      "midi_integrity": {
+        "same_pitch_overlaps": 0,
+        "unmatched_note_offs": 0,
+        "stuck_notes": 0
+      }
+    },
+    "after": {
+      "baseline": {
+        "potential_hand_motions_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "actual_attacks_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "attack_size_ratio": {
+          "single": 0.0,
+          "double": 0.125,
+          "triple": 0.75,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.0,
+        "downbeat_reattack_ratio": 1.0,
+        "cross_bar_sustain_ratio": 0.0,
+        "unique_variants_in_four_bars": 1,
+        "average_velocity": 81.06,
+        "full_strum_attack_ratio": 0.0,
+        "long_hand_gap_count": 0,
+        "event_count": 96
+      },
+      "sixteenth_grid": {
+        "potential_hand_motions_per_bar": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "actual_attacks_per_bar": [
+          12,
+          12,
+          13,
+          11
+        ],
+        "attack_size_ratio": {
+          "single": 0.2917,
+          "double": 0.0833,
+          "triple": 0.5,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.0,
+        "downbeat_reattack_ratio": 0.75,
+        "cross_bar_sustain_ratio": 0.0,
+        "unique_variants_in_four_bars": 4,
+        "average_velocity": 85.75,
+        "full_strum_attack_ratio": 0.125,
+        "long_hand_gap_count": 0,
+        "event_count": 118
+      },
+      "per_string_sustain": {
+        "potential_hand_motions_per_bar": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "actual_attacks_per_bar": [
+          12,
+          12,
+          13,
+          11
+        ],
+        "attack_size_ratio": {
+          "single": 0.2917,
+          "double": 0.0833,
+          "triple": 0.5,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.9792,
+        "downbeat_reattack_ratio": 0.75,
+        "cross_bar_sustain_ratio": 1.0,
+        "unique_variants_in_four_bars": 4,
+        "average_velocity": 85.66,
+        "full_strum_attack_ratio": 0.125,
+        "long_hand_gap_count": 0,
+        "event_count": 118
+      },
+      "foreground_thinning": {
+        "potential_hand_motions_per_bar": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "actual_attacks_per_bar": [
+          12,
+          12,
+          13,
+          11
+        ],
+        "attack_size_ratio": {
+          "single": 0.2917,
+          "double": 0.0833,
+          "triple": 0.5,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.9792,
+        "downbeat_reattack_ratio": 0.75,
+        "cross_bar_sustain_ratio": 1.0,
+        "unique_variants_in_four_bars": 4,
+        "average_velocity": 85.75,
+        "full_strum_attack_ratio": 0.125,
+        "long_hand_gap_count": 0,
+        "event_count": 118
+      },
+      "midi_integrity": {
+        "same_pitch_overlaps": 0,
+        "unmatched_note_offs": 0,
+        "stuck_notes": 0
+      }
+    },
+    "with_foreground": {
+      "baseline": {
+        "potential_hand_motions_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "actual_attacks_per_bar": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "attack_size_ratio": {
+          "single": 0.0,
+          "double": 0.125,
+          "triple": 0.75,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.0,
+        "downbeat_reattack_ratio": 1.0,
+        "cross_bar_sustain_ratio": 0.0,
+        "unique_variants_in_four_bars": 1,
+        "average_velocity": 81.06,
+        "full_strum_attack_ratio": 0.0,
+        "long_hand_gap_count": 0,
+        "event_count": 96
+      },
+      "sixteenth_grid": {
+        "potential_hand_motions_per_bar": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "actual_attacks_per_bar": [
+          12,
+          12,
+          13,
+          11
+        ],
+        "attack_size_ratio": {
+          "single": 0.2917,
+          "double": 0.0833,
+          "triple": 0.5,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.0,
+        "downbeat_reattack_ratio": 0.75,
+        "cross_bar_sustain_ratio": 0.0,
+        "unique_variants_in_four_bars": 4,
+        "average_velocity": 85.75,
+        "full_strum_attack_ratio": 0.125,
+        "long_hand_gap_count": 0,
+        "event_count": 118
+      },
+      "per_string_sustain": {
+        "potential_hand_motions_per_bar": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "actual_attacks_per_bar": [
+          12,
+          12,
+          13,
+          11
+        ],
+        "attack_size_ratio": {
+          "single": 0.2917,
+          "double": 0.0833,
+          "triple": 0.5,
+          "four_or_more": 0.125
+        },
+        "previous_attack_sustain_ratio": 0.9792,
+        "downbeat_reattack_ratio": 0.75,
+        "cross_bar_sustain_ratio": 1.0,
+        "unique_variants_in_four_bars": 4,
+        "average_velocity": 85.66,
+        "full_strum_attack_ratio": 0.125,
+        "long_hand_gap_count": 0,
+        "event_count": 118
+      },
+      "foreground_thinning": {
+        "potential_hand_motions_per_bar": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "actual_attacks_per_bar": [
+          11,
+          11,
+          12,
+          10
+        ],
+        "attack_size_ratio": {
+          "single": 0.2273,
+          "double": 0.2273,
+          "triple": 0.4773,
+          "four_or_more": 0.0682
+        },
+        "previous_attack_sustain_ratio": 0.9773,
+        "downbeat_reattack_ratio": 0.75,
+        "cross_bar_sustain_ratio": 1.0,
+        "unique_variants_in_four_bars": 4,
+        "average_velocity": 76.12,
+        "full_strum_attack_ratio": 0.0682,
+        "long_hand_gap_count": 0,
+        "event_count": 105
+      },
+      "midi_integrity": {
+        "same_pitch_overlaps": 0,
+        "unmatched_note_offs": 0,
+        "stuck_notes": 0
+      }
+    }
+  },
+  "foreground_before_after": {
+    "attacks_per_bar": [
+      12,
+      11
+    ],
+    "average_velocity": [
+      85.75,
+      76.12
+    ],
+    "full_strum_attack_ratio": [
+      0.125,
+      0.0682
+    ],
+    "hand_motions_per_bar": [
+      [
+        16,
+        16,
+        16,
+        16
+      ],
+      [
+        16,
+        16,
+        16,
+        16
+      ]
+    ]
+  },
+  "foreground_activity": [
+    {
+      "bar": 1,
+      "active_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10
+      ],
+      "onset_steps": [
+        0,
+        8
+      ],
+      "release_steps": [
+        4,
+        5,
+        6,
+        7,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "long_hold_steps": [
+        4,
+        5
+      ]
+    },
+    {
+      "bar": 2,
+      "active_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "onset_steps": [
+        0
+      ],
+      "release_steps": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "long_hold_steps": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "bar": 3,
+      "active_steps": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "onset_steps": [
+        2,
+        6
+      ],
+      "release_steps": [
+        0,
+        1,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "long_hold_steps": []
+    },
+    {
+      "bar": 4,
+      "active_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "onset_steps": [
+        0
+      ],
+      "release_steps": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "long_hold_steps": [
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ]
+}

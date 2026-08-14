@@ -6,6 +6,27 @@
 composition.json -> standalone MIDI tracks -> FluidSynth/SF2 -> WAV stems -> stereo mix.wav
 ```
 
+新工程还可保留乐器语义：
+
+```text
+musical intent -> instrument_phrase -> neutral performance events
+-> sound-library profile -> MIDI -> stems -> mix
+```
+
+旧 `events` 路径保持兼容；新路径让吉他、贝斯、鼓、键盘和弦乐从 phrase
+产生阶段就采用各自的演奏逻辑，而不是对同一钢琴卷帘随机调整力度和时值。
+
+Lead Guitar 的正式默认模式为 `legacy_stable`。实验性的
+`phrase_generation_mode: long_form_experimental` 会先规划完整 8–16 小节的 section arc、
+相关联的子乐句和持续 melodic state，最后才生成音符；它必须显式开启。格式见
+`docs/long_form_phrase_schema.md`，可运行示例在 `projects/long_form_phrase_demos/`。
+
+正式创作较长的电吉他主题或 Solo 前，必须阅读
+`docs/guitar_native_lead_playbook.md`。该手册记录了已验证作品 **The Distance Still
+Burns** 的成功经验：先写可演奏主题与连续指板运动，再写换把、sequence、bend target
+和回收；真实渲染后才修系统。对应 V1/V2、独奏 MIDI、诊断和对比证据位于
+`projects/guitar_native_rock_proof/`。它是方法参考，不是要求复制相同音符或曲式。
+
 没有 Web、云服务、DAW 或 VST 依赖。作曲、音色映射、渲染和混音相互解耦。
 
 可选的人声层同样完全本地，支持中文、英文、日文：只有歌曲目录明确存在 `vocals.json` 且命令加入 `--with-vocals` 时，才会加载对应歌声模型。普通配乐、BGM 和纯音乐仍走原来的轻量伴奏流程。
@@ -77,6 +98,50 @@ py -3.11 -m venv .venv
 - `drum` 使用 GM 鼓名（如 `kick`、`snare`、`closed_hat`、`high_tom`）或 MIDI note number。
 - `rest` 可用于明确表达留白；没有事件的区域天然也是休止。
 - `loop_bars` 表示这一小段在所属 section 内循环多少小节。
+
+### Instrument-aware phrase
+
+需要真实乐器逻辑时，clip 使用 `instrument_phrase`，不要同时填写最终 `events`：
+
+```json
+{
+  "loop_bars": 4,
+  "sound_library_profile": "general_midi",
+  "instrument_phrase": {
+    "instrument": "electric_rhythm_guitar",
+    "role": "rhythm",
+    "phrase_type": "palm_muted_eighths",
+    "energy": 0.55,
+    "harmony": [
+      {"at": "1:1", "duration": 4, "chord": "E5"}
+    ],
+    "articulations": ["palm_mute", "accent"],
+    "performance_intent": {
+      "attack": "tight",
+      "release": "controlled",
+      "humanization": "action_based",
+      "seed": 17
+    }
+  }
+}
+```
+
+渲染语义工程时自动生成 `semantic_phrases.json` 和
+`instrument-validation.json`。单独检查：
+
+```powershell
+.\.venv\Scripts\python.exe scripts\critic_instruments.py <song> --write
+```
+
+规则与架构见 `docs/instrument_research/`。七个最小真实渲染工程位于
+`projects/instrument_aware_demos/`。
+
+### Sound-library profile
+
+`profiles/` 把 `palm_mute`、`slide`、`legato` 等语义翻译为特定音源的
+keyswitch、CC、pitch bend 或明确的降级方案。General MIDI 不支持真实采样切换时，
+只使用已声明的 gate/velocity fallback，并在 articulation coverage 中报告；作曲器
+不会虚构音源能力。
 
 例如“把 chorus 的 bass 写得活一点”只需编辑：
 

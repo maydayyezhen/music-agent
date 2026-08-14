@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "title": "Verse Chorus Drum Study",
+    "tempo": 116,
+    "time_signature": "4/4",
+    "key": "E minor"
+  },
+  "complexity": "standard",
+  "complexity_contour": "custom",
+  "sections": [
+    {
+      "name": "verse",
+      "bars": 8
+    },
+    {
+      "name": "chorus",
+      "bars": 8
+    }
+  ],
+  "tracks": {
+    "drums": {
+      "role": "drum kit",
+      "sections": {
+        "verse": {
+          "loop_bars": 8,
+          "sound_library_profile": "general_midi",
+          "instrument_phrase": {
+            "instrument": "drum_kit",
+            "role": "drums",
+            "phrase_type": "rock_verse",
+            "energy": 0.45,
+            "performance_intent": {
+              "attack": "intentional",
+              "release": "phrase_shaped",
+              "humanization": "action_based",
+              "seed": 106
+            },
+            "bars": 8,
+            "transition_fill": true
+          }
+        },
+        "chorus": {
+          "loop_bars": 8,
+          "sound_library_profile": "general_midi",
+          "instrument_phrase": {
+            "instrument": "drum_kit",
+            "role": "drums",
+            "phrase_type": "chorus_with_fill",
+            "energy": 0.86,
+            "performance_intent": {
+              "attack": "intentional",
+              "release": "phrase_shaped",
+              "humanization": "action_based",
+              "seed": 107
+            },
+            "bars": 8,
+            "transition_fill": true
+          }
+        }
+      }
+    }
+  }
+}

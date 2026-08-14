@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "title": "Open Power Chorus Study",
+  "track_metrics": {
+    "rhythm_guitar": {
+      "instrument": "electric_rhythm_guitar",
+      "sections": {
+        "chorus": {
+          "instrument": "electric_rhythm_guitar",
+          "event_count": 78,
+          "note_count": 78,
+          "range": [
+            40,
+            62
+          ],
+          "median_gap_beats": 0.07000000000000028,
+          "velocity_unique": 14,
+          "velocity_stddev": 3.720953692799458,
+          "articulations": {
+            "sustain": 78,
+            "accent": 78
+          },
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 9.75,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 0.17999999999999972
+          }
+        }
+      }
+    }
+  },
+  "section_density": {
+    "chorus": {
+      "events_per_bar": 9.75,
+      "by_track": {
+        "rhythm_guitar": 9.75
+      },
+      "active_tracks": 1
+    }
+  },
+  "articulation_coverage": {
+    "sustain": 78,
+    "accent": 78
+  },
+  "profile_coverage": {
+    "rhythm_guitar.chorus": {
+      "profile": "general_midi",
+      "articulation_coverage": {
+        "sustain": {
+          "mapped": 0,
+          "fallback": 78,
+          "unsupported": 0
+        },
+        "accent": {
+          "mapped": 0,
+          "fallback": 78,
+          "unsupported": 0
+        }
+      }
+    }
+  },
+  "phrase_variation": {
+    "diagnostic_count": 0
+  },
+  "diagnostics": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "info_count": 0
+}

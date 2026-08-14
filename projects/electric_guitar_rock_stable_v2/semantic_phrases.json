@@ -1,0 +1,4413 @@
+{
+  "schema_version": 1,
+  "title": "Lanterns Against the Rain",
+  "phrases": [
+    {
+      "track": "lead_guitar",
+      "section": "intro",
+      "instrument": "electric_lead_guitar",
+      "role": "primary melody",
+      "phrase_type": "melodic_lead",
+      "phrase_generation_mode": "legacy_stable",
+      "energy": 0.28,
+      "motif": [
+        {
+          "type": "note",
+          "pitch": "D4",
+          "at": "5:1",
+          "duration": 1.25,
+          "velocity": 73,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F4",
+          "at": "5:2.5",
+          "duration": 0.55,
+          "velocity": 73,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "at": "5:3.25",
+          "duration": 0.65,
+          "velocity": 78,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "at": "5:4",
+          "duration": 0.72,
+          "velocity": 73,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F4",
+          "at": "7:1",
+          "duration": 0.75,
+          "velocity": 70,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E4",
+          "at": "7:2",
+          "duration": 0.45,
+          "velocity": 70,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D4",
+          "at": "7:2.75",
+          "duration": 0.7,
+          "velocity": 70,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C4",
+          "at": "7:3.75",
+          "duration": 0.85,
+          "velocity": 70,
+          "articulations": [
+            "sustain"
+          ]
+        }
+      ],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "picked",
+        "release": "clean",
+        "humanization": "none",
+        "seed": 6400
+      }
+    },
+    {
+      "track": "lead_guitar",
+      "section": "verse_1",
+      "instrument": "electric_lead_guitar",
+      "role": "primary melody",
+      "phrase_type": "melodic_lead",
+      "phrase_generation_mode": "legacy_stable",
+      "energy": 0.42,
+      "motif": [
+        {
+          "type": "note",
+          "pitch": "D4",
+          "at": "1:1",
+          "duration": 1.25,
+          "velocity": 76,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F4",
+          "at": "1:2.5",
+          "duration": 0.55,
+          "velocity": 76,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "at": "1:3.25",
+          "duration": 0.65,
+          "velocity": 81,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "at": "1:4",
+          "duration": 0.72,
+          "velocity": 76,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F4",
+          "at": "3:1",
+          "duration": 0.75,
+          "velocity": 72,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E4",
+          "at": "3:2",
+          "duration": 0.45,
+          "velocity": 72,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D4",
+          "at": "3:2.75",
+          "duration": 0.7,
+          "velocity": 72,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C4",
+          "at": "3:3.75",
+          "duration": 0.85,
+          "velocity": 72,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E4",
+          "at": "5:1",
+          "duration": 1.25,
+          "velocity": 78,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "at": "5:2.5",
+          "duration": 0.55,
+          "velocity": 78,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B4",
+          "at": "5:3.25",
+          "duration": 0.65,
+          "velocity": 83,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "at": "5:4",
+          "duration": 0.72,
+          "velocity": 78,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F4",
+          "at": "7:1",
+          "duration": 0.75,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E4",
+          "at": "7:2",
+          "duration": 0.45,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D4",
+          "at": "7:2.75",
+          "duration": 0.7,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C4",
+          "at": "7:3.75",
+          "duration": 0.85,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "at": "9:1",
+          "duration": 1.25,
+          "velocity": 80,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A#4",
+          "at": "9:2.5",
+          "duration": 0.55,
+          "velocity": 80,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "at": "9:3.25",
+          "duration": 0.65,
+          "velocity": 85,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C5",
+          "at": "9:4",
+          "duration": 0.72,
+          "velocity": 80,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A#4",
+          "at": "11:1",
+          "duration": 0.75,
+          "velocity": 76,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "at": "11:2",
+          "duration": 0.45,
+          "velocity": 76,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "at": "11:2.75",
+          "duration": 0.7,
+          "velocity": 76,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F4",
+          "at": "11:3.75",
+          "duration": 0.85,
+          "velocity": 76,
+          "articulations": [
+            "sustain"
+          ]
+        }
+      ],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "picked",
+        "release": "clean",
+        "humanization": "none",
+        "seed": 6401
+      }
+    },
+    {
+      "track": "lead_guitar",
+      "section": "pre_chorus",
+      "instrument": "electric_lead_guitar",
+      "role": "primary melody",
+      "phrase_type": "melodic_lead",
+      "phrase_generation_mode": "legacy_stable",
+      "energy": 0.62,
+      "motif": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "at": "1:1",
+          "duration": 1.25,
+          "velocity": 79,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A#4",
+          "at": "1:2.5",
+          "duration": 0.55,
+          "velocity": 79,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "at": "1:3.25",
+          "duration": 0.65,
+          "velocity": 84,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C5",
+          "at": "1:4",
+          "duration": 0.72,
+          "velocity": 79,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "at": "3:1",
+          "duration": 1.25,
+          "velocity": 81,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C5",
+          "at": "3:2.5",
+          "duration": 0.55,
+          "velocity": 81,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E5",
+          "at": "3:3.25",
+          "duration": 0.65,
+          "velocity": 86,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "at": "3:4",
+          "duration": 0.72,
+          "velocity": 81,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C5",
+          "at": "5:1",
+          "duration": 1.25,
+          "velocity": 83,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D#5",
+          "at": "5:2.5",
+          "duration": 0.55,
+          "velocity": 83,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "5:3.25",
+          "duration": 0.65,
+          "velocity": 88,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F5",
+          "at": "5:4",
+          "duration": 0.72,
+          "velocity": 83,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "at": "7:1",
+          "duration": 1.25,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F5",
+          "at": "7:2.5",
+          "duration": 0.55,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "7:3.25",
+          "duration": 0.65,
+          "velocity": 90,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "7:4",
+          "duration": 0.72,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        }
+      ],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "picked",
+        "release": "clean",
+        "humanization": "none",
+        "seed": 6402
+      }
+    },
+    {
+      "track": "lead_guitar",
+      "section": "chorus_1",
+      "instrument": "electric_lead_guitar",
+      "role": "primary melody",
+      "phrase_type": "melodic_lead",
+      "phrase_generation_mode": "legacy_stable",
+      "energy": 0.82,
+      "motif": [
+        {
+          "type": "note",
+          "pitch": "F5",
+          "at": "1:1",
+          "duration": 0.5,
+          "velocity": 84,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "1:1.75",
+          "duration": 0.5,
+          "velocity": 84,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "1:2.5",
+          "duration": 0.75,
+          "velocity": 89,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "1:3.5",
+          "duration": 0.45,
+          "velocity": 84,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "1:4",
+          "duration": 0.8,
+          "velocity": 84,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D#5",
+          "at": "3:1",
+          "duration": 0.5,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "3:1.75",
+          "duration": 0.5,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A#5",
+          "at": "3:2.5",
+          "duration": 0.75,
+          "velocity": 90,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "3:3.5",
+          "duration": 0.45,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F5",
+          "at": "3:4",
+          "duration": 0.8,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F5",
+          "at": "5:1",
+          "duration": 0.5,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "5:1.75",
+          "duration": 0.5,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "5:2.5",
+          "duration": 0.75,
+          "velocity": 90,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "5:3.5",
+          "duration": 0.45,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "5:4",
+          "duration": 0.8,
+          "velocity": 85,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E5",
+          "at": "7:1",
+          "duration": 1.25,
+          "velocity": 86,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "7:2.5",
+          "duration": 0.55,
+          "velocity": 86,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "7:3.25",
+          "duration": 0.65,
+          "velocity": 91,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "7:4",
+          "duration": 0.72,
+          "velocity": 86,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F5",
+          "at": "9:1",
+          "duration": 0.5,
+          "velocity": 87,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "9:1.75",
+          "duration": 0.5,
+          "velocity": 87,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "9:2.5",
+          "duration": 0.75,
+          "velocity": 92,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "9:3.5",
+          "duration": 0.45,
+          "velocity": 87,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "9:4",
+          "duration": 0.8,
+          "velocity": 87,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G#5",
+          "at": "11:1",
+          "duration": 0.5,
+          "velocity": 87,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "11:1.75",
+          "duration": 0.5,
+          "velocity": 87,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D#6",
+          "at": "11:2.5",
+          "duration": 0.75,
+          "velocity": 92,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "11:3.5",
+          "duration": 0.45,
+          "velocity": 87,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A#5",
+          "at": "11:4",
+          "duration": 0.8,
+          "velocity": 87,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "13:1",
+          "duration": 0.5,
+          "velocity": 88,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C#6",
+          "at": "13:1.75",
+          "duration": 0.5,
+          "velocity": 88,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E6",
+          "at": "13:2.5",
+          "duration": 0.75,
+          "velocity": 93,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C#6",
+          "at": "13:3.5",
+          "duration": 0.45,
+          "velocity": 88,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "13:4",
+          "duration": 0.8,
+          "velocity": 88,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E5",
+          "at": "15:1",
+          "duration": 1.25,
+          "velocity": 89,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "15:2.5",
+          "duration": 0.55,
+          "velocity": 89,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "15:3.25",
+          "duration": 0.65,
+          "velocity": 94,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "15:4",
+          "duration": 0.72,
+          "velocity": 89,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "at": "12:1.5",
+          "duration": 0.42,
+          "velocity": 88,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F5",
+          "at": "12:2.25",
+          "duration": 0.42,
+          "velocity": 91,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "12:3",
+          "duration": 0.7,
+          "velocity": 94,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "14:1.5",
+          "duration": 0.55,
+          "velocity": 96,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "14:2.5",
+          "duration": 0.45,
+          "velocity": 92,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "14:3.25",
+          "duration": 0.8,
+          "velocity": 90,
+          "articulations": [
+            "sustain"
+          ]
+        }
+      ],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "picked",
+        "release": "clean",
+        "humanization": "none",
+        "seed": 6403
+      }
+    },
+    {
+      "track": "lead_guitar",
+      "section": "verse_2",
+      "instrument": "electric_lead_guitar",
+      "role": "primary melody",
+      "phrase_type": "melodic_lead",
+      "phrase_generation_mode": "legacy_stable",
+      "energy": 0.52,
+      "motif": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "at": "1:1",
+          "duration": 1.25,
+          "velocity": 78,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A#4",
+          "at": "1:2.5",
+          "duration": 0.55,
+          "velocity": 78,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "at": "1:3.25",
+          "duration": 0.65,
+          "velocity": 83,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C5",
+          "at": "1:4",
+          "duration": 0.72,
+          "velocity": 78,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C5",
+          "at": "3:1",
+          "duration": 0.75,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B4",
+          "at": "3:2",
+          "duration": 0.45,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "at": "3:2.75",
+          "duration": 0.7,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "at": "3:3.75",
+          "duration": 0.85,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B4",
+          "at": "5:1",
+          "duration": 1.25,
+          "velocity": 80,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "at": "5:2.5",
+          "duration": 0.55,
+          "velocity": 80,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F#5",
+          "at": "5:3.25",
+          "duration": 0.65,
+          "velocity": 85,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "at": "7:1",
+          "duration": 1.25,
+          "velocity": 81,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F5",
+          "at": "7:2.5",
+          "duration": 0.55,
+          "velocity": 81,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "7:3.25",
+          "duration": 0.65,
+          "velocity": 86,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "9:1",
+          "duration": 0.5,
+          "velocity": 82,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "9:1.75",
+          "duration": 0.5,
+          "velocity": 82,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D6",
+          "at": "9:2.5",
+          "duration": 0.75,
+          "velocity": 87,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "9:3.5",
+          "duration": 0.45,
+          "velocity": 82,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "11:1",
+          "duration": 0.5,
+          "velocity": 83,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C#6",
+          "at": "11:1.75",
+          "duration": 0.5,
+          "velocity": 83,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E6",
+          "at": "11:2.5",
+          "duration": 0.75,
+          "velocity": 88,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C#6",
+          "at": "11:3.5",
+          "duration": 0.45,
+          "velocity": 83,
+          "articulations": [
+            "sustain"
+          ]
+        }
+      ],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "picked",
+        "release": "clean",
+        "humanization": "none",
+        "seed": 6404
+      }
+    },
+    {
+      "track": "lead_guitar",
+      "section": "final_chorus",
+      "instrument": "electric_lead_guitar",
+      "role": "primary melody",
+      "phrase_type": "melodic_lead",
+      "phrase_generation_mode": "legacy_stable",
+      "energy": 1.0,
+      "motif": [
+        {
+          "type": "note",
+          "pitch": "F5",
+          "at": "1:1",
+          "duration": 0.5,
+          "velocity": 90,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "1:1.75",
+          "duration": 0.5,
+          "velocity": 90,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "1:2.5",
+          "duration": 0.75,
+          "velocity": 95,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "1:3.5",
+          "duration": 0.45,
+          "velocity": 90,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "1:4",
+          "duration": 0.8,
+          "velocity": 90,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "3:1",
+          "duration": 0.5,
+          "velocity": 91,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "3:1.75",
+          "duration": 0.5,
+          "velocity": 91,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D6",
+          "at": "3:2.5",
+          "duration": 0.75,
+          "velocity": 96,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "3:3.5",
+          "duration": 0.45,
+          "velocity": 91,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "3:4",
+          "duration": 0.8,
+          "velocity": 91,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G#5",
+          "at": "5:1",
+          "duration": 0.5,
+          "velocity": 91,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "5:1.75",
+          "duration": 0.5,
+          "velocity": 91,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D#6",
+          "at": "5:2.5",
+          "duration": 0.75,
+          "velocity": 96,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "5:3.5",
+          "duration": 0.45,
+          "velocity": 91,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A#5",
+          "at": "5:4",
+          "duration": 0.8,
+          "velocity": 91,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "7:1",
+          "duration": 0.5,
+          "velocity": 92,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C#6",
+          "at": "7:1.75",
+          "duration": 0.5,
+          "velocity": 92,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E6",
+          "at": "7:2.5",
+          "duration": 0.75,
+          "velocity": 97,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C#6",
+          "at": "7:3.5",
+          "duration": 0.45,
+          "velocity": 92,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "7:4",
+          "duration": 0.8,
+          "velocity": 92,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "9:1",
+          "duration": 0.5,
+          "velocity": 93,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "9:1.75",
+          "duration": 0.5,
+          "velocity": 93,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D6",
+          "at": "9:2.5",
+          "duration": 0.75,
+          "velocity": 98,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "9:3.5",
+          "duration": 0.45,
+          "velocity": 93,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "9:4",
+          "duration": 0.8,
+          "velocity": 93,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "11:1",
+          "duration": 1.25,
+          "velocity": 93,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A#5",
+          "at": "11:2.5",
+          "duration": 0.55,
+          "velocity": 93,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D6",
+          "at": "11:3.25",
+          "duration": 0.65,
+          "velocity": 98,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "11:4",
+          "duration": 0.72,
+          "velocity": 93,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "13:1",
+          "duration": 0.5,
+          "velocity": 94,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C#6",
+          "at": "13:1.75",
+          "duration": 0.5,
+          "velocity": 94,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E6",
+          "at": "13:2.5",
+          "duration": 0.75,
+          "velocity": 99,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C#6",
+          "at": "13:3.5",
+          "duration": 0.45,
+          "velocity": 94,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "B5",
+          "at": "13:4",
+          "duration": 0.8,
+          "velocity": 94,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "15:1",
+          "duration": 1.25,
+          "velocity": 95,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "15:2.5",
+          "duration": 0.55,
+          "velocity": 95,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E6",
+          "at": "15:3.25",
+          "duration": 0.65,
+          "velocity": 100,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D6",
+          "at": "15:4",
+          "duration": 0.72,
+          "velocity": 95,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "14:1.5",
+          "duration": 0.42,
+          "velocity": 99,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D6",
+          "at": "14:2.25",
+          "duration": 0.42,
+          "velocity": 101,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E6",
+          "at": "14:3",
+          "duration": 0.55,
+          "velocity": 104,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D6",
+          "at": "16:1",
+          "duration": 2.6,
+          "velocity": 100,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "4:1.5",
+          "duration": 0.45,
+          "velocity": 94,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "4:2.25",
+          "duration": 0.45,
+          "velocity": 97,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D6",
+          "at": "4:3",
+          "duration": 0.85,
+          "velocity": 100,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G5",
+          "at": "8:1.25",
+          "duration": 0.55,
+          "velocity": 96,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "8:2.25",
+          "duration": 0.55,
+          "velocity": 99,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "8:3.25",
+          "duration": 0.65,
+          "velocity": 101,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D6",
+          "at": "12:1.5",
+          "duration": 0.42,
+          "velocity": 101,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C6",
+          "at": "12:2.25",
+          "duration": 0.42,
+          "velocity": 98,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A5",
+          "at": "12:3",
+          "duration": 0.8,
+          "velocity": 96,
+          "articulations": [
+            "sustain"
+          ]
+        }
+      ],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "picked",
+        "release": "clean",
+        "humanization": "none",
+        "seed": 6406
+      }
+    },
+    {
+      "track": "lead_guitar",
+      "section": "outro",
+      "instrument": "electric_lead_guitar",
+      "role": "primary melody",
+      "phrase_type": "melodic_lead",
+      "phrase_generation_mode": "legacy_stable",
+      "energy": 0.3,
+      "motif": [
+        {
+          "type": "note",
+          "pitch": "D4",
+          "at": "1:1",
+          "duration": 1.25,
+          "velocity": 78,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F4",
+          "at": "1:2.5",
+          "duration": 0.55,
+          "velocity": 78,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "at": "1:3.25",
+          "duration": 0.65,
+          "velocity": 83,
+          "articulations": [
+            "sustain",
+            "slide"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "at": "1:4",
+          "duration": 0.72,
+          "velocity": 78,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F4",
+          "at": "3:1",
+          "duration": 0.75,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "E4",
+          "at": "3:2",
+          "duration": 0.45,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D4",
+          "at": "3:2.75",
+          "duration": 0.7,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "C4",
+          "at": "3:3.75",
+          "duration": 0.85,
+          "velocity": 74,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "F4",
+          "at": "6:1",
+          "duration": 1.2,
+          "velocity": 69,
+          "articulations": [
+            "sustain"
+          ]
+        },
+        {
+          "type": "note",
+          "pitch": "D4",
+          "at": "8:1",
+          "duration": 2.6,
+          "velocity": 66,
+          "articulations": [
+            "sustain"
+          ]
+        }
+      ],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "picked",
+        "release": "clean",
+        "humanization": "none",
+        "seed": 6407
+      }
+    },
+    {
+      "track": "rhythm_guitar",
+      "section": "intro",
+      "instrument": "electric_rhythm_guitar",
+      "role": "rhythmic harmony",
+      "phrase_type": "palm_muted_eighths",
+      "energy": 0.2,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "C"
+        }
+      ],
+      "subdivision": 1.0,
+      "gate": 0.42,
+      "strum_spread": 0.04,
+      "rest_steps": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31
+      ],
+      "articulations": [
+        "palm_mute",
+        "accent"
+      ],
+      "performance_intent": {
+        "attack": "tight",
+        "release": "controlled",
+        "picking": "alternate",
+        "humanization": "action_based",
+        "seed": 6500
+      }
+    },
+    {
+      "track": "rhythm_guitar",
+      "section": "verse_1",
+      "instrument": "electric_rhythm_guitar",
+      "role": "rhythmic harmony",
+      "phrase_type": "palm_muted_eighths",
+      "energy": 0.38,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "C"
+        }
+      ],
+      "subdivision": 0.5,
+      "gate": 0.42,
+      "strum_spread": 0.04,
+      "rest_steps": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35,
+        39,
+        43,
+        47
+      ],
+      "articulations": [
+        "palm_mute",
+        "accent"
+      ],
+      "performance_intent": {
+        "attack": "tight",
+        "release": "controlled",
+        "picking": "alternate",
+        "humanization": "action_based",
+        "seed": 6501
+      }
+    },
+    {
+      "track": "rhythm_guitar",
+      "section": "pre_chorus",
+      "instrument": "electric_rhythm_guitar",
+      "role": "rhythmic harmony",
+      "phrase_type": "palm_muted_eighths",
+      "energy": 0.6,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "subdivision": 0.5,
+      "gate": 0.42,
+      "strum_spread": 0.04,
+      "rest_steps": [],
+      "articulations": [
+        "palm_mute",
+        "accent"
+      ],
+      "performance_intent": {
+        "attack": "tight",
+        "release": "controlled",
+        "picking": "alternate",
+        "humanization": "action_based",
+        "seed": 6502
+      }
+    },
+    {
+      "track": "rhythm_guitar",
+      "section": "chorus_1",
+      "instrument": "electric_rhythm_guitar",
+      "role": "rhythmic harmony",
+      "phrase_type": "open_power_chords",
+      "energy": 0.8,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "subdivision": 1.0,
+      "gate": 0.86,
+      "strum_spread": 0.075,
+      "rest_steps": [],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "tight",
+        "release": "controlled",
+        "picking": "alternate",
+        "humanization": "action_based",
+        "seed": 6503
+      }
+    },
+    {
+      "track": "rhythm_guitar",
+      "section": "verse_2",
+      "instrument": "electric_rhythm_guitar",
+      "role": "rhythmic harmony",
+      "phrase_type": "palm_muted_eighths",
+      "energy": 0.46,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "subdivision": 0.5,
+      "gate": 0.42,
+      "strum_spread": 0.04,
+      "rest_steps": [
+        3,
+        7,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35,
+        39,
+        43,
+        47
+      ],
+      "articulations": [
+        "palm_mute",
+        "accent"
+      ],
+      "performance_intent": {
+        "attack": "tight",
+        "release": "controlled",
+        "picking": "alternate",
+        "humanization": "action_based",
+        "seed": 6504
+      }
+    },
+    {
+      "track": "rhythm_guitar",
+      "section": "bridge_relay",
+      "instrument": "electric_rhythm_guitar",
+      "role": "bridge pedal-riff carrier",
+      "phrase_type": "palm_muted_eighths",
+      "energy": 0.72,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "subdivision": 0.5,
+      "gate": 0.42,
+      "strum_spread": 0.04,
+      "rest_steps": [],
+      "articulations": [
+        "palm_mute",
+        "accent"
+      ],
+      "performance_intent": {
+        "attack": "tight",
+        "release": "controlled",
+        "picking": "alternate",
+        "humanization": "action_based",
+        "seed": 6505
+      }
+    },
+    {
+      "track": "rhythm_guitar",
+      "section": "final_chorus",
+      "instrument": "electric_rhythm_guitar",
+      "role": "rhythmic harmony",
+      "phrase_type": "open_power_chords",
+      "energy": 0.96,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "subdivision": 1.0,
+      "gate": 0.86,
+      "strum_spread": 0.075,
+      "rest_steps": [],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "tight",
+        "release": "controlled",
+        "picking": "alternate",
+        "humanization": "action_based",
+        "seed": 6506
+      }
+    },
+    {
+      "track": "rhythm_guitar",
+      "section": "outro",
+      "instrument": "electric_rhythm_guitar",
+      "role": "rhythmic harmony",
+      "phrase_type": "open_power_chords",
+      "energy": 0.34,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "subdivision": 1.0,
+      "gate": 0.86,
+      "strum_spread": 0.075,
+      "rest_steps": [],
+      "articulations": [
+        "sustain"
+      ],
+      "performance_intent": {
+        "attack": "tight",
+        "release": "controlled",
+        "picking": "alternate",
+        "humanization": "action_based",
+        "seed": 6507
+      }
+    },
+    {
+      "track": "bass",
+      "section": "intro",
+      "instrument": "electric_bass",
+      "role": "groove connector",
+      "phrase_type": "connecting_bass",
+      "energy": 0.24,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "C"
+        }
+      ],
+      "register_midi": [
+        29,
+        52
+      ],
+      "kick_offsets": [
+        0,
+        2
+      ],
+      "articulations": [
+        "finger"
+      ],
+      "performance_intent": {
+        "attack": "finger",
+        "release": "connected",
+        "humanization": "action_based",
+        "seed": 6600
+      }
+    },
+    {
+      "track": "bass",
+      "section": "verse_1",
+      "instrument": "electric_bass",
+      "role": "groove connector",
+      "phrase_type": "connecting_bass",
+      "energy": 0.4,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "C"
+        }
+      ],
+      "register_midi": [
+        29,
+        52
+      ],
+      "kick_offsets": [
+        0,
+        2
+      ],
+      "articulations": [
+        "finger"
+      ],
+      "performance_intent": {
+        "attack": "finger",
+        "release": "connected",
+        "humanization": "action_based",
+        "seed": 6601
+      }
+    },
+    {
+      "track": "bass",
+      "section": "pre_chorus",
+      "instrument": "electric_bass",
+      "role": "groove connector",
+      "phrase_type": "connecting_bass",
+      "energy": 0.58,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "register_midi": [
+        29,
+        52
+      ],
+      "kick_offsets": [
+        0,
+        2
+      ],
+      "articulations": [
+        "finger"
+      ],
+      "performance_intent": {
+        "attack": "finger",
+        "release": "connected",
+        "humanization": "action_based",
+        "seed": 6602
+      }
+    },
+    {
+      "track": "bass",
+      "section": "chorus_1",
+      "instrument": "electric_bass",
+      "role": "groove connector",
+      "phrase_type": "connecting_bass",
+      "energy": 0.78,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        29,
+        52
+      ],
+      "kick_offsets": [
+        0,
+        2
+      ],
+      "articulations": [
+        "finger"
+      ],
+      "performance_intent": {
+        "attack": "finger",
+        "release": "connected",
+        "humanization": "action_based",
+        "seed": 6603
+      }
+    },
+    {
+      "track": "bass",
+      "section": "verse_2",
+      "instrument": "electric_bass",
+      "role": "groove connector",
+      "phrase_type": "connecting_bass",
+      "energy": 0.5,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "register_midi": [
+        29,
+        52
+      ],
+      "kick_offsets": [
+        0,
+        2
+      ],
+      "articulations": [
+        "finger"
+      ],
+      "performance_intent": {
+        "attack": "finger",
+        "release": "connected",
+        "humanization": "action_based",
+        "seed": 6604
+      }
+    },
+    {
+      "track": "bass",
+      "section": "bridge_relay",
+      "instrument": "electric_bass",
+      "role": "rising relay line",
+      "phrase_type": "connecting_bass",
+      "energy": 0.74,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        29,
+        52
+      ],
+      "kick_offsets": [
+        0,
+        2
+      ],
+      "articulations": [
+        "finger"
+      ],
+      "performance_intent": {
+        "attack": "finger",
+        "release": "connected",
+        "humanization": "action_based",
+        "seed": 6605
+      }
+    },
+    {
+      "track": "bass",
+      "section": "final_chorus",
+      "instrument": "electric_bass",
+      "role": "groove connector",
+      "phrase_type": "connecting_bass",
+      "energy": 0.92,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        29,
+        52
+      ],
+      "kick_offsets": [
+        0,
+        2
+      ],
+      "articulations": [
+        "finger"
+      ],
+      "performance_intent": {
+        "attack": "finger",
+        "release": "connected",
+        "humanization": "action_based",
+        "seed": 6606
+      }
+    },
+    {
+      "track": "bass",
+      "section": "outro",
+      "instrument": "electric_bass",
+      "role": "groove connector",
+      "phrase_type": "connecting_bass",
+      "energy": 0.32,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        29,
+        52
+      ],
+      "kick_offsets": [
+        0,
+        2
+      ],
+      "articulations": [
+        "finger"
+      ],
+      "performance_intent": {
+        "attack": "finger",
+        "release": "connected",
+        "humanization": "action_based",
+        "seed": 6607
+      }
+    },
+    {
+      "track": "drums",
+      "section": "intro",
+      "instrument": "drum_kit",
+      "role": "groove and structural propulsion",
+      "phrase_type": "rock_verse",
+      "bars": 8,
+      "energy": 0.18,
+      "transition_fill": true,
+      "performance_intent": {
+        "attack": "tight",
+        "release": "natural",
+        "humanization": "limb_based",
+        "seed": 6700
+      }
+    },
+    {
+      "track": "drums",
+      "section": "verse_1",
+      "instrument": "drum_kit",
+      "role": "groove and structural propulsion",
+      "phrase_type": "rock_verse",
+      "bars": 12,
+      "energy": 0.36,
+      "transition_fill": true,
+      "performance_intent": {
+        "attack": "tight",
+        "release": "natural",
+        "humanization": "limb_based",
+        "seed": 6701
+      }
+    },
+    {
+      "track": "drums",
+      "section": "pre_chorus",
+      "instrument": "drum_kit",
+      "role": "groove and structural propulsion",
+      "phrase_type": "rock_verse",
+      "bars": 8,
+      "energy": 0.56,
+      "transition_fill": true,
+      "performance_intent": {
+        "attack": "tight",
+        "release": "natural",
+        "humanization": "limb_based",
+        "seed": 6702
+      }
+    },
+    {
+      "track": "drums",
+      "section": "chorus_1",
+      "instrument": "drum_kit",
+      "role": "groove and structural propulsion",
+      "phrase_type": "rock_chorus",
+      "bars": 16,
+      "energy": 0.82,
+      "transition_fill": true,
+      "performance_intent": {
+        "attack": "tight",
+        "release": "natural",
+        "humanization": "limb_based",
+        "seed": 6703
+      }
+    },
+    {
+      "track": "drums",
+      "section": "verse_2",
+      "instrument": "drum_kit",
+      "role": "groove and structural propulsion",
+      "phrase_type": "rock_verse",
+      "bars": 12,
+      "energy": 0.46,
+      "transition_fill": true,
+      "performance_intent": {
+        "attack": "tight",
+        "release": "natural",
+        "humanization": "limb_based",
+        "seed": 6704
+      }
+    },
+    {
+      "track": "drums",
+      "section": "bridge_relay",
+      "instrument": "drum_kit",
+      "role": "groove and structural propulsion",
+      "phrase_type": "rock_chorus",
+      "bars": 16,
+      "energy": 0.76,
+      "transition_fill": true,
+      "performance_intent": {
+        "attack": "tight",
+        "release": "natural",
+        "humanization": "limb_based",
+        "seed": 6705
+      }
+    },
+    {
+      "track": "drums",
+      "section": "final_chorus",
+      "instrument": "drum_kit",
+      "role": "groove and structural propulsion",
+      "phrase_type": "rock_chorus",
+      "bars": 16,
+      "energy": 1.0,
+      "transition_fill": true,
+      "performance_intent": {
+        "attack": "tight",
+        "release": "natural",
+        "humanization": "limb_based",
+        "seed": 6706
+      }
+    },
+    {
+      "track": "drums",
+      "section": "outro",
+      "instrument": "drum_kit",
+      "role": "groove and structural propulsion",
+      "phrase_type": "rock_verse",
+      "bars": 8,
+      "energy": 0.3,
+      "transition_fill": false,
+      "performance_intent": {
+        "attack": "tight",
+        "release": "natural",
+        "humanization": "limb_based",
+        "seed": 6707
+      }
+    },
+    {
+      "track": "organ",
+      "section": "intro",
+      "instrument": "organ",
+      "role": "voice-led harmonic plane",
+      "phrase_type": "organ_voice_led_chords",
+      "energy": 0.24,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "C"
+        }
+      ],
+      "register_midi": [
+        55,
+        76
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "soft",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6800
+      }
+    },
+    {
+      "track": "organ",
+      "section": "pre_chorus",
+      "instrument": "organ",
+      "role": "voice-led harmonic plane",
+      "phrase_type": "organ_voice_led_chords",
+      "energy": 0.46,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "register_midi": [
+        55,
+        76
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "soft",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6802
+      }
+    },
+    {
+      "track": "organ",
+      "section": "chorus_1",
+      "instrument": "organ",
+      "role": "voice-led harmonic plane",
+      "phrase_type": "organ_voice_led_chords",
+      "energy": 0.6,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        55,
+        76
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "soft",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6803
+      }
+    },
+    {
+      "track": "organ",
+      "section": "verse_2",
+      "instrument": "organ",
+      "role": "voice-led harmonic plane",
+      "phrase_type": "organ_voice_led_chords",
+      "energy": 0.34,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "register_midi": [
+        55,
+        76
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "soft",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6804
+      }
+    },
+    {
+      "track": "organ",
+      "section": "final_chorus",
+      "instrument": "organ",
+      "role": "voice-led harmonic plane",
+      "phrase_type": "organ_voice_led_chords",
+      "energy": 0.78,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        55,
+        76
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "soft",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6806
+      }
+    },
+    {
+      "track": "organ",
+      "section": "outro",
+      "instrument": "organ",
+      "role": "voice-led harmonic plane",
+      "phrase_type": "organ_voice_led_chords",
+      "energy": 0.28,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        55,
+        76
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "soft",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6807
+      }
+    },
+    {
+      "track": "strings",
+      "section": "intro",
+      "instrument": "strings",
+      "role": "emotional plane and inner movement",
+      "phrase_type": "long_tones_inner_movement",
+      "energy": 0.18,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "C"
+        }
+      ],
+      "register_midi": [
+        60,
+        84
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "bowed",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6900
+      }
+    },
+    {
+      "track": "strings",
+      "section": "pre_chorus",
+      "instrument": "strings",
+      "role": "emotional plane and inner movement",
+      "phrase_type": "long_tones_inner_movement",
+      "energy": 0.4,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "register_midi": [
+        60,
+        84
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "bowed",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6902
+      }
+    },
+    {
+      "track": "strings",
+      "section": "chorus_1",
+      "instrument": "strings",
+      "role": "emotional plane and inner movement",
+      "phrase_type": "long_tones_inner_movement",
+      "energy": 0.56,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        60,
+        84
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "bowed",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6903
+      }
+    },
+    {
+      "track": "strings",
+      "section": "verse_2",
+      "instrument": "strings",
+      "role": "emotional plane and inner movement",
+      "phrase_type": "long_tones_inner_movement",
+      "energy": 0.32,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "A"
+        }
+      ],
+      "register_midi": [
+        60,
+        84
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "bowed",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6904
+      }
+    },
+    {
+      "track": "strings",
+      "section": "final_chorus",
+      "instrument": "strings",
+      "role": "emotional plane and inner movement",
+      "phrase_type": "long_tones_inner_movement",
+      "energy": 0.82,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "9:1",
+          "duration": 4,
+          "chord": "Gm"
+        },
+        {
+          "at": "10:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "11:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "12:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "13:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "14:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "15:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "16:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        60,
+        84
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "bowed",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6906
+      }
+    },
+    {
+      "track": "strings",
+      "section": "outro",
+      "instrument": "strings",
+      "role": "emotional plane and inner movement",
+      "phrase_type": "long_tones_inner_movement",
+      "energy": 0.3,
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "F"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Dm"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "Bb"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "A"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "Dm"
+        }
+      ],
+      "register_midi": [
+        60,
+        84
+      ],
+      "voices": 3,
+      "performance_intent": {
+        "attack": "bowed",
+        "release": "connected",
+        "humanization": "voice_led",
+        "seed": 6907
+      }
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "plan": {
+    "metadata": {
+      "tempo": 100,
+      "time_signature": "4/4",
+      "key": "E minor",
+      "seed": 4202,
+      "instrument": "GM Acoustic Grand Piano program 0"
+    },
+    "harmony": [
+      "Em",
+      "C",
+      "G",
+      "D",
+      "Em",
+      "C",
+      "Am",
+      "B7"
+    ],
+    "section": {
+      "bars": [
+        1,
+        8
+      ],
+      "role": "lead_melody",
+      "arc": {
+        "opening_energy": 0.35,
+        "peak_bar": 7,
+        "resolution_bar": 8,
+        "direction": "gradual_rise_then_release"
+      }
+    },
+    "motif": {
+      "id": "A",
+      "length_beats": 4,
+      "contour": "rise_fall",
+      "rhythmic_identity": "short_short_long"
+    },
+    "phrase_plan": [
+      {
+        "bars": [
+          1,
+          2
+        ],
+        "function": "introduce",
+        "resolution": "open",
+        "reset_state": false
+      },
+      {
+        "bars": [
+          3,
+          4
+        ],
+        "function": "develop",
+        "operation": "change_ending",
+        "resolution": "deferred",
+        "reset_state": false
+      },
+      {
+        "bars": [
+          5,
+          6
+        ],
+        "function": "expand",
+        "operation": "sequence_up",
+        "resolution": "deferred",
+        "reset_state": false
+      },
+      {
+        "bars": [
+          7,
+          8
+        ],
+        "function": "climax_and_resolve",
+        "operation": "augmentation_release",
+        "resolution": "strong",
+        "reset_state": true
+      }
+    ],
+    "rests": [
+      {
+        "after_beat": 3.0,
+        "duration_beats": 0.5,
+        "rest_type": "breath",
+        "reset_state": false
+      },
+      {
+        "after_beat": 11.0,
+        "duration_beats": 0.5,
+        "rest_type": "breath",
+        "reset_state": false
+      },
+      {
+        "after_beat": 19.0,
+        "duration_beats": 0.5,
+        "rest_type": "breath",
+        "reset_state": false
+      },
+      {
+        "after_beat": 32.0,
+        "duration_beats": 0.0,
+        "rest_type": "section_end",
+        "reset_state": true
+      }
+    ]
+  },
+  "notes": [
+    {
+      "start_beat": 0.5,
+      "duration_beats": 0.5,
+      "pitch": "E4",
+      "motif_id": "A",
+      "motif_operation": "original"
+    },
+    {
+      "start_beat": 1.25,
+      "duration_beats": 0.5,
+      "pitch": "G4",
+      "motif_id": "A",
+      "motif_operation": "original"
+    },
+    {
+      "start_beat": 2.0,
+      "duration_beats": 1.0,
+      "pitch": "B4",
+      "motif_id": "A",
+      "motif_operation": "original"
+    },
+    {
+      "start_beat": 3.5,
+      "duration_beats": 0.5,
+      "pitch": "A4",
+      "motif_id": "A",
+      "motif_operation": "original"
+    },
+    {
+      "start_beat": 4.25,
+      "duration_beats": 0.5,
+      "pitch": "G4",
+      "motif_id": "A",
+      "motif_operation": "continuation"
+    },
+    {
+      "start_beat": 5.0,
+      "duration_beats": 1.0,
+      "pitch": "B4",
+      "motif_id": "A",
+      "motif_operation": "continuation"
+    },
+    {
+      "start_beat": 6.25,
+      "duration_beats": 0.75,
+      "pitch": "D5",
+      "motif_id": "A",
+      "motif_operation": "continuation"
+    },
+    {
+      "start_beat": 7.25,
+      "duration_beats": 1.0,
+      "pitch": "C5",
+      "motif_id": "A",
+      "motif_operation": "continuation",
+      "cross_bar_reason": "phrase_continuation"
+    },
+    {
+      "start_beat": 8.5,
+      "duration_beats": 0.5,
+      "pitch": "E4",
+      "motif_id": "A",
+      "motif_operation": "change_ending"
+    },
+    {
+      "start_beat": 9.25,
+      "duration_beats": 0.5,
+      "pitch": "G4",
+      "motif_id": "A",
+      "motif_operation": "change_ending"
+    },
+    {
+      "start_beat": 10.0,
+      "duration_beats": 1.0,
+      "pitch": "B4",
+      "motif_id": "A",
+      "motif_operation": "change_ending"
+    },
+    {
+      "start_beat": 11.5,
+      "duration_beats": 0.5,
+      "pitch": "C5",
+      "motif_id": "A",
+      "motif_operation": "change_ending"
+    },
+    {
+      "start_beat": 12.25,
+      "duration_beats": 0.5,
+      "pitch": "B4",
+      "motif_id": "A",
+      "motif_operation": "change_ending"
+    },
+    {
+      "start_beat": 13.0,
+      "duration_beats": 0.75,
+      "pitch": "D5",
+      "motif_id": "A",
+      "motif_operation": "change_ending"
+    },
+    {
+      "start_beat": 14.0,
+      "duration_beats": 0.75,
+      "pitch": "E5",
+      "motif_id": "A",
+      "motif_operation": "change_ending"
+    },
+    {
+      "start_beat": 15.0,
+      "duration_beats": 1.2,
+      "pitch": "D5",
+      "motif_id": "A",
+      "motif_operation": "change_ending",
+      "cross_bar_reason": "delayed_resolution"
+    },
+    {
+      "start_beat": 16.5,
+      "duration_beats": 0.5,
+      "pitch": "G4",
+      "motif_id": "A",
+      "motif_operation": "sequence_up"
+    },
+    {
+      "start_beat": 17.25,
+      "duration_beats": 0.5,
+      "pitch": "B4",
+      "motif_id": "A",
+      "motif_operation": "sequence_up"
+    },
+    {
+      "start_beat": 18.0,
+      "duration_beats": 1.0,
+      "pitch": "D5",
+      "motif_id": "A",
+      "motif_operation": "sequence_up"
+    },
+    {
+      "start_beat": 19.5,
+      "duration_beats": 0.5,
+      "pitch": "E5",
+      "motif_id": "A",
+      "motif_operation": "sequence_up"
+    },
+    {
+      "start_beat": 20.25,
+      "duration_beats": 0.5,
+      "pitch": "D5",
+      "motif_id": "A",
+      "motif_operation": "sequence_up"
+    },
+    {
+      "start_beat": 21.0,
+      "duration_beats": 0.75,
+      "pitch": "E5",
+      "motif_id": "A",
+      "motif_operation": "sequence_up"
+    },
+    {
+      "start_beat": 22.0,
+      "duration_beats": 0.75,
+      "pitch": "F#5",
+      "motif_id": "A",
+      "motif_operation": "sequence_up"
+    },
+    {
+      "start_beat": 23.0,
+      "duration_beats": 1.2,
+      "pitch": "G5",
+      "motif_id": "A",
+      "motif_operation": "sequence_up",
+      "cross_bar_reason": "anticipation"
+    },
+    {
+      "start_beat": 24.5,
+      "duration_beats": 0.75,
+      "pitch": "A5",
+      "motif_id": "A",
+      "motif_operation": "augmentation_release"
+    },
+    {
+      "start_beat": 25.5,
+      "duration_beats": 0.75,
+      "pitch": "B5",
+      "motif_id": "A",
+      "motif_operation": "augmentation_release"
+    },
+    {
+      "start_beat": 26.5,
+      "duration_beats": 1.25,
+      "pitch": "D6",
+      "motif_id": "A",
+      "motif_operation": "augmentation_release"
+    },
+    {
+      "start_beat": 28.0,
+      "duration_beats": 0.5,
+      "pitch": "B5",
+      "motif_id": "A",
+      "motif_operation": "augmentation_release"
+    },
+    {
+      "start_beat": 28.75,
+      "duration_beats": 0.5,
+      "pitch": "G5",
+      "motif_id": "A",
+      "motif_operation": "augmentation_release"
+    },
+    {
+      "start_beat": 29.5,
+      "duration_beats": 0.75,
+      "pitch": "F#5",
+      "motif_id": "A",
+      "motif_operation": "augmentation_release"
+    },
+    {
+      "start_beat": 30.5,
+      "duration_beats": 1.5,
+      "pitch": "E5",
+      "motif_id": "A",
+      "motif_operation": "augmentation_release"
+    }
+  ]
+}

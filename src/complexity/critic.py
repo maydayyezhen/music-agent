@@ -8,6 +8,7 @@ from typing import Any
 import numpy as np
 
 from src.complexity.schema import resolve_section_complexities
+from src.accompaniment.generator import materialize_clip
 
 
 @dataclass
@@ -49,14 +50,14 @@ def _union_coverage(intervals: list[tuple[float, float]], total: float) -> float
     return sum(end - start for start, end in merged) / total
 
 
-def _expanded_events(clip: dict[str, Any], section_bars: int, beats_per_bar: int) -> list[dict[str, float]]:
+def _expanded_events(clip: dict[str, Any], track: dict[str, Any], section_bars: int, beats_per_bar: int) -> list[dict[str, float]]:
     loop_bars = int(clip["loop_bars"])
     loop_beats = loop_bars * beats_per_bar
     result: list[dict[str, float]] = []
     for loop_bar in range(0, section_bars, loop_bars):
         shift = loop_bar * beats_per_bar
-        for event in clip.get("events", []):
-            if event.get("type", "note") == "rest":
+        for event in materialize_clip(clip, track, beats_per_bar):
+            if event.get("type", "note") in {"rest", "control_change"}:
                 continue
             start = shift + _position(event["at"], beats_per_bar)
             if start >= section_bars * beats_per_bar:
@@ -85,7 +86,7 @@ def analyze_complexity(composition: dict[str, Any]) -> dict[str, Any]:
         events_by_track: dict[str, list[dict[str, float]]] = {}
         for track_name, track in composition["tracks"].items():
             clip = track.get("sections", {}).get(section_name)
-            events = _expanded_events(clip, bars, beats_per_bar) if clip else []
+            events = _expanded_events(clip, track, bars, beats_per_bar) if clip else []
             events_by_track[track_name] = events
             intervals = [(item["start"], item["start"] + item["duration"]) for item in events]
             durations = [item["duration"] for item in events]

@@ -1,0 +1,1517 @@
+{
+  "schema_version": 1,
+  "title": "下一站还没有名字",
+  "track_metrics": {
+    "vocal_melody": {
+      "instrument": "strictly monophonic sung-melody proxy",
+      "sections": {
+        "intro": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 0,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": null,
+          "velocity_unique": 0,
+          "velocity_stddev": 0.0,
+          "articulations": {},
+          "max_identical_bar_repetitions": 0,
+          "events_per_bar": 0.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "verse_1": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 60,
+          "note_count": 60,
+          "range": [
+            59,
+            69
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 3.2401988965013997,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 5.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 2.385
+          }
+        },
+        "pre_1": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 32,
+          "note_count": 32,
+          "range": [
+            64,
+            73
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 3.0618621784789726,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 5.333333333333333,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 2.09
+          }
+        },
+        "chorus_1": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 57,
+          "note_count": 57,
+          "range": [
+            66,
+            76
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 3.676767753637559,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 4.75,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 4.135
+          }
+        },
+        "interlude": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 0,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": null,
+          "velocity_unique": 0,
+          "velocity_stddev": 0.0,
+          "articulations": {},
+          "max_identical_bar_repetitions": 0,
+          "events_per_bar": 0.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "verse_2": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 63,
+          "note_count": 63,
+          "range": [
+            59,
+            69
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 3.2295249173424803,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 5.25,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 2.384999999999999
+          }
+        },
+        "pre_2": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 31,
+          "note_count": 31,
+          "range": [
+            64,
+            73
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 3.458690362240054,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 5.166666666666667,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.7785000000000002
+          }
+        },
+        "chorus_2": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 59,
+          "note_count": 59,
+          "range": [
+            66,
+            76
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 3.949188913777372,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 4.916666666666667,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 3.8850000000000016
+          }
+        },
+        "bridge": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 41,
+          "note_count": 41,
+          "range": [
+            59,
+            69
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 3.059396152602729,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 5.125,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 2.2600000000000007
+          }
+        },
+        "final_chorus": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 69,
+          "note_count": 69,
+          "range": [
+            66,
+            76
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 3.5710450779793166,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 4.928571428571429,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 3.384999999999998
+          }
+        },
+        "outro": {
+          "instrument": "strictly monophonic sung-melody proxy",
+          "event_count": 8,
+          "note_count": 8,
+          "range": [
+            64,
+            74
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 6,
+          "velocity_stddev": 3.59687364248454,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 1.3333333333333333,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 2.93
+          }
+        }
+      }
+    },
+    "rhythm_guitar_1": {
+      "instrument": "continuous right-hand and harmonic engine",
+      "sections": {
+        "intro": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 48,
+          "note_count": 48,
+          "range": [
+            43,
+            64
+          ],
+          "median_gap_beats": 0.04499999999999993,
+          "velocity_unique": 8,
+          "velocity_stddev": 2.059867849051379,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 12.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 0.5449999999999999
+          }
+        },
+        "verse_1": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 96,
+          "note_count": 96,
+          "range": [
+            40,
+            62
+          ],
+          "median_gap_beats": 0.5,
+          "velocity_unique": 4,
+          "velocity_stddev": 2.23606797749979,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 8.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.6599999999999966
+          }
+        },
+        "pre_1": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 48,
+          "note_count": 48,
+          "range": [
+            40,
+            61
+          ],
+          "median_gap_beats": 0.5,
+          "velocity_unique": 8,
+          "velocity_stddev": 2.29128784747792,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 8.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.08
+          }
+        },
+        "chorus_1": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 144,
+          "note_count": 144,
+          "range": [
+            40,
+            64
+          ],
+          "median_gap_beats": 0.045000000000001705,
+          "velocity_unique": 8,
+          "velocity_stddev": 2.059867849051379,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 12.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 0.7349999999999994
+          }
+        },
+        "interlude": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 48,
+          "note_count": 48,
+          "range": [
+            43,
+            64
+          ],
+          "median_gap_beats": 0.04499999999999993,
+          "velocity_unique": 8,
+          "velocity_stddev": 2.059867849051379,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 12.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 0.5449999999999999
+          }
+        },
+        "verse_2": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 96,
+          "note_count": 96,
+          "range": [
+            40,
+            64
+          ],
+          "median_gap_beats": 0.5,
+          "velocity_unique": 4,
+          "velocity_stddev": 2.23606797749979,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 8.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.6599999999999966
+          }
+        },
+        "pre_2": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 48,
+          "note_count": 48,
+          "range": [
+            40,
+            61
+          ],
+          "median_gap_beats": 0.5,
+          "velocity_unique": 8,
+          "velocity_stddev": 2.29128784747792,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 8.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.08
+          }
+        },
+        "chorus_2": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 144,
+          "note_count": 144,
+          "range": [
+            40,
+            64
+          ],
+          "median_gap_beats": 0.045000000000001705,
+          "velocity_unique": 8,
+          "velocity_stddev": 2.059867849051379,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 12.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 0.7349999999999994
+          }
+        },
+        "bridge": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 28,
+          "note_count": 28,
+          "range": [
+            40,
+            57
+          ],
+          "median_gap_beats": 0.055,
+          "velocity_unique": 4,
+          "velocity_stddev": 3.1815796359028696,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 3.5,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 4.175000000000001
+          }
+        },
+        "final_chorus": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 174,
+          "note_count": 174,
+          "range": [
+            40,
+            64
+          ],
+          "median_gap_beats": 0.045000000000001705,
+          "velocity_unique": 10,
+          "velocity_stddev": 2.308600015931286,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 12.428571428571429,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 0.7349999999999994
+          }
+        },
+        "outro": {
+          "instrument": "continuous right-hand and harmonic engine",
+          "event_count": 24,
+          "note_count": 24,
+          "range": [
+            43,
+            64
+          ],
+          "median_gap_beats": 0.045,
+          "velocity_unique": 4,
+          "velocity_stddev": 1.118033988749895,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 4.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.545
+          }
+        }
+      }
+    },
+    "rhythm_guitar_2": {
+      "instrument": "upper partials, arpeggios and restrained counter-motion",
+      "sections": {
+        "intro": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 24,
+          "note_count": 24,
+          "range": [
+            57,
+            69
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 1.707825127659933,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 6.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 0.6800000000000002
+          }
+        },
+        "verse_1": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 18,
+          "note_count": 18,
+          "range": [
+            57,
+            66
+          ],
+          "median_gap_beats": 0.07000000000000028,
+          "velocity_unique": 3,
+          "velocity_stddev": 1.632993161855452,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 1.5,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 15.25
+          }
+        },
+        "pre_1": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 18,
+          "note_count": 18,
+          "range": [
+            55,
+            66
+          ],
+          "median_gap_beats": 1.5,
+          "velocity_unique": 8,
+          "velocity_stddev": 1.8929694486000912,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 3.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 3.6000000000000014
+          }
+        },
+        "chorus_1": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 48,
+          "note_count": 48,
+          "range": [
+            55,
+            69
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 4,
+          "velocity_stddev": 3.3541019662496847,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 4.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 2.4400000000000013
+          }
+        },
+        "interlude": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 24,
+          "note_count": 24,
+          "range": [
+            57,
+            69
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 6,
+          "velocity_stddev": 1.707825127659933,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 6.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 0.6800000000000002
+          }
+        },
+        "verse_2": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 36,
+          "note_count": 36,
+          "range": [
+            55,
+            69
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 3,
+          "velocity_stddev": 2.449489742783178,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 3.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 6.8
+          }
+        },
+        "pre_2": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 18,
+          "note_count": 18,
+          "range": [
+            55,
+            66
+          ],
+          "median_gap_beats": 1.5,
+          "velocity_unique": 8,
+          "velocity_stddev": 1.8929694486000912,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 3.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 7.300000000000001
+          }
+        },
+        "chorus_2": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 48,
+          "note_count": 48,
+          "range": [
+            55,
+            69
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 4,
+          "velocity_stddev": 3.3541019662496847,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 4.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 2.4400000000000013
+          }
+        },
+        "bridge": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 36,
+          "note_count": 36,
+          "range": [
+            55,
+            69
+          ],
+          "median_gap_beats": 0.75,
+          "velocity_unique": 16,
+          "velocity_stddev": 3.753599095913082,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 4.5,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.6199999999999992
+          }
+        },
+        "final_chorus": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 62,
+          "note_count": 62,
+          "range": [
+            55,
+            69
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 3.883045673755912,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 4.428571428571429,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 2.4399999999999995
+          }
+        },
+        "outro": {
+          "instrument": "upper partials, arpeggios and restrained counter-motion",
+          "event_count": 18,
+          "note_count": 18,
+          "range": [
+            57,
+            69
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 3,
+          "velocity_stddev": 0.816496580927726,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 3.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 3.1500000000000004
+          }
+        }
+      }
+    },
+    "bass": {
+      "instrument": "independent root/fifth motion and approaches",
+      "sections": {
+        "intro": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 20,
+          "note_count": 20,
+          "range": [
+            43,
+            54
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 2.8284271247461903,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 5.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.25
+          }
+        },
+        "verse_1": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 48,
+          "note_count": 48,
+          "range": [
+            40,
+            54
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 4,
+          "velocity_stddev": 2.23606797749979,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 4.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.2999999999999998
+          }
+        },
+        "pre_1": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 30,
+          "note_count": 30,
+          "range": [
+            40,
+            52
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 2.8284271247461903,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 5.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.25
+          }
+        },
+        "chorus_1": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 60,
+          "note_count": 60,
+          "range": [
+            40,
+            54
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 2.5612496949731396,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 5.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.25
+          }
+        },
+        "interlude": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 20,
+          "note_count": 20,
+          "range": [
+            43,
+            54
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 2.8284271247461903,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 5.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.25
+          }
+        },
+        "verse_2": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 48,
+          "note_count": 48,
+          "range": [
+            40,
+            54
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 4,
+          "velocity_stddev": 2.23606797749979,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 4.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.3000000000000003
+          }
+        },
+        "pre_2": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 30,
+          "note_count": 30,
+          "range": [
+            40,
+            52
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 2.8284271247461903,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 5.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.25
+          }
+        },
+        "chorus_2": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 60,
+          "note_count": 60,
+          "range": [
+            40,
+            54
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 2.5612496949731396,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 5.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.25
+          }
+        },
+        "bridge": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 28,
+          "note_count": 28,
+          "range": [
+            40,
+            54
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 2.799416848895061,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 3.5,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.3500000000000014
+          }
+        },
+        "final_chorus": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 70,
+          "note_count": 70,
+          "range": [
+            40,
+            54
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 2.5612496949731396,
+          "articulations": {},
+          "max_identical_bar_repetitions": 4,
+          "events_per_bar": 5.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.25
+          }
+        },
+        "outro": {
+          "instrument": "independent root/fifth motion and approaches",
+          "event_count": 30,
+          "note_count": 30,
+          "range": [
+            43,
+            54
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 5,
+          "velocity_stddev": 2.8284271247461903,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 5.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.25
+          }
+        }
+      }
+    },
+    "drums": {
+      "instrument": "pop-rock time, fills and section lift",
+      "sections": {
+        "intro": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 40,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 13,
+          "velocity_stddev": 15.276432011435132,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 10.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "verse_1": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 151,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 9,
+          "velocity_stddev": 12.844865534096074,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 12.583333333333334,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "pre_1": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 90,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 13,
+          "velocity_stddev": 13.833422578917828,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 15.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "chorus_1": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 178,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 13,
+          "velocity_stddev": 15.018291460721889,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 14.833333333333334,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "interlude": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 58,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 13,
+          "velocity_stddev": 13.877296919712416,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 14.5,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "verse_2": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 151,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 9,
+          "velocity_stddev": 13.324463813089062,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 12.583333333333334,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "pre_2": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 90,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 13,
+          "velocity_stddev": 14.306952466856416,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 15.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "chorus_2": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 178,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 13,
+          "velocity_stddev": 15.018291460721889,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 14.833333333333334,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "bridge": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 95,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 12,
+          "velocity_stddev": 13.526401801897325,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 11.875,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "final_chorus": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 207,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 13,
+          "velocity_stddev": 15.622714867091192,
+          "articulations": {},
+          "max_identical_bar_repetitions": 4,
+          "events_per_bar": 14.785714285714286,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "outro": {
+          "instrument": "pop-rock time, fills and section lift",
+          "event_count": 84,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": 0.5,
+          "velocity_unique": 13,
+          "velocity_stddev": 12.460049537105387,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 14.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        }
+      }
+    },
+    "electric_piano": {
+      "instrument": "sparse background glue only",
+      "sections": {
+        "intro": {
+          "instrument": "sparse background glue only",
+          "event_count": 12,
+          "note_count": 12,
+          "range": [
+            57,
+            69
+          ],
+          "median_gap_beats": 0.025000000000000355,
+          "velocity_unique": 3,
+          "velocity_stddev": 1.632993161855452,
+          "articulations": {},
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 3.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 1.0999999999999996
+          }
+        },
+        "verse_1": {
+          "instrument": "sparse background glue only",
+          "event_count": 0,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": null,
+          "velocity_unique": 0,
+          "velocity_stddev": 0.0,
+          "articulations": {},
+          "max_identical_bar_repetitions": 0,
+          "events_per_bar": 0.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "pre_1": {
+          "instrument": "sparse background glue only",
+          "event_count": 0,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": null,
+          "velocity_unique": 0,
+          "velocity_stddev": 0.0,
+          "articulations": {},
+          "max_identical_bar_repetitions": 0,
+          "events_per_bar": 0.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "chorus_1": {
+          "instrument": "sparse background glue only",
+          "event_count": 0,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": null,
+          "velocity_unique": 0,
+          "velocity_stddev": 0.0,
+          "articulations": {},
+          "max_identical_bar_repetitions": 0,
+          "events_per_bar": 0.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "interlude": {
+          "instrument": "sparse background glue only",
+          "event_count": 0,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": null,
+          "velocity_unique": 0,
+          "velocity_stddev": 0.0,
+          "articulations": {},
+          "max_identical_bar_repetitions": 0,
+          "events_per_bar": 0.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "verse_2": {
+          "instrument": "sparse background glue only",
+          "event_count": 0,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": null,
+          "velocity_unique": 0,
+          "velocity_stddev": 0.0,
+          "articulations": {},
+          "max_identical_bar_repetitions": 0,
+          "events_per_bar": 0.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "pre_2": {
+          "instrument": "sparse background glue only",
+          "event_count": 0,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": null,
+          "velocity_unique": 0,
+          "velocity_stddev": 0.0,
+          "articulations": {},
+          "max_identical_bar_repetitions": 0,
+          "events_per_bar": 0.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "chorus_2": {
+          "instrument": "sparse background glue only",
+          "event_count": 0,
+          "note_count": 0,
+          "range": null,
+          "median_gap_beats": null,
+          "velocity_unique": 0,
+          "velocity_stddev": 0.0,
+          "articulations": {},
+          "max_identical_bar_repetitions": 0,
+          "events_per_bar": 0.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": null
+          }
+        },
+        "bridge": {
+          "instrument": "sparse background glue only",
+          "event_count": 24,
+          "note_count": 24,
+          "range": [
+            55,
+            69
+          ],
+          "median_gap_beats": 0.025000000000000355,
+          "velocity_unique": 3,
+          "velocity_stddev": 1.632993161855452,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 3.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 5.1125
+          }
+        },
+        "final_chorus": {
+          "instrument": "sparse background glue only",
+          "event_count": 18,
+          "note_count": 18,
+          "range": [
+            57,
+            69
+          ],
+          "median_gap_beats": 0.02499999999999858,
+          "velocity_unique": 3,
+          "velocity_stddev": 1.632993161855452,
+          "articulations": {},
+          "max_identical_bar_repetitions": 2,
+          "events_per_bar": 1.2857142857142858,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 5.075000000000003
+          }
+        },
+        "outro": {
+          "instrument": "sparse background glue only",
+          "event_count": 18,
+          "note_count": 18,
+          "range": [
+            57,
+            69
+          ],
+          "median_gap_beats": 0.025000000000000355,
+          "velocity_unique": 3,
+          "velocity_stddev": 1.632993161855452,
+          "articulations": {},
+          "max_identical_bar_repetitions": 3,
+          "events_per_bar": 3.0,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 0.5
+          }
+        }
+      }
+    }
+  },
+  "section_density": {
+    "intro": {
+      "events_per_bar": 36.0,
+      "by_track": {
+        "vocal_melody": 0.0,
+        "rhythm_guitar_1": 12.0,
+        "rhythm_guitar_2": 6.0,
+        "bass": 5.0,
+        "drums": 10.0,
+        "electric_piano": 3.0
+      },
+      "active_tracks": 5
+    },
+    "verse_1": {
+      "events_per_bar": 31.083333333333336,
+      "by_track": {
+        "vocal_melody": 5.0,
+        "rhythm_guitar_1": 8.0,
+        "rhythm_guitar_2": 1.5,
+        "bass": 4.0,
+        "drums": 12.583333333333334,
+        "electric_piano": 0.0
+      },
+      "active_tracks": 5
+    },
+    "pre_1": {
+      "events_per_bar": 36.33333333333333,
+      "by_track": {
+        "vocal_melody": 5.333333333333333,
+        "rhythm_guitar_1": 8.0,
+        "rhythm_guitar_2": 3.0,
+        "bass": 5.0,
+        "drums": 15.0,
+        "electric_piano": 0.0
+      },
+      "active_tracks": 5
+    },
+    "chorus_1": {
+      "events_per_bar": 40.583333333333336,
+      "by_track": {
+        "vocal_melody": 4.75,
+        "rhythm_guitar_1": 12.0,
+        "rhythm_guitar_2": 4.0,
+        "bass": 5.0,
+        "drums": 14.833333333333334,
+        "electric_piano": 0.0
+      },
+      "active_tracks": 5
+    },
+    "interlude": {
+      "events_per_bar": 37.5,
+      "by_track": {
+        "vocal_melody": 0.0,
+        "rhythm_guitar_1": 12.0,
+        "rhythm_guitar_2": 6.0,
+        "bass": 5.0,
+        "drums": 14.5,
+        "electric_piano": 0.0
+      },
+      "active_tracks": 4
+    },
+    "verse_2": {
+      "events_per_bar": 32.833333333333336,
+      "by_track": {
+        "vocal_melody": 5.25,
+        "rhythm_guitar_1": 8.0,
+        "rhythm_guitar_2": 3.0,
+        "bass": 4.0,
+        "drums": 12.583333333333334,
+        "electric_piano": 0.0
+      },
+      "active_tracks": 5
+    },
+    "pre_2": {
+      "events_per_bar": 36.16666666666667,
+      "by_track": {
+        "vocal_melody": 5.166666666666667,
+        "rhythm_guitar_1": 8.0,
+        "rhythm_guitar_2": 3.0,
+        "bass": 5.0,
+        "drums": 15.0,
+        "electric_piano": 0.0
+      },
+      "active_tracks": 5
+    },
+    "chorus_2": {
+      "events_per_bar": 40.75,
+      "by_track": {
+        "vocal_melody": 4.916666666666667,
+        "rhythm_guitar_1": 12.0,
+        "rhythm_guitar_2": 4.0,
+        "bass": 5.0,
+        "drums": 14.833333333333334,
+        "electric_piano": 0.0
+      },
+      "active_tracks": 5
+    },
+    "bridge": {
+      "events_per_bar": 31.5,
+      "by_track": {
+        "vocal_melody": 5.125,
+        "rhythm_guitar_1": 3.5,
+        "rhythm_guitar_2": 4.5,
+        "bass": 3.5,
+        "drums": 11.875,
+        "electric_piano": 3.0
+      },
+      "active_tracks": 6
+    },
+    "final_chorus": {
+      "events_per_bar": 42.857142857142854,
+      "by_track": {
+        "vocal_melody": 4.928571428571429,
+        "rhythm_guitar_1": 12.428571428571429,
+        "rhythm_guitar_2": 4.428571428571429,
+        "bass": 5.0,
+        "drums": 14.785714285714286,
+        "electric_piano": 1.2857142857142858
+      },
+      "active_tracks": 6
+    },
+    "outro": {
+      "events_per_bar": 30.333333333333332,
+      "by_track": {
+        "vocal_melody": 1.3333333333333333,
+        "rhythm_guitar_1": 4.0,
+        "rhythm_guitar_2": 3.0,
+        "bass": 5.0,
+        "drums": 14.0,
+        "electric_piano": 3.0
+      },
+      "active_tracks": 6
+    }
+  },
+  "articulation_coverage": {},
+  "profile_coverage": {},
+  "phrase_variation": {
+    "diagnostic_count": 0
+  },
+  "diagnostics": [
+    {
+      "severity": "info",
+      "code": "register_collision",
+      "track": "rhythm_guitar_2+electric_piano",
+      "section": "intro",
+      "message": "tracks share nearly identical median register",
+      "evidence": [
+        62.0,
+        62.0
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "register_collision",
+      "track": "vocal_melody+rhythm_guitar_2",
+      "section": "verse_2",
+      "message": "tracks share nearly identical median register",
+      "evidence": [
+        64,
+        62.0
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "register_collision",
+      "track": "vocal_melody+rhythm_guitar_2",
+      "section": "bridge",
+      "message": "tracks share nearly identical median register",
+      "evidence": [
+        64,
+        62.0
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "register_collision",
+      "track": "vocal_melody+electric_piano",
+      "section": "bridge",
+      "message": "tracks share nearly identical median register",
+      "evidence": [
+        64,
+        62.0
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "register_collision",
+      "track": "rhythm_guitar_2+electric_piano",
+      "section": "bridge",
+      "message": "tracks share nearly identical median register",
+      "evidence": [
+        62.0,
+        62.0
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "register_collision",
+      "track": "rhythm_guitar_2+electric_piano",
+      "section": "final_chorus",
+      "message": "tracks share nearly identical median register",
+      "evidence": [
+        62.0,
+        62.0
+      ]
+    },
+    {
+      "severity": "info",
+      "code": "register_collision",
+      "track": "rhythm_guitar_2+electric_piano",
+      "section": "outro",
+      "message": "tracks share nearly identical median register",
+      "evidence": [
+        63.0,
+        63.0
+      ]
+    }
+  ],
+  "error_count": 0,
+  "warning_count": 0,
+  "info_count": 7
+}

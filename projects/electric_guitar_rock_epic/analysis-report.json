@@ -1,0 +1,712 @@
+{
+  "audio": {
+    "mix": {
+      "duration_seconds": 232.0,
+      "channels": 2,
+      "sample_rate": 44100,
+      "peak_dbfs": -8.441265499166946,
+      "rms_dbfs": -26.85805916558885,
+      "clipped_samples": 0,
+      "sections": {
+        "intro": {
+          "start_seconds": 0.0,
+          "end_seconds": 15.0,
+          "rms_dbfs": -29.716946643987793,
+          "peak_dbfs": -11.228975345562954
+        },
+        "verse1": {
+          "start_seconds": 15.0,
+          "end_seconds": 40.0,
+          "rms_dbfs": -29.80971435921491,
+          "peak_dbfs": -11.257992821230324
+        },
+        "pre1": {
+          "start_seconds": 40.0,
+          "end_seconds": 55.0,
+          "rms_dbfs": -26.466676527374837,
+          "peak_dbfs": -9.108647848562349
+        },
+        "chorus1": {
+          "start_seconds": 55.0,
+          "end_seconds": 80.0,
+          "rms_dbfs": -25.530764613883047,
+          "peak_dbfs": -10.00515786393767
+        },
+        "verse2": {
+          "start_seconds": 80.0,
+          "end_seconds": 100.0,
+          "rms_dbfs": -29.858111573268765,
+          "peak_dbfs": -11.742105993897116
+        },
+        "pre2": {
+          "start_seconds": 100.0,
+          "end_seconds": 115.0,
+          "rms_dbfs": -26.15218617209195,
+          "peak_dbfs": -9.400191902898875
+        },
+        "chorus2": {
+          "start_seconds": 115.0,
+          "end_seconds": 140.0,
+          "rms_dbfs": -25.41997222868137,
+          "peak_dbfs": -10.177110975511617
+        },
+        "build_a": {
+          "start_seconds": 140.0,
+          "end_seconds": 160.0,
+          "rms_dbfs": -29.008117996836233,
+          "peak_dbfs": -10.17283452934278
+        },
+        "bridge_build": {
+          "start_seconds": 160.0,
+          "end_seconds": 180.0,
+          "rms_dbfs": -25.99706366368112,
+          "peak_dbfs": -9.302950619946328
+        },
+        "final_chorus": {
+          "start_seconds": 180.0,
+          "end_seconds": 215.0,
+          "rms_dbfs": -24.92440881842759,
+          "peak_dbfs": -8.441265499166946
+        },
+        "outro": {
+          "start_seconds": 215.0,
+          "end_seconds": 230.0,
+          "rms_dbfs": -29.85564635127906,
+          "peak_dbfs": -12.525206458252896
+        }
+      }
+    },
+    "stems": {
+      "bass": {
+        "duration_seconds": 232.0,
+        "channels": 2,
+        "sample_rate": 44100,
+        "peak_dbfs": -10.490683609072669,
+        "rms_dbfs": -28.467500771443973,
+        "clipped_samples": 0,
+        "sections": {
+          "intro": {
+            "start_seconds": 0.0,
+            "end_seconds": 15.0,
+            "rms_dbfs": -30.80368691980823,
+            "peak_dbfs": -16.538822546063933
+          },
+          "verse1": {
+            "start_seconds": 15.0,
+            "end_seconds": 40.0,
+            "rms_dbfs": -30.79154370115134,
+            "peak_dbfs": -16.538822546063933
+          },
+          "pre1": {
+            "start_seconds": 40.0,
+            "end_seconds": 55.0,
+            "rms_dbfs": -27.769540940321136,
+            "peak_dbfs": -13.97621980122513
+          },
+          "chorus1": {
+            "start_seconds": 55.0,
+            "end_seconds": 80.0,
+            "rms_dbfs": -28.462099472731932,
+            "peak_dbfs": -14.10300387839098
+          },
+          "verse2": {
+            "start_seconds": 80.0,
+            "end_seconds": 100.0,
+            "rms_dbfs": -30.727329102493396,
+            "peak_dbfs": -16.482063416497923
+          },
+          "pre2": {
+            "start_seconds": 100.0,
+            "end_seconds": 115.0,
+            "rms_dbfs": -27.839559956460707,
+            "peak_dbfs": -13.760320791178772
+          },
+          "chorus2": {
+            "start_seconds": 115.0,
+            "end_seconds": 140.0,
+            "rms_dbfs": -28.474751819905215,
+            "peak_dbfs": -14.100315580740903
+          },
+          "build_a": {
+            "start_seconds": 140.0,
+            "end_seconds": 160.0,
+            "rms_dbfs": -26.84358877411028,
+            "peak_dbfs": -11.055930601330132
+          },
+          "bridge_build": {
+            "start_seconds": 160.0,
+            "end_seconds": 180.0,
+            "rms_dbfs": -25.572372465500163,
+            "peak_dbfs": -10.490683609072669
+          },
+          "final_chorus": {
+            "start_seconds": 180.0,
+            "end_seconds": 215.0,
+            "rms_dbfs": -28.447835811476764,
+            "peak_dbfs": -13.817371174524705
+          },
+          "outro": {
+            "start_seconds": 215.0,
+            "end_seconds": 230.0,
+            "rms_dbfs": -30.885452383414286,
+            "peak_dbfs": -16.61568141867714
+          }
+        }
+      },
+      "drums": {
+        "duration_seconds": 232.0,
+        "channels": 2,
+        "sample_rate": 44100,
+        "peak_dbfs": -3.459360724004031,
+        "rms_dbfs": -23.583031015414967,
+        "clipped_samples": 0,
+        "sections": {
+          "intro": {
+            "start_seconds": 0.0,
+            "end_seconds": 15.0,
+            "rms_dbfs": -25.998957508765447,
+            "peak_dbfs": -4.679695235203792
+          },
+          "verse1": {
+            "start_seconds": 15.0,
+            "end_seconds": 40.0,
+            "rms_dbfs": -26.29349380398078,
+            "peak_dbfs": -4.592453644128879
+          },
+          "pre1": {
+            "start_seconds": 40.0,
+            "end_seconds": 55.0,
+            "rms_dbfs": -22.812063824983614,
+            "peak_dbfs": -3.8179997451432586
+          },
+          "chorus1": {
+            "start_seconds": 55.0,
+            "end_seconds": 80.0,
+            "rms_dbfs": -22.228642650456756,
+            "peak_dbfs": -4.4135036548254885
+          },
+          "verse2": {
+            "start_seconds": 80.0,
+            "end_seconds": 100.0,
+            "rms_dbfs": -26.19119837585874,
+            "peak_dbfs": -5.335803838227644
+          },
+          "pre2": {
+            "start_seconds": 100.0,
+            "end_seconds": 115.0,
+            "rms_dbfs": -22.802796083900386,
+            "peak_dbfs": -3.459360724004031
+          },
+          "chorus2": {
+            "start_seconds": 115.0,
+            "end_seconds": 140.0,
+            "rms_dbfs": -22.231210110150307,
+            "peak_dbfs": -4.811992298861062
+          },
+          "build_a": {
+            "start_seconds": 140.0,
+            "end_seconds": 160.0,
+            "rms_dbfs": -26.593085894307194,
+            "peak_dbfs": -4.3049176741450355
+          },
+          "bridge_build": {
+            "start_seconds": 160.0,
+            "end_seconds": 180.0,
+            "rms_dbfs": -21.77770631176541,
+            "peak_dbfs": -3.8418937840686813
+          },
+          "final_chorus": {
+            "start_seconds": 180.0,
+            "end_seconds": 215.0,
+            "rms_dbfs": -22.288625959791734,
+            "peak_dbfs": -4.796783404302905
+          },
+          "outro": {
+            "start_seconds": 215.0,
+            "end_seconds": 230.0,
+            "rms_dbfs": -26.633676935771696,
+            "peak_dbfs": -9.235139923495295
+          }
+        }
+      },
+      "lead_guitar": {
+        "duration_seconds": 232.0,
+        "channels": 2,
+        "sample_rate": 44100,
+        "peak_dbfs": -7.42561269836103,
+        "rms_dbfs": -27.648173941171514,
+        "clipped_samples": 0,
+        "sections": {
+          "intro": {
+            "start_seconds": 0.0,
+            "end_seconds": 15.0,
+            "rms_dbfs": -32.48121777233879,
+            "peak_dbfs": -16.922661087872115
+          },
+          "verse1": {
+            "start_seconds": 15.0,
+            "end_seconds": 40.0,
+            "rms_dbfs": -32.460034198849726,
+            "peak_dbfs": -15.675612062621633
+          },
+          "pre1": {
+            "start_seconds": 40.0,
+            "end_seconds": 55.0,
+            "rms_dbfs": -27.486016906756966,
+            "peak_dbfs": -13.260618840454331
+          },
+          "chorus1": {
+            "start_seconds": 55.0,
+            "end_seconds": 80.0,
+            "rms_dbfs": -25.50125962299994,
+            "peak_dbfs": -13.367421457880049
+          },
+          "verse2": {
+            "start_seconds": 80.0,
+            "end_seconds": 100.0,
+            "rms_dbfs": -31.364641098919126,
+            "peak_dbfs": -15.504903989045363
+          },
+          "pre2": {
+            "start_seconds": 100.0,
+            "end_seconds": 115.0,
+            "rms_dbfs": -26.361405116867086,
+            "peak_dbfs": -12.799670381866648
+          },
+          "chorus2": {
+            "start_seconds": 115.0,
+            "end_seconds": 140.0,
+            "rms_dbfs": -25.117884200555963,
+            "peak_dbfs": -13.086677815966452
+          },
+          "build_a": {
+            "start_seconds": 140.0,
+            "end_seconds": 160.0,
+            "rms_dbfs": -90.1827064924759,
+            "peak_dbfs": -71.22414851040786
+          },
+          "bridge_build": {
+            "start_seconds": 160.0,
+            "end_seconds": 180.0,
+            "rms_dbfs": -90.30899869919436,
+            "peak_dbfs": -90.30899869919436
+          },
+          "final_chorus": {
+            "start_seconds": 180.0,
+            "end_seconds": 215.0,
+            "rms_dbfs": -23.951238267932737,
+            "peak_dbfs": -7.42561269836103
+          },
+          "outro": {
+            "start_seconds": 215.0,
+            "end_seconds": 230.0,
+            "rms_dbfs": -31.066012292603435,
+            "peak_dbfs": -15.589041017358483
+          }
+        }
+      },
+      "organ": {
+        "duration_seconds": 231.88607709750568,
+        "channels": 2,
+        "sample_rate": 44100,
+        "peak_dbfs": -11.645329115702081,
+        "rms_dbfs": -27.380074789315533,
+        "clipped_samples": 0,
+        "sections": {
+          "intro": {
+            "start_seconds": 0.0,
+            "end_seconds": 15.0,
+            "rms_dbfs": -28.563213044326993,
+            "peak_dbfs": -15.531802657750353
+          },
+          "verse1": {
+            "start_seconds": 15.0,
+            "end_seconds": 40.0,
+            "rms_dbfs": -28.061939479013276,
+            "peak_dbfs": -14.527260397433784
+          },
+          "pre1": {
+            "start_seconds": 40.0,
+            "end_seconds": 55.0,
+            "rms_dbfs": -27.23768117245953,
+            "peak_dbfs": -13.476804455825649
+          },
+          "chorus1": {
+            "start_seconds": 55.0,
+            "end_seconds": 80.0,
+            "rms_dbfs": -27.268517371922066,
+            "peak_dbfs": -13.478055394063293
+          },
+          "verse2": {
+            "start_seconds": 80.0,
+            "end_seconds": 100.0,
+            "rms_dbfs": -32.075083067914875,
+            "peak_dbfs": -18.679107853376372
+          },
+          "pre2": {
+            "start_seconds": 100.0,
+            "end_seconds": 115.0,
+            "rms_dbfs": -27.340737995815267,
+            "peak_dbfs": -13.464304972249565
+          },
+          "chorus2": {
+            "start_seconds": 115.0,
+            "end_seconds": 140.0,
+            "rms_dbfs": -27.2683369563609,
+            "peak_dbfs": -13.448082488502973
+          },
+          "build_a": {
+            "start_seconds": 140.0,
+            "end_seconds": 160.0,
+            "rms_dbfs": -28.143585027024905,
+            "peak_dbfs": -13.893151077430284
+          },
+          "bridge_build": {
+            "start_seconds": 160.0,
+            "end_seconds": 180.0,
+            "rms_dbfs": -25.063658137324015,
+            "peak_dbfs": -11.986239037050854
+          },
+          "final_chorus": {
+            "start_seconds": 180.0,
+            "end_seconds": 215.0,
+            "rms_dbfs": -25.643743273646788,
+            "peak_dbfs": -11.645329115702081
+          },
+          "outro": {
+            "start_seconds": 215.0,
+            "end_seconds": 230.0,
+            "rms_dbfs": -30.507971610992133,
+            "peak_dbfs": -14.396959101310763
+          }
+        }
+      },
+      "rhythm_guitar": {
+        "duration_seconds": 231.60743764172335,
+        "channels": 2,
+        "sample_rate": 44100,
+        "peak_dbfs": -10.073362088232223,
+        "rms_dbfs": -28.019773801749807,
+        "clipped_samples": 0,
+        "sections": {
+          "intro": {
+            "start_seconds": 0.0,
+            "end_seconds": 15.0,
+            "rms_dbfs": -31.879961305364045,
+            "peak_dbfs": -14.605250298607121
+          },
+          "verse1": {
+            "start_seconds": 15.0,
+            "end_seconds": 40.0,
+            "rms_dbfs": -32.11363861780217,
+            "peak_dbfs": -14.609524500106343
+          },
+          "pre1": {
+            "start_seconds": 40.0,
+            "end_seconds": 55.0,
+            "rms_dbfs": -30.093650644324022,
+            "peak_dbfs": -13.444343137234169
+          },
+          "chorus1": {
+            "start_seconds": 55.0,
+            "end_seconds": 80.0,
+            "rms_dbfs": -26.254410502436485,
+            "peak_dbfs": -10.275189614551302
+          },
+          "verse2": {
+            "start_seconds": 80.0,
+            "end_seconds": 100.0,
+            "rms_dbfs": -31.636610195814384,
+            "peak_dbfs": -14.706974869836127
+          },
+          "pre2": {
+            "start_seconds": 100.0,
+            "end_seconds": 115.0,
+            "rms_dbfs": -30.271051993763717,
+            "peak_dbfs": -13.436869260704142
+          },
+          "chorus2": {
+            "start_seconds": 115.0,
+            "end_seconds": 140.0,
+            "rms_dbfs": -26.28462350367616,
+            "peak_dbfs": -10.156603208846292
+          },
+          "build_a": {
+            "start_seconds": 140.0,
+            "end_seconds": 160.0,
+            "rms_dbfs": -27.518426267907465,
+            "peak_dbfs": -10.385772831834217
+          },
+          "bridge_build": {
+            "start_seconds": 160.0,
+            "end_seconds": 180.0,
+            "rms_dbfs": -25.877741253328583,
+            "peak_dbfs": -10.073362088232223
+          },
+          "final_chorus": {
+            "start_seconds": 180.0,
+            "end_seconds": 215.0,
+            "rms_dbfs": -26.229295888322895,
+            "peak_dbfs": -10.104696194909826
+          },
+          "outro": {
+            "start_seconds": 215.0,
+            "end_seconds": 230.0,
+            "rms_dbfs": -32.077510501798294,
+            "peak_dbfs": -14.78369433383217
+          }
+        }
+      },
+      "strings": {
+        "duration_seconds": 232.0,
+        "channels": 2,
+        "sample_rate": 44100,
+        "peak_dbfs": -13.376072127652009,
+        "rms_dbfs": -31.131750471196725,
+        "clipped_samples": 0,
+        "sections": {
+          "intro": {
+            "start_seconds": 0.0,
+            "end_seconds": 15.0,
+            "rms_dbfs": -31.066863382622145,
+            "peak_dbfs": -16.569127373900788
+          },
+          "verse1": {
+            "start_seconds": 15.0,
+            "end_seconds": 40.0,
+            "rms_dbfs": -31.365208181230955,
+            "peak_dbfs": -16.583425137850337
+          },
+          "pre1": {
+            "start_seconds": 40.0,
+            "end_seconds": 55.0,
+            "rms_dbfs": -32.694783125092314,
+            "peak_dbfs": -19.17330305305385
+          },
+          "chorus1": {
+            "start_seconds": 55.0,
+            "end_seconds": 80.0,
+            "rms_dbfs": -32.60317355136769,
+            "peak_dbfs": -19.214371165675026
+          },
+          "verse2": {
+            "start_seconds": 80.0,
+            "end_seconds": 100.0,
+            "rms_dbfs": -37.06948432328027,
+            "peak_dbfs": -21.9098837293992
+          },
+          "pre2": {
+            "start_seconds": 100.0,
+            "end_seconds": 115.0,
+            "rms_dbfs": -33.02109468851001,
+            "peak_dbfs": -19.299539557063092
+          },
+          "chorus2": {
+            "start_seconds": 115.0,
+            "end_seconds": 140.0,
+            "rms_dbfs": -32.60879694352261,
+            "peak_dbfs": -19.301985253162048
+          },
+          "build_a": {
+            "start_seconds": 140.0,
+            "end_seconds": 160.0,
+            "rms_dbfs": -28.306387476558193,
+            "peak_dbfs": -13.80307341057516
+          },
+          "bridge_build": {
+            "start_seconds": 160.0,
+            "end_seconds": 180.0,
+            "rms_dbfs": -28.35366256224443,
+            "peak_dbfs": -13.376072127652009
+          },
+          "final_chorus": {
+            "start_seconds": 180.0,
+            "end_seconds": 215.0,
+            "rms_dbfs": -30.11835245340416,
+            "peak_dbfs": -17.53721703334002
+          },
+          "outro": {
+            "start_seconds": 215.0,
+            "end_seconds": 230.0,
+            "rms_dbfs": -32.19076777273198,
+            "peak_dbfs": -18.461021776883083
+          }
+        }
+      }
+    }
+  },
+  "midi_integrity": {
+    "lead_guitar": {
+      "note_count": 255,
+      "same_pitch_overlaps": 0,
+      "unmatched_note_off": 0,
+      "stuck_notes": 0,
+      "tiny_notes_lt_0_05beat": 0
+    },
+    "rhythm_guitar": {
+      "note_count": 653,
+      "same_pitch_overlaps": 0,
+      "unmatched_note_off": 0,
+      "stuck_notes": 0,
+      "tiny_notes_lt_0_05beat": 0
+    },
+    "bass": {
+      "note_count": 384,
+      "same_pitch_overlaps": 0,
+      "unmatched_note_off": 0,
+      "stuck_notes": 0,
+      "tiny_notes_lt_0_05beat": 0
+    },
+    "organ": {
+      "note_count": 374,
+      "same_pitch_overlaps": 0,
+      "unmatched_note_off": 0,
+      "stuck_notes": 0,
+      "tiny_notes_lt_0_05beat": 0
+    },
+    "strings": {
+      "note_count": 113,
+      "same_pitch_overlaps": 0,
+      "unmatched_note_off": 0,
+      "stuck_notes": 0,
+      "tiny_notes_lt_0_05beat": 0
+    },
+    "drums": {
+      "note_count": 953,
+      "same_pitch_overlaps": 0,
+      "unmatched_note_off": 0,
+      "stuck_notes": 0,
+      "tiny_notes_lt_0_05beat": 0
+    }
+  },
+  "lead_build_overlap_note_count": 0,
+  "build_note_counts": {
+    "lead_guitar": 0,
+    "rhythm_guitar": 136,
+    "bass": 76,
+    "organ": 40,
+    "strings": 24,
+    "drums": 98
+  },
+  "section_event_differences": {
+    "chorus1_vs_chorus2": {
+      "lead_guitar": {
+        "events_a": 50,
+        "events_b": 52,
+        "symmetric_difference": 102,
+        "jaccard_similarity": 0.0
+      },
+      "rhythm_guitar": {
+        "events_a": 50,
+        "events_b": 50,
+        "symmetric_difference": 10,
+        "jaccard_similarity": 0.8182
+      },
+      "bass": {
+        "events_a": 50,
+        "events_b": 50,
+        "symmetric_difference": 10,
+        "jaccard_similarity": 0.8182
+      },
+      "organ": {
+        "events_a": 20,
+        "events_b": 20,
+        "symmetric_difference": 0,
+        "jaccard_similarity": 1.0
+      },
+      "strings": {
+        "events_a": 10,
+        "events_b": 10,
+        "symmetric_difference": 0,
+        "jaccard_similarity": 1.0
+      },
+      "drums": {
+        "events_a": 145,
+        "events_b": 145,
+        "symmetric_difference": 0,
+        "jaccard_similarity": 1.0
+      }
+    },
+    "chorus2_vs_final_chorus": {
+      "lead_guitar": {
+        "events_a": 52,
+        "events_b": 78,
+        "symmetric_difference": 130,
+        "jaccard_similarity": 0.0
+      },
+      "rhythm_guitar": {
+        "events_a": 50,
+        "events_b": 70,
+        "symmetric_difference": 60,
+        "jaccard_similarity": 0.3333
+      },
+      "bass": {
+        "events_a": 50,
+        "events_b": 70,
+        "symmetric_difference": 62,
+        "jaccard_similarity": 0.3187
+      },
+      "organ": {
+        "events_a": 20,
+        "events_b": 28,
+        "symmetric_difference": 48,
+        "jaccard_similarity": 0.0
+      },
+      "strings": {
+        "events_a": 10,
+        "events_b": 14,
+        "symmetric_difference": 24,
+        "jaccard_similarity": 0.0
+      },
+      "drums": {
+        "events_a": 145,
+        "events_b": 201,
+        "symmetric_difference": 64,
+        "jaccard_similarity": 0.6878
+      }
+    },
+    "build_a_vs_bridge_build": {
+      "lead_guitar": {
+        "events_a": 0,
+        "events_b": 0,
+        "symmetric_difference": 0,
+        "jaccard_similarity": 1.0
+      },
+      "rhythm_guitar": {
+        "events_a": 28,
+        "events_b": 40,
+        "symmetric_difference": 68,
+        "jaccard_similarity": 0.0
+      },
+      "bass": {
+        "events_a": 28,
+        "events_b": 48,
+        "symmetric_difference": 76,
+        "jaccard_similarity": 0.0
+      },
+      "organ": {
+        "events_a": 16,
+        "events_b": 24,
+        "symmetric_difference": 40,
+        "jaccard_similarity": 0.0
+      },
+      "strings": {
+        "events_a": 4,
+        "events_b": 4,
+        "symmetric_difference": 8,
+        "jaccard_similarity": 0.0
+      },
+      "drums": {
+        "events_a": 38,
+        "events_b": 60,
+        "symmetric_difference": 98,
+        "jaccard_similarity": 0.0
+      }
+    }
+  },
+  "sha256": {
+    "final.wav": "d77bb321a2ff63a4abc7402ee44dab7fe500a77aaacf8d5358bc660efdc9012b",
+    "mix.wav": "d77bb321a2ff63a4abc7402ee44dab7fe500a77aaacf8d5358bc660efdc9012b",
+    "v1.wav": "2d85a622ccb00ca5fc806df4830c19abff1a25573784ee040ee1e782f74cd4ab"
+  }
+}

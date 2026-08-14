@@ -1,0 +1,62 @@
+{
+  "plans": [
+    {
+      "section_id": "lead_8_bar_arc",
+      "bars": [
+        1,
+        8
+      ],
+      "opening_register": "mid",
+      "peak_register": "high",
+      "peak_bar": 6,
+      "final_resolution_bar": 8,
+      "energy_curve": [
+        0.36,
+        0.476,
+        0.592,
+        0.708,
+        0.824,
+        0.94,
+        0.68,
+        0.44
+      ],
+      "density_curve": [
+        0.528,
+        0.563,
+        0.598,
+        0.632,
+        0.667,
+        0.702,
+        0.624,
+        0.552
+      ],
+      "cadence_plan": {
+        "strong_cadences": [
+          8
+        ],
+        "weak_cadences": [
+          4
+        ],
+        "avoid_resolution_bars": [
+          2,
+          6
+        ]
+      },
+      "breath_bars": [
+        2,
+        4,
+        6
+      ],
+      "cross_bar_note_bars": [
+        2,
+        4,
+        6,
+        6
+      ],
+      "delayed_target": {
+        "pitch": "B5",
+        "bar": 6
+      }
+    }
+  ]
+}

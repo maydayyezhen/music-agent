@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "title": "Strings Inner-Movement Study",
+  "phrases": [
+    {
+      "track": "strings",
+      "section": "arc",
+      "instrument": "strings",
+      "role": "plane",
+      "phrase_type": "long_tones_inner_movement",
+      "energy": 0.55,
+      "performance_intent": {
+        "attack": "intentional",
+        "release": "phrase_shaped",
+        "humanization": "action_based",
+        "seed": 109
+      },
+      "harmony": [
+        {
+          "at": "1:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "2:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "3:1",
+          "duration": 4,
+          "chord": "G"
+        },
+        {
+          "at": "4:1",
+          "duration": 4,
+          "chord": "D"
+        },
+        {
+          "at": "5:1",
+          "duration": 4,
+          "chord": "Em"
+        },
+        {
+          "at": "6:1",
+          "duration": 4,
+          "chord": "C"
+        },
+        {
+          "at": "7:1",
+          "duration": 4,
+          "chord": "Am"
+        },
+        {
+          "at": "8:1",
+          "duration": 4,
+          "chord": "B"
+        }
+      ],
+      "register_midi": [
+        55,
+        83
+      ],
+      "voices": 4,
+      "articulations": [
+        "sustain",
+        "legato"
+      ]
+    }
+  ]
+}

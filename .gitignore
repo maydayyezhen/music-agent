@@ -23,3 +23,6 @@ projects/**/*.mid
 # Local diagnostic files.
 *.log
 .pytest_cache/
+
+# Local IDE metadata.
+.idea/

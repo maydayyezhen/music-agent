@@ -1,0 +1,478 @@
+{
+  "global_target": {
+    "intro": {
+      "level": "standard",
+      "rhythm": 3,
+      "harmony": 3,
+      "arrangement": 3,
+      "melodic_ornamentation": 2,
+      "density": 3,
+      "variation": 3,
+      "budget": 11,
+      "melody_rest_ratio_guide": [
+        0.15,
+        0.4
+      ]
+    },
+    "verse": {
+      "level": "standard",
+      "rhythm": 3,
+      "harmony": 3,
+      "arrangement": 3,
+      "melodic_ornamentation": 2,
+      "density": 3,
+      "variation": 3,
+      "budget": 11,
+      "melody_rest_ratio_guide": [
+        0.15,
+        0.4
+      ]
+    },
+    "chorus": {
+      "level": "rich",
+      "rhythm": 4,
+      "harmony": 4,
+      "arrangement": 4,
+      "melodic_ornamentation": 3,
+      "density": 3,
+      "variation": 4,
+      "budget": 15,
+      "melody_rest_ratio_guide": [
+        0.1,
+        0.3
+      ]
+    },
+    "bridge": {
+      "level": "standard",
+      "rhythm": 3,
+      "harmony": 3,
+      "arrangement": 3,
+      "melodic_ornamentation": 2,
+      "density": 3,
+      "variation": 3,
+      "budget": 11,
+      "melody_rest_ratio_guide": [
+        0.15,
+        0.4
+      ]
+    },
+    "final_chorus": {
+      "level": "rich",
+      "rhythm": 4,
+      "harmony": 4,
+      "arrangement": 4,
+      "melodic_ornamentation": 3,
+      "density": 3,
+      "variation": 4,
+      "budget": 15,
+      "melody_rest_ratio_guide": [
+        0.1,
+        0.3
+      ]
+    },
+    "outro": {
+      "level": "standard",
+      "rhythm": 3,
+      "harmony": 3,
+      "arrangement": 3,
+      "melodic_ornamentation": 2,
+      "density": 3,
+      "variation": 3,
+      "budget": 11,
+      "melody_rest_ratio_guide": [
+        0.15,
+        0.4
+      ]
+    }
+  },
+  "track_metrics": {
+    "rhythm_guitar": {
+      "intro": {
+        "note_density": 9.0,
+        "rest_ratio": 0.30399999999999927,
+        "duration_entropy": 0.41381685030363374,
+        "same_grid_ratio": 0.3333333333333333,
+        "velocity_variance": 13.428819444444445,
+        "pattern_repetition": 0.0,
+        "event_count": 72
+      },
+      "verse": {
+        "note_density": 21.0,
+        "rest_ratio": 0.6289999999999972,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 0.3333333333333333,
+        "velocity_variance": 24.07936507936508,
+        "pattern_repetition": 0.0,
+        "event_count": 336
+      },
+      "chorus": {
+        "note_density": 9.0,
+        "rest_ratio": 0.3040000000000004,
+        "duration_entropy": 0.41381685030363374,
+        "same_grid_ratio": 0.3333333333333333,
+        "velocity_variance": 13.791473765432098,
+        "pattern_repetition": 0.0,
+        "event_count": 144
+      },
+      "bridge": {
+        "note_density": 21.0,
+        "rest_ratio": 0.6289999999999972,
+        "duration_entropy": -0.0,
+        "same_grid_ratio": 0.3333333333333333,
+        "velocity_variance": 23.209041950113384,
+        "pattern_repetition": 0.0,
+        "event_count": 336
+      },
+      "final_chorus": {
+        "note_density": 9.0,
+        "rest_ratio": 0.3040000000000004,
+        "duration_entropy": 0.41381685030363374,
+        "same_grid_ratio": 0.3333333333333333,
+        "velocity_variance": 13.905044367283953,
+        "pattern_repetition": 0.0,
+        "event_count": 144
+      },
+      "outro": {
+        "note_density": 9.0,
+        "rest_ratio": 0.30399999999999927,
+        "duration_entropy": 0.41381685030363374,
+        "same_grid_ratio": 0.3333333333333333,
+        "velocity_variance": 13.897376543209875,
+        "pattern_repetition": 0.0,
+        "event_count": 72
+      }
+    },
+    "lead_guitar": {
+      "intro": {
+        "note_density": 1.5,
+        "rest_ratio": 0.7853749999999997,
+        "duration_entropy": 1.4591479170272448,
+        "same_grid_ratio": 0.75,
+        "velocity_variance": 8.409722222222221,
+        "pattern_repetition": 0.0,
+        "event_count": 12
+      },
+      "verse": {
+        "note_density": 1.4375,
+        "rest_ratio": 0.8056874999999999,
+        "duration_entropy": 1.4029342381953893,
+        "same_grid_ratio": 0.7391304347826086,
+        "velocity_variance": 6.49905482041588,
+        "pattern_repetition": 0.0,
+        "event_count": 23
+      },
+      "chorus": {
+        "note_density": 1.4375,
+        "rest_ratio": 0.8056874999999999,
+        "duration_entropy": 1.4029342381953893,
+        "same_grid_ratio": 0.7391304347826086,
+        "velocity_variance": 12.77126654064272,
+        "pattern_repetition": 0.0,
+        "event_count": 23
+      },
+      "bridge": {
+        "note_density": 0.0,
+        "rest_ratio": 1.0,
+        "duration_entropy": 0.0,
+        "same_grid_ratio": 0.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 0
+      },
+      "final_chorus": {
+        "note_density": 1.4375,
+        "rest_ratio": 0.8056874999999999,
+        "duration_entropy": 1.4029342381953893,
+        "same_grid_ratio": 0.7391304347826086,
+        "velocity_variance": 12.77126654064272,
+        "pattern_repetition": 0.0,
+        "event_count": 23
+      },
+      "outro": {
+        "note_density": 1.0,
+        "rest_ratio": 0.8928749999999999,
+        "duration_entropy": 1.0,
+        "same_grid_ratio": 0.75,
+        "velocity_variance": 12.609375,
+        "pattern_repetition": 0.0,
+        "event_count": 8
+      }
+    },
+    "bass": {
+      "intro": {
+        "note_density": 3.5,
+        "rest_ratio": 0.36175,
+        "duration_entropy": 2.5216406363433186,
+        "same_grid_ratio": 0.7142857142857143,
+        "velocity_variance": 54.30994897959185,
+        "pattern_repetition": 0.0,
+        "event_count": 28
+      },
+      "verse": {
+        "note_density": 3.5,
+        "rest_ratio": 0.36175000000000035,
+        "duration_entropy": 2.5216406363433186,
+        "same_grid_ratio": 0.7142857142857143,
+        "velocity_variance": 56.56855867346939,
+        "pattern_repetition": 0.0,
+        "event_count": 56
+      },
+      "chorus": {
+        "note_density": 3.5,
+        "rest_ratio": 0.36175000000000035,
+        "duration_entropy": 2.5216406363433186,
+        "same_grid_ratio": 0.7142857142857143,
+        "velocity_variance": 54.57142857142857,
+        "pattern_repetition": 0.0,
+        "event_count": 56
+      },
+      "bridge": {
+        "note_density": 3.5,
+        "rest_ratio": 0.36175000000000035,
+        "duration_entropy": 2.5216406363433186,
+        "same_grid_ratio": 0.7142857142857143,
+        "velocity_variance": 57.02423469387754,
+        "pattern_repetition": 0.0,
+        "event_count": 56
+      },
+      "final_chorus": {
+        "note_density": 3.5,
+        "rest_ratio": 0.36175000000000035,
+        "duration_entropy": 2.5216406363433186,
+        "same_grid_ratio": 0.7142857142857143,
+        "velocity_variance": 53.321109693877546,
+        "pattern_repetition": 0.0,
+        "event_count": 56
+      },
+      "outro": {
+        "note_density": 3.5,
+        "rest_ratio": 0.36175,
+        "duration_entropy": 2.5216406363433186,
+        "same_grid_ratio": 0.7142857142857143,
+        "velocity_variance": 52.229591836734684,
+        "pattern_repetition": 0.0,
+        "event_count": 28
+      }
+    },
+    "drums": {
+      "intro": {
+        "note_density": 9.5,
+        "rest_ratio": 0.8449999999999996,
+        "duration_entropy": 0.2974722489192896,
+        "same_grid_ratio": 0.868421052631579,
+        "velocity_variance": 141.03791551246536,
+        "pattern_repetition": 0.4473684210526315,
+        "event_count": 76
+      },
+      "verse": {
+        "note_density": 9.625,
+        "rest_ratio": 0.8421875000000014,
+        "duration_entropy": 0.46637036556720757,
+        "same_grid_ratio": 0.8571428571428571,
+        "velocity_variance": 183.7008348794063,
+        "pattern_repetition": 0.4415584415584416,
+        "event_count": 154
+      },
+      "chorus": {
+        "note_density": 14.3125,
+        "rest_ratio": 0.7225000000000024,
+        "duration_entropy": 0.2534986980292305,
+        "same_grid_ratio": 0.9039301310043668,
+        "velocity_variance": 241.61705535744937,
+        "pattern_repetition": 0.34497816593886466,
+        "event_count": 229
+      },
+      "bridge": {
+        "note_density": 9.625,
+        "rest_ratio": 0.8421875000000014,
+        "duration_entropy": 0.46637036556720757,
+        "same_grid_ratio": 0.8571428571428571,
+        "velocity_variance": 225.082855456232,
+        "pattern_repetition": 0.4415584415584416,
+        "event_count": 154
+      },
+      "final_chorus": {
+        "note_density": 14.3125,
+        "rest_ratio": 0.7225000000000024,
+        "duration_entropy": 0.2534986980292305,
+        "same_grid_ratio": 0.9039301310043668,
+        "velocity_variance": 305.4625960603345,
+        "pattern_repetition": 0.34497816593886466,
+        "event_count": 229
+      },
+      "outro": {
+        "note_density": 9.5,
+        "rest_ratio": 0.8449999999999996,
+        "duration_entropy": 0.2974722489192896,
+        "same_grid_ratio": 0.868421052631579,
+        "velocity_variance": 161.73597645429362,
+        "pattern_repetition": 0.4473684210526315,
+        "event_count": 76
+      }
+    },
+    "organ": {
+      "intro": {
+        "note_density": 1.875,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.2866926683547546,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.7733333333333334,
+        "pattern_repetition": 0.5333333333333333,
+        "event_count": 15
+      },
+      "verse": {
+        "note_density": 2.0,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.2987949406953985,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.75,
+        "pattern_repetition": 0.5,
+        "event_count": 32
+      },
+      "chorus": {
+        "note_density": 2.125,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.1816742385599053,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.771626297577855,
+        "pattern_repetition": 0.5294117647058824,
+        "event_count": 34
+      },
+      "bridge": {
+        "note_density": 1.8125,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.4318873153407885,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.615933412604043,
+        "pattern_repetition": 0.4482758620689655,
+        "event_count": 29
+      },
+      "final_chorus": {
+        "note_density": 2.0625,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.2112938253354983,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.776859504132231,
+        "pattern_repetition": 0.5454545454545454,
+        "event_count": 33
+      },
+      "outro": {
+        "note_density": 1.625,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.669180336866731,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 2.6982248520710064,
+        "pattern_repetition": 0.46153846153846156,
+        "event_count": 13
+      }
+    },
+    "strings": {
+      "intro": {
+        "note_density": 0.0,
+        "rest_ratio": 1.0,
+        "duration_entropy": 0.0,
+        "same_grid_ratio": 0.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 0
+      },
+      "verse": {
+        "note_density": 0.0,
+        "rest_ratio": 1.0,
+        "duration_entropy": 0.0,
+        "same_grid_ratio": 0.0,
+        "velocity_variance": 0.0,
+        "pattern_repetition": 0.0,
+        "event_count": 0
+      },
+      "chorus": {
+        "note_density": 2.125,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.1816742385599053,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 120.41868512110726,
+        "pattern_repetition": 0.5294117647058824,
+        "event_count": 34
+      },
+      "bridge": {
+        "note_density": 1.8125,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.31415062214826,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 124.40665873959573,
+        "pattern_repetition": 0.5172413793103448,
+        "event_count": 29
+      },
+      "final_chorus": {
+        "note_density": 2.0625,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.2112938253354983,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 109.95592286501379,
+        "pattern_repetition": 0.5454545454545454,
+        "event_count": 33
+      },
+      "outro": {
+        "note_density": 1.625,
+        "rest_ratio": 0.0,
+        "duration_entropy": 1.669180336866731,
+        "same_grid_ratio": 1.0,
+        "velocity_variance": 25.928994082840234,
+        "pattern_repetition": 0.46153846153846156,
+        "event_count": 13
+      }
+    }
+  },
+  "section_metrics": {
+    "intro": {
+      "section_density": 25.375,
+      "active_tracks": 5,
+      "track_overlap_ratio": 0.8333333333333334,
+      "onset_overlap_ratio": 0.18396578451200302,
+      "target_budget": 11,
+      "declared_budget_total": 8
+    },
+    "verse": {
+      "section_density": 37.5625,
+      "active_tracks": 5,
+      "track_overlap_ratio": 0.8333333333333334,
+      "onset_overlap_ratio": 0.15991284800189845,
+      "target_budget": 11,
+      "declared_budget_total": 8
+    },
+    "chorus": {
+      "section_density": 32.5,
+      "active_tracks": 6,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.2113761973643332,
+      "target_budget": 15,
+      "declared_budget_total": 8
+    },
+    "bridge": {
+      "section_density": 37.75,
+      "active_tracks": 5,
+      "track_overlap_ratio": 0.8333333333333334,
+      "onset_overlap_ratio": 0.25935259939070765,
+      "target_budget": 11,
+      "declared_budget_total": 8
+    },
+    "final_chorus": {
+      "section_density": 32.375,
+      "active_tracks": 6,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.2076286094402747,
+      "target_budget": 15,
+      "declared_budget_total": 8
+    },
+    "outro": {
+      "section_density": 26.25,
+      "active_tracks": 6,
+      "track_overlap_ratio": 1.0,
+      "onset_overlap_ratio": 0.2314722960717954,
+      "target_budget": 11,
+      "declared_budget_total": 8
+    }
+  },
+  "warnings": [],
+  "warning_count": 0
+}

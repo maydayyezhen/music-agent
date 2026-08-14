@@ -1,0 +1,1517 @@
+{
+  "track_metrics": {
+    "lead_guitar": {
+      "intro": {
+        "texture": "implicit",
+        "family": "line",
+        "average_note_duration": 1.1,
+        "short_note_ratio": 0.375,
+        "sustain_ratio": 0.125,
+        "legato_ratio": 0.2857142857142857,
+        "average_gap_between_notes": 1.0571428571428574,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 2.75,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 8,
+        "total_track_event_count": 8,
+        "continuity_target": null
+      },
+      "verse1": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.8538461538461539,
+        "short_note_ratio": 0.38461538461538464,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.25,
+        "average_gap_between_notes": 1.8772727272727274,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 3.0269868333592873,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 13,
+        "total_track_event_count": 13,
+        "continuity_target": null
+      },
+      "pre1": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.8566666666666666,
+        "short_note_ratio": 0.4,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.07142857142857142,
+        "average_gap_between_notes": 0.7142857142857143,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 2.840223928941852,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 15,
+        "total_track_event_count": 15,
+        "continuity_target": null
+      },
+      "chorus1": {
+        "texture": "implicit",
+        "family": "line",
+        "average_note_duration": 0.54,
+        "short_note_ratio": 0.8,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.7142857142857143,
+        "average_gap_between_notes": 0.24285714285714283,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.7219280948873623,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 50,
+        "total_track_event_count": 50,
+        "continuity_target": null
+      },
+      "verse2": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.7666666666666667,
+        "short_note_ratio": 0.6666666666666666,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.09090909090909091,
+        "average_gap_between_notes": 1.6454545454545455,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 2.418295834054489,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 12,
+        "total_track_event_count": 12,
+        "continuity_target": null
+      },
+      "pre2": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.7200000000000001,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.5741176470588237,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 18,
+        "total_track_event_count": 18,
+        "continuity_target": null
+      },
+      "chorus2": {
+        "texture": "implicit",
+        "family": "line",
+        "average_note_duration": 0.5076923076923077,
+        "short_note_ratio": 0.8461538461538461,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.7254901960784313,
+        "average_gap_between_notes": 0.24509803921568624,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.3346791410515948,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 52,
+        "total_track_event_count": 52,
+        "continuity_target": null
+      },
+      "final_chorus": {
+        "texture": "implicit",
+        "family": "line",
+        "average_note_duration": 0.47089743589743605,
+        "short_note_ratio": 0.8717948717948718,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.5064935064935064,
+        "average_gap_between_notes": 0.24573333333333286,
+        "overlap_ratio": 0.025974025974025976,
+        "duration_entropy": 1.7342839201595417,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 78,
+        "total_track_event_count": 78,
+        "continuity_target": null
+      },
+      "outro": {
+        "texture": "implicit",
+        "family": "line",
+        "average_note_duration": 1.4833333333333334,
+        "short_note_ratio": 0.1111111111111111,
+        "sustain_ratio": 0.2222222222222222,
+        "legato_ratio": 0.125,
+        "average_gap_between_notes": 1.26875,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 2.94770277922009,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 9,
+        "total_track_event_count": 9,
+        "continuity_target": null
+      }
+    },
+    "rhythm_guitar": {
+      "intro": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 1.1500000000000001,
+        "short_note_ratio": 0.5714285714285714,
+        "sustain_ratio": 0.42857142857142855,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 1.7062499999999998,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.9852281360342516,
+        "voice_leading_distance": 2.5714285714285716,
+        "common_tone_retention": 0.8571428571428571,
+        "event_count": 9,
+        "total_track_event_count": 9,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "verse1": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 1.1499999999999997,
+        "short_note_ratio": 0.5714285714285714,
+        "sustain_ratio": 0.42857142857142855,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 1.682142857142857,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.9852281360342516,
+        "voice_leading_distance": 2.4285714285714284,
+        "common_tone_retention": 0.8571428571428571,
+        "event_count": 15,
+        "total_track_event_count": 15,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "pre1": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 0.42999999999999994,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.9047058823529409,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 2.3082708345352603,
+        "voice_leading_distance": 2.2,
+        "common_tone_retention": 0.8,
+        "event_count": 18,
+        "total_track_event_count": 18,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "chorus1": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 0.4,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.20408163265306123,
+        "average_gap_between_notes": 0.38734693877550985,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.9219280948873623,
+        "voice_leading_distance": 3.3333333333333335,
+        "common_tone_retention": 0.8888888888888888,
+        "event_count": 50,
+        "total_track_event_count": 50,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "verse2": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 1.1500000000000001,
+        "short_note_ratio": 0.5714285714285714,
+        "sustain_ratio": 0.42857142857142855,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 1.6909090909090907,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.9852281360342516,
+        "voice_leading_distance": 2.6363636363636362,
+        "common_tone_retention": 0.9090909090909091,
+        "event_count": 12,
+        "total_track_event_count": 12,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "pre2": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 0.42999999999999994,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.9047058823529409,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 2.3082708345352603,
+        "voice_leading_distance": 2.6,
+        "common_tone_retention": 0.8,
+        "event_count": 18,
+        "total_track_event_count": 18,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "chorus2": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 0.4,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.20408163265306123,
+        "average_gap_between_notes": 0.38734693877550985,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.9219280948873623,
+        "voice_leading_distance": 3.5555555555555554,
+        "common_tone_retention": 0.8888888888888888,
+        "event_count": 50,
+        "total_track_event_count": 50,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "build_a": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 0.42928571428571427,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.7259259259259255,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 2.316333280562803,
+        "voice_leading_distance": 2.142857142857143,
+        "common_tone_retention": 1.0,
+        "event_count": 28,
+        "total_track_event_count": 28,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "bridge_build": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 0.4,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.20512820512820512,
+        "average_gap_between_notes": 0.38410256410256377,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.9219280948873623,
+        "voice_leading_distance": 2.6666666666666665,
+        "common_tone_retention": 1.0,
+        "event_count": 40,
+        "total_track_event_count": 40,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "final_chorus": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 0.4,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.2028985507246377,
+        "average_gap_between_notes": 0.39101449275362293,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.9219280948873623,
+        "voice_leading_distance": 3.8461538461538463,
+        "common_tone_retention": 0.7692307692307693,
+        "event_count": 70,
+        "total_track_event_count": 70,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      },
+      "outro": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 1.1500000000000001,
+        "short_note_ratio": 0.5714285714285714,
+        "sustain_ratio": 0.42857142857142855,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 1.7062499999999998,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.9852281360342516,
+        "voice_leading_distance": 1.75,
+        "common_tone_retention": 0.875,
+        "event_count": 9,
+        "total_track_event_count": 9,
+        "continuity_target": {
+          "sustain_ratio": 0.25,
+          "legato_ratio": 0.2,
+          "overlap": 0.0,
+          "common_tone_retention": 0.2,
+          "voice_leading_strength": 0.4
+        }
+      }
+    },
+    "bass": {
+      "intro": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 1.0927777777777776,
+        "short_note_ratio": 0.16666666666666666,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.5294117647058824,
+        "average_gap_between_notes": 0.22823529411764726,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.8288713632524445,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 18,
+        "total_track_event_count": 18,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "verse1": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 1.0937333333333332,
+        "short_note_ratio": 0.13333333333333333,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.5517241379310345,
+        "average_gap_between_notes": 0.22786206896551778,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.7483943455364033,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 30,
+        "total_track_event_count": 30,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "pre1": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 0.8475833333333332,
+        "short_note_ratio": 0.20833333333333334,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.8260869565217391,
+        "average_gap_between_notes": 0.14382608695652205,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.8886865525783176,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 24,
+        "total_track_event_count": 24,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "chorus1": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 0.48424000000000006,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.40816326530612246,
+        "average_gap_between_notes": 0.30016326530612203,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.2597218324096136,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 50,
+        "total_track_event_count": 50,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "verse2": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 1.10075,
+        "short_note_ratio": 0.16666666666666666,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.5217391304347826,
+        "average_gap_between_notes": 0.2231304347826091,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.7755490855036324,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 24,
+        "total_track_event_count": 24,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "pre2": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 0.8475833333333332,
+        "short_note_ratio": 0.20833333333333334,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.8260869565217391,
+        "average_gap_between_notes": 0.14382608695652205,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.8886865525783176,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 24,
+        "total_track_event_count": 24,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "chorus2": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 0.48424000000000006,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.40816326530612246,
+        "average_gap_between_notes": 0.30016326530612203,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.2597218324096136,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 50,
+        "total_track_event_count": 50,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "build_a": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 1.0739285714285713,
+        "short_note_ratio": 0.25,
+        "sustain_ratio": 0.14285714285714285,
+        "legato_ratio": 1.0,
+        "average_gap_between_notes": 0.04555555555555544,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 2.0166775832212607,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 28,
+        "total_track_event_count": 28,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "bridge_build": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 0.5267916666666667,
+        "short_note_ratio": 0.875,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.5106382978723404,
+        "average_gap_between_notes": 0.12965957446808513,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 2.2228548143998657,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 48,
+        "total_track_event_count": 48,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "final_chorus": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 0.4857142857142857,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.4057971014492754,
+        "average_gap_between_notes": 0.3031884057971007,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.2417273423670232,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 70,
+        "total_track_event_count": 70,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      },
+      "outro": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 1.0927777777777776,
+        "short_note_ratio": 0.16666666666666666,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.5294117647058824,
+        "average_gap_between_notes": 0.22823529411764726,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.8288713632524445,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 18,
+        "total_track_event_count": 18,
+        "continuity_target": {
+          "sustain_ratio": 0.45,
+          "legato_ratio": 0.55,
+          "overlap": 0.0,
+          "common_tone_retention": 0.3,
+          "voice_leading_strength": 0.7
+        }
+      }
+    },
+    "organ": {
+      "intro": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 7.599999999999999,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.40000000000000036,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 0.6666666666666666,
+        "common_tone_retention": 1.0,
+        "event_count": 3,
+        "total_track_event_count": 3,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "verse1": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 7.599999999999997,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.39999999999999947,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 1.3333333333333333,
+        "common_tone_retention": 1.0,
+        "event_count": 5,
+        "total_track_event_count": 5,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "pre1": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 1.6249999999999998,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.3681818181818182,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.0,
+        "voice_leading_distance": 3.8,
+        "common_tone_retention": 0.9,
+        "event_count": 12,
+        "total_track_event_count": 12,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "chorus1": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 1.625,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.37105263157894725,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.0,
+        "voice_leading_distance": 3.296296296296296,
+        "common_tone_retention": 0.7222222222222222,
+        "event_count": 20,
+        "total_track_event_count": 20,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "verse2": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 1.81375,
+        "short_note_ratio": 0.0625,
+        "sustain_ratio": 0.4375,
+        "legato_ratio": 1.0,
+        "average_gap_between_notes": 0.07866666666666673,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.271782221599798,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 16,
+        "total_track_event_count": 16,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "pre2": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 1.6249999999999998,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.3681818181818182,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.0,
+        "voice_leading_distance": 3.133333333333333,
+        "common_tone_retention": 0.9,
+        "event_count": 12,
+        "total_track_event_count": 12,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "chorus2": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 1.625,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.37105263157894725,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.0,
+        "voice_leading_distance": 3.296296296296296,
+        "common_tone_retention": 0.7222222222222222,
+        "event_count": 20,
+        "total_track_event_count": 20,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "build_a": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 1.8199999999999998,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 0.4375,
+        "legato_ratio": 1.0,
+        "average_gap_between_notes": 0.07866666666666673,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.271782221599798,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 16,
+        "total_track_event_count": 16,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "bridge_build": {
+        "texture": "counterline",
+        "family": "line",
+        "average_note_duration": 1.2541666666666667,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 1.0,
+        "average_gap_between_notes": 0.05304347826086982,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.0994839817876882,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 24,
+        "total_track_event_count": 24,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "final_chorus": {
+        "texture": "pulse",
+        "family": "point",
+        "average_note_duration": 1.6250000000000004,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.3722222222222221,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.0,
+        "voice_leading_distance": 3.7435897435897427,
+        "common_tone_retention": 0.7307692307692307,
+        "event_count": 28,
+        "total_track_event_count": 28,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      },
+      "outro": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 3.6500000000000004,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.3500000000000001,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 4.866666666666666,
+        "common_tone_retention": 0.8,
+        "event_count": 6,
+        "total_track_event_count": 6,
+        "continuity_target": {
+          "sustain_ratio": 0.75,
+          "legato_ratio": 0.6,
+          "overlap": 0.0,
+          "common_tone_retention": 0.7,
+          "voice_leading_strength": 0.8
+        }
+      }
+    },
+    "strings": {
+      "intro": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 7.5,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.5,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 3.6666666666666665,
+        "common_tone_retention": 0.5,
+        "event_count": 3,
+        "total_track_event_count": 3,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "verse1": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 7.5,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.5,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 3.1666666666666665,
+        "common_tone_retention": 0.5,
+        "event_count": 5,
+        "total_track_event_count": 5,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "pre1": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 3.65,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.3500000000000001,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 6,
+        "total_track_event_count": 6,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "chorus1": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 3.65,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.3500000000000007,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 10,
+        "total_track_event_count": 10,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "verse2": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 3.5,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 4.5,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 4,
+        "total_track_event_count": 4,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "pre2": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 3.65,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.3500000000000001,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 6,
+        "total_track_event_count": 6,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "chorus2": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 3.65,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.3500000000000007,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 10,
+        "total_track_event_count": 10,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "build_a": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 7.45,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.5500000000000004,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 3.0,
+        "common_tone_retention": 0.6666666666666666,
+        "event_count": 4,
+        "total_track_event_count": 4,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "bridge_build": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 7.45,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.5500000000000004,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 4.111111111111111,
+        "common_tone_retention": 0.5,
+        "event_count": 4,
+        "total_track_event_count": 4,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "final_chorus": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 3.6499999999999995,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.35000000000000087,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 14,
+        "total_track_event_count": 14,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      },
+      "outro": {
+        "texture": "sustain",
+        "family": "plane",
+        "average_note_duration": 7.5,
+        "short_note_ratio": 0.0,
+        "sustain_ratio": 1.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.5,
+        "overlap_ratio": 0.0,
+        "duration_entropy": -0.0,
+        "voice_leading_distance": 1.8333333333333335,
+        "common_tone_retention": 0.75,
+        "event_count": 3,
+        "total_track_event_count": 3,
+        "continuity_target": {
+          "sustain_ratio": 0.85,
+          "legato_ratio": 0.7,
+          "overlap": 0.0,
+          "common_tone_retention": 0.8,
+          "voice_leading_strength": 0.85
+        }
+      }
+    },
+    "drums": {
+      "intro": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.1548888888888889,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.038461538461538464,
+        "average_gap_between_notes": 0.708846153846154,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.1256828315506748,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 45,
+        "total_track_event_count": 45,
+        "continuity_target": null
+      },
+      "verse1": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.14857142857142852,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.023809523809523808,
+        "average_gap_between_notes": 0.7528571428571433,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.9983636725938131,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 84,
+        "total_track_event_count": 84,
+        "continuity_target": null
+      },
+      "pre1": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.13847457627118645,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.22580645161290322,
+        "average_gap_between_notes": 0.574516129032258,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.8806549128885661,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 59,
+        "total_track_event_count": 59,
+        "continuity_target": null
+      },
+      "chorus1": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.12917241379310346,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.13186813186813187,
+        "average_gap_between_notes": 0.2886813186813188,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.5725302397788603,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 145,
+        "total_track_event_count": 145,
+        "continuity_target": null
+      },
+      "verse2": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.14823529411764702,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.029411764705882353,
+        "average_gap_between_notes": 0.737058823529412,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.9975025463691153,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 68,
+        "total_track_event_count": 68,
+        "continuity_target": null
+      },
+      "pre2": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.13847457627118645,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.22580645161290322,
+        "average_gap_between_notes": 0.574516129032258,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.8806549128885661,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 59,
+        "total_track_event_count": 59,
+        "continuity_target": null
+      },
+      "chorus2": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.12917241379310346,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.13186813186813187,
+        "average_gap_between_notes": 0.2886813186813188,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.5725302397788603,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 145,
+        "total_track_event_count": 145,
+        "continuity_target": null
+      },
+      "build_a": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.17921052631578946,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.05714285714285714,
+        "average_gap_between_notes": 0.7054285714285715,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.0384115826430849,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 38,
+        "total_track_event_count": 38,
+        "continuity_target": null
+      },
+      "bridge_build": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.15016666666666667,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.03508771929824561,
+        "average_gap_between_notes": 0.3931578947368426,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 0.4074445433186969,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 60,
+        "total_track_event_count": 60,
+        "continuity_target": null
+      },
+      "final_chorus": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.1290049751243781,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.12598425196850394,
+        "average_gap_between_notes": 0.29188976377952797,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.5304468915605685,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 201,
+        "total_track_event_count": 201,
+        "continuity_target": null
+      },
+      "outro": {
+        "texture": "implicit",
+        "family": "point",
+        "average_note_duration": 0.1520408163265306,
+        "short_note_ratio": 1.0,
+        "sustain_ratio": 0.0,
+        "legato_ratio": 0.0,
+        "average_gap_between_notes": 0.8169565217391307,
+        "overlap_ratio": 0.0,
+        "duration_entropy": 1.1233180066740756,
+        "voice_leading_distance": 0.0,
+        "common_tone_retention": 0.0,
+        "event_count": 49,
+        "total_track_event_count": 49,
+        "continuity_target": null
+      }
+    }
+  },
+  "section_metrics": {
+    "intro": {
+      "texture_distribution": {
+        "pulse": 1,
+        "counterline": 1,
+        "sustain": 2
+      },
+      "point_line_plane_balance": {
+        "point": 2,
+        "line": 2,
+        "plane": 2,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "plane",
+        "plane"
+      ]
+    },
+    "verse1": {
+      "texture_distribution": {
+        "pulse": 1,
+        "counterline": 1,
+        "sustain": 2
+      },
+      "point_line_plane_balance": {
+        "point": 3,
+        "line": 1,
+        "plane": 2,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "plane",
+        "plane"
+      ]
+    },
+    "pre1": {
+      "texture_distribution": {
+        "pulse": 2,
+        "counterline": 1,
+        "sustain": 1
+      },
+      "point_line_plane_balance": {
+        "point": 4,
+        "line": 1,
+        "plane": 1,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "point",
+        "plane"
+      ]
+    },
+    "chorus1": {
+      "texture_distribution": {
+        "pulse": 2,
+        "counterline": 1,
+        "sustain": 1
+      },
+      "point_line_plane_balance": {
+        "point": 3,
+        "line": 2,
+        "plane": 1,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "point",
+        "plane"
+      ]
+    },
+    "verse2": {
+      "texture_distribution": {
+        "pulse": 1,
+        "counterline": 2,
+        "sustain": 1
+      },
+      "point_line_plane_balance": {
+        "point": 3,
+        "line": 2,
+        "plane": 1,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "line",
+        "plane"
+      ]
+    },
+    "pre2": {
+      "texture_distribution": {
+        "pulse": 2,
+        "counterline": 1,
+        "sustain": 1
+      },
+      "point_line_plane_balance": {
+        "point": 4,
+        "line": 1,
+        "plane": 1,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "point",
+        "plane"
+      ]
+    },
+    "chorus2": {
+      "texture_distribution": {
+        "pulse": 2,
+        "counterline": 1,
+        "sustain": 1
+      },
+      "point_line_plane_balance": {
+        "point": 3,
+        "line": 2,
+        "plane": 1,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "point",
+        "plane"
+      ]
+    },
+    "build_a": {
+      "texture_distribution": {
+        "pulse": 1,
+        "counterline": 2,
+        "sustain": 1
+      },
+      "point_line_plane_balance": {
+        "point": 2,
+        "line": 2,
+        "plane": 1,
+        "silent": 1
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "line",
+        "plane"
+      ]
+    },
+    "bridge_build": {
+      "texture_distribution": {
+        "pulse": 1,
+        "counterline": 2,
+        "sustain": 1
+      },
+      "point_line_plane_balance": {
+        "point": 2,
+        "line": 2,
+        "plane": 1,
+        "silent": 1
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "line",
+        "plane"
+      ]
+    },
+    "final_chorus": {
+      "texture_distribution": {
+        "pulse": 2,
+        "counterline": 1,
+        "sustain": 1
+      },
+      "point_line_plane_balance": {
+        "point": 3,
+        "line": 2,
+        "plane": 1,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "point",
+        "plane"
+      ]
+    },
+    "outro": {
+      "texture_distribution": {
+        "pulse": 1,
+        "counterline": 1,
+        "sustain": 2
+      },
+      "point_line_plane_balance": {
+        "point": 2,
+        "line": 2,
+        "plane": 2,
+        "silent": 0
+      },
+      "accompaniment_families": [
+        "point",
+        "line",
+        "plane",
+        "plane"
+      ]
+    }
+  },
+  "warnings": [],
+  "warning_count": 0
+}

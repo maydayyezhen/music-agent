@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "title": "Eight-Bar Singing Lead",
+    "tempo": 104,
+    "time_signature": "4/4",
+    "key": "E minor"
+  },
+  "sections": [
+    {
+      "name": "solo",
+      "bars": 8
+    }
+  ],
+  "tracks": {
+    "lead_guitar": {
+      "role": "electric lead guitar",
+      "sections": {
+        "solo": {
+          "loop_bars": 8,
+          "sound_library_profile": "general_midi",
+          "instrument_phrase": {
+            "instrument": "electric_lead_guitar",
+            "role": "lead",
+            "phrase_type": "melodic_lead",
+            "phrase_generation_mode": "long_form_experimental",
+            "energy": 0.74,
+            "performance_intent": {
+              "attack": "singing",
+              "release": "arc_shaped",
+              "humanization": "action_based",
+              "seed": 301
+            },
+            "key_root": "E",
+            "register_midi": [
+              59,
+              88
+            ],
+            "motif_root_midi": 64,
+            "motif_id": "motif_A",
+            "motif_seed": [
+              {
+                "offset": 0.5,
+                "duration": 0.75,
+                "degree": 0,
+                "action": "pick"
+              },
+              {
+                "offset": 1.25,
+                "duration": 0.75,
+                "degree": 3,
+                "action": "hammer_on"
+              },
+              {
+                "offset": 3.5,
+                "duration": 1.0,
+                "degree": 5,
+                "action": "slide",
+                "cross_bar_reason": "phrase_continuation"
+              },
+              {
+                "offset": 4.4,
+                "duration": 0.7,
+                "degree": 3,
+                "action": "pull_off"
+              },
+              {
+                "offset": 5.2,
+                "duration": 1.2,
+                "degree": 7,
+                "action": "pick",
+                "cross_bar_reason": "delayed_resolution",
+                "rest_type_after": "breath"
+              },
+              {
+                "offset": 8.5,
+                "duration": 0.8,
+                "degree": 5,
+                "action": "slide"
+              },
+              {
+                "offset": 9.4,
+                "duration": 0.75,
+                "degree": 3,
+                "action": "pull_off"
+              },
+              {
+                "offset": 10.4,
+                "duration": 1.9,
+                "degree": 8,
+                "action": "pick",
+                "cross_bar_reason": "target_sustain",
+                "rest_type_after": "breath"
+              }
+            ],
+            "harmony": [
+              {
+                "at": "1:1",
+                "duration": 4,
+                "chord": "Em"
+              },
+              {
+                "at": "2:1",
+                "duration": 4,
+                "chord": "C"
+              },
+              {
+                "at": "3:1",
+                "duration": 4,
+                "chord": "G"
+              },
+              {
+                "at": "4:1",
+                "duration": 4,
+                "chord": "D"
+              },
+              {
+                "at": "5:1",
+                "duration": 4,
+                "chord": "Em"
+              },
+              {
+                "at": "6:1",
+                "duration": 4,
+                "chord": "C"
+              },
+              {
+                "at": "7:1",
+                "duration": 4,
+                "chord": "G"
+              },
+              {
+                "at": "8:1",
+                "duration": 4,
+                "chord": "D"
+              }
+            ],
+            "section_arc": {
+              "section_id": "lead_8_bar_arc",
+              "bars": [
+                1,
+                8
+              ],
+              "opening_register": "mid",
+              "peak_register": "high",
+              "peak_bar": 6,
+              "final_resolution_bar": 8,
+              "energy_curve": [
+                0.36,
+                0.476,
+                0.592,
+                0.708,
+                0.824,
+                0.94,
+                0.68,
+                0.44
+              ],
+              "density_curve": [
+                0.528,
+                0.563,
+                0.598,
+                0.632,
+                0.667,
+                0.702,
+                0.624,
+                0.552
+              ],
+              "cadence_plan": {
+                "strong_cadences": [
+                  8
+                ],
+                "weak_cadences": [
+                  4
+                ],
+                "avoid_resolution_bars": [
+                  2,
+                  6
+                ]
+              },
+              "breath_bars": [
+                2,
+                4,
+                6
+              ],
+              "cross_bar_note_bars": [
+                2,
+                4,
+                6,
+                6
+              ],
+              "delayed_target": {
+                "pitch": "B5",
+                "bar": 6
+              }
+            },
+            "phrase_relationships": [
+              {
+                "phrase_id": "A1",
+                "bars": [
+                  1,
+                  2
+                ],
+                "relationship": "introduce",
+                "continuation_from": null,
+                "continuation_to": "A2",
+                "resolution": "deferred",
+                "motif_operations": []
+              },
+              {
+                "phrase_id": "A2",
+                "bars": [
+                  3,
+                  4
+                ],
+                "relationship": "continuation",
+                "continuation_from": "A1",
+                "continuation_to": "A3",
+                "resolution": "deferred",
+                "motif_operations": [
+                  "rhythmic_extension",
+                  "change_ending"
+                ]
+              },
+              {
+                "phrase_id": "A3",
+                "bars": [
+                  5,
+                  6
+                ],
+                "relationship": "variation",
+                "continuation_from": "A2",
+                "continuation_to": "C",
+                "resolution": "deferred",
+                "motif_operations": [
+                  "transpose_up",
+                  "change_ending"
+                ]
+              },
+              {
+                "phrase_id": "C",
+                "bars": [
+                  7,
+                  8
+                ],
+                "relationship": "resolution",
+                "continuation_from": "A3",
+                "continuation_to": null,
+                "resolution": "strong",
+                "motif_operations": [
+                  "augmentation"
+                ]
+              }
+            ],
+            "long_form_phrase_rules": {
+              "planning_window_bars": 8,
+              "minimum_connected_span_bars": 6,
+              "maximum_strong_cadences_per_8_bars": 1,
+              "minimum_cross_bar_notes_per_8_bars": 2,
+              "minimum_motif_developments_per_section": 3,
+              "maximum_independent_phrase_resets_per_8_bars": 1,
+              "maximum_consecutive_full_rest_bars": 1,
+              "require_delayed_peak": true,
+              "require_delayed_resolution": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "title": "Lead Articulation Study",
+  "track_metrics": {
+    "lead_guitar": {
+      "instrument": "electric_lead_guitar",
+      "sections": {
+        "lead": {
+          "instrument": "electric_lead_guitar",
+          "event_count": 12,
+          "note_count": 12,
+          "range": [
+            64,
+            76
+          ],
+          "median_gap_beats": 1.0,
+          "velocity_unique": 6,
+          "velocity_stddev": 4.561310727801336,
+          "articulations": {
+            "sustain": 3,
+            "hammer_on": 3,
+            "legato": 3,
+            "bend": 1,
+            "vibrato": 3,
+            "slide": 2,
+            "pull_off": 2,
+            "bend_release": 1
+          },
+          "max_identical_bar_repetitions": 1,
+          "events_per_bar": 1.5,
+          "note_spacing": {
+            "same_pitch_overlap_count": 0,
+            "max_same_pitch_overlap_beats": 0.0,
+            "median_same_pitch_gap_beats": 8.350000000000001
+          }
+        }
+      }
+    }
+  },
+  "section_density": {
+    "lead": {
+      "events_per_bar": 1.5,
+      "by_track": {
+        "lead_guitar": 1.5
+      },
+      "active_tracks": 1
+    }
+  },
+  "articulation_coverage": {
+    "sustain": 3,
+    "hammer_on": 3,
+    "legato": 3,
+    "bend": 1,
+    "vibrato": 3,
+    "slide": 2,
+    "pull_off": 2,
+    "bend_release": 1
+  },
+  "profile_coverage": {
+    "lead_guitar.lead": {
+      "profile": "general_midi",
+      "articulation_coverage": {
+        "sustain": {
+          "mapped": 0,
+          "fallback": 3,
+          "unsupported": 0
+        },
+        "hammer_on": {
+          "mapped": 0,
+          "fallback": 0,
+          "unsupported": 3
+        },
+        "legato": {
+          "mapped": 0,
+          "fallback": 3,
+          "unsupported": 0
+        },
+        "bend": {
+          "mapped": 0,
+          "fallback": 0,
+          "unsupported": 1
+        },
+        "vibrato": {
+          "mapped": 0,
+          "fallback": 0,
+          "unsupported": 3
+        },
+        "slide": {
+          "mapped": 0,
+          "fallback": 0,
+          "unsupported": 2
+        },
+        "pull_off": {
+          "mapped": 0,
+          "fallback": 0,
+          "unsupported": 2
+        },
+        "bend_release": {
+          "mapped": 0,
+          "fallback": 0,
+          "unsupported": 1
+        }
+      }
+    }
+  },
+  "phrase_variation": {
+    "diagnostic_count": 0
+  },
+  "diagnostics": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "info_count": 0
+}
