@@ -4,61 +4,62 @@ Read the root `SKILL.md` and `docs/clean_slate_bootstrap.md`.
 
 ## Active context
 
-Only these sources are active by default:
+These sources are active by default:
 
 - the user's current request;
 - the current project being edited;
 - `manifest.json` and registered native artifacts;
 - implementation code and schemas required to run the task;
-- explicitly selected Skills under `skills_v2/`;
-- one explicitly selected material recipe under `materials_v2/` when timbre, texture or production is part of the request.
+- relevant Skills under `skills_v2/`;
+- `materials_v2/registry.json`;
+- multiple relevant material cards under `materials_v2/`.
 
-The previous knowledge library, prior instrument playbooks and complete example projects are cold
-storage. Do not search, summarize or imitate them unless the user explicitly requests recovery of
-a named capability.
+The previous knowledge library, prior instrument playbooks and complete example projects are cold storage. Do not search or imitate them unless the user explicitly requests recovery of a named capability.
 
-Do not browse the entire material library. Resolve the requested instrument and texture, then read
-the smallest matching recipe.
+The V2 materials library is not cold storage. It is active external musical memory. Browse its registry during composition, retrieve several plausible cards, and use them as vocabulary for harmony, voicing, accompaniment, instrument behavior, texture and production.
+
+Large material retrieval is acceptable when it improves the result. Prefer a coherent shortlist over arbitrary context limits.
 
 ## Preserve the new architecture
 
 The facade is thin:
 
 ```text
-manifest/index
+skills + retrieved materials
+-> manifest/index
 -> native artifact
 -> adapter/compiler
 -> renderer
 -> derived output and report
 ```
 
-Do not move notes, automation, plugin state or other rich native data into the manifest merely to
-make one schema appear universal.
+Do not move notes, automation, plugin state or other rich native data into the manifest merely to make one schema appear universal.
 
-Prefer existing mature standards and project-native files. Add custom data only as a clearly
-named extension or sidecar when no mature representation fits.
+Prefer existing mature standards and project-native files. Add custom data only as a clearly named extension or sidecar when no mature representation fits.
 
 ## Task workflow
 
 1. Resolve the user's requested artifact and constraints.
-2. Inspect the active project and the smallest necessary code path.
-3. Select the narrowest matching `skills_v2/` Skill when behavior guidance is needed.
-4. Select one `materials_v2/` recipe only when the user asks for a sound texture or production target.
-5. Create or edit a structured source artifact.
-6. Preserve a prior version for material changes.
-7. Compile and render through the registered adapter.
-8. Run data-integrity and round-trip checks relevant to that adapter.
-9. Describe concrete audible or structural failures.
-10. Fix the smallest responsible layer.
+2. Inspect the active project and necessary code path.
+3. Select relevant `skills_v2/` Skills for operations and constraints.
+4. Read `materials_v2/registry.json`.
+5. Retrieve material cards across all relevant dimensions, including harmony, voicing, accompaniment, phrasing, timbre and production.
+6. Compare candidate materials and decide which ideas can coexist.
+7. Adapt materials through transposition, revoicing, rhythmic variation, density changes, orchestration changes and section-aware development.
+8. Create or edit the structured source artifact.
+9. Preserve a prior version for material changes.
+10. Compile and render through the registered adapter.
+11. Run relevant data-integrity checks.
+12. Describe concrete audible or structural failures.
+13. Fix the smallest responsible layer or retrieve additional material when the vocabulary is insufficient.
 
-Do not require a universal form, motif process, harmony system, density curve, climax location or
-instrument hierarchy.
+Do not require a universal form, motif process, harmony system, density curve, climax location or instrument hierarchy.
 
 ## Rebuilding `skills_v2/`
 
-Create a new Skill only after a concrete task exposes reusable knowledge.
+Create a Skill when a concrete task exposes a reusable operation or decision procedure.
 
-Every Skill must define:
+Every Skill should define:
 
 - trigger and scope;
 - capability boundary;
@@ -68,48 +69,55 @@ Every Skill must define:
 - validation method;
 - provenance.
 
-Skills should teach operations and constraints. They must not contain finished songs, copied
-builders, signature progressions, full melodic phrases or validator statistics promoted from one
-project.
+Skills teach how to work. Materials provide concrete things worth trying.
 
-## Rebuilding `materials_v2/`
+## Growing `materials_v2/`
 
-Create a material recipe when a concrete listening task exposes a reusable relationship between an
-instrument/source and a named texture.
+Create or extend material cards whenever a listening, MIDI, score or production study exposes reusable musical vocabulary.
 
-Every material recipe should define:
+The library may contain:
 
-- texture identity and searchable tags;
-- suitable instrument or source prerequisites;
-- performance prerequisites that processing cannot repair;
-- practical starting ranges for source controls and processing;
-- renderer or synthesis mappings where useful;
-- failure modes;
-- listening checks;
-- provenance and uncertainty.
+- chord voicing families;
+- harmonic colors and chord-motion tendencies;
+- accompaniment and rhythm-pattern families;
+- instrument gestures and articulation combinations;
+- phrase shapes, pickups, fills, transitions and cadence devices;
+- orchestration and register combinations;
+- texture and production recipes;
+- renderer-specific mappings;
+- small synthetic examples and parameterized fragments.
 
-Materials decide how a performance should feel and sound. They do not decide melody, harmony, form
-or a finished rhythm pattern.
+Each material card should define searchable tags, applicability, transformation options, incompatibilities, failure modes and provenance.
 
-A material recipe must not preserve a source song's exact notes, chord progression, form, velocity
-sequence or full production chain as a template. Approximate settings must be labeled as starting
-points rather than measured facts unless they were actually measured.
+Materials may be stylistic. Multiple overlapping cards are welcome because comparison and accumulation improve the Agent's choices.
+
+Do not convert one complete copyrighted song into a default reusable template. Do not copy a source's full melody, chord progression, form, exact rhythm sequence or production automation wholesale. Extract, label, transform and recombine the useful parts.
+
+## Retrieval behavior
+
+During composition:
+
+1. search by instrument, role, texture, energy, genre and musical problem;
+2. retrieve several cards, not necessarily only one;
+3. include contrasting candidates when the direction is uncertain;
+4. prefer cards with concrete examples and listening checks;
+5. explain which cards informed the result when that matters;
+6. add a new card after a successful experiment reveals a reusable result.
+
+Do not avoid the material library merely to keep context small. Context is a resource to manage, not an enemy to starve.
 
 ## Legacy recovery
 
 Legacy recovery is opt-in. When explicitly requested:
 
-1. identify one narrow question;
-2. inspect the smallest relevant legacy passage;
-3. extract the implementation fact;
-4. rewrite it in style-neutral language;
-5. add a test or inspectable validation rule;
-6. place the cleaned result in `skills_v2/` or `materials_v2/` according to whether it describes behavior or sound;
-7. do not import the original musical example.
+1. identify the useful capability or material;
+2. inspect the smallest relevant legacy source;
+3. extract the reusable fact or pattern;
+4. rewrite it into V2 terminology;
+5. place it in `skills_v2/` or `materials_v2/` according to whether it describes an operation or musical material;
+6. retain provenance and uncertainty;
+7. do not import a complete finished composition as the reusable object.
 
 ## Honesty boundary
 
-A successful compile proves that the pipeline accepted the data. It does not prove that the music
-sounds good. A validator passing proves only the invariants it actually checks. A material recipe
-provides a starting point, not a guarantee that every sample library or recording will respond the
-same way.
+A successful compile proves that the pipeline accepted the data. It does not prove that the music sounds good. A validator passing proves only the invariants it checks. A material card is a candidate vocabulary item, not a guarantee that every arrangement, sample library or mix will respond the same way.
