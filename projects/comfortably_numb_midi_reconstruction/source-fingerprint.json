@@ -1,0 +1,33 @@
+{
+  "ticks_per_beat": 480,
+  "tempo_microseconds_per_beat": 923076,
+  "time_signature": [
+    4,
+    4
+  ],
+  "tracks": {
+    "lead_guitar": {
+      "source_track_name": "Guitar 1",
+      "source_program": 30,
+      "source_channel_zero_based": 0,
+      "note_count": 82,
+      "note_tuple_sha256": "9de9a1a0267fd9071f25cfde01224b2bb9d97c819f6050412aba78693a333560",
+      "min_start_tick": 1800,
+      "max_end_tick": 22080
+    },
+    "rhythm_guitar": {
+      "source_track_name": "Guitar 2",
+      "source_program": 25,
+      "source_channel_zero_based": 2,
+      "note_count": 746,
+      "note_tuple_sha256": "cf40dfc91eca8e287b17023778533a2e46a722c77fb58e989316517b3cfc0a02",
+      "min_start_tick": 0,
+      "max_end_tick": 23040
+    }
+  },
+  "unsupported_source_events": {
+    "control_changes": 0,
+    "pitch_wheels": 0,
+    "aftertouch": 0
+  }
+}
