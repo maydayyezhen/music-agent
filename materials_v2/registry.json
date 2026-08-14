@@ -64,15 +64,15 @@
       "problem_tags": ["straightened-swing", "brittle-upstroke", "arpeggio-like-strum", "overquantized-sweep"]
     },
     {
-      "id": "persistent-gentle-steel-accompaniment",
+      "id": "gentle-steel-strum-picking",
       "kind": "accompaniment_pattern",
-      "path": "materials_v2/accompaniment_patterns/acoustic_guitar/persistent_gentle_steel_accompaniment.md",
+      "path": "materials_v2/accompaniment_patterns/acoustic_guitar/gentle_steel_strum_picking.md",
       "status": "active",
       "instruments": ["steel_string_acoustic_guitar", "acoustic_guitar"],
       "roles": ["rhythmic_accompaniment", "vocal_support", "guitar_bed"],
       "genre_tags": ["pop", "acoustic-pop", "folk-pop"],
-      "texture_tags": ["gentle", "laid-back", "persistent", "triplet-derived", "strum-picking", "low-variation", "ringing"],
-      "problem_tags": ["over-varied-accompaniment", "guitar-too-busy", "guitar-too-foreground", "over-gated-acoustic"]
+      "texture_tags": ["gentle", "laid-back", "steel-string", "strum-picking", "triplet-derived", "persistent", "ringing"],
+      "problem_tags": ["over-varied-accompaniment", "guitar-too-busy", "guitar-too-foreground", "over-gated-acoustic", "forced-western-shuffle"]
     }
   ]
 }
