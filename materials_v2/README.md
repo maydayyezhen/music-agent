@@ -1,48 +1,125 @@
 # Materials V2
 
-`materials_v2/` is an opt-in library of reusable sound and production recipes.
+`materials_v2/` is the active external musical memory of Music Agent.
 
-It is not a composition skill library and it is not a collection of finished-song templates.
+It is intentionally allowed to grow large. Harmony, voicing, accompaniment, phrasing and timbre are difficult to invent well from an empty prompt. A broad material library gives the Agent concrete vocabulary to compare, combine and transform.
 
-Use it to answer questions such as:
+The Agent may browse `registry.json` by default during composition and load multiple relevant cards.
 
-- what kind of instrument source fits a requested texture;
-- how to shape attack, body, grain, width and room;
-- which processing chain is a sensible starting point;
-- which audible failures indicate the wrong source or wrong settings.
+## What belongs here
 
-## Library boundary
+Material cards may describe reusable:
 
-A material recipe may contain:
+- chord voicing families;
+- open-string and common-tone strategies;
+- harmonic colors and chord-motion tendencies;
+- accompaniment pattern families;
+- rhythmic texture grids;
+- instrument gestures and articulation combinations;
+- phrase shapes, pickups, fills, transitions and cadences;
+- orchestration and register combinations;
+- timbre and production recipes;
+- renderer-specific setup advice;
+- small synthetic examples and parameterized fragments.
 
-- a texture name and searchable tags;
-- suitable instrument and playing prerequisites;
-- source/sample-selection guidance;
-- relative performance and rendering guidance;
-- suggested EQ, dynamics, saturation, stereo and ambience ranges;
-- code-synthesis equivalents when useful;
-- failure modes and listening checks.
+This library is broader than a sound-preset collection. It stores things the Agent can try.
 
-A material recipe must not contain:
+## Suggested structure
 
-- a complete copyrighted source file;
-- a finished song's chord progression, melody or exact rhythm sequence;
-- a source MIDI note list or velocity sequence;
-- a claim that approximate settings were objectively measured when they were not;
-- mandatory brand-specific plugins when a generic processing description is enough.
+```text
+materials_v2/
+├── registry.json
+├── chord_voicings/
+├── harmonic_motion/
+├── accompaniment_patterns/
+├── instrument_gestures/
+├── phrase_devices/
+├── orchestration/
+├── timbre_recipes/
+└── production_chains/
+```
 
-## Context policy
+The directories may grow gradually. Do not create empty ceremony before useful material exists.
 
-Materials are never loaded by default. Select one recipe explicitly by texture, instrument or production goal.
+## Retrieval policy
 
-Composition skills decide what the instrument plays. Material recipes decide how that performance should feel and sound. Renderers and profiles translate the recipe into available controls.
+For an ordinary composition task:
 
-## Recipe status
+1. read `registry.json`;
+2. search by instrument, role, texture, energy, genre and current failure;
+3. retrieve several cards from different relevant categories;
+4. compare compatible and contrasting candidates;
+5. combine useful features rather than following one card mechanically;
+6. retrieve more material when the first result sounds generic or structurally weak.
 
-Each recipe should distinguish:
+There is no rule that only one material may be loaded. Large retrieval is acceptable when it adds useful vocabulary.
 
-- `identity`: the intended audible result;
-- `requirements`: what the source and performance must already provide;
-- `starting_ranges`: practical starting points, not universal truths;
-- `renderer_mapping`: how to approximate the texture with samples, synthesis or effects;
-- `failure_modes`: signs that the result has drifted away from the target.
+## How materials should be used
+
+Materials are starting points and transformation targets.
+
+Useful transformations include:
+
+- transpose;
+- revoice;
+- invert;
+- thin or widen;
+- change register;
+- alter rhythmic density;
+- change meter placement;
+- split a pattern between instruments;
+- preserve a common tone while changing the surrounding harmony;
+- transfer a gesture to another compatible instrument;
+- combine the texture of one card with the harmony behavior of another;
+- adapt dynamics and articulation to the current section.
+
+The result should fit the active piece rather than behave like a pasted preset.
+
+## Card contents
+
+A useful material card should contain as many of these as apply:
+
+- identity and searchable tags;
+- musical role and suitable contexts;
+- prerequisites;
+- concrete pattern, voicing or processing description;
+- small examples;
+- controllable variables;
+- transformations;
+- compatible materials;
+- conflicts and failure modes;
+- listening or score checks;
+- implementation notes;
+- provenance and uncertainty.
+
+Cards may overlap. Several cards describing related techniques are valuable because their differences give the Agent choices.
+
+## Boundary
+
+Do not store a complete copyrighted recording, score or MIDI as a default reusable template.
+
+Do not copy a source's complete melody, full chord progression, full form, exact rhythm sequence or detailed automation wholesale into a reusable card.
+
+It is acceptable to store:
+
+- abstracted observations;
+- short lawful examples;
+- generic or parameterized patterns;
+- voicing families;
+- transformed exercises;
+- texture descriptions;
+- implementation guidance;
+- source-local research notes kept separate from reusable cards.
+
+When a setting or interpretation was estimated rather than measured, label it as a practical starting point.
+
+## Relationship to Skills
+
+```text
+Skills     = how to perform an operation
+Materials  = musical vocabulary and sound options worth trying
+Projects   = the current piece's actual notes, automation and decisions
+Profiles   = mappings from materials to available tools or renderers
+```
+
+A Skill may ask the Agent to consult the materials library. A material card does not need to be style-neutral. Accumulation is the point.
