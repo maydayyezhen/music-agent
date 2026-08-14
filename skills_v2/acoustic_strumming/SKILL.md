@@ -1,184 +1,314 @@
 ---
 name: acoustic-guitar-continuous-eighth-strumming
-description: Extract, validate and generate a generalized continuous eighth-note acoustic-guitar strumming model from MIDI evidence.
+description: Write and revise general-purpose continuous eighth-note acoustic-guitar strumming without relying on a trained model or a finished-song template.
 status: active
 ---
 
 # Acoustic Guitar Continuous Eighth Strumming
 
-## Trigger
+## Purpose
 
-Use this skill when the task is specifically about:
+Use this skill when an acoustic guitar should provide a continuous eighth-note accompaniment pulse.
 
-- detecting common eighth-note acoustic-guitar strumming in MIDI;
-- separating right-hand motion from the source song's key, chords, tempo and program;
-- generating a new strumming performance from a generalized model;
-- testing whether extracted behavior survives transposition, tempo changes and timbre changes.
+This is a text knowledge and decision skill. It does not require a trained model, feature extractor, learned fingerprint, or source-song transcription.
 
-Do not use this skill for fingerpicking, sixteenth-note funk, isolated chord hits, electric-guitar palm muting or complete song composition.
-
-## Capability boundary
-
-This skill targets one technique:
+The target behavior is:
 
 ```text
-continuous eighth-note alternate hand motion
+one bar of 4/4
+1 & 2 & 3 & 4 &
 D U D U D U D U
 ```
 
-A grid position may produce:
+The hand may continue through every eighth-note slot even when some slots are silent or only lightly touch part of the chord.
 
-- `full`
-- `low_partial`
-- `middle_partial`
-- `high_partial`
-- `double_stop`
-- `single_string`
-- `air_candidate`
+Do not use this skill for:
 
-`air_candidate` is an inference from a missing MIDI attack. Ordinary MIDI does not encode a literal empty hand stroke.
+- fingerpicking;
+- isolated sustained chord hits;
+- sixteenth-note funk strumming;
+- electric-guitar palm-muted rhythm;
+- flamenco techniques;
+- percussive body hits;
+- complete song composition.
 
-The target technique must not be treated as learned unless the source MIDI contains measurable within-stroke onset order. A quantized block-chord track can teach attack rhythm, relative velocity, voicing coverage, duration and overlap, but it cannot teach down/up direction or sweep timing.
+## Evidence boundary
 
-## Required invariants
+### Direct observations from the first studied MIDI sample
 
-The extracted technique fingerprint should remain stable when the same performance is:
+The studied acoustic-guitar track supported these observations:
 
-- transposed;
-- assigned another MIDI program;
-- played under another tempo map;
-- given a uniform velocity offset;
-- moved to another absolute register while retaining relative voicing shape.
+- attacks occurred on all eight eighth-note positions in the bar;
+- attacks commonly used compact chord groups of about three simultaneous notes;
+- the chord voices began on exactly the same MIDI tick;
+- the source therefore preserved attack rhythm, pitch content, velocity, duration, and overlap;
+- the source did not preserve string-by-string sweep order.
 
-The fingerprint intentionally excludes:
+These observations support a continuous eighth-note chord-pulse technique. They do not prove downstroke or upstroke direction.
 
-- song title;
-- key;
-- absolute pitches;
-- chord names;
-- absolute BPM;
-- absolute MIDI program;
-- source form and section names;
-- exact source velocity values.
+### General guitar-performance knowledge used by this skill
 
-## Extraction procedure
+The following rules are performance conventions, not facts recovered from that MIDI sample:
 
-1. Select one MIDI track/channel.
-2. Pair note-on and note-off events.
-3. Group near-simultaneous note attacks into stroke candidates using a beat-relative window.
-4. Measure direction observability before assigning any hand motion:
-   - count multi-note strokes;
-   - measure within-stroke onset spread;
-   - count strokes with enough non-zero spread to support an ordering estimate;
-   - mark fully quantized sources as `unobservable_quantized_onsets`.
-5. Estimate direction only for observable strokes:
-   - low pitch to high pitch over time: `down`;
-   - high pitch to low pitch over time: `up`;
-   - insufficient spread or weak correlation: `unknown`.
-6. Quantize the candidate onset to an eighth-note slot while retaining grid deviation.
-7. Classify the sounding string group from note count, pitch span and relative register.
-8. Normalize velocity within the local bar.
-9. Aggregate multiple bars into slot probabilities and dominant behavior.
-10. Store uncertainty and limitations explicitly.
-11. Generate a directional synthetic demo only when direction is observable, or when the caller explicitly requests an alternate-hand hypothesis.
+- continuous eighth-note motion normally alternates down and up;
+- downstrokes can cover more low and middle strings and can carry stronger accents;
+- upstrokes are often lighter and can favor middle or high strings;
+- silent positions may still contain an air stroke;
+- the right hand should not restart its direction cycle at every chord or bar boundary;
+- strings not struck again may continue ringing when the voicing and articulation allow it.
 
-## Direction observability states
+Keep this distinction visible when documenting a project.
 
-- `observable`: enough chordal strokes preserve within-stroke onset order.
-- `weak_partial_evidence`: a small minority of strokes preserve order; do not generalize aggressively.
-- `unobservable_quantized_onsets`: chord attacks exist, but every string/voice starts together.
-- `no_chordal_strokes`: the selected track does not provide usable stroke groups.
+## Core representation
 
-For an unobservable source, set direction fields to `unknown`. Do not manufacture a D/U label from slot parity or stylistic expectations.
+Think in three independent layers.
 
-An optional demo may impose `D U D U` through `--assume-alternate-demo` or `--assume-alternate`. That is a rendering hypothesis, not learned evidence, and it must not be written back into the study model.
+### 1. Hand motion
 
-## Evidence versus inference
+The default physical clock is:
 
-Direct MIDI evidence:
-
-- note onset;
-- note duration;
-- velocity;
-- pitch;
-- track/channel/program;
-- note overlap;
-- onset order inside a cluster, when non-zero onset differences exist.
-
-Inferred behavior:
-
-- down/up direction;
-- full versus partial stroke;
-- continuous alternate hand motion;
-- missing-slot air stroke;
-- strings ringing through a later stroke.
-
-Unknown without stronger data:
-
-- literal guitar-string identity;
-- pick angle;
-- fretting fingering;
-- hand pressure;
-- body/percussive noise;
-- whether a silent grid position was physically performed.
-
-Never report an inference as a directly encoded MIDI fact.
-
-## Model contract
-
-The generalized model contains:
-
-- `technique`
-- `subdivision`
-- `slots_per_bar`
-- `motion`
-- `slot_profiles`
-- `attack_mask`
-- `sustain_observations`
-- `evidence`
-- `invariance_fingerprint`
-- `limitations`
-
-The analysis package also contains `observability.direction`, including multi-note stroke count, measurable direction count, zero-spread ratio, and median/maximum spread.
-
-The model is an extracted behavior summary, not a transcription of a source song.
-
-## Commands
-
-List candidate track/channels:
-
-```powershell
-.\.venv\Scripts\python.exe scripts\study_acoustic_strumming.py list "<file.mid>"
+```text
+slot:       0 1 2 3 4 5 6 7
+direction:  D U D U D U D U
 ```
 
-Analyze one candidate:
+Direction continues across barlines. A missing audible attack does not remove the hand-motion slot.
 
-```powershell
-.\.venv\Scripts\python.exe scripts\study_acoustic_strumming.py analyze `
-  "<file.mid>" `
-  first_eighth_strumming `
-  --track 4 `
-  --channel 0
+### 2. Stroke action
+
+Each slot chooses one action:
+
+- `full_strum`: broad chord attack;
+- `low_partial`: bass and lower-middle strings;
+- `middle_partial`: middle-string support;
+- `high_partial`: upper-string answer;
+- `light_upstroke`: light upper or middle-upper response;
+- `muted_strum`: short non-pitched or weakly pitched attack when supported by the renderer;
+- `ghost_strum`: very soft contact;
+- `air_strum`: hand passes without a sounding note;
+- `single_string_restrike`: one important chord tone is refreshed.
+
+These are action categories, not fixed MIDI note lists.
+
+### 3. Sound realization
+
+The renderer or compiler decides:
+
+- which chord tones fit the requested string group;
+- the small onset spread among sounded strings;
+- velocity and velocity gradient;
+- duration and release behavior;
+- retrigger and overlap handling;
+- articulation fallback when the sound library lacks a dedicated sample.
+
+Do not place library-specific keyswitch numbers in the musical phrase.
+
+## Default musical behavior
+
+### Pulse
+
+For the fully active subtype, sound all eight eighth-note positions.
+
+This does not mean every slot should be equally loud or use the same voicing. A convincing full-pulse bar normally varies:
+
+- chord width;
+- low-versus-high register emphasis;
+- accent strength;
+- duration;
+- attack openness.
+
+### Downstrokes
+
+Downstrokes usually work well for:
+
+- bar openings;
+- strong beats;
+- low-string reinforcement;
+- wider voicings;
+- structural accents.
+
+Do not make every downstroke a six-note maximum-velocity chord.
+
+### Upstrokes
+
+Upstrokes usually work well for:
+
+- offbeat motion;
+- lighter answers;
+- high or middle-high partial voicings;
+- short connective attacks;
+- keeping the pulse alive without masking a foreground melody.
+
+Do not make every upstroke identical or mechanically quiet.
+
+### Accent hierarchy
+
+Start with a meter-aware hierarchy rather than random velocity:
+
+```text
+beat 1: strongest structural anchor
+beat 3: secondary anchor
+beats 2 and 4: supportive attacks
+upbeats: usually lighter connective motion
 ```
 
-Generate a deliberately hypothetical D/U demo from an unobservable model:
+This hierarchy is a starting point. Genre, phrase direction, syncopation, and section energy may override it.
 
-```powershell
-.\.venv\Scripts\python.exe scripts\study_acoustic_strumming.py generate `
-  studies\first_eighth_strumming\model.json `
-  studies\first_eighth_strumming\hypothesis_demo.mid `
-  --assume-alternate
-```
+Normalize dynamics to the current section. Do not copy exact velocities from a reference MIDI.
 
-## Acceptance criteria
+## Voicing and string-group behavior
 
-The first technique is considered learned only when:
+Continuous strumming should not be eight repetitions of one block chord.
 
-1. at least one real MIDI sample contains measurable within-stroke direction evidence;
-2. a real sample produces a plausible stroke study;
-3. the source-specific absolute data is absent from the fingerprint;
-4. transposition, tempo, program and uniform velocity transformations preserve the fingerprint;
-5. the synthetic demo is valid MIDI and uses unrelated chord voicings;
-6. uncertainty is retained instead of converted into invented technique labels.
+Useful contrast:
 
-A source with `unobservable_quantized_onsets` contributes attack-grid, voicing, velocity and sustain knowledge, but does not complete the D/U technique.
+- strong downstroke: broad voicing including a bass note;
+- light upstroke: two or three upper chord tones;
+- connective downstroke: low or middle partial;
+- weak response: high partial or ghost contact;
+- foreground-active moment: thinner voicing and reduced velocity;
+- foreground rest: temporarily allow a wider chord.
+
+Chord identity and stroke width are separate decisions.
+
+A chord may remain harmonically unchanged while its sounded subset changes from slot to slot.
+
+## Sustain and retrigger rules
+
+Treat sounded strings or voices independently when the renderer supports it.
+
+- A partial stroke should retrigger only the selected voices.
+- Unselected compatible voices may continue ringing.
+- Do not create overlapping duplicates of the same pitch without an intentional retrigger policy.
+- At a chord change, stop or replace voices that conflict with the new harmony.
+- Shared or compatible tones may continue when this sounds natural.
+- A new attack does not require cutting every previous note.
+- Short muting is an articulation decision, not the default for every slot.
+
+The goal is a connected harmonic fabric rather than a row of detached piano chords.
+
+## Chord-change behavior
+
+A chord change affects the fretting hand and sounded pitches. It does not reset the right-hand clock.
+
+For each boundary:
+
+1. preserve the next expected down/up direction;
+2. identify which sounding voices remain compatible;
+3. release conflicting voices before or at the new attack;
+4. choose a stroke width appropriate to the boundary;
+5. avoid forcing every change to begin with a maximum full downstroke.
+
+A light pickup or partial stroke can introduce a new chord before a stronger later attack.
+
+## Interaction with a lead or vocal
+
+When another part is foreground:
+
+- keep the eighth-note hand motion conceptually active;
+- reduce audible attack density only when the arrangement needs space;
+- prefer partial high or middle strokes over repeated full chords;
+- reduce velocity and chord width;
+- avoid duplicating the foreground rhythm;
+- allow longer ringing voices to carry harmony through busy lead passages.
+
+When the foreground rests, the guitar may briefly become wider or more rhythmically explicit.
+
+## Variation without copying a song
+
+Build variation from transformations, not from a stored reference pattern.
+
+Safe operations include:
+
+- replace one full stroke with a partial stroke;
+- thin one or two upstrokes;
+- convert a sounding slot to an air stroke;
+- strengthen a structural downstroke;
+- refresh a single upper chord tone;
+- lengthen compatible ringing voices;
+- shorten one muted or transitional attack;
+- alter chord width over a two-bar or four-bar phrase;
+- reduce activity under a foreground phrase;
+- open the voicing near a section arrival.
+
+Preserve enough repetition that the right-hand identity remains audible.
+
+Do not randomize every bar independently.
+
+## MIDI realization guidance
+
+When generating ordinary MIDI:
+
+- represent each audible stroke with the selected chord tones;
+- use a small low-to-high onset spread for downstrokes;
+- use a small high-to-low onset spread for upstrokes;
+- scale the spread with tempo so very fast songs do not produce slow arpeggios;
+- keep main metric anchors close to the grid;
+- vary velocity by meter, direction, stroke width, and phrase role;
+- manage note-offs per pitch or per string-like voice;
+- avoid stuck notes and same-pitch overlap;
+- retain an explicit semantic action grid when air strokes matter, because MIDI cannot encode silent hand motion directly.
+
+A fully quantized block chord is a valid simplified rendering, but it loses sweep direction and should not be described as evidence of a physical downstroke or upstroke.
+
+## Minimal decision procedure
+
+For every bar:
+
+1. Establish eight alternating hand-motion slots.
+2. Decide which slots sound and which remain air strokes.
+3. Assign stronger structural downstrokes.
+4. Choose narrower and usually lighter upstrokes.
+5. Vary chord coverage rather than repeating one voicing eight times.
+6. Preserve compatible ringing tones.
+7. Handle the next chord without resetting hand direction.
+8. Thin the guitar when a lead or vocal needs room.
+9. Check that the bar belongs to a repeating phrase, not an unrelated random pattern.
+
+## Common failure modes
+
+Reject or revise the part when:
+
+- every chord tone starts together on every slot with identical velocity and duration;
+- every stroke uses the same full voicing;
+- the right hand restarts with a downstroke at every bar or chord;
+- upstrokes are absent without an intentional style reason;
+- chord changes cut every ringing note mechanically;
+- same-pitch notes overlap accidentally;
+- humanization is random rather than meter- and action-based;
+- the guitar duplicates the lead rhythm continuously;
+- a source MIDI's exact pitches, velocities, form, or bar sequence are copied into the skill;
+- air strokes are claimed as MIDI facts even though they were not encoded.
+
+## Validation checklist
+
+Before accepting a generated part, verify:
+
+- the declared subdivision is eighth-note;
+- the down/up hand sequence remains continuous across bars;
+- sounding and silent slots are intentional;
+- chord width varies meaningfully;
+- strong and weak attacks form a readable meter;
+- partial strokes actually use fewer voices;
+- chord changes do not create conflicting sustained tones;
+- note durations produce connection without stuck notes;
+- the accompaniment leaves space for foreground material;
+- repeated bars are related but not mechanically identical;
+- no source-specific melody, chord progression, title, or exact velocity sequence entered the reusable skill.
+
+## Current status
+
+This skill currently documents one broad technique family: continuous eighth-note acoustic-guitar accompaniment.
+
+The first MIDI study strengthened the knowledge of continuous eighth-note attack density, compact partial chord attacks, and sustained overlap. It did not provide down/up sweep evidence.
+
+Future studies should refine this text only when they reveal reusable behavior such as:
+
+- sparse eighth-note variants;
+- different partial-stroke distributions;
+- reliable sweep timing ranges;
+- muted and ghost-stroke behavior;
+- chord-change release strategies;
+- interaction with vocals or lead instruments.
+
+Add reusable principles and decision rules. Do not add a finished song's exact pattern.
