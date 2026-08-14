@@ -19,7 +19,7 @@ class LongFormTonalityTests(unittest.TestCase):
         pitch_classes, descriptor = resolve_tonality({"key_root": "E"})
         self.assertEqual(descriptor["source"], "legacy_key_root")
         self.assertEqual(descriptor["mode"], "natural_minor")
-        self.assertEqual(pitch_classes, {1, 2, 4, 6, 7, 9, 11})
+        self.assertEqual(pitch_classes, {0, 2, 4, 6, 7, 9, 11})
 
     def test_explicit_major_and_borrowed_interval_are_preserved(self) -> None:
         major, descriptor = resolve_tonality({"tonality": {"tonic": "D", "mode": "major"}})
