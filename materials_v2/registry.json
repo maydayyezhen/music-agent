@@ -73,6 +73,17 @@
       "genre_tags": ["pop", "acoustic-pop", "folk-pop"],
       "texture_tags": ["gentle", "laid-back", "steel-string", "strum-picking", "triplet-derived", "persistent", "ringing"],
       "problem_tags": ["over-varied-accompaniment", "guitar-too-busy", "guitar-too-foreground", "over-gated-acoustic", "forced-western-shuffle"]
+    },
+    {
+      "id": "normal-pop-rock-bass",
+      "kind": "accompaniment_pattern",
+      "path": "materials_v2/accompaniment_patterns/bass/normal_pop_rock_bass.md",
+      "status": "active",
+      "instruments": ["electric_bass", "finger_bass"],
+      "roles": ["bass_foundation", "rhythmic_accompaniment", "groove_support"],
+      "genre_tags": ["pop", "pop-rock", "rock"],
+      "texture_tags": ["normal", "supportive", "accompaniment-locked", "eighth-note", "sixteenth-connective", "repetitive", "low-variation"],
+      "problem_tags": ["bass-quarter-note-pogo", "bass-too-detached", "bass-ignores-accompaniment", "mechanical-root-fifth-loop", "overactive-bass-fills"]
     }
   ]
 }
