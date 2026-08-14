@@ -1,0 +1,23 @@
+{
+  "source_role": "structural statistics from the user-supplied guitar-solo MIDI; no source notes copied",
+  "lead_track_note_count": 82,
+  "lead_span_beats": 42.25,
+  "connection_ratio_gap_le_0_05": 0.8395,
+  "same_pitch_transition_ratio": 0.2716,
+  "stepwise_motion_abs_0_2_ratio": 0.6173,
+  "small_motion_abs_0_5_ratio": 0.9136,
+  "large_leap_abs_7_plus_ratio": 0.0864,
+  "median_note_duration_beats": 0.3333,
+  "short_note_le_one_third_ratio": 0.7195,
+  "long_note_ge_one_beat_ratio": 0.1341,
+  "phrase_islands_gap_threshold_0_75": 5,
+  "peak_pitch_occurrences": 1,
+  "demo_translation": {
+    "copy_notes": false,
+    "use_repeated_note_propulsion": true,
+    "use_triplet_like_bursts": true,
+    "prefer_small_motion": true,
+    "connect_many_adjacent_notes": true,
+    "reserve_highest_target_for_late_arc": true
+  }
+}
