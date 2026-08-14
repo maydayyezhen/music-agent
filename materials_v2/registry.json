@@ -1,0 +1,21 @@
+{
+  "schema": "music-agent-materials-v2-registry",
+  "schema_version": 1,
+  "materials": [
+    {
+      "id": "dry-grainy-steel-string-strum",
+      "path": "materials_v2/timbre_recipes/acoustic_guitar/dry_grainy_steel_string_strum.md",
+      "status": "active",
+      "instrument": "steel_string_acoustic_guitar",
+      "texture_tags": [
+        "dry",
+        "grainy",
+        "pick-forward",
+        "close-miked",
+        "folk-rock",
+        "britpop-adjacent",
+        "compact-room"
+      ]
+    }
+  ]
+}
