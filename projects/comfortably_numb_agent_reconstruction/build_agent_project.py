@@ -214,6 +214,7 @@ def main() -> None:
                                 "release": "landings sustain and receive delayed vibrato",
                                 "humanization": "articulation_driven",
                                 "source": "reference MIDI phrasing skeleton",
+                                "seed": 8142025,
                             },
                         },
                     }
