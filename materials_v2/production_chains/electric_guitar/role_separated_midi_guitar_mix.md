@@ -11,7 +11,7 @@ status: active
 
 A reusable MIDI-level mix-balancing strategy for arrangements with several electric-guitar roles. The central idea is to separate **foreground**, **rhythm bed**, and **support texture** with controller balance and spatial placement instead of making every guitar equally loud and equally close.
 
-This material is intentionally limited to what a reference MIDI can support. It covers MIDI controller balance, pan, reverb/chorus sends, role hierarchy and automation. It does **not** claim source-derived EQ, compression, amplifier, microphone or mastering settings.
+This material is intentionally limited to what a reference MIDI can support. It covers MIDI controller balance, pan, reverb/chorus sends and role hierarchy. It does **not** claim source-derived EQ, compression, amplifier, microphone or mastering settings.
 
 Useful tags:
 
@@ -24,7 +24,6 @@ cc7
 pan
 reverb-send
 chorus-send
-automation
 section-balance
 ```
 
@@ -152,33 +151,43 @@ This is useful evidence that a muted part does not need maximum direct level to 
 
 When adapting the material, prioritize the intended role over copying the source number.
 
-## Section automation
+## Section transitions: preserve energy by default
 
-The source did not use only static balances.
+Do **not** use CC7 fade-outs as the default way to end an interior section.
 
-The sustained melodic Overdrive contained long CC7 fade runs, including repeated fades from about 95 down into the low 30s over roughly seven beats.
-
-The continuous rhythm Overdrive contained several strong CC7 fade-outs, including transitions from about 80 down to 0 over approximately four beats in later sections.
-
-This supports a reusable section rule:
+For ordinary verse / build / chorus / bridge handoffs, prefer:
 
 ```text
-layer exits / phrase tails
-→ automate level downward
-→ do not rely only on abrupt note-off or track disappearance
+role handoff
++ deliberate note ending
++ phrase gap
++ density change
++ new layer entry / old layer exit
 ```
 
-Use automation especially when a sustained or highly reverberant guitar would otherwise vanish unnaturally at a section boundary.
+The next section should normally arrive with intentional energy, not feel as if the channel fader is being pulled down underneath it.
+
+A fade is reserved for cases where the musical form explicitly calls for it, especially:
+
+```text
+intro fade-in
+outro fade-out
+explicit atmospheric dissolve
+special transition whose purpose is loss of energy
+```
+
+Even when a reference MIDI contains interior CC7 fades, treat those as source-specific arrangement choices rather than a reusable default.
 
 ## Adaptation rule
 
 When applying this material to a new project:
 
 1. Preserve foreground-versus-bed ordering before copying any exact value.
-2. Compensate for attack density. A rhythm part re-articulated twice as often as the reference may need a lower direct level.
+2. Compensate for attack density. A denser rhythm part may need lower direct level even when it remains clearly audible.
 3. Compensate for the renderer. CC91 and CC93 behavior varies between SoundFonts, synths and plugins.
 4. Rebalance when several guitar families overlap that were not simultaneously active in the reference.
 5. Prefer reducing a masking bed before endlessly boosting the foreground.
+6. Keep interior-section energy stable unless the composition explicitly asks for a fade.
 
 ## Failure modes
 
@@ -187,7 +196,8 @@ Revise when:
 - every guitar is assigned nearly the same level and center position;
 - the rhythm bed masks a melodic guitar even though both parts are musically correct;
 - a background guitar is made quieter but still occupies the same pan and apparent distance as the foreground;
-- a sustained guitar is abruptly cut at a section exit even though the role calls for a tail;
+- an interior section loses momentum because a routine CC7 fade pulls the guitar bed away;
+- a phrase tail is confused with a channel-level fade-out;
 - absolute CC values from one MIDI are treated as universal decibel targets;
 - EQ, compression, amp or microphone claims are attributed to MIDI evidence that cannot support them.
 
@@ -201,8 +211,7 @@ Observed source facts used here:
 - sustained melodic GM Program 29 Overdrive: initial CC7 95, pan 74, reverb send 64, chorus send 64;
 - continuous rhythm GM Program 29 Overdrive: initial CC7 80, pan 94, reverb send 127, chorus send 64;
 - muted guitar: CC7 75, reverb send 120, chorus send 64, with no explicit pan event;
-- the sustained melodic Overdrive used 130 CC7 events, including repeated gradual fade runs;
-- the continuous rhythm Overdrive used 298 CC7 events, including several long fades to very low level or zero;
-- these controller relationships are stored as source evidence, not universal mix numbers.
+- the source also contained extensive CC7 automation, including fades, but listening tests in the current project showed that promoting interior fade-outs as a general rule caused unwanted loss of section energy;
+- therefore those fades remain source-specific evidence and are not a default production behavior.
 
 The source does not reveal commercial-recording EQ, compression, amplifier, cabinet, microphone, bus processing or mastering.
