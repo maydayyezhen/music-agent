@@ -9,7 +9,7 @@ status: active
 
 ## Identity
 
-A pop-rock bass family whose groove changes together with the current rhythm-guitar role. Instead of treating bass as one fixed pattern across the whole song, let the low end switch behavior when the arrangement moves between restrained muted-guitar sections and open overdriven sections.
+A pop-rock bass family whose groove changes together with the current rhythm-section role. Instead of treating bass as one fixed pattern across the whole song, let the low end switch behavior when the arrangement moves between restrained muted-guitar sections and more open, stronger sections.
 
 Useful tags:
 
@@ -25,7 +25,7 @@ low-variation
 phrase-fill
 ```
 
-This is not a replacement for `normal-pop-rock-bass`. Use `normal-pop-rock-bass` when the bass should broadly inherit a main accompaniment groove. Use this card when the arrangement contains clearly different rhythm-guitar roles and the bass should change with them.
+This is not a replacement for `normal-pop-rock-bass`. Use `normal-pop-rock-bass` when the bass should broadly inherit a main accompaniment groove. Use this card when the arrangement contains clearly different section roles and the bass should change with them.
 
 ## Core principle
 
@@ -37,11 +37,11 @@ A useful arrangement relationship is:
 muted rhythm guitar
 → bass becomes sparser and leaves more internal space
 
-overdriven rhythm guitar
+open / stronger rhythm section
 → bass opens into a fuller repeated pulse
 ```
 
-Do not express a section change only by increasing bass velocity. Change the rhythmic behavior when the rhythm-guitar role changes.
+Do not express a section change only by increasing bass velocity. Change the rhythmic behavior when the surrounding rhythm section changes.
 
 ## Muted-section behavior
 
@@ -67,16 +67,16 @@ This produces motion without competing with a clipped muted-guitar layer.
 
 Do not force this exact mask into every muted section. Preserve the larger principle: fewer bass attacks, intentional sustain, and strong agreement with the muted rhythm-guitar pulse.
 
-## Open overdrive-section behavior
+## Open-section behavior
 
-When an open overdriven rhythm guitar takes over, the bass may switch to a full quarter-note pulse:
+When the arrangement opens into a stronger section, the bass may switch to a full quarter-note pulse:
 
 ```text
 1   2   3   4
 X   X   X   X
 ```
 
-Keep pitch movement restrained. Repeated root or harmonic-anchor notes are useful because the section lift comes primarily from rhythmic fullness and the open guitar layer, not from a suddenly busy bass line.
+Keep pitch movement restrained. Repeated root or harmonic-anchor notes are useful because the section lift comes primarily from rhythmic fullness and the wider arrangement, not from a suddenly busy bass line.
 
 A meter-aware accent hierarchy can keep repeated notes alive:
 
@@ -109,7 +109,7 @@ Use this sparingly and keep the anchor recognizable.
 
 ## Relationship to rhythm guitar
 
-This material intentionally allows very high attack alignment between bass and the current rhythm-guitar layer.
+This material intentionally allows very high attack alignment between bass and the active rhythm-guitar layer when that layer defines the section pulse.
 
 Think in roles:
 
@@ -117,11 +117,13 @@ Think in roles:
 muted guitar block
 ↔ sparse bass pulse
 
-overdrive power pulse
+open rhythm-section pulse
 ↔ full bass pulse
 ```
 
 The bass does not need to duplicate guitar pitches. It shares attack structure and section energy while remaining in its own register and harmonic role.
+
+A sustained melodic guitar layer such as `sustained-overdrive-guitar` may sit above this rhythm section without controlling every bass attack.
 
 ## Relationship to drums
 
@@ -130,7 +132,7 @@ Bass may reinforce important kick attacks, but kick is not the only controller.
 Use the whole rhythm section:
 
 ```text
-rhythm guitar role
+rhythm-guitar role
 +
 kick/backbeat structure
 +
@@ -166,7 +168,7 @@ establish groove
 
 Revise when:
 
-- the bass uses the same rhythm through muted and open guitar sections;
+- the bass uses the same rhythm through restrained and open sections;
 - section lift is created only by higher velocity;
 - the muted section fills every beat and loses internal space;
 - the open section becomes melodically busy when a repeated pulse would support the arrangement better;
@@ -180,9 +182,10 @@ Revise when:
 This material pairs naturally with:
 
 - `muted-pop-rock-pulse` for restrained sections;
-- `overdriven-power-chord-pulse` for open, stronger sections.
+- a fuller drum/accompaniment groove for open sections;
+- `sustained-overdrive-guitar` as a separate long-note electric layer above the bass groove when the arrangement needs more electric-guitar body without another short pulse pattern.
 
-A useful basic arrangement transformation is:
+A useful basic transformation is:
 
 ```text
 Verse:
@@ -190,15 +193,17 @@ muted-pop-rock-pulse
 +
 section-linked-pop-rock-bass sparse mode
 
-Chorus:
-overdriven-power-chord-pulse
+Stronger section:
+fuller rhythm section
 +
 section-linked-pop-rock-bass full-pulse mode
++
+optional sustained-overdrive-guitar above it
 ```
 
 ## Study provenance
 
-This material was abstracted from the bass track of a user-provided pop-rock MIDI that also contained dedicated muted and overdriven rhythm-guitar tracks.
+This material was abstracted from the bass track of a user-provided pop-rock MIDI that also contained dedicated muted and overdriven guitar tracks.
 
 Observed in the studied bass track:
 
@@ -209,9 +214,9 @@ Observed in the studied bass track:
 - 78 bars used the `1, 2, 4` bass pattern, while 96 bars used the full `1, 2, 3, 4` quarter-note pulse;
 - among bars where the dedicated muted-guitar track was active, 62 of 64 bass bars used the `1, 2, 4` pattern, and about 91.8% of bass attacks aligned exactly with muted-guitar attacks;
 - in those three-hit bars, median bass note durations were about 0.73 beat on beat 1, 1.55 beats on beat 2, and 0.71 beat on beat 4, supporting an intentional sustained middle space;
-- among bars where the dedicated overdriven rhythm-guitar track was active, 84 of 100 bass bars used the full four-hit quarter-note pulse, and about 96.9% of bass attacks aligned exactly with overdriven-guitar attacks;
+- among bars where the source's dedicated short overdriven rhythm-guitar track was active, 84 of 100 bass bars used the full four-hit quarter-note pulse, and about 96.9% of bass attacks aligned exactly with that source track;
 - in common four-hit bars, median velocity by beat showed a clear meter-aware hierarchy, with beat 2 lighter than beats 1, 3 and 4;
 - 51 of the common four-hit bars repeated one pitch on all four beats, while 38 used a `root, root, color, root` shape; 36 consecutive two-bar pairs specifically used a stable-root bar followed by a third-beat color-note bar;
 - later parts of the source added occasional extra pickups and fills after the basic groove had already been strongly established.
 
-These observations support a section-linked bass family in which rhythm-guitar role and bass groove change together. The source's exact pitches, chord progression, section order and complete rhythmic sequence are intentionally omitted.
+The short overdriven rhythm-guitar source remains useful as evidence for this bass relationship, but its previously promoted standalone guitar Material has been removed. The source's exact pitches, chord progression, section order and complete rhythmic sequence are intentionally omitted.
