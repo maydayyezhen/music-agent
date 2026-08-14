@@ -36,6 +36,23 @@
       "study_status": "parked",
       "current_relevance": "deferred",
       "notes": "Registered for later reference. Do not continue extracting reusable knowledge from this source while the current research focus is guitar strumming."
+    },
+    {
+      "id": "green-day-good-riddance-midi",
+      "title": "Good Riddance (Time of Your Life)",
+      "artist": "Green Day",
+      "source_type": "midi",
+      "expected_local_path": "source_library/midi/good_riddance.mid",
+      "provided_by_user": true,
+      "research_tags": [
+        "acoustic_guitar",
+        "guitar_strumming",
+        "warm_pop_strumming",
+        "sixteenth_grid"
+      ],
+      "study_status": "studied",
+      "current_relevance": "active",
+      "notes": "Studied for reusable acoustic-strumming behavior only. Main guitar: GM program 24, 2048 notes, 684 exact onset groups, mostly 0.25/0.50-beat attack gaps, common 2-5-note attacks, and most 4/4 bars around 11-12 audible attacks on a sixteenth grid. User identified the rendered character as a useful common warm acoustic-strumming reference. Exact source rhythm, pitches and harmony are not stored in Materials."
     }
   ]
 }
