@@ -38,10 +38,10 @@ The hand may move through all sixteen positions, but only a subset should sound.
 A useful active-density range is roughly:
 
 ```text
-9-13 audible attacks per bar
+8-13 audible attacks per bar
 ```
 
-For a typical flowing pop version, 10-12 attacks per bar is a strong starting region.
+For a typical flowing pop version, 9-12 attacks per bar is a strong starting region. Denser or lighter variants can sit outside that center without leaving the family.
 
 Do not fill all sixteen positions merely because the grid exists.
 
@@ -80,6 +80,8 @@ rather than:
 ```text
 full chord x every attack
 ```
+
+The family can also support broader steel-string realizations in which many strokes cover roughly four to five chord tones. Stroke width and attack density are independent controls.
 
 ## Pattern construction
 
@@ -152,13 +154,25 @@ The listener should recognize one accompaniment identity across several bars.
 
 Works well with:
 
-- warm or rounded acoustic timbres;
+- nylon-string or steel-string acoustic sources;
 - suspended or open-string voicings;
 - common-tone chord changes;
 - light bass and vocal-led pop arrangements;
 - multi-take layering at restrained levels when more width is needed.
 
-Can also be adapted to steel-string sources by increasing attack definition while keeping the same broad-anchor / narrow-connective logic.
+Steel-string does not require a separate rhythm material. Keep the same family and let the instrument choice control the basic string character.
+
+## Explicit sweep realization
+
+The first study behind this card used simultaneous onset groups, so it did not reveal physical string order. A later user-provided steel-string MIDI in the same broad rhythm family did preserve short within-stroke offsets.
+
+That second sample supports a useful renderer option:
+
+- when the source or renderer needs explicit sweep, a pop strum may spread the chord across roughly a few tens of milliseconds rather than firing every string on one tick;
+- keep the spread short enough to read as one strum, not an arpeggio;
+- do not force visible staggering when the target sampler already contains recorded strum articulation.
+
+This is a realization option, not a requirement of the rhythm family.
 
 ## Failure modes
 
@@ -190,9 +204,9 @@ Likely causes:
 
 ## Study provenance
 
-This card was abstracted from a user-provided MIDI study of a warm pop acoustic-strumming arrangement.
+This card was first abstracted from a user-provided MIDI study of a warm pop acoustic-strumming arrangement.
 
-Observed in the studied main acoustic-guitar track:
+Observed in the first studied main acoustic-guitar track:
 
 - 2048 note events formed 684 exact onset groups;
 - onset groups contained 1-5 notes, with a median of 3;
@@ -204,4 +218,13 @@ Observed in the studied main acoustic-guitar track:
 - the MIDI used nearly fixed velocity, so it was not treated as reliable evidence for expressive dynamics;
 - simultaneous note onsets did not reveal physical down/up direction or string sweep timing.
 
-The source's exact rhythmic mask, chord sequence and pitches are intentionally omitted.
+A second user-provided steel-string MIDI independently reinforced the same broad family rather than motivating a new material:
+
+- GM program 25 was used for the main acoustic part;
+- tempo was about 93 BPM;
+- straight 0.25- and 0.50-beat attack spacing was common;
+- full bars commonly landed around 8-11 audible strum groups;
+- broader groups around five notes were common when nearby within-stroke notes were clustered as one attack;
+- preserved within-stroke offsets were typically on the order of a few tens of milliseconds.
+
+The sources' exact rhythmic masks, chord sequences and pitches are intentionally omitted.
