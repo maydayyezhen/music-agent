@@ -79,6 +79,18 @@
       "study_status": "studied",
       "current_relevance": "active",
       "notes": "Studied for gentle steel-string strum-picking behavior. The MIDI is type 1 at 384 ticks per beat and about 111 BPM. Two long-running guitar channels used GM program 25. Channel 0 contained 490 note-ons from roughly beat 8 to 461 with median velocity about 72; channel 6 contained 896 note-ons from roughly beat 10 to 460 with median velocity about 55. After grouping close onsets, one channel was dominated by single-note attacks while the other mixed many single notes with many three-note partial groups. Common adjacent gaps were approximately 1/3, 2/3 and 1 beat. This source motivated the gentle-steel-strum-picking Material. Exact pitches, harmony and full rhythm remain source-specific."
+    },
+    {
+      "id": "cranberries-zombie-karaoke-midi",
+      "title": "Zombie",
+      "artist": "The Cranberries",
+      "source_type": "midi",
+      "expected_local_path": "source_library/midi/Zombie 1 (Karaoke).mid",
+      "provided_by_user": true,
+      "research_tags": ["electric_guitar", "rhythm_guitar", "muted_guitar", "overdriven_guitar", "power_chord", "pop_rock"],
+      "study_status": "partially_studied",
+      "current_relevance": "active",
+      "notes": "Current study intentionally focuses only on two simple rhythm-guitar roles. The dedicated GM program 28 Muted Guitar track contained 440 note attacks forming 224 onset groups, overwhelmingly compact two-note attacks on a one-beat pulse, with short gates, phrase gaps and repeated crescendo blocks. The dedicated GM program 29 Overdriven Guitar rhythm track contained 766 note attacks forming 388 onset groups, overwhelmingly root/fifth two-note power shapes on a one-beat pulse, with strong/soft alternating accent and gate relationships. These studies motivated muted-pop-rock-pulse and overdriven-power-chord-pulse. The separate chorused clean and melodic overdrive/lead tracks remain unpromoted for later study. Exact pitches, chord progression, full rhythmic sequences and arrangement remain source-specific."
     }
   ]
 }
