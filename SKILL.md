@@ -1,72 +1,56 @@
 ---
-name: local-instrument-aware-music-agent
-description: Compose structured local music with instrument-specific phrase logic, semantic articulations, deterministic performance, validation, MIDI, stems and WAV renders.
+name: music-agent-clean-slate
+description: Build structured, editable music projects through native artifacts, thin adapters and a newly rebuilt skill library.
 ---
 
-# Local Instrument-aware Music Agent
+# Music Agent Clean Slate
 
-Read `AGENTS.md` and `docs/creative_context_policy.md` first.
+Read only:
 
-For a new composition or material rewrite, create `musical-brief.md` and
-`creative-seed.md` before inspecting any complete song, demo, proof project, MIDI, core motif or
-project-local build script.
+1. `AGENTS.md`
+2. `docs/clean_slate_bootstrap.md`
+3. the specific skill selected from `skills_v2/`
+4. the active project being edited
+5. implementation code or schema needed to execute the current task
 
-Normal composition context may include:
+The previous knowledge and skill library is inactive. Do not search or read it unless the user
+explicitly asks to recover a specific capability.
 
-1. `references/composition-guidelines.md`
-2. `references/music-complexity.md`
-3. `references/accompaniment-textures.md`
-4. `docs/instrument_research/architecture_proposal.md`
-5. matching method/research files under `docs/instrument_research/`
-6. primitive libraries that describe operations rather than finished songs
-
-Files under `projects/` are executable evidence, not default creative references. Do not read a
-proof/demo project's `composition*.json`, `build_song.py`, exact motif, harmony, form, density
-curve or MIDI before writing the new piece. Consult the smallest relevant proof passage only
-after a concrete compiler, profile, validator or renderer failure exists.
-
-For Acoustic Guitar or Electric Rhythm Guitar strumming, read
-`docs/continuous_strumming.md`. Use explicit `sustained_chord_hit` versus
-`continuous_strumming`; preserve air strokes and cross-bar hand direction in the IR. The
-available strumming patterns are physical primitives, not instructions to reproduce an existing
-song's groove or form.
-
-Prefer `instrument_phrase` for guitar, bass, drums, keyboard and strings when the requested
-part should model a player's decisions. Keep legacy `events` for migration and small exact-note
-edits. Never mix both inside one clip.
-
-The required boundary remains:
+## Architecture kept during the reset
 
 ```text
-musical intent -> instrument phrase -> neutral performance -> profile-mapped MIDI
--> local renderer -> WAV stem -> mix
+user intent
+-> thin Agent operation layer
+-> native/structured project artifacts
+-> adapter or compiler
+-> MIDI / audio renderer
+-> validation and conversion report
 ```
 
-Sound-library triggers belong in `profiles/`, never in instrument composers. Run:
+The project facade indexes artifacts and routes adapters. It must not become a new universal music
+format.
 
-```powershell
-.\.venv\Scripts\python.exe scripts\critic_instruments.py <song> --write
-.\.venv\Scripts\python.exe scripts\critic_complexity.py <song> --write
-.\.venv\Scripts\python.exe scripts\critic_continuity.py <song> --write
-.\.venv\Scripts\python.exe scripts\critic_reference_similarity.py <song> --write
-```
+Keep these distinctions:
 
-The similarity critic is a template-reuse heuristic, not a copyright or quality judgment. A high
-score requires musical inspection; do not respond by randomly changing notes.
+- authoritative source artifacts;
+- sidecars that preserve unsupported native data;
+- derived MIDI/audio outputs;
+- conversion reports that disclose quantization, degradation or loss.
 
-Use an explicit seed in every semantic phrase. Humanization follows physical actions and
-phrase function; random note timing/velocity is not a substitute for instrument writing.
+## Default workflow
 
-For substantial Electric Lead Guitar work, read `docs/guitar_native_lead_playbook.md` as a
-capability and physical-playability guide. Its development strategies are optional choices, not
-a canonical song arc. Do not automatically require a delayed high point, thematic return,
-continuous density or the workflow of any existing proof song.
+1. Read the user request.
+2. Inspect only the active project's files and required APIs.
+3. Write the smallest editable source that can express the request.
+4. Compile, validate and render.
+5. Report concrete failures rather than hiding them with randomization.
+6. Add a `skills_v2/` skill only when the task reveals reusable knowledge.
 
-For 8–16 bar lead melodies, `docs/long_form_phrase_schema.md` describes optional planning fields.
-Only enable rules that the current piece declares. Formal work defaults to `legacy_stable`; use
-`phrase_generation_mode: long_form_experimental` only for an explicit planning experiment, then
-run `scripts/critic_long_form.py <song> --write`.
+Do not begin by loading genre guides, instrument playbooks, proof songs, motif libraries or prior
+builders.
 
-Before accepting a new composition, perform the divergence check in
-`docs/creative_context_policy.md`. Changing only key, tempo, program number or a few pitches from
-a consulted example is a failed composition attempt.
+## Skill rebuilding rule
+
+A V2 skill must be narrow, testable and style-neutral by default. It should contain capability
+facts, contracts, decision procedures, failure modes and validation. Tiny synthetic examples are
+allowed. Finished compositions and fixed musical arcs are not.
