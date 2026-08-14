@@ -1,369 +1,196 @@
 ---
 id: dry-grainy-steel-string-strum
-name: Dry Grainy Steel-String Strum
+name: Dry Pick-Forward Single Steel-String
 instrument: steel_string_acoustic_guitar
 status: active
 ---
 
-# Dry Grainy Steel-String Strum
+# Dry Pick-Forward Single Steel-String
 
 ## Identity
 
-A close, dry steel-string acoustic-guitar texture with audible pick contact and separate string attacks.
+A **single-guitar** steel-string texture that is close, dry, compact and pick-forward.
 
-The desired impression is:
-
-- clear right-hand motion;
-- short, tactile pick grain;
-- compact wooden body rather than glossy cinematic bloom;
-- controlled low end;
-- enough upper-mid presence to hear individual attacks;
-- minimal room smear;
-- one coherent guitar, not a wide chorus cloud.
-
-Useful texture tags:
+Useful tags:
 
 ```text
 dry
-grainy
+single-guitar
 pick-forward
-close-miked
+close
 compact
 folk-rock
-britpop-adjacent
 rhythmic
 ```
 
-This recipe describes a reusable texture. It does not store a source song's notes, chords, form or exact rhythm.
+This recipe is useful when the goal is to hear one guitar and its attack clearly. It should **not** be treated as the default recipe for a thick layered Britpop-style guitar bed.
 
-## Best instrument source
+The earlier `britpop-adjacent` implication was removed after comparison against a user-provided multi-guitar MIDI arrangement. That comparison showed that a composite guitar texture can come from several complementary guitar tracks rather than from exaggerated pick noise on one track.
+
+## Source requirements
 
 Prefer:
 
 - steel-string acoustic guitar;
-- pick-played or pick-capable sample source;
+- pick-capable source;
 - multiple velocity layers;
 - round robin or attack variation;
-- separate or naturally present pick/string noise;
-- short, controllable release;
-- close microphone position or dry direct signal.
+- controllable release;
+- close or relatively dry microphone signal.
 
-Avoid as the primary source:
-
-- nylon guitar;
-- soft fingerstyle-only samples;
-- heavily reverberant baked samples;
-- pre-processed stereo pads labeled as acoustic guitar;
-- sources whose attack is already rounded off;
-- sources with long fixed release that cannot handle repeated eighth-note attacks.
+Avoid relying on processing to rescue a source whose attack is already excessively soft or whose room is baked in.
 
 ## Performance prerequisites
 
-Processing cannot create convincing grain if the performance is a row of identical block chords.
+The performance should already provide intentional rhythm, chord coverage and note duration.
 
-The MIDI or performance should already provide:
+For ordinary single-note samplers or synthesis, directional onset spread may help down/up strokes read as physical sweeps. For dedicated strum articulations, explicit MIDI staggering may be unnecessary because the sample itself can contain the sweep.
 
-- low-to-high onset order for downstrokes;
-- high-to-low onset order for upstrokes;
-- narrower and usually lighter upstrokes;
-- variation between full and partial chord coverage;
-- non-random metric accents;
-- intentional note overlap and release;
-- occasional air, ghost or muted actions when appropriate;
-- no accidental same-pitch stacking.
-
-For continuous eighth-note strumming, use the active acoustic-strumming Skill for the musical behavior. This material recipe only shapes the resulting sound.
+Do not claim that simultaneous MIDI chord tones are inherently wrong for guitar. They are only likely to sound piano-like when the renderer treats every note as an unrelated single-note attack.
 
 ## Texture axes
 
-Use these normalized values as descriptive targets, not plugin parameters:
+Use these as descriptive targets, not universal plugin values:
 
 ```text
 dryness:          0.80–0.95
-grain:            0.65–0.85
-pick definition:  0.70–0.90
+pick definition:  0.65–0.85
 wood body:        0.45–0.65
 low-end weight:   0.30–0.50
-brightness:       0.55–0.75
-room amount:      0.05–0.18
-stereo width:     0.10–0.30
-saturation:       0.10–0.25
+brightness:       0.50–0.72
+room amount:      0.04–0.16
+stereo width:     0.05–0.25
+saturation:       0.08–0.20
 ```
 
-The most important relationship is:
+The pick should belong to the pitched string. If the transient sounds like a separate plastic click, reduce it.
+
+## Intra-stroke timing
+
+When the renderer needs explicit per-string timing, a practical starting range is:
 
 ```text
-pick definition > room amount
+downstroke total spread: 12–35 ms
+upstroke total spread:    8–24 ms
 ```
 
-If the room tail becomes more obvious than the string attacks, the texture has drifted away from this recipe.
+Use less spread at faster tempos and for narrow partial strokes.
 
-## Performance-to-render starting ranges
+Do not force these values when a strum sample already contains its own timing. Block-like MIDI onsets can be valid input to that kind of source.
 
-These are practical starting ranges derived from the desired texture and the successful grainier preview. They are not measurements from a commercial recording.
+## Velocity
 
-### Intra-stroke spread
+This recipe does not prescribe one absolute velocity range.
+
+Choose the velocity region that drives the selected sample source into the intended articulation. A hard-strummed patch may need substantially higher velocities than a soft exposed acoustic part.
+
+When a relevant reference MIDI exists, inspect its velocity distribution for the current project instead of using a generic fixed value.
+
+## Generic processing starting points
+
+### Low end
 
 ```text
-downstroke total spread: 18–45 ms
-upstroke total spread:    10–30 ms
+high-pass: roughly 65–95 Hz when needed
 ```
 
-Scale with tempo and chord width.
+Do not remove the entire wooden body.
 
-- Wider downstrokes may use the upper part of the range.
-- Two- or three-note upstrokes should remain near the lower part.
-- At fast tempos, reduce both ranges so the stroke does not become an arpeggio.
+### Body and mud
 
-### Attack relationship
+Inspect roughly 220–450 Hz. Reduce only when repeated strums become boxy.
 
-```text
-downstroke velocity reference: 1.00
-upstroke velocity reference:   0.68–0.85
-ghost contact reference:       0.35–0.55
-```
+### Pick definition
 
-Use meter and phrase function before adding randomness.
+Inspect roughly 2–5 kHz. Use source attack controls or modest EQ rather than extreme boosts.
 
-### Duration
+### Harshness
 
-```text
-full stroke gate:       65–95% of the next eighth-note interval
-partial stroke gate:    50–80%
-ghost or muted contact: 15–35%
-```
+Inspect roughly 5.5–8.5 kHz when strong strokes become brittle.
 
-Compatible voices may ring across later attacks. Do not shorten every note merely to create more attack noise.
+### Compression
 
-## Source and sampler controls
-
-Start here when the instrument provides matching controls:
-
-- choose a medium or firm pick articulation;
-- increase pick or attack noise modestly;
-- keep release noise present but below the initial pick transient;
-- reduce room microphone level;
-- favor close mic over ambient mic;
-- reduce built-in stereo width;
-- disable lush chorus or doubling;
-- keep round robin enabled;
-- avoid maxing attack-noise controls, which turns grain into plastic clicking.
-
-A useful balance is that the pick should be audible at normal listening level but should not sound detached from the pitched string.
-
-## Generic processing chain
-
-### 1. High-pass and low-end control
-
-Start with:
-
-```text
-high-pass: 65–90 Hz
-slope:     12 or 18 dB/octave
-```
-
-Use the lower end for solo guitar and the higher end when bass and kick are present.
-
-Do not remove all body below 180 Hz. The texture should be dry, not skeletal.
-
-### 2. Mud control
-
-Typical inspection area:
-
-```text
-220–450 Hz
-```
-
-Apply a broad reduction of roughly 1–4 dB only when repeated strums accumulate cardboard or boxiness.
-
-Do not automatically carve this region. Some sources need the body.
-
-### 3. Pick and string definition
-
-Typical inspection area:
-
-```text
-2.2–4.8 kHz
-```
-
-A broad 1–3 dB lift can reveal pick grain when the source is dull.
-
-When the source is already sharp, use a transient shaper or source-level attack control instead of a large EQ boost.
-
-### 4. Harshness control
-
-Inspect:
-
-```text
-5.5–8.5 kHz
-```
-
-Use a narrow or dynamic reduction when strong downstrokes become brittle or fizzy.
-
-The goal is audible grain without a spray-can top end.
-
-### 5. Compression
-
-Starting range:
+A useful transparent starting point:
 
 ```text
 ratio:          2:1–3:1
 attack:         15–35 ms
 release:        60–140 ms
-gain reduction: 1–4 dB on stronger strokes
+gain reduction: about 1–4 dB on stronger strokes
 ```
 
-A slower attack preserves the pick transient. Too-fast attack erases the very grain this recipe is meant to keep.
+Avoid very fast attack when preserving pick definition is the goal.
 
-Do not flatten every upstroke to the same level as every downstroke.
+### Saturation
 
-### 6. Saturation
+Use subtle tape, console or soft clipping for density and cohesion. Do not turn this single-guitar recipe into obvious distortion.
 
-Use subtle tape, console or soft-clipping saturation:
+### Room
+
+Keep the direct guitar in front:
 
 ```text
-harmonic drive: low
-perceived effect: slight density and edge binding
+short room / early reflections
+wet level: low
 ```
-
-The target is a small amount of roughness and cohesion, not obvious distortion.
-
-When using a wet/dry control, a starting range around 3–12% processed signal is often enough.
-
-### 7. Room
-
-Use a short room or early-reflection treatment:
-
-```text
-decay:     0.25–0.65 s
-pre-delay: 0–15 ms
-wet level: 4–12%
-```
-
-Keep the dry pick attack in front.
-
-Avoid long halls, glossy plates and obvious stereo tails for this texture.
-
-### 8. Stereo image
-
-Keep the guitar itself fairly compact:
-
-```text
-dry width:  mostly mono to modest stereo
-room width: slightly wider than dry
-```
-
-For one guitar, avoid hard-splitting low strings left and high strings right. Small pitch- or string-dependent movement is acceptable, but it should still read as one instrument.
 
 ## Code-synthesis approximation
 
-When no sample library is available, approximate the texture with:
+When no sample library is available:
 
-- Karplus-Strong or another plucked-string resonator;
-- a 6–12 ms high-passed noise transient for pick contact;
-- a 10–25 ms low-level scrape component;
-- slightly different excitation and damping per string;
-- faster high-frequency decay than low-frequency decay;
-- quiet body resonances around roughly 90–300 Hz;
-- a short, low-level room response;
-- restrained stereo spread.
+- use a plucked-string resonator such as Karplus-Strong;
+- add a short bright pick transient;
+- keep scrape/finger noise quieter than the pitched string;
+- vary excitation and damping per string;
+- add modest 90–300 Hz body resonances;
+- use a short, quiet room;
+- keep stereo spread restrained.
 
-Important relationships:
+The failed direction to avoid is **more pick noise = more rock authenticity**. Too much synthetic transient makes the guitar thin, clicky and detached from the body.
+
+## Pairing with layered production
+
+When the desired result is thick, coarse or wall-like, pair this or another suitable acoustic source with:
 
 ```text
-pick transient is short and bright
-string body is longer and pitched
-scrape is quieter than both
-room is quieter than the direct signal
+materials_v2/production_chains/acoustic_guitar/multi_take_acoustic_stack.md
 ```
 
-Do not use identical oscillator envelopes for every chord tone. That produces smooth glass rather than grainy wood and string.
-
-## Arrangement interaction
-
-When a lead or vocal is present:
-
-- reduce chord width before aggressively reducing brightness;
-- lower upstroke velocity;
-- use more partial strokes;
-- reduce low-mid body slightly if masking occurs;
-- keep enough pick definition that the rhythm remains audible at lower level.
-
-When the guitar is exposed:
-
-- allow a little more body;
-- retain release and finger-change noise at a low level;
-- avoid making the transient unnaturally sharp merely because there is more space.
+Layering can create density and grain without pushing one guitar's pick transient unnaturally hard.
 
 ## Failure modes
 
-### Smooth wash with no individual attacks
+### Plastic clicking
 
 Likely causes:
 
-- attack too soft;
-- too much room or release;
-- insufficient intra-stroke onset spread;
-- excessive compression with a fast attack;
-- too little 2–5 kHz information;
-- every string synthesized with the same envelope.
+- pick-noise layer too loud;
+- excessive 3–7 kHz emphasis;
+- transient shape identical on every note;
+- insufficient pitched body.
 
-### Plastic clicking detached from the guitar
+### Smooth but weak
 
 Likely causes:
 
-- pick-noise control too high;
-- transient layer too loud;
-- noise transient too short and identical on every attack;
-- not enough pitched string body;
-- excessive 3–7 kHz boost.
+- source velocity too low for the desired articulation;
+- attack too rounded;
+- excessive sustain or room;
+- insufficient rhythmic retriggering.
 
-### Cardboard boxiness
-
-Likely causes:
-
-- too much 250–450 Hz buildup;
-- long overlapping full voicings;
-- excessive body-mic level;
-- compression release too slow.
-
-### Brittle spray-can top end
+### Overly arpeggiated
 
 Likely causes:
 
-- too much 6–10 kHz;
-- saturation after a large high-frequency boost;
-- identical bright attack on every string;
-- upstrokes rendered as loudly and broadly as downstrokes.
+- inter-string spread too wide;
+- explicit sweep added on top of a sample that already contains a sweep.
 
-### Piano-like repeated chords
+### Thin compared with a reference guitar bed
 
-Likely causes:
-
-- all chord tones begin at the same time;
-- every stroke uses the full voicing;
-- all notes are cut at every new attack;
-- no difference between downstroke and upstroke coverage;
-- velocity is copied uniformly across the chord.
-
-Fix the performance layer before adding more effects.
-
-## Listening checklist
-
-Accept the texture when:
-
-- individual string attacks are perceptible without sounding like a slow arpeggio;
-- the pick contact belongs to the string rather than floating above it;
-- downstrokes feel broader than upstrokes;
-- the guitar remains compact and near the listener;
-- the room is sensed more than heard;
-- repeated eighth notes retain rhythmic definition;
-- the low end supports the wood body without obscuring bass or kick;
-- strong strokes have edge but do not become brittle;
-- the texture still works at reduced volume.
+The problem may be arrangement or layering rather than single-guitar timbre. Check whether several guitar parts are contributing before adding more EQ or pick noise.
 
 ## Provenance boundary
 
-This recipe was created from the shared listening goal and the contrast between a smooth synthetic preview and a grain-enhanced synthetic preview.
+This recipe comes from the successful single-guitar grain experiment in the current Music Agent work. Its production values are practical starting points, not measurements extracted from a commercial recording or MIDI file.
 
-Its parameter ranges are reusable production starting points and informed approximations. They were not objectively extracted from the referenced MIDI, because ordinary MIDI does not contain microphone, sample, EQ, compression, saturation or room settings.
+The user-provided MIDI comparison was used to **limit** the recipe's claims: ordinary MIDI can reveal program choice, velocity, timing, note duration and multi-track arrangement, but it cannot reveal microphone, EQ, compression, saturation or recorded pick-noise level.
