@@ -108,15 +108,15 @@
       "problem_tags": ["muted-guitar-too-sustained", "muted-guitar-too-full", "random-chug-velocity", "no-phrase-gaps"]
     },
     {
-      "id": "overdriven-power-chord-pulse",
-      "kind": "accompaniment_pattern",
-      "path": "materials_v2/accompaniment_patterns/electric_guitar/overdriven_power_chord_pulse.md",
+      "id": "sustained-overdrive-guitar",
+      "kind": "instrument_gesture",
+      "path": "materials_v2/instrument_gestures/electric_guitar/sustained_overdrive_guitar.md",
       "status": "active",
       "instruments": ["overdriven_electric_guitar"],
-      "roles": ["rhythmic_accompaniment", "section_lift", "rock_foundation"],
+      "roles": ["sustained_support", "melodic_fill", "phrase_tail", "lead_support"],
       "genre_tags": ["pop-rock", "rock"],
-      "texture_tags": ["overdriven", "power-chord", "steady-pulse", "strong-soft-alternation", "short-gate"],
-      "problem_tags": ["electric-guitar-as-piano-chords", "flat-power-chord-pulse", "over-sustained-rhythm-guitar", "random-rhythm-guitar"]
+      "texture_tags": ["sustained", "long-note", "single-note", "fifth-dyad", "pedal-tone", "melodic-support"],
+      "problem_tags": ["overdrive-too-choppy", "electric-guitar-pulse-interference", "hard-cut-phrase-tail", "overfilled-electric-guitar"]
     }
   ]
 }
