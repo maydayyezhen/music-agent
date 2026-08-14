@@ -8,7 +8,7 @@ status: active
 
 ## Purpose
 
-Use this skill for repeated acoustic-guitar strumming built on a regular subdivision grid, especially eighth-note and sixteenth-note accompaniment.
+Use this skill for repeated acoustic-guitar strumming built on a regular or swung subdivision grid, especially eighth-note, sixteenth-note and triplet-derived accompaniment.
 
 This is a text knowledge and decision skill. It does not require a trained model and it does not define the final guitar timbre. Timbre, layering and production belong in `materials_v2/`.
 
@@ -56,23 +56,53 @@ This sample supports several reusable ideas:
 
 The exact source rhythm mask, pitches and harmonic sequence belong to the source library and must not be copied into this Skill.
 
+### Study 3: rolling triplet / shuffle strum with recoverable sweep direction
+
+A third user-provided MIDI study added a triplet-derived strumming family and, unlike the first two studies, preserved enough within-stroke timing to recover physical sweep direction.
+
+Directly observed in the main steel-string guitar channel:
+
+- the MIDI encoded 125 BPM at 192 ticks per beat;
+- GM program 25 was used;
+- 3074 note-ons were present;
+- grouping adjacent note-ons within 12 ticks produced about 1015 strum groups with a median width of three notes;
+- attack groups aligned overwhelmingly to two triplet locations within each beat: the beat start and the late-triplet position about 2/3 of a beat later;
+- there was essentially no comparable middle-triplet attack family;
+- beat-start groups with recoverable direction strongly moved low-to-high;
+- late-triplet groups with recoverable direction were almost entirely high-to-low;
+- within-stroke onset spread had a median around 20 ms and a 90th percentile around 47.5 ms;
+- note duration had a median around 0.78 quarter-note beats;
+- velocity varied meaningfully in the source, with a median around 86 and a broad range rather than one fixed export value.
+
+This sample supports several reusable ideas:
+
+- acoustic strumming may use a triplet or shuffle lattice rather than a straight eighth/sixteenth grid;
+- a common rolling relationship is long-short spacing: about 2/3 beat from anchor to return, then about 1/3 beat to the next anchor;
+- beat anchors can be broad low-to-high downstrokes;
+- late-triplet returns can be substantial high-to-low upstrokes rather than tiny decorative flicks;
+- explicit string-by-string spread is valid when the source actually preserves directional within-stroke timing;
+- ringing duration can extend through the next attack so the groove rolls instead of becoming clipped.
+
+The exact source harmony, pitches, arrangement and full MIDI rhythm sequence remain in the source library. Only the reusable triplet-strumming behavior is promoted here.
+
 ## General performance knowledge
 
-The following rules are performance conventions, not facts recovered from the studied MIDI samples:
+The following rules are performance conventions, not facts recovered from every studied MIDI sample:
 
-- choose a subdivision grid appropriate to the part, commonly eighths or sixteenths;
-- continuous right-hand motion normally alternates down and up across that grid;
-- a silent grid position may still contain an air stroke;
+- choose a subdivision grid appropriate to the part; it may be straight eighths, straight sixteenths, triplet-derived or swung;
+- continuous right-hand motion normally follows a stable physical clock appropriate to that subdivision;
+- a silent grid position may still contain an air stroke or return motion;
 - downstrokes often cover more low and middle strings and may carry stronger structural accents;
-- upstrokes are often narrower, lighter and biased toward middle or upper strings;
+- upstrokes are often narrower and lighter, but some groove families intentionally use substantial upstroke returns;
 - chord changes do not automatically reset right-hand direction;
-- compatible strings or voices may continue ringing through later attacks.
+- compatible strings or voices may continue ringing through later attacks;
+- do not straighten a swing/triplet groove into equal eighths unless that is an intentional style change.
 
 ## Core representation
 
 Treat strumming as three separate layers.
 
-### 1. Hand-motion clock
+### 1. Hand-motion / subdivision clock
 
 For eighth notes in 4/4:
 
@@ -88,7 +118,16 @@ For sixteenth notes in 4/4:
 D U D U D U D U D U D U D U D U
 ```
 
-The audible pattern is a subset of this physical clock. Do not restart the direction cycle merely because the bar, chord or phrase changed.
+For a rolling triplet-derived pattern family:
+
+```text
+1 trip let  2 trip let  3 trip let  4 trip let
+D   .   U   D   .   U   D   .   U   D   .   U
+```
+
+The triplet example is one useful pattern family, not a universal law for every triplet groove. The middle slot may be silent while the hand resets or travels.
+
+The audible pattern is a subset of the physical clock. Do not restart the direction cycle merely because the bar, chord or phrase changed.
 
 For flowing sixteenth-grid accompaniment, do not assume every slot should sound. A useful part may leave several positions as air strokes while retaining continuous hand motion.
 
@@ -126,16 +165,17 @@ Do not hard-code sample-library keyswitches into the musical phrase.
 
 ## Decision procedure
 
-1. Choose the subdivision from the musical task instead of assuming eighth notes.
-2. Build the continuous D/U hand-motion clock.
-3. Mark which grid positions sound and which are air strokes.
+1. Choose the subdivision and swing relationship from the musical task instead of assuming straight eighth notes.
+2. Build the appropriate hand-motion or triplet pulse clock.
+3. Mark which grid positions sound and which are air/reset strokes.
 4. Assign stroke width and register coverage per sounding slot.
-5. Treat structural anchors and connective attacks as different roles; connective sixteenths may be narrower.
-6. Establish meter-aware dynamics before adding any humanization.
-7. Preserve compatible ringing voices rather than cutting every chord at every attack.
-8. At chord changes, release conflicting voices without resetting the hand clock.
-9. Thin the guitar when a lead or vocal needs space.
-10. Keep repeated bars related. Variation should transform a recognizable pattern rather than randomize every bar.
+5. Treat structural anchors and connective/return attacks as different roles; their width and weight may differ by style.
+6. Preserve long-short timing in triplet/shuffle grooves instead of quantizing it to equal eighths.
+7. Establish meter-aware dynamics before adding any humanization.
+8. Preserve compatible ringing voices rather than cutting every chord at every attack.
+9. At chord changes, release conflicting voices without resetting the groove clock.
+10. Thin the guitar when a lead or vocal needs space.
+11. Keep repeated bars related. Variation should transform a recognizable pattern rather than randomize every bar.
 
 ## Dynamics
 
@@ -144,7 +184,8 @@ Do not use one fixed velocity recipe for every style.
 Useful relationships:
 
 - structural downstrokes are often stronger than connective attacks;
-- upstrokes are often lighter than nearby downstrokes;
+- upstrokes are often lighter than nearby downstrokes, but this is style-dependent rather than mandatory;
+- a rolling triplet return may have enough weight to function as a second rhythmic anchor;
 - ghost or muted contacts are substantially lower;
 - section energy, accompaniment role and the target instrument source determine the absolute velocity range.
 
@@ -160,6 +201,7 @@ Useful contrasts include:
 
 - broad downstroke with bass support;
 - narrow upper-string upstroke;
+- substantial return upstroke in triplet/shuffle styles;
 - low or middle partial connective stroke;
 - ghost contact;
 - single-tone refresh;
@@ -177,6 +219,16 @@ narrower connective sixteenths
 partial common-tone retention
 ```
 
+A useful rolling-triplet relationship is:
+
+```text
+low-to-high anchor
++
+late-triplet high-to-low return
++
+ringing overlap across the beat
+```
+
 Do not hard-code one source's exact chord-width sequence. Generate a related family from the current harmony and phrase role.
 
 ## MIDI realization
@@ -192,22 +244,27 @@ When ordinary single-note samples or synthesis require explicit sweep motion:
 - scale the spread with tempo and stroke width;
 - keep it short enough that the result remains a strum rather than an arpeggio.
 
-When the source evidence has simultaneous chord onsets, label direction and sweep timing as unknown unless another source supplies them.
+Reference evidence can justify recoverable direction when within-stroke note timing trends consistently with pitch order. When source notes are simultaneous, label direction and sweep timing as unknown unless another source supplies them.
+
+Do not promote one source's measured sweep spread into a universal constant. Treat measured values as evidence for that source and derive practical renderer settings from tempo, width and sample behavior.
 
 ## Common failure modes
 
 Revise the part when:
 
 - the subdivision was guessed incorrectly from a reference;
+- a triplet/shuffle pattern has been straightened into equal eighths;
 - a sixteenth grid is treated as a requirement to sound all sixteen positions;
 - every attack uses the same full voicing;
 - connective sixteenths are as broad and heavy as every structural anchor without a style reason;
+- every upstroke is forced to be tiny even when the groove needs a substantial return;
 - the right hand restarts at every bar or chord;
 - up/down labels are invented from fully simultaneous MIDI blocks;
 - all notes are cut mechanically at every new attack;
 - accidental same-pitch overlap creates doubled notes or stuck notes;
 - humanization is random rather than tied to stroke role and meter;
 - visible MIDI staggering is forced even when the sampler already supplies a strum articulation;
+- explicit staggering is so wide that the result becomes an arpeggio;
 - the guitar continuously duplicates a foreground melody or vocal rhythm.
 
 ## Validation checklist
@@ -215,24 +272,28 @@ Revise the part when:
 Before accepting a generated part, verify:
 
 - the declared subdivision matches the intended pattern;
-- the D/U hand clock is internally continuous;
+- swing/triplet long-short spacing is preserved when required;
+- the hand or pulse clock is internally coherent;
 - sounding and silent slots are intentional;
 - a sixteenth-grid part has deliberate holes when the style calls for flow rather than maximum density;
 - stroke width varies meaningfully;
-- structural and connective attacks have sensible width relationships;
+- structural and connective/return attacks have sensible width relationships;
 - dynamics form a readable meter and phrase;
 - partial strokes actually use fewer voices;
 - note duration creates the intended amount of connection;
 - chord changes do not leave incompatible sustained tones;
 - renderer-specific sweep behavior is not confused with source MIDI evidence;
+- recoverable direction is only claimed when within-stroke timing supports it;
 - repeated bars are related but not mechanically identical.
 
 ## Current status
 
-This skill documents reusable acoustic-guitar strumming behavior across regular eighth- and sixteenth-note subdivision grids.
+This skill documents reusable acoustic-guitar strumming behavior across straight eighth, straight sixteenth and triplet-derived groove families.
 
 The first MIDI study contributed evidence for dense chord-pulse attacks, compact chord groups, strong velocity variation and note overlap.
 
 The second strumming study added evidence for warm flowing sixteenth-grid accompaniment with deliberate holes, variable 1-5-note attack width, narrower connective sixteenths, common-tone retention and stable multi-bar pattern families.
 
-Neither studied MIDI provided recoverable physical down/up direction or string-by-string sweep timing.
+The third strumming study added evidence for rolling long-short triplet timing, substantial late-triplet return strokes, ringing note lengths and recoverable low-to-high / high-to-low sweep direction when the MIDI actually preserves within-stroke onset order.
+
+The first two studies did not provide recoverable physical sweep direction. The third one did, so the Skill now distinguishes simultaneous block evidence from genuinely directional strum evidence.
