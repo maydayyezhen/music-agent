@@ -15,6 +15,14 @@ references/ableton-skills/
 references/hermes-songwriting/
 references/midi-agent-skill/
 
+# Original source-library binaries are local research assets. The Git-tracked
+# registry records their expected paths and study status.
+source_library/**/*.mid
+source_library/**/*.midi
+source_library/**/*.wav
+source_library/**/*.flac
+source_library/**/*.mp3
+
 # Rendered artifacts are reproducible and quickly make the repository huge.
 # This also catches revision folders such as stems_v1 and backend scratch WAVs.
 projects/**/*.wav
