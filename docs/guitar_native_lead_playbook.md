@@ -1,242 +1,245 @@
-# Guitar-native Lead Playbook
+# Guitar-Native Lead Writing
 
-This playbook records the proven approach behind `projects/guitar_native_rock_proof`.
-Read it before composing a substantial Electric Lead Guitar theme or solo. It is a
-workflow and decision guide, not a fixed lick library and not a requirement that every
-song contain 32 bars of continuous notes.
+This document is a capability and playability guide. It is not a song template, lick library or
+required dramatic arc.
 
-## Proven result
+Read `docs/creative_context_policy.md` first. Write the new piece's `creative-seed.md` before
+opening any complete guitar demo or proof project.
 
-The reference song **The Distance Still Burns** was composed at E minor, 116 BPM and
-104 bars. Its Main Solo spans 32 bars as one performance process:
+## What must survive
 
-- 32/32 solo bars active;
-- 301 solo notes and one phrase island at the explicit gap threshold of 0.5 beat;
-- maximum internal gap 0.09 beat and no rest over one beat;
-- density arc 57 / 80 / 86 / 78 notes per eight-bar block;
-- delayed E6 peak at solo bar 26;
-- zero different-pitch overlap and zero unsafe pitch-wheel messages;
-- one core motif is stated, sequenced upward, compressed, extended, driven into a bend
-  target, released into a descent, and recovered in the Final Theme.
-
-These numbers prove this particular result. They are useful diagnostics, not universal
-targets. A slower or sparser guitar work may need more space.
-
-## The central lesson
-
-Do not compose a singable melody and replace its timbre with guitar. Compose a physical,
-continuous guitar performance whose pitches and rhythm grow from:
+A convincing guitar part needs its musical identity and physical logic to survive the pipeline:
 
 ```text
-fretboard shape
--> repeated picking/legato pattern
--> position-preserving variation
--> connected position shift
--> rhythmic compression or expansion
--> delayed target and release
--> motif recovery
+musical role
+-> pitch/rhythm skeleton
+-> playable hand path
+-> performance actions
+-> neutral events
+-> profile/controller realization
+-> rendered audio
 ```
 
-Articulation comes after this skeleton works. Slide, bend and vibrato cannot rescue an
-unrelated lick collage.
+The plain pitch/rhythm skeleton should already make sense. Bends, slides and vibrato cannot turn
+an unrelated collection of phrases into one coherent performance.
 
-## Mandatory workflow for substantial Lead Guitar
+## Universal physical considerations
 
-### 1. Design one playable core motif
+These are constraints and questions, not stylistic prescriptions:
 
-Before arranging the song, store a real 1-2 bar motif with pitch, onset, duration,
-rhythmic identity, contour and a plausible fretboard position. It should support at least
-three of these operations:
+- Is the written range playable for the chosen tuning?
+- Can adjacent notes be reached with a plausible string/fret path?
+- Are hammer-ons and pull-offs assigned to reachable same-string movements?
+- Does a slide connect an actual source and destination?
+- Does a bend have a target and enough time to be perceived?
+- Is pitch-bend realization channel-safe?
+- Are intentional double-stops or chords declared rather than accidental overlaps?
+- Does repeated picking have a feasible rhythmic engine?
+- Are position changes audible musical decisions rather than random teleportation?
 
-- sequence up/down;
-- rhythmic compression or expansion;
-- fragmentation and extension;
-- register displacement;
-- repeated-note propulsion;
-- approach to a bend target;
-- descending recovery.
+A piece may intentionally violate normal guitar technique, but that choice should be explicit.
 
-Do not settle for a scale-safe pitch list without rhythmic identity.
+## Choose a lead archetype from the brief
 
-### 2. Plan the hand path before decorating notes
+Do not default every electric-guitar part to a long ascending rock solo. Possible roles include:
 
-Divide the long span into a small number of physical regions, for example:
+- sparse answering phrases;
+- repeated-note rhythmic hook;
+- low-register riff;
+- lyrical sustained theme;
+- angular intervallic line;
+- modal drone improvisation;
+- tremolo-picked texture;
+- octave melody;
+- double-stop response;
+- noise/feedback gesture;
+- through-composed solo;
+- deliberately static motif;
+- fragmented interjections;
+- cyclic pattern with gradual timbral change.
 
-```text
-mid position -> upper position -> high position -> descending return
-```
+The user brief determines whether the part develops, repeats, dissolves, interrupts, resolves or
+remains suspended.
 
-Within a region, prefer reachable same-string hammer/pull motion, adjacent-string
-movement, repeated picking patterns and modest fret motion. A new position must be a
-development of the previous material, not a new unrelated lick.
+## Build an original creative seed
 
-### 3. Write a section arc, not repeated closed phrases
+Before consulting complete examples, define:
 
-For a long solo, plan the entire contour before expanding notes:
+1. rhythmic identity;
+2. interval or pitch identity;
+3. register and physical region;
+4. phrase/rest behavior;
+5. harmonic relationship;
+6. development options appropriate to this piece;
+7. what the guitar must avoid.
 
-1. establish motif and position;
-2. vary it without resetting;
-3. sequence it along the fretboard;
-4. increase rhythmic or intervallic pressure;
-5. reach the high target late;
-6. continue after the target note;
-7. release/descend into the next section.
+The seed may be one note, a chordal gesture, a rhythm, a noise envelope or a conventional motif.
+Do not force a melodic motif when texture is the real idea.
 
-Do not automatically use `long note -> vibrato -> rest -> new lick` every two or four
-bars. A breath is allowed, but it must not erase direction, position or motif state.
+## Development operations
 
-### 4. Make every transition explainable
+Use these as independent primitives. No fixed order is required.
 
-Every adjacent pattern should connect through at least one reason:
+### Pitch and contour
 
-- shared boundary pitch;
-- slide into the next position;
-- bend release into the next pattern;
-- retained picking/repeated-note rhythm;
-- transposition, compression, expansion or fragmentation of the previous pattern;
-- continuation of the current ascent/descent;
-- reuse of the previous pattern's tail.
+- sequence up or down;
+- invert or mirror selected intervals;
+- retain contour while changing interval size;
+- pedal around one pitch;
+- displace selected notes by octave;
+- narrow or widen the range;
+- approach a target chromatically;
+- avoid resolution deliberately.
 
-If the composer cannot answer “why does this follow the previous pattern?”, rewrite it.
+### Rhythm
 
-### 5. Keep the skeleton monophonic and convincing
+- repeat a picking cell;
+- compress or expand durations;
+- shift accents;
+- add/remove pickups;
+- fragment the tail;
+- sustain across a barline;
+- interrupt with silence;
+- alternate dense and sparse responses;
+- preserve mechanical timing intentionally.
 
-Before complex articulation, the plain-note version must already sound guitar-shaped:
+### Guitar mechanics
 
-- recognisable fretboard motion;
-- repeated/sequence logic;
-- rhythmic drive and changing density;
-- short-note/long-note contrast;
-- delayed climax;
-- meaningful descent or thematic return.
+- remain inside one position;
+- connect positions by slide;
+- change strings while retaining fret shape;
+- use same-string legato groups;
+- move from picked to legato articulation;
+- introduce repeated-string retriggers;
+- add double-stops or octave shapes;
+- move from fretted notes to harmonics/noise when supported.
 
-Do not use different-pitch overlap to fake continuity. Ordinary Lead Guitar is
-monophonic unless a deliberate double-stop/chord technique and safe channel strategy are
-declared.
+### Form
 
-### 6. Realize only meaningful physical actions
+- statement and variation;
+- accumulation;
+- erosion/dissolution;
+- call and response;
+- cyclic return;
+- interrupted development;
+- multiple independent episodes;
+- flat hypnotic repetition;
+- late arrival;
+- early climax followed by decay;
+- no climax at all.
 
-- `hammer_on` / `pull_off`: reachable same-string groups.
-- `slide`: a real connection into another fret or position, not periodic decoration.
-- `bend`: enter an important target; keep the MIDI channel otherwise monophonic.
-- `bend_release`: continue into the following pattern rather than acting as an ending
-  stamp.
-- `vibrato`: delayed and reserved for selected stable target notes.
-- repeated notes / pick accents: preserve the rhythmic engine of the hand.
+A delayed high target and thematic return are only two possible strategies.
 
-## Composition fields for an intentional hand path
+## Fingering fields
 
-The stable `melodic_lead` path supports optional explicit fingering on motif notes:
+When physical placement matters, motif notes may declare:
 
 ```json
 {
   "pitch": "G4",
-  "at": "9:1",
+  "at": "3:2.5",
   "duration": 0.5,
-  "velocity": 99,
-  "articulations": ["slide", "accent"],
-  "planned_position": "upper_12",
+  "velocity": 92,
+  "planned_position": "custom_region_a",
   "planned_string": 3,
   "planned_fret": 12,
+  "articulations": ["slide"],
   "slide_from_semitones": -2.0
 }
 ```
 
-`planned_string` is zero-based against the configured tuning. The compiler verifies that
-the declared string/fret produces `pitch`; it rejects impossible pairs. Omit these fields
-when fingering is not compositionally important and let the existing allocator choose.
+`planned_string` is zero-based against the configured tuning. The compiler verifies that the
+string/fret pair produces the authored pitch.
 
-`slide_from_semitones` is semantic performance intent. A pitch-bend-capable profile maps
-it to a smooth approach curve. The MIDI channel safety gate suppresses pitch curves if
-another note overlaps.
+Use explicit fingering only when it affects the music or realization. Do not annotate every note
+merely to satisfy a template.
 
-Never put library-specific keyswitch numbers in composition data.
+## Articulation as causal action
 
-## Arrangement around the lead
+Articulation should explain a physical transition:
 
-The guitar succeeds because the band supports its arc:
+- `hammer_on`: source note and reachable higher fret;
+- `pull_off`: source note and reachable lower fret;
+- `slide`: connected source/destination and transition direction;
+- `bend`: target interval and curve;
+- `bend_release`: return or continuation behavior;
+- `vibrato`: delayed start, rate and depth when supported;
+- `palm_mute`: right-hand damping state;
+- `accent`: intentional attack emphasis;
+- `sustain`: intentional held target.
 
-- Rhythm Guitar changes right-hand language by section: muted eighths, syncopated
-  attacks, then open power-chord sustain. It stays out of the Lead's upper register.
-- Bass connects harmony with roots, fifths, octaves, passing/approach notes and cross-bar
-  motion. It aligns with selected kicks without copying every kick or rhythm-guitar hit.
-- Drums maintain a clear backbeat, change cymbal/kick energy by section, and reserve fills
-  for meaningful boundaries. The late solo should receive a real build.
-- Organ/Pad is an optional plane. It supports space and climax without copying the Lead.
-- A structural passage may remove Lead Guitar entirely; in that case another instrument
-  must carry line-level motion rather than all accompaniment becoming chord blocks.
+Do not stamp an articulation periodically because a prior example used it.
+
+## Arrangement interaction
+
+The other tracks should support the current lead role, not a generic rock blueprint.
+
+Ask:
+
+- Which register must remain open?
+- Which rhythm belongs to the foreground?
+- Should accompaniment continue, thin out, answer or disappear?
+- Does the harmony need to clarify the lead or remain ambiguous?
+- Is the guitar the line, point, plane or noise layer in this section?
+
+Acoustic strumming, bass roots, rock drums and organ pads are not mandatory companions.
 
 ## Render-first diagnostic loop
 
-For important guitar work, do not refactor from theory. Use:
+For important guitar work:
 
 ```text
-compose with current stable system
--> render real MIDI/WAV
--> inspect concrete bars and events
--> identify the smallest audible realization failure
--> change only that layer
--> regenerate the same song with the same seed/harmony/motif
--> compare
+compose from the current brief
+-> render MIDI/WAV
+-> identify a concrete audible failure
+-> inspect the smallest relevant compiler/profile/proof passage
+-> fix only the failing layer
+-> regenerate with musical data held constant when testing the system
 ```
 
-At minimum audit:
+Useful diagnostics include:
 
-- active-bar ratio and continuous span;
-- phrase islands under a documented gap threshold;
-- rests over one beat and consecutive blank bars;
-- automatic endings at four-bar boundaries;
-- motif statements versus developments;
-- exact repeated lick windows versus intentional sequence;
-- density curve and peak bar;
-- different-pitch overlap and same-pitch retrigger;
-- bend/slide count and other active notes during pitch wheel;
-- delayed vibrato rather than mechanical end stamping;
-- whether planned string/fret/position survives compilation;
-- rhythm-guitar, bass and drum independence.
+- note/phrase continuity;
+- unintended resets;
+- impossible fingering;
+- excessive or accidental overlap;
+- missing authored position data;
+- unsafe bends;
+- slide/vibrato realization;
+- repeated exact phrase windows;
+- register collisions;
+- whether articulation changed the intended rhythm;
+- whether accompaniment obscures the chosen lead role.
 
-Critic warnings are evidence, not musical law. A generic `melody_no_breath` warning must
-not force a continuous guitar solo back into vocal phrasing. Record a justified exception
-in `critique.md`; do not weaken the validator to hide it.
+Diagnostics describe the current piece. They do not prescribe the statistics of another song.
 
-## What the reference V1/V2 proved
+## Use of proof projects
 
-V1 already had a strong continuous melodic skeleton, but the realization layer silently
-discarded authored fretboard positions and emitted no slide curves. The successful fix
-did **not** add notes, change harmony, change seed, rewrite the rhythm section or relax
-validation. It only:
+Complete proof projects under `projects/` exist to demonstrate implementation behavior. Do not
+read their exact musical content during blank-slate composition.
 
-1. preserved and validated `planned_string` / `planned_fret`;
-2. preserved `slide_from_semitones` through the neutral/profile boundary;
-3. emitted a smooth, channel-safe slide-in curve.
+After a specific failure, a proof project may answer a narrow question such as:
 
-V1 and V2 therefore retained the same 744 Lead notes and identical rhythm-section MIDI,
-while V2 gained 14 audible position-changing slide gestures. This is the preferred kind
-of system improvement: a concrete musical intention survives the pipeline more faithfully.
+- how `planned_string` survives normalization;
+- how a profile maps `slide_from_semitones`;
+- how pitch-wheel safety is checked;
+- how a validator reports overlap.
 
-Reference artifacts:
+Record the file consulted and the implementation fact extracted. Do not reuse its notes,
+harmony, form, density curve, climax location or register path.
 
-- `projects/guitar_native_rock_proof/core_motif.json`
-- `projects/guitar_native_rock_proof/v1/validation_report.md`
-- `projects/guitar_native_rock_proof/v2/validation_report.md`
-- `projects/guitar_native_rock_proof/critique.md`
-- `projects/guitar_native_rock_proof/comparison/v1_vs_v2.md`
+## Anti-patterns
 
-Use the reference for principles and audit patterns. Do not copy its pitches, form,
-density, E-minor harmony or exact fret path unless the new brief genuinely calls for it.
+- changing only key and tempo from a proof song;
+- using the same section lengths and density arc as the nearest demo;
+- treating minor pentatonic as the default guitar language;
+- forcing every solo upward toward a late bend;
+- making every phrase four bars;
+- adding vibrato to every long note;
+- using articulation to disguise a weak skeleton;
+- copying a validated build script and replacing pitch lists;
+- reading full project examples before establishing the new creative seed;
+- allowing validators to invent the composition's style.
 
-## Explicit anti-patterns
-
-- vocal question/answer phrases with fixed breathing every two bars;
-- full cadence and reset every four bars;
-- random pentatonic notes or unrelated prefab licks;
-- every new lick restarting in another register;
-- long notes used as the only source of emotion;
-- bend/vibrato mechanically stamped on every ending;
-- random velocity/timing used to disguise weak phrase architecture;
-- extensive overlap used to imitate legato;
-- declared guitar fingering silently replaced downstream;
-- adding more validators or architecture before rendering the actual song.
-
-The target is a lead whose rhythm, contour, connection, climax and return could only
-naturally have grown from an electric guitarist's hands.
+The target is not one ideal guitar solo. The target is an authored musical idea that remains
+playable, editable and faithfully realizable.
