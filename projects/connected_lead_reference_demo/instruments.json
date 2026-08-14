@@ -1,5 +1,5 @@
 {
-  "lead_guitar": {"engine":"fluidsynth","bank":8,"program":27,"gm_name":"Chorused Clean Gt."},
+  "lead_guitar": {"engine":"fluidsynth","bank":0,"program":30,"gm_name":"Distortion Guitar"},
   "rhythm_guitar": {"engine":"fluidsynth","bank":0,"program":29,"gm_name":"Overdrive Guitar"},
   "bass": {"engine":"fluidsynth","bank":0,"program":34,"gm_name":"Pick Bass"},
   "drums": {"engine":"fluidsynth","channel":10,"bank":128,"program":16,"gm_name":"Power"},
