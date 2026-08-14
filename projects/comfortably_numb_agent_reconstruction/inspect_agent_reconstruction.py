@@ -1,19 +1,23 @@
 from __future__ import annotations
 
 import json
+import sys
 from collections import Counter
 from copy import deepcopy
 from pathlib import Path
+
+
+PROJECT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = PROJECT_DIR.parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from src.instruments import compile_instrument_phrase
 from src.performance import apply_profile, load_profile
 
 
-ROOT = Path(__file__).resolve().parent
-
-
 def main() -> None:
-    composition = json.loads((ROOT / "composition.json").read_text(encoding="utf-8"))
+    composition = json.loads((PROJECT_DIR / "composition.json").read_text(encoding="utf-8"))
     explicit_tracks = []
     compiled = {}
 
