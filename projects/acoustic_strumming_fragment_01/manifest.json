@@ -1,0 +1,25 @@
+{
+  "schema": "music-agent-project-facade",
+  "schema_version": 1,
+  "project": {
+    "title": "Eight Slots, One Hand"
+  },
+  "artifacts": {
+    "strumming_actions": {
+      "standard": "music-agent acoustic strumming action extension",
+      "path": "action_grid.json",
+      "authority": "authoritative"
+    },
+    "execution_midi": {
+      "standard": "MIDI 1.0 Standard MIDI File",
+      "path": "output/acoustic_strumming_fragment.mid",
+      "authority": "derived"
+    },
+    "preview_audio": {
+      "standard": "WAVE PCM audio",
+      "path": "output/acoustic_strumming_fragment.wav",
+      "authority": "derived"
+    }
+  },
+  "conversion_reports": []
+}
