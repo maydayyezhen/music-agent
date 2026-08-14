@@ -1,0 +1,55 @@
+{
+  "id": "chiptune_basic",
+  "status": "scaffold",
+  "platform_accuracy": "none",
+  "description": "Generic limited-voice chiptune scaffold. Not a real-console hardware profile.",
+  "constraint_modes": [
+    "8bit_aesthetic",
+    "hardware_inspired"
+  ],
+  "voice_budget": {
+    "max_simultaneous_slots": 4,
+    "slots": [
+      {
+        "id": "pulse_1",
+        "family": "pulse_like",
+        "polyphony": 1,
+        "default_role": "foreground_or_counterline"
+      },
+      {
+        "id": "pulse_2",
+        "family": "pulse_like",
+        "polyphony": 1,
+        "default_role": "harmony_or_counterline"
+      },
+      {
+        "id": "low_voice",
+        "family": "low_chip_voice",
+        "polyphony": 1,
+        "default_role": "bass"
+      },
+      {
+        "id": "noise_voice",
+        "family": "noise_or_transient",
+        "polyphony": 1,
+        "default_role": "percussion_or_effect"
+      }
+    ]
+  },
+  "chip_controls": {
+    "waveform": "project_extension",
+    "duty_or_pulse_mode": "project_extension",
+    "noise_mode": "project_extension",
+    "envelope": "project_extension",
+    "pitch_effect": "project_extension"
+  },
+  "midi_mapping": {
+    "status": "unimplemented",
+    "authority": "derived_only",
+    "notes": "Do not silently encode chip-specific controls as arbitrary MIDI CC values. Add an explicit adapter when implemented."
+  },
+  "renderer": {
+    "backend": null,
+    "status": "unimplemented"
+  }
+}
