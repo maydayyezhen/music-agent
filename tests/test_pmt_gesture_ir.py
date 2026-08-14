@@ -56,9 +56,19 @@ class PMTCoreTests(unittest.TestCase):
         )
         self.assertFalse(any(token.startswith("TSHIFT_") for token in tokens))
 
-    def test_duration_is_paper_compatible_and_clamped_to_two_seconds(self) -> None:
+    def test_agent_extension_tiles_long_note_duration(self) -> None:
+        tokens = encode_notes([PMTNote(0, 0, 60, 0, 4300, 72)])
+        decoded = decode_tokens(tokens)
+
+        self.assertEqual(decoded[0].duration_ms, 4300)
+        self.assertEqual(tokens.count("DURP_199"), 2)
+
+    def test_paper_compatible_mode_can_still_clamp_to_two_seconds(self) -> None:
         decoded = decode_tokens(
-            encode_notes([PMTNote(0, 0, 60, 0, 4300, 72)])
+            encode_notes(
+                [PMTNote(0, 0, 60, 0, 4300, 72)],
+                tile_long_durations=False,
+            )
         )
         self.assertEqual(decoded[0].duration_ms, 2000)
 
