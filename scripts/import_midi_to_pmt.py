@@ -9,11 +9,15 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from src.performance.midi_import import write_project
+from src.project_facade.midi_adapter import write_midi_import_facade
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Import a Standard MIDI File into PMT plus a MIDI sidecar."
+        description=(
+            "Import a Standard MIDI File into native PMT and MIDI sidecar "
+            "artifacts, indexed by a thin project manifest."
+        )
     )
     parser.add_argument("midi", type=Path, help="source .mid file")
     parser.add_argument("project", help="project name under projects/")
@@ -25,6 +29,7 @@ def main() -> int:
     project_path = ROOT / "projects" / args.project
     try:
         result = write_project(source, project_path)
+        write_midi_import_facade(project_path, result)
     except Exception as error:
         print(f"[FAIL] {error}", file=sys.stderr)
         return 1
@@ -46,6 +51,8 @@ def main() -> int:
             f"[WARN] unmatched note events: "
             f"{fingerprint['unmatched_note_events']}"
         )
+    print(f"[OK] manifest: {project_path / 'manifest.json'}")
+    print(f"[OK] conversion report: {project_path / 'reports' / 'midi-import.json'}")
     print(f"[OK] performance.pmt: {project_path / 'performance.pmt'}")
     print(
         f"[OK] MIDI sidecar: "
