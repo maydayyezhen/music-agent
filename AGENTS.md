@@ -1,9 +1,38 @@
 # Music Agent project instructions
 
-Read the root `SKILL.md` before new composition work. The project now supports an
-instrument-aware path in addition to legacy exact-note clips.
+Read the root `SKILL.md` and `docs/creative_context_policy.md` before new composition work.
 
-This repository is a local structured-composition and audio-rendering project. References under `references/` are project reading material, not installed Skills. Do not register them globally, install their MCP integrations, or introduce Ableton/Suno/cloud dependencies.
+This repository is a local structured-composition and audio-rendering project. References under
+`references/` are project reading material, not installed Skills. Do not register them globally,
+install their MCP integrations, or introduce Ableton/Suno/cloud dependencies.
+
+## Creative context isolation
+
+The repository contains two very different kinds of material:
+
+1. method documents and reusable implementation primitives;
+2. complete proof/demo songs under `projects/`.
+
+Only the first category belongs in the normal composition context.
+
+For a new song or substantial rewrite:
+
+1. Read the user brief.
+2. Create `musical-brief.md` and `creative-seed.md` before opening any complete example song.
+3. Decide the audible idea, rhythm, harmony behavior, form, texture, silence and instrument roles
+   independently.
+4. Read only the method documents and primitive libraries needed to realize that idea.
+5. Build and render a first draft.
+6. Inspect a proof/demo project only after a concrete compiler, profile, validator or renderer
+   failure has been identified.
+7. When a proof is consulted, read the smallest relevant passage and record only the
+   implementation fact used.
+
+Do not use another project's `build_song.py`, `composition*.json`, core motif, exact harmony,
+section plan, density curve, register path or MIDI as a starting template.
+
+Changing only key, tempo, programs or a few pitches from a proof song is a failed composition
+attempt.
 
 ## Preserve the rendering pipeline
 
@@ -20,36 +49,118 @@ musical intent -> instrument_phrase -> neutral performance events
 -> sound-library profile -> rendered MIDI events
 ```
 
-New player-like parts should prefer `instrument_phrase`; legacy `events` remain supported
-and byte-stable. Never put library-specific keyswitch numbers in composition or instrument
-modules. Read `docs/instrument_research/architecture_proposal.md` and the matching instrument
-research document. Profiles under `profiles/` own keyswitch, CC, pitch-bend and fallback mapping.
+New player-like parts should prefer `instrument_phrase`; legacy `events` remain supported and
+byte-stable. Never put library-specific keyswitch numbers in composition or instrument modules.
+Profiles under `profiles/` own keyswitch, CC, pitch-bend and fallback mapping.
 
-Lead melodies that develop across 8–16 bars must use the three-layer flow in
-`docs/long_form_phrase_schema.md`: section arc, phrase relationship graph, then persistent
-melodic-state realization. Formal songs default to `legacy_stable`. Set
-`phrase_generation_mode` to `long_form_experimental` only for an explicit experiment. A breath
-does not reset phrase state.
-Run `scripts/critic_long_form.py <song> --write` before accepting a long-form lead section.
+Composition data, instrument mapping, rendering and mixing stay decoupled. Prefer narrow changes:
+musical notes in `composition.json`; timbre in `instruments.json`; balance in `render.json`.
 
-Substantial Electric Lead Guitar work must also read `docs/guitar_native_lead_playbook.md`.
-Do not treat Lead Guitar as a vocal melody with another program number. Design the playable
-motif, fretboard regions, physical transitions, density arc, delayed target and thematic
-return before articulation. Prefer the stable explicit motif path for a controlled formal
-song; use the experimental planner only when the brief explicitly asks to test it. Render the
-existing system first, cite concrete failed bars/events, and modify code only when authored
-guitar intent is lost downstream. `projects/guitar_native_rock_proof/` is the validated
-reference, but its exact pitches, form and density are not a template.
+## Style is declared by the piece
 
-Acoustic Guitar and Electric Rhythm Guitar strumming must read
-`docs/continuous_strumming.md`. Do not reduce a continuous pattern to sounding chord events
-alone: preserve eighth/sixteenth down-up hand motion, including air strokes, across bar and
-chord boundaries. Use `sustained_chord_hit` only when a held attack is intentional; normal
-Verse/Chorus rhythm guitar should use `continuous_strumming` or an equivalent explicit-event
-`strumming_grid`. Vocal activity may thin the voicing or lower dynamics, but must not silently
-reset the right hand.
+Validators and schemas may enforce data integrity and physical feasibility. They must not silently
+invent the composition's style.
 
-Composition data, instrument mapping, rendering, and mixing stay decoupled. Prefer narrow changes: musical notes in the song's `composition.json`; timbre in `config/instruments.json`; balance in `config/render.json`.
+The following are optional strategies, never repository-wide defaults:
+
+- delayed climax or late high note;
+- motif sequence followed by thematic return;
+- continuous lead activity;
+- 4/8/16-bar phrases;
+- verse/chorus energy growth;
+- one strong cadence per eight bars;
+- minor-pentatonic guitar writing;
+- open-chord acoustic strumming;
+- rich arrangement as the definition of quality.
+
+A project may deliberately be minimal, static, cyclic, asymmetrical, noisy, dissonant,
+through-composed, mechanical or unresolved.
+
+## Mandatory workflow for a new song or major rewrite
+
+Execute these stages in order:
+
+1. Read `references/composition-guidelines.md`, `references/music-complexity.md`, and
+   `references/accompaniment-textures.md` as decision tools.
+2. Analyze the user brief and preserve explicit constraints.
+3. Create `projects/<song>/musical-brief.md` with genre, emotional target, key/tonal behavior,
+   tempo, length, instrumentation and exclusions.
+4. Create `projects/<song>/creative-seed.md` before inspecting complete examples. Record:
+   - central audible idea;
+   - rhythmic identity;
+   - pitch/harmonic identity;
+   - formal behavior;
+   - instrument roles;
+   - planned silence;
+   - at least two possible development paths;
+   - material or gestures to avoid.
+5. Define the song structure from the brief rather than from the nearest demo.
+6. Resolve a global complexity profile, section contour and per-section role budget. Complexity is
+   a descriptive control, not a demand for more notes.
+7. Define an energy or attention map only when useful. A flat, cyclic or discontinuous map is
+   valid.
+8. Give each instrument a distinct rhythmic/physical identity and plan explicit silence.
+9. Plan Point/Line/Plane balance appropriate to the piece.
+10. Develop harmony, motif, texture or sound gesture in the order most natural to the brief. A
+    melody-first workflow is not mandatory.
+11. Write instrument parts as playable/realizable behaviors rather than program-swapped piano
+    notes.
+12. Apply restrained performance detail after the musical skeleton works.
+13. If vocals were explicitly requested, follow the optional vocal workflow; otherwise skip it.
+14. Save the initial draft as `composition_v1.json`, copy it to `composition.json`, and render it.
+15. Run the relevant critics and interpret warnings in context:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\critic_instruments.py <song> --write
+.\.venv\Scripts\python.exe scripts\critic_complexity.py <song> --write
+.\.venv\Scripts\python.exe scripts\critic_continuity.py <song> --write
+```
+
+16. Write concrete audible findings to `projects/<song>/critique.md`.
+17. Make at least one targeted revision, preserve the prior version, and render again.
+18. If a downstream feature fails, then and only then consult a narrow proof/demo passage.
+19. Before acceptance, perform the divergence check in `docs/creative_context_policy.md` against
+    every complete example that was consulted.
+
+The following shortcut is prohibited:
+
+```text
+user prompt
+-> open nearest validated project
+-> copy its builder/form/motif path
+-> replace pitches and title
+-> declare a new composition
+```
+
+Small local edits do not require recreating the planning package, but must preserve recoverable
+prior versions when material.
+
+## Instrument-specific routing
+
+### Electric lead guitar
+
+Read `skills/instruments/electric_guitar/SKILL.md` and
+`docs/guitar_native_lead_playbook.md` for physical constraints and optional operations.
+Do not inspect a complete guitar proof project during blank-slate writing.
+
+`docs/long_form_phrase_schema.md` contains optional planning fields. Enable stylistic rules only
+when the current project declares them. A validator may describe peak timing or phrase resets but
+must not fail a piece for omitting a delayed climax unless that rule was enabled.
+
+### Acoustic and electric rhythm guitar
+
+Read `docs/continuous_strumming.md` when continuous right-hand motion matters. Preserve air
+strokes, hand direction and per-string state. Strumming pattern names are physical primitives,
+not complete arrangement templates. A piece may instead use fingerpicking, isolated attacks,
+noise, harmonics, percussion or intentional sustained chords.
+
+### Other instruments
+
+Read the matching method/research document only when needed. Instrument knowledge should describe
+range, technique, roles, expression and renderer capabilities without prescribing one finished
+part.
+
+## Optional vocal workflow
 
 Vocals are an optional parallel layer, never a default requirement:
 
@@ -57,62 +168,21 @@ Vocals are an optional parallel layer, never a default requirement:
 vocals.json -> local zh/en/ja singing backend -> stems/vocal.wav -> output/vocal_mix.wav
 ```
 
-If the brief asks for instrumental, soundtrack, BGM, underscore, karaoke/backing track, or says nothing about singing, do not create `vocals.json` and do not render vocals. Add vocals only when the user explicitly wants a sung song, lyrics, topline, or vocal demo. The instrumental `output/mix.wav` must remain available even for vocal projects.
+If the brief asks for instrumental, soundtrack, BGM, underscore, karaoke/backing track, or says
+nothing about singing, do not create `vocals.json`. Add vocals only when the user explicitly wants
+a sung song, lyrics, topline or vocal demo. The instrumental `output/mix.wav` must remain
+available even for vocal projects.
 
-## Mandatory workflow for a new song or major rewrite
-
-Before creating a new song or substantially rewriting one, execute these stages in order:
-
-1. Read `references/composition-guidelines.md`, `references/music-complexity.md`, and `references/accompaniment-textures.md`.
-2. Analyze the user brief and preserve explicit constraints.
-3. Create `projects/<song>/musical-brief.md` with genre, emotional target, key, tempo, length, instrumentation, and exclusions.
-4. Define the song structure.
-5. Resolve a global complexity profile, section contour, and per-section role budget; record them in the brief and composition.
-6. Define an energy map for every section and translate it into entrances/exits, density, register, tension, velocity, and drum intensity.
-7. Design a short rhythm motif before choosing pitches, give each instrument a distinct rhythmic identity, and plan explicit silence.
-8. Plan a Point/Line/Plane balance for each section. Give accompaniment tracks executable textures and continuity targets; do not let every non-lead track default to short points.
-9. Turn the rhythm into a short core melodic motif.
-10. Write functional harmony and instrument-appropriate voicings.
-11. Test the motif against the harmony before expanding the arrangement.
-12. Write section melodies using repetition, variation, contrast, and return.
-13. Write bass as a continuous phrase using mixed durations, approaches, fifths, pedals, or anticipation—not roots alone.
-14. Write drums with section-specific groove, limb feasibility and transitions.
-15. Write piano and guitar as distinct playable parts whose physical action and texture can evolve by section.
-16. Write strings and pad as support, counter-motion, atmosphere, or climax—not chord-block duplicates; preserve common tones where appropriate.
-17. Apply restrained MIDI cleanup/humanization: purposeful velocity, duration, articulation, and timing variation while preserving anchors.
-18. If vocals were explicitly requested, follow the optional vocal workflow below; otherwise skip it completely.
-19. Save the initial draft as `composition_v1.json`, copy it to `composition.json`, and render it.
-20. Run `scripts/critic_complexity.py <song> --write` and `scripts/critic_continuity.py <song> --write`, then listen when possible and analyze stems/mix for silence, duration, clipping, section energy, density, contrast, and accompaniment continuity.
-    For any semantic phrase, also run `scripts/critic_instruments.py <song> --write` and resolve physical errors before rendering.
-21. Complete `references/composer-checklist.md` and write concrete findings to `projects/<song>/critique.md`.
-22. Make at least one composition revision. Save it as `composition_v2.json` (and later numbered versions); never erase the only prior version.
-23. Copy the selected revision to `composition.json` and render the final candidate.
-
-The following shortcut is prohibited:
-
-```text
-user prompt -> immediately generate a complete multi-minute MIDI -> declare done
-```
-
-Small local edits (for example, changing one bass phrase) do not require recreating the entire planning package, but must still respect the relevant guidelines and preserve a recoverable prior version when the edit is material.
-
-## Optional vocal workflow
-
-Read `references/vocal-workflow.md` whenever vocals, lyrics, a singer, topline, or a vocal demo are requested. The essential rules are:
-
-1. Write melody and lyrics together. A note carries one Chinese character, one Japanese kana, or one English word/syllable token, plus pitch and duration.
-2. Preserve singable prosody: phrase stresses, breaths, vowel length, and comfortable range matter more than filling every beat.
-3. Keep phrases short enough to breathe and render independently; `start_beat` is absolute from song start and `duration` is in beats.
-4. Never invent a fake vocal stem or substitute speech/TTS. Select the installed backend by language: `zh` OpenCpop VISinger, `en` SoulX-Singer, or `ja` Kiritan VISinger.
-5. Render the instrumental first. Then run `scripts/render_vocals.py <song>` or `scripts/render_song.py <song> --with-vocals`.
-6. Verify that `stems/vocal.wav` is non-silent, has the intended lyric/pitch contour, and aligns with the instrumental before accepting `output/vocal_mix.wav`.
-7. The installed voices are language/model-specific. Do not silently transliterate, clone a real person, promise a named singer, or switch to spoken TTS. Unsupported languages and additional character voices need an explicitly licensed compatible model.
+Read `references/vocal-workflow.md` whenever vocals are requested. Preserve singable prosody,
+breaths and supported language/model constraints. Never invent a fake vocal stem, clone a real
+person or silently substitute spoken TTS.
 
 ## Progressive disclosure
 
 Default reading before composition:
 
 ```text
+docs/creative_context_policy.md
 references/composition-guidelines.md
 references/music-complexity.md
 references/accompaniment-textures.md
@@ -120,27 +190,40 @@ references/accompaniment-textures.md
 
 Read deeper only when the task needs it:
 
-- Harmony, voicing, or instrument ranges: `references/ableton-skills/skills/chord-pro/SKILL.md` and, when needed, `references/midi-agent-skill/resources/voice-leading.md`.
-- Drums, groove, or humanization: `references/ableton-skills/skills/groove-builder/SKILL.md` and `references/ableton-skills/skills/midi-cleanup/SKILL.md`.
-- Form, transitions, and section contrast: `references/ableton-skills/skills/arrangement-coach/SKILL.md`.
-- Electric Lead Guitar theme or solo: `docs/guitar_native_lead_playbook.md`, then
-  `docs/instrument_research/electric_lead_guitar.md`. Inspect the validated V1/V2 evidence in
-  `projects/guitar_native_rock_proof/` when continuity or articulation realization is in doubt.
-- Acoustic Guitar or Electric Rhythm Guitar strumming: `docs/continuous_strumming.md`; inspect
-  `projects/strumming_continuity_demo/` and run `tests.test_strumming_continuity` when the part
-  risks becoming one held chord per bar.
-- Full production planning: `references/ableton-skills/skills/producer-mode/SKILL.md`.
-- Hooks, motif, emotional progression, or lyrics/prosody: `references/hermes-songwriting/skills/creative/songwriting-and-ai-music/SKILL.md`. Ignore its Suno/cloud-generation instructions.
-- Structured MIDI, GM programs, and local engineering patterns: `references/midi-agent-skill/SKILL.md`, its `resources/`, and relevant helper code. Treat its rigid dissonance/root-bass rules as beginner safeguards, not universal musical law.
-- Installed SoundFont presets, hidden GS banks, or alternate drum kits: read `references/soundfont-catalog.md` and query `config/soundfont-catalog.json`. Never guess bank/program values. Every catalog entry—including presets named Choir, Voice, or Vox—is an ordinary instrument and may be used freely in an arrangement. These names do not mean the preset can pronounce lyrics; lyric-capable singing uses the optional AI vocal workflow.
-- Genre-specific knowledge: read a matching file under `references/genres/` only if one exists. Do not invent a large genre pack without a task requiring it.
+- Harmony, voicing or instrument ranges: relevant method/resource documents.
+- Drums, groove or humanization: groove and MIDI-cleanup references.
+- Form and transitions: arrangement references, treated as option libraries rather than a fixed
+  pop form.
+- Electric lead guitar: guitar method/research documents, not complete proof songs.
+- Acoustic/rhythm guitar motion: `docs/continuous_strumming.md` and compiler primitives.
+- Production planning: producer-mode references without cloud-generation instructions.
+- Hooks, motif or lyrics/prosody: songwriting method references without copying their examples.
+- Structured MIDI, GM programs and local engineering patterns: MIDI skill/resources and helper
+  code.
+- SoundFont presets: catalog/config files. Preset names such as Choir or Voice remain ordinary
+  instruments and do not imply lyric-capable singing.
+- Genre-specific knowledge: a matching genre method file when one exists.
 
-Complexity fields are optional for backward compatibility. If omitted, treat
-the target as `standard` without rewriting the file. Never equate a higher
-complexity target with random notes or continuous activity on every track.
+Do not read every repository or every example for each song. Finished songs are not a style
+knowledge base.
 
-Do not read all three repositories for every song. The synthesized guideline is the normal entry point.
+## Reference and material-library design
+
+New reusable materials should be stored as primitives and methods:
+
+- transformation operators;
+- playable voicing procedures;
+- action vocabularies;
+- capability tables;
+- groove abstractions;
+- articulation mapping;
+- validation logic.
+
+Do not promote a complete song's pitch list, chord progression, form, energy curve or exact
+statistics into a default Skill. Exact evidence remains project-local.
 
 ## Artistic discretion
 
-These rules prevent low-quality accidental AI MIDI; they are not a style grammar. Dissonance, minimalism, noise, asymmetry, repetition, unusual form, or deliberate mechanical timing are allowed when the brief calls for them. A conscious exception should serve the musical idea and be noted in the brief or critique.
+These rules prevent accidental copying and low-quality mechanical MIDI. They are not a music
+grammar. Dissonance, minimalism, noise, asymmetry, repetition, unusual form, deliberate grid
+timing and conscious violations are allowed when they serve the brief and are documented.
