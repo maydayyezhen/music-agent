@@ -24,7 +24,10 @@
       "const": 1
     },
     "technique": {
-      "const": "continuous_eighth_alternating_strumming"
+      "enum": [
+        "continuous_eighth_alternating_strumming",
+        "continuous_eighth_chord_attacks_direction_unobserved"
+      ]
     },
     "subdivision": {
       "const": "eighth"
@@ -44,10 +47,10 @@
       ],
       "properties": {
         "type": {
-          "const": "alternate"
+          "enum": ["alternate", "unknown"]
         },
         "slot_zero_direction": {
-          "enum": ["down", "up"]
+          "enum": ["down", "up", "unknown"]
         },
         "continuous_motion": {
           "type": "boolean"
@@ -59,6 +62,14 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1
+        },
+        "direction_observability": {
+          "enum": [
+            "observable",
+            "weak_partial_evidence",
+            "unobservable_quantized_onsets",
+            "no_chordal_strokes"
+          ]
         }
       },
       "additionalProperties": true
@@ -80,7 +91,7 @@
             "minimum": 0
           },
           "expected_direction": {
-            "enum": ["down", "up"]
+            "enum": ["down", "up", "unknown"]
           },
           "attack_probability": {
             "type": "number",
