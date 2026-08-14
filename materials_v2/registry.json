@@ -1,20 +1,51 @@
 {
   "schema": "music-agent-materials-v2-registry",
-  "schema_version": 1,
+  "schema_version": 2,
+  "retrieval_policy": {
+    "active_by_default": true,
+    "allow_multiple_cards": true,
+    "browse_registry_during_composition": true,
+    "recommended_shortlist_size": [3, 8],
+    "expand_when_result_is_generic": true
+  },
+  "material_kinds": [
+    "chord_voicing",
+    "harmonic_motion",
+    "accompaniment_pattern",
+    "instrument_gesture",
+    "phrase_device",
+    "orchestration_recipe",
+    "timbre_recipe",
+    "production_chain"
+  ],
   "materials": [
     {
       "id": "dry-grainy-steel-string-strum",
+      "kind": "timbre_recipe",
       "path": "materials_v2/timbre_recipes/acoustic_guitar/dry_grainy_steel_string_strum.md",
       "status": "active",
-      "instrument": "steel_string_acoustic_guitar",
+      "instruments": [
+        "steel_string_acoustic_guitar"
+      ],
+      "roles": [
+        "rhythmic_accompaniment",
+        "foreground_acoustic_texture"
+      ],
+      "genre_tags": [
+        "folk-rock",
+        "britpop-adjacent"
+      ],
       "texture_tags": [
         "dry",
         "grainy",
         "pick-forward",
         "close-miked",
-        "folk-rock",
-        "britpop-adjacent",
         "compact-room"
+      ],
+      "problem_tags": [
+        "missing-pick-definition",
+        "over-smoothed-acoustic-guitar",
+        "excess-room-smear"
       ]
     }
   ]
