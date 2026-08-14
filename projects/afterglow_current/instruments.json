@@ -1,0 +1,14 @@
+{
+  "acoustic_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 25,
+    "gm_name": "Acoustic Guitar (steel)"
+  },
+  "lead_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 30,
+    "gm_name": "Distortion Guitar"
+  }
+}
