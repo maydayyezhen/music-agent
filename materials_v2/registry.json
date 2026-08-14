@@ -33,19 +33,53 @@
       ],
       "genre_tags": [
         "folk-rock",
-        "britpop-adjacent"
+        "acoustic-rock"
       ],
       "texture_tags": [
         "dry",
-        "grainy",
+        "single-guitar",
         "pick-forward",
-        "close-miked",
-        "compact-room"
+        "close",
+        "compact"
       ],
       "problem_tags": [
         "missing-pick-definition",
         "over-smoothed-acoustic-guitar",
         "excess-room-smear"
+      ]
+    },
+    {
+      "id": "multi-take-acoustic-stack",
+      "kind": "production_chain",
+      "path": "materials_v2/production_chains/acoustic_guitar/multi_take_acoustic_stack.md",
+      "status": "active",
+      "instruments": [
+        "steel_string_acoustic_guitar",
+        "acoustic_guitar",
+        "clean_guitar"
+      ],
+      "roles": [
+        "rhythmic_accompaniment",
+        "guitar_bed",
+        "layered_acoustic_texture"
+      ],
+      "genre_tags": [
+        "rock",
+        "pop-rock",
+        "britpop-adjacent"
+      ],
+      "texture_tags": [
+        "layered",
+        "multi-take",
+        "thick",
+        "coarse",
+        "wide"
+      ],
+      "problem_tags": [
+        "single-guitar-too-thin",
+        "excess-pick-click",
+        "narrow-guitar-bed",
+        "static-clone-layering"
       ]
     }
   ]
