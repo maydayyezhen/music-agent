@@ -19,8 +19,8 @@ SECTIONS = [
 HARMONY = {
     "intro": ["Em", "C", "G", "D"],
     "theme_a": ["Em", "C", "G", "D", "Em", "C", "G", "D"],
-    "theme_b": ["C", "G", "D", "Em", "C", "G", "D", "B7"],
-    "peak": ["Em", "C", "G", "D", "C", "D", "Em", "B7"],
+    "theme_b": ["C", "G", "D", "Em", "C", "G", "D", "B"],
+    "peak": ["Em", "C", "G", "D", "C", "D", "Em", "B"],
     "outro": ["Em", "C", "G", "Em"],
 }
 
