@@ -48,7 +48,11 @@ Sound-library triggers belong in `profiles/`, never in instrument composers. Run
 .\.venv\Scripts\python.exe scripts\critic_instruments.py <song> --write
 .\.venv\Scripts\python.exe scripts\critic_complexity.py <song> --write
 .\.venv\Scripts\python.exe scripts\critic_continuity.py <song> --write
+.\.venv\Scripts\python.exe scripts\critic_reference_similarity.py <song> --write
 ```
+
+The similarity critic is a template-reuse heuristic, not a copyright or quality judgment. A high
+score requires musical inspection; do not respond by randomly changing notes.
 
 Use an explicit seed in every semantic phrase. Humanization follows physical actions and
 phrase function; random note timing/velocity is not a substitute for instrument writing.
