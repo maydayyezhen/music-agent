@@ -1,37 +1,56 @@
-# Long-Form Phrase Schemas
+# Long-Form Phrase Planning Schema
 
-Long-form lead phrases remain inside `instrument_phrase`, but experimental use must explicitly
-set `phrase_generation_mode` to `long_form_experimental`. Formal songs either omit the field or
-set it to `legacy_stable`. The old names `long_form` and `legacy_short_phrase` remain migration
-aliases only.
+Long-form lead planning remains inside `instrument_phrase`, but the schema describes optional
+planning data rather than one preferred dramatic arc.
+
+Use `phrase_generation_mode: long_form_experimental` only when the current piece benefits from
+explicit long-range planning. Formal songs otherwise use `legacy_stable` or omit the field.
+
+Read `docs/creative_context_policy.md` before using this schema. Do not copy curves, bar counts,
+register paths or cadence plans from another project.
+
+## Design principle
+
+A long phrase may be:
+
+- cumulative or decaying;
+- arch-shaped, wave-shaped, terraced or flat;
+- sparse or continuous;
+- repetitive, developmental or deliberately static;
+- goal-directed or suspended;
+- metrically regular or asymmetrical;
+- resolved, unresolved or cyclic.
+
+The schema records the piece's chosen behavior. It does not require a delayed peak, late high
+note, final cadence, motif return or fixed phrase length.
 
 ## Section arc
 
 ```json
 {
   "section_arc": {
-    "section_id": "lead_chorus_1",
-    "bars": [1, 16],
-    "opening_register": "mid",
-    "peak_register": "high",
-    "peak_bar": 12,
-    "final_resolution_bar": 16,
-    "energy_curve": [0.42, 0.48, 0.54, 0.60, 0.64, 0.70, 0.78, 0.84, 0.90, 0.96, 1.0, 0.94, 0.86, 0.76, 0.64, 0.52],
-    "density_curve": [0.42, 0.48, 0.50, 0.46, 0.54, 0.58, 0.62, 0.58, 0.66, 0.72, 0.80, 0.74, 0.64, 0.56, 0.48, 0.34],
-    "cadence_plan": {
-      "strong_cadences": [16],
-      "weak_cadences": [8],
-      "avoid_resolution_bars": [4, 12]
-    },
-    "breath_bars": [4, 8, 13],
-    "cross_bar_note_bars": [2, 6, 10, 14],
-    "delayed_target": {"pitch": "E6", "bar": 12}
+    "section_id": "lead_section_1",
+    "bars": [1, 11],
+    "shape": "custom",
+    "register_plan": ["low_mid", "mid", "mid", "high_mid", "mid"],
+    "energy_curve": [0.35, 0.38, 0.34, 0.42, 0.47, 0.45, 0.51, 0.48, 0.44, 0.40, 0.32],
+    "density_curve": [0.25, 0.40, 0.20, 0.35, 0.50, 0.30, 0.45, 0.25, 0.35, 0.20, 0.15],
+    "arrivals": [
+      {"bar": 7, "kind": "registral", "strength": 0.6}
+    ],
+    "breath_regions": [[3, 3], [8, 8]],
+    "resolution_policy": "open"
   }
 }
 ```
 
-The curves must contain one value per section bar. `peak_bar` and the delayed target must
-not precede the midpoint when delayed peak/resolution rules are enabled.
+Only `section_id` and `bars` are required. Curves, arrivals, targets and register plans are
+optional. When present, a curve contains one value per section bar.
+
+`shape` may be `custom`, `arch`, `wave`, `terrace`, `accumulate`, `decay`, `flat`, `cyclic` or
+another project-local descriptive value.
+
+`resolution_policy` may be `closed`, `open`, `cyclic`, `interrupted` or `none`.
 
 ## Phrase relationship graph
 
@@ -39,77 +58,111 @@ not precede the midpoint when delayed peak/resolution rules are enabled.
 {
   "phrase_relationships": [
     {
-      "phrase_id": "A1",
-      "bars": [1, 4],
+      "phrase_id": "P1",
+      "bars": [1, 3],
       "relationship": "introduce",
       "continuation_from": null,
-      "continuation_to": "A2",
-      "resolution": "deferred",
+      "continuation_to": "P2",
       "motif_operations": []
     },
     {
-      "phrase_id": "A2",
-      "bars": [5, 8],
-      "relationship": "variation",
-      "continuation_from": "A1",
-      "continuation_to": "A3",
-      "resolution": "deferred",
-      "motif_operations": ["transpose_up", "change_ending"]
+      "phrase_id": "P2",
+      "bars": [4, 6],
+      "relationship": "fragmentation",
+      "continuation_from": "P1",
+      "continuation_to": null,
+      "motif_operations": ["shorten", "change_register"]
     }
   ]
 }
 ```
 
-Relationships may be `introduce`, `repeat`, `variation`, `sequence`, `extension`,
-`fragmentation`, `augmentation`, `compression`, `continuation`, `answer`, `climax`, or
-`resolution`. Bar ranges must cover the arc in order. A phrase marked deferred must link
-forward and preserve unresolved state.
+Relationships may include `introduce`, `repeat`, `variation`, `sequence`, `extension`,
+`fragmentation`, `augmentation`, `compression`, `continuation`, `answer`, `interruption`,
+`recontextualization`, `climax`, `dissolution`, `resolution` or a project-local extension.
+
+The graph does not need to cover the section with uniform four-bar blocks. Nodes may overlap,
+leave gaps or describe cyclic relationships when the piece requires them.
 
 ## Melodic state
 
-The state is generated, not hand-authored as final notes:
+State is optional. Use it only when the phrase genuinely carries information across local
+boundaries.
 
 ```json
 {
   "melodic_state": {
     "active_motif": "motif_A",
-    "motif_version": 2,
-    "current_register": "mid_high",
-    "direction": "ascending",
-    "tension": 0.68,
+    "current_register": "mid",
+    "direction": "mixed",
+    "tension": 0.48,
     "resolved": false,
-    "continuation_required": true,
-    "target_pitch": 76,
-    "target_bar": 12,
-    "last_interval": 2,
-    "last_note_function": "non_chord_tone",
-    "phrase_breath_remaining": 0.75,
-    "cadence_strength": 0.2
+    "continuation_required": false,
+    "last_interval": -2,
+    "last_note_function": "chord_tone"
   }
 }
 ```
 
-The compiler writes a state snapshot at the start and end of every relationship node.
-`rest_type: breath` never resets this object. `rest_type: structural_end` is legal only
-at a planned strong cadence or section end.
+Projects may add instrument-specific state such as hand position, string group, bow direction,
+breath reserve or pedal state. Do not create state fields merely to imitate another project.
 
-## Rules
+A rest may preserve, transform or reset state. Declare that behavior explicitly when it matters:
+
+```json
+{
+  "rest": {
+    "at": "5:3",
+    "duration": 1.5,
+    "state_effect": "preserve"
+  }
+}
+```
+
+`state_effect` may be `preserve`, `relax`, `transform` or `reset`.
+
+## Optional rule profile
+
+Rules are opt-in project declarations. Omitted rules are not silently enabled.
 
 ```json
 {
   "long_form_phrase_rules": {
-    "planning_window_bars": 16,
-    "minimum_connected_span_bars": 6,
-    "maximum_strong_cadences_per_8_bars": 1,
-    "minimum_cross_bar_notes_per_8_bars": 2,
-    "minimum_motif_developments_per_section": 3,
-    "maximum_independent_phrase_resets_per_8_bars": 1,
-    "maximum_consecutive_full_rest_bars": 1,
-    "require_delayed_peak": true,
-    "require_delayed_resolution": true
+    "minimum_connected_span_bars": 4,
+    "maximum_consecutive_full_rest_bars": 2,
+    "require_declared_arrival": false,
+    "require_delayed_peak": false,
+    "require_delayed_resolution": false,
+    "require_cross_bar_notes": false,
+    "require_motif_development": true,
+    "allowed_phrase_lengths": [2, 3, 5]
   }
 }
 ```
 
-These values are validator targets. The compiler does not turn every musical preference
-into an unconditional hard error.
+Validators should inspect only declared rules plus universal data-integrity constraints. They may
+report descriptive metrics without turning stylistic preferences into failures.
+
+## Universal checks versus stylistic checks
+
+Universal checks may reject:
+
+- invalid bar ranges;
+- malformed curves;
+- references to missing phrase IDs;
+- impossible pitch/fingering declarations;
+- overlapping monophonic events when overlap is not declared;
+- unsafe controller realization.
+
+Stylistic checks must remain advisory unless explicitly enabled by the project. Examples include:
+
+- peak timing;
+- cadence count;
+- breath frequency;
+- motif-development count;
+- cross-bar-note count;
+- continuous activity;
+- high-register arrival;
+- final thematic return.
+
+The schema is a planning surface, not a hidden composition template.
