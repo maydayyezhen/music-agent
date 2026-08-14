@@ -43,6 +43,21 @@
         "staccato",
         "instrument continuity"
       ]
+    },
+    {
+      "id": "chiptune-8bit-composition",
+      "path": "skills_v2/chiptune_8bit/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "8-bit music",
+        "8bit music",
+        "chiptune",
+        "chip music",
+        "pulse wave",
+        "limited voice music",
+        "hardware inspired game music",
+        "chip performance"
+      ]
     }
   ]
 }
