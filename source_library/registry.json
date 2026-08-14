@@ -1,0 +1,41 @@
+{
+  "schema": "music-agent-source-library",
+  "schema_version": 1,
+  "retrieval_policy": {
+    "active_during_composition": false,
+    "open_only_for_explicit_study": true,
+    "promote_abstracted_knowledge_to_materials": true,
+    "promote_broad_rules_to_skills": true
+  },
+  "sources": [
+    {
+      "id": "oasis-wonderwall-midi",
+      "title": "Wonderwall",
+      "artist": "Oasis",
+      "source_type": "midi",
+      "expected_local_path": "source_library/midi/Oasis - Wonderwall.mid",
+      "provided_by_user": true,
+      "research_tags": [
+        "acoustic_guitar",
+        "guitar_strumming"
+      ],
+      "study_status": "partially_studied",
+      "current_relevance": "active",
+      "notes": "Previously used to study dense acoustic-guitar subdivision attacks and to correct evidence boundaries in the acoustic-strumming Skill. Keep source-specific content out of reusable Materials."
+    },
+    {
+      "id": "guns-n-roses-patience-midi",
+      "title": "Patience",
+      "artist": "Guns N' Roses",
+      "source_type": "midi",
+      "expected_local_path": "source_library/midi/Guns n Roses - Patience.mid",
+      "provided_by_user": true,
+      "research_tags": [
+        "acoustic_guitar"
+      ],
+      "study_status": "parked",
+      "current_relevance": "deferred",
+      "notes": "Registered for later reference. Do not continue extracting reusable knowledge from this source while the current research focus is guitar strumming."
+    }
+  ]
+}
