@@ -134,17 +134,21 @@ short note + large dead gap + short note
 
 Small gaps are fine when articulation needs separation. Long silence should usually be phrase-level space, not an automatic gate after every attack.
 
-## Dynamic tail
+## Phrase tails without routine fader fades
 
-A long held electric-guitar note may fade gradually instead of ending abruptly.
+For normal interior phrases and section boundaries, preserve the tail primarily through the **note itself** and the renderer's natural release.
 
-This can be realized by:
+Prefer:
 
-- MIDI expression or volume automation;
-- sampler/amp-envelope behavior;
-- audio-level automation after rendering.
+```text
+longer final note
++ natural release
++ intentional next-section handoff
+```
 
-Treat the fade as an optional phrase-tail gesture, not a requirement on every sustained note.
+Do not automatically add CC7 / expression fade-outs to sustained phrases. In energetic pop-rock arrangements this can make the next section feel as if the power suddenly disappears.
+
+Channel-level fades are reserved for deliberate form-level effects such as an intro fade-in, an outro fade-out, or an explicitly atmospheric dissolve.
 
 ## Arrangement role
 
@@ -153,7 +157,7 @@ Useful roles include:
 - melodic fill over a simpler rhythm section;
 - sustained answer after a vocal phrase;
 - long-note electric layer that fills space above muted guitar and bass;
-- section ending or transition tail;
+- section ending or transition tail carried by note duration and natural release;
 - later-section thickening through fifth-doubled notes or pedal sustain.
 
 The role may be foreground or supporting depending on register and level.
@@ -168,7 +172,7 @@ Revise when:
 - every note is doubled into a dyad from the beginning;
 - long notes are added randomly without phrase meaning;
 - a pedal tone clashes with the changing harmony;
-- every phrase ending is hard-cut instead of sometimes using a natural tail or fade.
+- an interior phrase loses energy because a routine CC7 fade is used instead of note length and natural release.
 
 ## Study provenance
 
@@ -184,6 +188,6 @@ Observed in the studied track:
 - 99 of 103 onset groups lasted at least about 0.9 beat, 51 lasted at least about 1.5 beats, and 23 lasted at least about 2 beats;
 - the first two recurring phrases were entirely single-note and mixed roughly one-beat notes with selected two-beat notes, ending in a very long held tail;
 - later passages used many more dyads and occasionally held a lower support tone for many beats while upper notes continued to move;
-- the track contained extensive CC7 volume automation, including gradual fades on sustained phrase tails.
+- the source also contained extensive CC7 automation, but that controller behavior is not promoted as the default way to shape interior phrase tails.
 
 These observations support a sustained overdrive gesture family centered on long occupancy, sparse melodic attacks, optional fifth doubling and pedal sustain. The source's exact melody, pitches, harmony, full phrase sequence and arrangement are intentionally omitted.
