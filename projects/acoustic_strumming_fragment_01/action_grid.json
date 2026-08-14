@@ -1,0 +1,63 @@
+{
+  "schema": "music-agent-acoustic-strumming-actions",
+  "schema_version": 1,
+  "title": "Eight Slots, One Hand",
+  "tempo_bpm": 96,
+  "time_signature": "4/4",
+  "instrument": "acoustic_guitar",
+  "technique": "continuous_eighth_note_strumming",
+  "hand_clock": ["down", "up", "down", "up", "down", "up", "down", "up"],
+  "source_note": "Original synthetic exercise derived from the active text Skill. No finished-song pattern was used.",
+  "patterns": {
+    "A": [
+      ["full_strum", 88],
+      ["light_upstroke", 62],
+      ["low_partial", 74],
+      ["high_partial", 66],
+      ["middle_partial", 78],
+      ["light_upstroke", 64],
+      ["full_strum", 82],
+      ["high_partial", 68]
+    ],
+    "A_prime": [
+      ["full_strum", 90],
+      ["air_strum", 0],
+      ["low_partial", 75],
+      ["light_upstroke", 63],
+      ["middle_partial", 76],
+      ["ghost_strum", 48],
+      ["full_strum", 84],
+      ["high_partial", 67]
+    ],
+    "B": [
+      ["full_strum", 91],
+      ["high_partial", 65],
+      ["middle_partial", 77],
+      ["light_upstroke", 64],
+      ["full_strum", 86],
+      ["high_partial", 68],
+      ["low_partial", 79],
+      ["light_upstroke", 66]
+    ],
+    "B_prime": [
+      ["full_strum", 92],
+      ["air_strum", 0],
+      ["single_string_restrike", 70],
+      ["high_partial", 66],
+      ["middle_partial", 80],
+      ["light_upstroke", 64],
+      ["full_strum", 87],
+      ["ghost_strum", 50]
+    ]
+  },
+  "bars": [
+    {"bar": 1, "chord": "Am7", "voicing_midi": [45, 52, 55, 60, 64, 69], "pattern": "A"},
+    {"bar": 2, "chord": "Fmaj7", "voicing_midi": [41, 48, 53, 57, 60, 64], "pattern": "A"},
+    {"bar": 3, "chord": "Cadd9", "voicing_midi": [48, 55, 60, 62, 64, 67], "pattern": "A_prime"},
+    {"bar": 4, "chord": "G6", "voicing_midi": [43, 50, 55, 59, 64, 67], "pattern": "A_prime"},
+    {"bar": 5, "chord": "Dm7", "voicing_midi": [50, 57, 60, 65, 69], "pattern": "B"},
+    {"bar": 6, "chord": "Fmaj7", "voicing_midi": [41, 48, 53, 57, 60, 64], "pattern": "B"},
+    {"bar": 7, "chord": "Cadd9", "voicing_midi": [48, 55, 60, 62, 64, 67], "pattern": "B_prime"},
+    {"bar": 8, "chord": "E7sus4", "voicing_midi": [40, 47, 52, 57, 62, 64], "pattern": "B_prime"}
+  ]
+}
