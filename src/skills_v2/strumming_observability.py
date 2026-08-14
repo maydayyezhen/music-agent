@@ -110,9 +110,13 @@ def annotate_direction_observability(
 
 
 def can_generate_directional_demo(model: Mapping[str, Any]) -> bool:
+    motion = model.get("motion", {})
+    status = motion.get("direction_observability")
+    if status is not None:
+        return status == "observable"
     return (
-        model.get("motion", {}).get("direction_observability")
-        == "observable"
+        motion.get("slot_zero_direction") in {"down", "up"}
+        and float(motion.get("alternate_direction_confidence", 0.0)) > 0.0
     )
 
 
