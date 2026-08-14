@@ -14,6 +14,18 @@
         "sidecar",
         "round trip"
       ]
+    },
+    {
+      "id": "acoustic-guitar-continuous-eighth-strumming",
+      "path": "skills_v2/acoustic_strumming/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "acoustic guitar strumming",
+        "eighth-note strumming",
+        "down up strumming",
+        "stroke extraction",
+        "strumming invariance"
+      ]
     }
   ]
 }
