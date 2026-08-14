@@ -1,0 +1,19 @@
+{
+  "schema": "music-agent-skills-v2-registry",
+  "schema_version": 1,
+  "active_skills": [
+    {
+      "id": "project-artifact-architecture",
+      "path": "skills_v2/project_architecture/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "manifest",
+        "artifact routing",
+        "adapter",
+        "conversion report",
+        "sidecar",
+        "round trip"
+      ]
+    }
+  ]
+}
