@@ -56,8 +56,32 @@ def _parse_index(token: str, family: str, upper: int) -> int:
     return value
 
 
-def encode_notes(notes: Iterable[PMTNote]) -> list[str]:
-    """Encode notes using the paper-derived performance-timed PMT grammar.
+def _duration_tokens(duration_ms: int | float, *, tile_long_durations: bool) -> list[str]:
+    """Encode duration using paper tokens, optionally tiled for notes over 2 s.
+
+    Paper PMT allows one ``DURP`` token. The Agent extension repeats ``DURP_199``
+    and ends with a remainder token, keeping a finite vocabulary while avoiding
+    destructive truncation of held notes.
+    """
+
+    remaining = _quantize_ms(duration_ms)
+    if not tile_long_durations:
+        remaining = min(MAX_DURATION_MS, remaining)
+
+    result: list[str] = []
+    while remaining > MAX_DURATION_MS:
+        result.append("DURP_199")
+        remaining -= MAX_DURATION_MS
+    result.append(f"DURP_{remaining // TAU_MS - 1}")
+    return result
+
+
+def encode_notes(
+    notes: Iterable[PMTNote],
+    *,
+    tile_long_durations: bool = True,
+) -> list[str]:
+    """Encode notes using performance-timed PMT plus the optional duration tile.
 
     Notes are serialized deterministically by ``(onset, track, pitch)``.
     A true zero-millisecond onset gap emits no ``TSHIFT`` token.
@@ -89,16 +113,15 @@ def encode_notes(notes: Iterable[PMTNote]) -> list[str]:
             active_track = note.track
             active_program = note.program
 
-        duration_ms = min(MAX_DURATION_MS, _quantize_ms(note.duration_ms))
-        duration_bin = duration_ms // TAU_MS - 1
         velocity_bin = max(0, min(31, note.velocity // 4))
+        tokens.append(f"PITCH_{note.pitch}")
         tokens.extend(
-            (
-                f"PITCH_{note.pitch}",
-                f"DURP_{duration_bin}",
-                f"VEL_{velocity_bin}",
+            _duration_tokens(
+                note.duration_ms,
+                tile_long_durations=tile_long_durations,
             )
         )
+        tokens.append(f"VEL_{velocity_bin}")
         previous_onset_ms = onset_ms
 
     tokens.append("<EOS>")
@@ -106,7 +129,12 @@ def encode_notes(notes: Iterable[PMTNote]) -> list[str]:
 
 
 def decode_tokens(stream: Sequence[str] | str) -> list[PMTNote]:
-    """Decode a strict PMT stream into absolute-millisecond notes."""
+    """Decode strict performance-timed PMT into absolute-millisecond notes.
+
+    One or more consecutive ``DURP`` tokens are accepted. Multiple tokens are
+    the Music Agent long-duration extension; a paper-compatible stream still
+    uses exactly one.
+    """
 
     tokens = stream.split() if isinstance(stream, str) else list(stream)
     if len(tokens) < 2 or tokens[0] != "<BOS>" or tokens[-1] != "<EOS>":
@@ -138,22 +166,29 @@ def decode_tokens(stream: Sequence[str] | str) -> list[PMTNote]:
         if token.startswith("PITCH_"):
             if active_track is None or active_program is None:
                 raise PMTError("PITCH requires an active TRACK and PROG")
-            if index + 2 >= len(tokens):
-                raise PMTError("PITCH must be followed by DURP and VEL")
             pitch = _parse_index(token, "PITCH", 127)
-            duration_bin = _parse_index(tokens[index + 1], "DURP", 199)
-            velocity_bin = _parse_index(tokens[index + 2], "VEL", 31)
+            cursor = index + 1
+            duration_ms = 0
+            while cursor < len(tokens) - 1 and tokens[cursor].startswith("DURP_"):
+                duration_bin = _parse_index(tokens[cursor], "DURP", 199)
+                duration_ms += (duration_bin + 1) * TAU_MS
+                cursor += 1
+            if duration_ms <= 0:
+                raise PMTError("PITCH must be followed by at least one DURP")
+            if cursor >= len(tokens) - 1 or not tokens[cursor].startswith("VEL_"):
+                raise PMTError("DURP sequence must be followed by VEL")
+            velocity_bin = _parse_index(tokens[cursor], "VEL", 31)
             notes.append(
                 PMTNote(
                     track=active_track,
                     program=active_program,
                     pitch=pitch,
                     onset_ms=current_time_ms,
-                    duration_ms=(duration_bin + 1) * TAU_MS,
+                    duration_ms=duration_ms,
                     velocity=4 * velocity_bin + 2,
                 )
             )
-            index += 3
+            index = cursor + 1
             continue
         raise PMTError(f"unexpected PMT token: {token!r}")
 
