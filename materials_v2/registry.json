@@ -24,130 +24,55 @@
       "kind": "timbre_recipe",
       "path": "materials_v2/timbre_recipes/acoustic_guitar/dry_grainy_steel_string_strum.md",
       "status": "active",
-      "instruments": [
-        "steel_string_acoustic_guitar"
-      ],
-      "roles": [
-        "rhythmic_accompaniment",
-        "foreground_acoustic_texture"
-      ],
-      "genre_tags": [
-        "folk-rock",
-        "acoustic-rock"
-      ],
-      "texture_tags": [
-        "dry",
-        "single-guitar",
-        "pick-forward",
-        "close",
-        "compact"
-      ],
-      "problem_tags": [
-        "missing-pick-definition",
-        "over-smoothed-acoustic-guitar",
-        "excess-room-smear"
-      ]
+      "instruments": ["steel_string_acoustic_guitar"],
+      "roles": ["rhythmic_accompaniment", "foreground_acoustic_texture"],
+      "genre_tags": ["folk-rock", "acoustic-rock"],
+      "texture_tags": ["dry", "single-guitar", "pick-forward", "close", "compact"],
+      "problem_tags": ["missing-pick-definition", "over-smoothed-acoustic-guitar", "excess-room-smear"]
     },
     {
       "id": "multi-take-acoustic-stack",
       "kind": "production_chain",
       "path": "materials_v2/production_chains/acoustic_guitar/multi_take_acoustic_stack.md",
       "status": "active",
-      "instruments": [
-        "steel_string_acoustic_guitar",
-        "acoustic_guitar",
-        "clean_guitar"
-      ],
-      "roles": [
-        "rhythmic_accompaniment",
-        "guitar_bed",
-        "layered_acoustic_texture"
-      ],
-      "genre_tags": [
-        "rock",
-        "pop-rock",
-        "britpop-adjacent"
-      ],
-      "texture_tags": [
-        "layered",
-        "multi-take",
-        "thick",
-        "coarse",
-        "wide"
-      ],
-      "problem_tags": [
-        "single-guitar-too-thin",
-        "excess-pick-click",
-        "narrow-guitar-bed",
-        "static-clone-layering"
-      ]
+      "instruments": ["steel_string_acoustic_guitar", "acoustic_guitar", "clean_guitar"],
+      "roles": ["rhythmic_accompaniment", "guitar_bed", "layered_acoustic_texture"],
+      "genre_tags": ["rock", "pop-rock", "britpop-adjacent"],
+      "texture_tags": ["layered", "multi-take", "thick", "coarse", "wide"],
+      "problem_tags": ["single-guitar-too-thin", "excess-pick-click", "narrow-guitar-bed", "static-clone-layering"]
     },
     {
       "id": "warm-pop-sixteenth-strum",
       "kind": "accompaniment_pattern",
       "path": "materials_v2/accompaniment_patterns/acoustic_guitar/warm_pop_sixteenth_strum.md",
       "status": "active",
-      "instruments": [
-        "acoustic_guitar",
-        "nylon_acoustic_guitar",
-        "steel_string_acoustic_guitar"
-      ],
-      "roles": [
-        "rhythmic_accompaniment",
-        "vocal_support"
-      ],
-      "genre_tags": [
-        "pop",
-        "acoustic-pop",
-        "folk-pop"
-      ],
-      "texture_tags": [
-        "warm",
-        "flowing",
-        "sixteenth-grid",
-        "partial-strum",
-        "connected"
-      ],
-      "problem_tags": [
-        "strumming-too-blocky",
-        "sixteenth-grid-too-busy",
-        "static-chord-width"
-      ]
+      "instruments": ["acoustic_guitar", "nylon_acoustic_guitar", "steel_string_acoustic_guitar"],
+      "roles": ["rhythmic_accompaniment", "vocal_support"],
+      "genre_tags": ["pop", "acoustic-pop", "folk-pop"],
+      "texture_tags": ["warm", "flowing", "sixteenth-grid", "partial-strum", "connected"],
+      "problem_tags": ["strumming-too-blocky", "sixteenth-grid-too-busy", "static-chord-width"]
     },
     {
       "id": "rolling-triplet-acoustic-strum",
       "kind": "accompaniment_pattern",
       "path": "materials_v2/accompaniment_patterns/acoustic_guitar/rolling_triplet_acoustic_strum.md",
       "status": "active",
-      "instruments": [
-        "acoustic_guitar",
-        "steel_string_acoustic_guitar"
-      ],
-      "roles": [
-        "rhythmic_accompaniment",
-        "groove_foundation",
-        "vocal_support"
-      ],
-      "genre_tags": [
-        "folk",
-        "acoustic-rock",
-        "country-adjacent",
-        "western-adjacent"
-      ],
-      "texture_tags": [
-        "rolling",
-        "triplet-grid",
-        "shuffle",
-        "long-short",
-        "ringing",
-        "directional-sweep"
-      ],
-      "problem_tags": [
-        "straightened-swing",
-        "brittle-upstroke",
-        "arpeggio-like-strum",
-        "overquantized-sweep"
-      ]
+      "instruments": ["acoustic_guitar", "steel_string_acoustic_guitar"],
+      "roles": ["rhythmic_accompaniment", "groove_foundation", "vocal_support"],
+      "genre_tags": ["folk", "acoustic-rock", "country-adjacent", "western-adjacent"],
+      "texture_tags": ["rolling", "triplet-grid", "shuffle", "long-short", "ringing", "directional-sweep"],
+      "problem_tags": ["straightened-swing", "brittle-upstroke", "arpeggio-like-strum", "overquantized-sweep"]
+    },
+    {
+      "id": "persistent-gentle-steel-accompaniment",
+      "kind": "accompaniment_pattern",
+      "path": "materials_v2/accompaniment_patterns/acoustic_guitar/persistent_gentle_steel_accompaniment.md",
+      "status": "active",
+      "instruments": ["steel_string_acoustic_guitar", "acoustic_guitar"],
+      "roles": ["rhythmic_accompaniment", "vocal_support", "guitar_bed"],
+      "genre_tags": ["pop", "acoustic-pop", "folk-pop"],
+      "texture_tags": ["gentle", "laid-back", "persistent", "triplet-derived", "strum-picking", "low-variation", "ringing"],
+      "problem_tags": ["over-varied-accompaniment", "guitar-too-busy", "guitar-too-foreground", "over-gated-acoustic"]
     }
   ]
 }
