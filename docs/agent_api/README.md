@@ -236,6 +236,14 @@ shape_note_lengths
 
 Without these switches, authored duration and basic velocity behavior remain unembellished.
 
+For guitar-specific performance semantics and the boundary between current executable fields, the existing Gesture IR sidecar, renderer Profiles, and not-yet-implemented physical fingering features, read:
+
+```text
+docs/agent_api/guitar_performance.md
+```
+
+Do not open `src/performance/` during ordinary composition to rediscover that contract.
+
 ## Validator contract
 
 Validators may always report measurements.
