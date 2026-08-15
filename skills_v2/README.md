@@ -14,6 +14,8 @@ skills_v2/
 │   └── SKILL.md
 ├── project_architecture/
 │   └── SKILL.md
+├── instrumentation_arrangement/
+│   └── SKILL.md
 ├── acoustic_strumming/
 │   └── SKILL.md
 ├── bass_line_continuity/
@@ -25,6 +27,8 @@ skills_v2/
 ```
 
 Load Skills through `registry.json` and only when their triggers/scope match the current task.
+
+`instrumentation-role-planning` is intentionally thin and is the default planning step for multi-instrument composition. It chooses musical functions, instrument roles and section entry/exit before detailed Material retrieval; it must not grow into fixed genre instrumentation templates.
 
 ## Skill properties
 
@@ -64,6 +68,7 @@ Do not:
 - treat one song's validator statistics as universal quality targets;
 - load all Skills for every task;
 - encode renderer, plugin or hardware-specific parameters as universal composition rules;
-- duplicate Material cards inside Skills.
+- duplicate Material cards inside Skills;
+- encode `genre -> fixed instrument lineup` or `genre -> fixed energy` shortcuts into a Skill.
 
 The V2 library should grow slowly enough that every active file has a clear reason to exist.
