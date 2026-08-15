@@ -1,0 +1,36 @@
+{
+  "schema": "music-agent-project-facade",
+  "schema_version": 1,
+  "project": {
+    "title": "Neon After Rain",
+    "purpose": "generic melody structure validation"
+  },
+  "artifacts": {
+    "melody_plan": {
+      "standard": "music-agent melody structure plan v1",
+      "path": "melody_plan.json",
+      "authority": "authoritative"
+    },
+    "composition_builder": {
+      "standard": "Python project builder",
+      "path": "build.py",
+      "authority": "authoritative"
+    },
+    "execution_midi": {
+      "standard": "MIDI 1.0 Standard MIDI File",
+      "path": "output/neon_after_rain.mid",
+      "authority": "derived"
+    },
+    "melody_events": {
+      "standard": "music-agent melody event trace v1",
+      "path": "output/melody_events.json",
+      "authority": "derived"
+    },
+    "validation_report": {
+      "standard": "music-agent generic melody structure validation v1",
+      "path": "reports/validation.json",
+      "authority": "derived"
+    }
+  },
+  "conversion_reports": []
+}
