@@ -3,6 +3,18 @@
   "description": "Documented Ample Guitar v4 mapping; use only with a matching installed profile.",
   "supports": {"keyswitch": true, "cc": [1, 7, 10, 11, 64], "pitch_bend": true, "mpe": false},
   "pitch_bend_range": 2,
+  "performance_capabilities": {
+    "automatic_fingering": true,
+    "string_selection": true,
+    "hand_position_control": true,
+    "open_string_preference": true,
+    "native_legato_samples": true,
+    "native_strum_engine": true,
+    "graded_palm_mute": true,
+    "note_off_velocity": true,
+    "polyphonic_bend_mode": true,
+    "attack_preroll_compensation": true
+  },
   "articulations": {
     "sustain": {"keyswitch": {"note": 24, "velocity": 80, "lead_ticks": 24}},
     "palm_mute": {"keyswitch": {"note": 26, "velocity": 64, "lead_ticks": 24}},
