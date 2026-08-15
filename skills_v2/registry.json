@@ -16,6 +16,28 @@
       ]
     },
     {
+      "id": "complex-composition-orchestration",
+      "path": "skills_v2/complex_composition_orchestration/SKILL.md",
+      "status": "active",
+      "default_for_complex_composition": true,
+      "triggers": [
+        "long composition",
+        "long song",
+        "full song",
+        "multi-section composition",
+        "multi-instrument composition",
+        "complex arrangement",
+        "detailed arrangement",
+        "three minute song",
+        "3 minute song",
+        "subagent",
+        "subagents",
+        "parallel composition",
+        "orchestrated composition",
+        "large composition task"
+      ]
+    },
+    {
       "id": "music-practice-navigation",
       "path": "skills_v2/music_practice_navigation/SKILL.md",
       "status": "active",
