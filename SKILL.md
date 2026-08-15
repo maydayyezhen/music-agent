@@ -11,6 +11,8 @@ description: Route structured music work through the current V2 Skills, Material
 user request
 -> creative-context policy
 -> active project
+-> complexity judgment
+-> host subagent orchestration when useful and supported
 -> relevant skills_v2
 -> instrumentation / role plan when arranging multiple instruments
 -> relevant materials_v2 per chosen instrument + role
@@ -22,6 +24,33 @@ user request
 ```
 
 For multi-instrument composition, **do not let Material retrieval choose the band lineup**. Resolve a lightweight instrumentation/role plan first, including section entry/exit, then retrieve Materials for those chosen roles.
+
+For long, multi-section, multi-instrument or otherwise context-heavy composition, a capable host agent should also consider `complex-composition-orchestration`. The host may create focused subagents, but this repository does not implement a custom multi-agent framework.
+
+## Complex composition route
+
+For a short cue, small arrangement or narrow edit, work directly.
+
+When scope becomes large enough that one context is likely to flatten details or pad duration with repetition:
+
+```text
+parent host agent
+-> compact shared blueprint
+-> smallest useful set of focused subagents
+-> longitudinal musical responsibilities where possible
+-> structured active-project artifacts
+-> parent integration
+-> instrument performance realization
+-> build / render / inspect / patch
+```
+
+Prefer responsibility ownership such as melody, harmony, rhythm section, guitar arrangement, color layers or performance realization over arbitrary splits such as first minute / second minute / third minute.
+
+More duration should create room for intentional recurrence, development, role evolution, section contrast, return and breathing space. Do not force constant novelty, but do not meet a long duration request primarily with low-information copying.
+
+Every child uses the same creative-context firewall and only the active project plus relevant V2 knowledge surfaces. The parent remains responsible for accepting, rejecting, thinning and repairing child work.
+
+See `skills_v2/complex_composition_orchestration/SKILL.md` for the full delegation contract.
 
 ## Creative-context firewall
 
@@ -61,11 +90,13 @@ Use `source_study` only when the user explicitly asks to study, compare, verify 
 2. `AGENTS.md`
 3. this file
 4. the active project explicitly named by the user, if one exists
-5. `skills_v2/registry.json` and relevant Skills
-6. for multi-instrument composition, `instrumentation-role-planning`
-7. `materials_v2/registry.json` and relevant Materials for chosen instruments/roles
-8. required Profiles
-9. `docs/agent_api/` for stable execution mechanics
+5. `skills_v2/registry.json`
+6. `complex-composition-orchestration` when task scope and host capabilities justify delegation
+7. other relevant Skills
+8. for multi-instrument composition, `instrumentation-role-planning`
+9. `materials_v2/registry.json` and relevant Materials for chosen instruments/roles
+10. required Profiles
+11. `docs/agent_api/` for stable execution mechanics
 
 Do not browse examples to learn APIs.
 
