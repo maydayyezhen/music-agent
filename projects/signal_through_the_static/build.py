@@ -314,7 +314,7 @@ def build_composition() -> dict[str, object]:
         section_data.append({
             "name": name,
             "bars": bars,
-            "complexity": "rich" if energy >= 0.78 else ("standard" if energy >= 0.45 else "sparse"),
+            "complexity": "rich" if energy >= 0.78 else ("standard" if energy >= 0.45 else "simple"),
             "complexity_budget": {
                 "lead": 3 if name in {"bridge", "final_chorus"} else (2 if "chorus" in name or name == "intro" else 1),
                 "drums": 3 if "chorus" in name else (2 if name not in {"intro", "outro"} else 0),
