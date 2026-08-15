@@ -44,7 +44,8 @@ music-practice-navigation
 -> melody-structure-development when melody matters
 -> melody-harmony-coordination when harmony is being chosen under melody
 -> relevant guitar / bass Materials
--> instrument realization Skills / Profiles
+-> guitar-performance-model when guitar is selected
+-> selected instrument Profile / realization
 ```
 
 The style Skill chooses priorities and compatible behaviors. It does not author hidden notes or force a renderer preset.
@@ -213,6 +214,8 @@ role-separated-midi-guitar-mix
 ```
 
 Do not load all of them merely because the word `Britpop` appears.
+
+After a guitar role/pattern is chosen, hand the part to `guitar-performance-model` for fingering-aware, transition-aware, picking/strum-aware realization. The style layer decides **what kind of guitar part is needed**; the performance layer decides **how a guitarist plausibly plays it**.
 
 ---
 
