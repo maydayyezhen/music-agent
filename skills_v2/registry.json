@@ -130,6 +130,29 @@
       ]
     },
     {
+      "id": "guitar-performance-model",
+      "path": "skills_v2/guitar_performance_model/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "guitar",
+        "electric guitar",
+        "acoustic guitar",
+        "guitar performance",
+        "guitar midi",
+        "guitar articulation",
+        "guitar fingering",
+        "guitar strumming",
+        "guitar picking",
+        "guitar legato",
+        "hammer on",
+        "pull off",
+        "guitar slide",
+        "guitar bend",
+        "guitar vibrato",
+        "guitar voicing"
+      ]
+    },
+    {
       "id": "acoustic-guitar-continuous-strumming",
       "path": "skills_v2/acoustic_strumming/SKILL.md",
       "status": "active",
