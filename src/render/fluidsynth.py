@@ -39,6 +39,8 @@ def render_midi(
     command = [
         str(executable),
         "-ni",
+        "-o",
+        "synth.midi-bank-select=mma",
         "-g",
         str(gain),
         "-F",
