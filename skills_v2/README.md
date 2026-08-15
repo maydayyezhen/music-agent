@@ -16,6 +16,8 @@ skills_v2/
 │   └── SKILL.md
 ├── acoustic_strumming/
 │   └── SKILL.md
+├── bass_line_continuity/
+│   └── SKILL.md
 ├── midi_reference_analysis/
 │   └── SKILL.md
 └── chiptune_8bit/
