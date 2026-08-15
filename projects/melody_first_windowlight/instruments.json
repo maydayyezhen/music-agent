@@ -1,0 +1,8 @@
+{
+  "main_melody": {"bank": 0, "program": 73, "channel": 1},
+  "acoustic_guitar": {"bank": 0, "program": 25, "channel": 2},
+  "finger_bass": {"bank": 0, "program": 33, "channel": 3},
+  "electric_piano": {"bank": 0, "program": 4, "channel": 4},
+  "strings_pad": {"bank": 0, "program": 48, "channel": 5},
+  "drums": {"bank": 128, "program": 0, "channel": 10}
+}

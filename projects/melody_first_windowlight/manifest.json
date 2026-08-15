@@ -1,0 +1,22 @@
+{
+  "schema": "music-agent-project-facade",
+  "schema_version": 1,
+  "project": {"title": "Windowlight Relay", "slug": "melody_first_windowlight"},
+  "artifacts": {
+    "composition": {
+      "standard": "Music Agent V2 structured composition JSON",
+      "path": "composition.json",
+      "authority": "authoritative"
+    },
+    "instrument_mapping": {
+      "standard": "Music Agent V2 explicit MIDI instrument mapping",
+      "path": "instruments.json",
+      "authority": "authoritative"
+    },
+    "execution_midi": {
+      "standard": "MIDI 1.0 Standard MIDI File",
+      "path": "output/full_song.mid",
+      "authority": "derived"
+    }
+  }
+}
