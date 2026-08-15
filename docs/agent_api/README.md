@@ -92,13 +92,17 @@ phrase_type
 energy
 performance_intent.seed
 
-tonality or explicit legacy key_root
+tonality
+# or legacy compatibility fields: key_root + mode, both explicit
+
 register_midi
 motif_seed
 harmony
 section_arc.bars
 phrase_relationships
 ```
+
+No key or mode is inferred.
 
 `motif_seed` is authored musical content. Each item has:
 
@@ -116,7 +120,7 @@ When `degree` is used, provide:
 motif_root_midi
 ```
 
-Pitch policy:
+Pitch policy for degree-derived material:
 
 ```text
 pitch_quantization: none | scale
@@ -128,7 +132,7 @@ Default for authored long-form material:
 none
 ```
 
-The executor does not silently quantize authored notes unless `scale` is explicitly requested.
+Direct `pitch` entries are exact authored pitches. Degree-derived pitches are quantized only when `pitch_quantization: scale` is explicitly requested.
 
 ## Relationship semantics
 
