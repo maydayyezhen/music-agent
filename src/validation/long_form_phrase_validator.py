@@ -36,6 +36,14 @@ def _scaled_rule(value: Any, bars: int) -> int:
     return int(value) * max(1, bars // 8)
 
 
+def _explicit_development_count(relationships: list[dict[str, Any]]) -> int:
+    """Count executable authored changes, not semantic labels."""
+    return sum(
+        bool(rel.get("transform") or rel.get("note_overrides"))
+        for rel in relationships
+    )
+
+
 def _apply_explicit_rules(
     *,
     rules: dict[str, Any],
@@ -73,7 +81,7 @@ def _apply_explicit_rules(
                 "insufficient_motif_development",
                 track_name,
                 section_name,
-                "motif development is below the active project's explicit target",
+                "explicit motif transformations are below the active project's target",
                 {"actual": metrics["motif_developments"], "target": target},
             ))
 
@@ -112,14 +120,14 @@ def _apply_explicit_rules(
                 "require_delayed_peak needs section_arc.peak_bar",
                 None,
             ))
-        elif metrics["peak_bars"] and min(metrics["peak_bars"]) < max(3, bars // 2):
+        elif metrics["peak_bars"] and min(metrics["peak_bars"]) < int(planned):
             diagnostics.append(_diagnostic(
                 "warning",
                 "early_peak",
                 track_name,
                 section_name,
-                "highest pitch arrives earlier than this project explicitly allows",
-                metrics["peak_bars"],
+                "highest pitch arrives before the active project's explicit peak bar",
+                {"actual": metrics["peak_bars"], "planned": planned},
             ))
 
     if rules.get("require_delayed_resolution"):
@@ -133,17 +141,17 @@ def _apply_explicit_rules(
                 "require_delayed_resolution needs section_arc.final_resolution_bar",
                 None,
             ))
-        elif planned != bars or any(
-            rel["resolution"] == "strong" for rel in relationships[:-1]
-        ):
-            diagnostics.append(_diagnostic(
-                "warning",
-                "resolution_not_delayed",
-                track_name,
-                section_name,
-                "strong resolution occurs earlier than this project explicitly allows",
-                metrics["strong_cadence_bars"],
-            ))
+        else:
+            strong_bars = metrics["strong_cadence_bars"]
+            if int(planned) not in strong_bars or any(bar < int(planned) for bar in strong_bars):
+                diagnostics.append(_diagnostic(
+                    "warning",
+                    "resolution_not_delayed",
+                    track_name,
+                    section_name,
+                    "strong resolution does not follow the project's explicit resolution bar",
+                    {"actual": strong_bars, "planned": planned},
+                ))
 
     if rules.get("require_continuation_graph") and (
         metrics["boundary_continuations"] < max(0, len(relationships) - 1)
@@ -177,14 +185,14 @@ def _apply_explicit_rules(
             metrics["breath_state_resets"],
         ))
 
-    if rules.get("forbid_automatic_vibrato_endings") and metrics["vibrato_bars"]:
+    if rules.get("forbid_automatic_vibrato_endings") and metrics["ending_vibrato_bars"]:
         diagnostics.append(_diagnostic(
             "warning",
             "automatic_vibrato_endings",
             track_name,
             section_name,
-            "vibrato appears despite the active project's explicit prohibition",
-            metrics["vibrato_bars"],
+            "phrase-ending vibrato violates the active project's explicit rule",
+            metrics["ending_vibrato_bars"],
         ))
 
     if "maximum_consecutive_full_rest_bars" in rules:
@@ -290,9 +298,7 @@ def analyze_long_form_phrases(composition: dict[str, Any]) -> dict[str, Any]:
                 for rel in relationships
                 for operation in rel.get("motif_operations", [])
             ]
-            development_count = sum(
-                rel["relationship"] != "introduce" for rel in relationships
-            )
+            development_count = _explicit_development_count(relationships)
             resets = sum(
                 1
                 for index, rel in enumerate(relationships)
@@ -372,6 +378,15 @@ def analyze_long_form_phrases(composition: dict[str, Any]) -> dict[str, Any]:
             articulation_end_ratio = (
                 ending_expression / len(expressive) if expressive else 0.0
             )
+            ending_vibrato_bars = sorted({
+                int(start // beats) + 1
+                for start, event in onsets
+                if "vibrato" in event.get("articulations", [])
+                and any(
+                    abs((start + float(event["duration"])) - end) <= 0.8
+                    for end in phrase_ends
+                )
+            })
 
             longest_rest_run = 0
             run = 0
@@ -396,6 +411,7 @@ def analyze_long_form_phrases(composition: dict[str, Any]) -> dict[str, Any]:
                 "peak_bars": peak_bars,
                 "planned_peak_bar": arc.get("peak_bar"),
                 "vibrato_bars": vibrato_bars,
+                "ending_vibrato_bars": ending_vibrato_bars,
                 "boundary_continuations": boundary_continuations,
                 "full_rest_bars": full_rest_bars,
                 "maximum_consecutive_full_rest_bars": longest_rest_run,
