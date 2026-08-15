@@ -1,0 +1,69 @@
+{
+  "schema": "music-agent-project-facade",
+  "schema_version": 1,
+  "project": {
+    "title": "Halfway to Sunrise",
+    "slug": "halfway_to_sunrise_pop_rock",
+    "status": "active",
+    "duration_design": "96 bars at 128 BPM = 180 seconds before render tail"
+  },
+  "artifacts": {
+    "song_source": {
+      "standard": "music-agent song-specific Python source",
+      "path": "build_song.py",
+      "authority": "authoritative"
+    },
+    "composition": {
+      "standard": "music-agent composition JSON",
+      "path": "composition.json",
+      "authority": "derived"
+    },
+    "vocal_score": {
+      "standard": "music-agent vocal score JSON",
+      "path": "vocals.json",
+      "authority": "derived"
+    },
+    "instrument_config": {
+      "standard": "music-agent instrument extension",
+      "path": "instruments.json",
+      "authority": "derived"
+    },
+    "render_config": {
+      "standard": "music-agent render extension",
+      "path": "render.json",
+      "authority": "derived"
+    },
+    "lyrics": {
+      "standard": "Markdown lyrics sheet",
+      "path": "lyrics.md",
+      "authority": "derived"
+    },
+    "semantic_phrases": {
+      "standard": "music-agent semantic phrase export",
+      "path": "semantic_phrases.json",
+      "authority": "derived"
+    },
+    "execution_midi": {
+      "standard": "MIDI 1.0 Standard MIDI File",
+      "path": "output/full_song.mid",
+      "authority": "derived"
+    },
+    "instrumental_mix": {
+      "standard": "WAVE PCM audio",
+      "path": "output/mix.wav",
+      "authority": "derived"
+    },
+    "vocal_mix": {
+      "standard": "WAVE PCM audio",
+      "path": "output/vocal_mix.wav",
+      "authority": "derived"
+    }
+  },
+  "conversion_reports": [
+    "instrument-validation.json"
+  ],
+  "edit_protocols": {
+    "pointer": "RFC 6901 JSON Pointer",
+    "patch": "RFC 6902 JSON Patch"
+  }
+}
