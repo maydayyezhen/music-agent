@@ -91,6 +91,30 @@
       "study_status": "partially_studied",
       "current_relevance": "active",
       "notes": "Current promoted studies cover Muted Guitar, section-linked bass, the continuous overdriven rhythm track, and the separate sustained melodic Overdriven Guitar track. The Muted Guitar track contained 440 note attacks forming 224 onset groups, used GM program 28, had a median nominal gate around 0.41 beat, and contained no CC64 sustain events; it therefore supports a genuinely clipped muted pulse interpretation. Two separate GM program 29 Overdriven Guitar tracks must not be conflated. The sustained melodic Overdriven Guitar track contained 157 note attacks forming 103 onset groups, used sparse single notes and dyads, had median onset-group duration around 1.49 beats, and contained no CC64 sustain events; this track motivated sustained-overdrive-guitar. The separate rhythm Overdriven Guitar track contained 766 note attacks forming 388 onset groups, with 374 two-note groups and 384 adjacent onset gaps exactly one beat. Its raw MIDI note gate had a median around 0.38 beat, but the same track contained 96 CC64 sustain events forming 48 pedal-down blocks, each about 7.99 beats long. Therefore its audible role is not a series of isolated short stabs: it is repeated re-articulation over a continuously sustained overdrive bed. This corrected interpretation replaces the earlier short-gate overdrive abstraction and now motivates continuous-overdrive-rhythm-bed. The bass track contained 745 attacks and showed a strong section-role link: muted-guitar bars overwhelmingly paired with a sparse 1-2-4 bass mask and long beat-2 sustain, while sections with the continuous overdrive rhythm track overwhelmingly paired with a fuller 1-2-3-4 bass pulse and high attack alignment. The separate chorused clean track remains unpromoted for later study. Exact pitches, chord progression, full rhythmic sequences, controller sequence and arrangement remain source-specific."
+    },
+    {
+      "id": "sade-smooth-operator-midi",
+      "title": "Smooth Operator",
+      "artist": "Sade",
+      "source_type": "midi",
+      "expected_local_path": "source_library/midi/Sade_-_Smooth_Operator.mid",
+      "provided_by_user": true,
+      "research_tags": ["bass", "smooth_bass", "melodic_support_bass", "fretless_style", "small_interval_motion", "anchor_connective_motion", "bass_continuity"],
+      "study_status": "studied",
+      "current_relevance": "active",
+      "notes": "Studied for flowing melodic-support bass behavior. The bass channel used GM program 35 and contained 516 completed notes over MIDI 26-48, with no CC64 sustain and no pitch-wheel events. Median duration was about 0.70 beat, median onset spacing 1.0 beat, and median note-off-to-next-note-on gap about 0.22 beat. Common onset gaps were 0.5 beat (217), 1.5 beats (164), and 1.0 beat (58). About 36.1% of adjacent notes repeated pitch, about 25.2% moved by one or two semitones excluding repeats, and about 95.7% stayed within five semitones. This source motivated smooth-melodic-support-bass and supports the broader bass-line-continuity Skill. Exact melody, harmony and full rhythmic sequence remain source-specific."
+    },
+    {
+      "id": "george-benson-give-me-the-night-midi",
+      "title": "Give Me the Night",
+      "artist": "George Benson",
+      "source_type": "midi",
+      "expected_local_path": "source_library/midi/BENSON.Give me the night K.mid",
+      "provided_by_user": true,
+      "research_tags": ["bass", "groove_bass", "melodic_bass", "bass_motif", "syncopation", "stepwise_motion", "octave_displacement", "bass_continuity"],
+      "study_status": "studied",
+      "current_relevance": "active",
+      "notes": "Studied for groove-motif melodic bass behavior. The dedicated SYNTH BASS track used GM program 38 and contained 730 completed notes over MIDI 24-55, with no CC64 sustain and no pitch-wheel events. Median duration was about 0.22 beat, median onset spacing 0.5 beat, and median note-off-to-next-note-on gap about 0.28 beat. Common onset gaps were 0.5 beat (312), 0.25 beat (169), 0.75 beat (92), 1.0 beat (52), and 2.0 beats (46). About 11.2% of adjacent notes repeated pitch, about 49.2% moved by one or two semitones excluding repeats, and about 66.5% stayed within five semitones. Exactly one-octave moves occurred 111 times, with 79 upward and 32 downward. Velocity was comparatively stable at 98-110 with median 101. This source motivated groove-motif-bass and supports the broader bass-line-continuity Skill. Exact melody, harmony and full rhythmic sequence remain source-specific."
     }
   ]
 }
