@@ -64,6 +64,13 @@
       "path": "skills_v2/bass_line_continuity/SKILL.md",
       "status": "active",
       "triggers": [
+        "bass",
+        "bass line",
+        "bass accompaniment",
+        "electric bass",
+        "synth bass",
+        "finger bass",
+        "fretless bass",
         "smooth bass",
         "melodic bass",
         "connected bass",
