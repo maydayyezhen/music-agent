@@ -3,6 +3,22 @@
   "description": "Portable fallback; no library-specific keyswitches are invented.",
   "supports": {"keyswitch": false, "cc": [1, 7, 10, 11, 64], "pitch_bend": true, "mpe": false},
   "pitch_bend_range": 2,
+  "performance_capabilities": {
+    "automatic_fingering": false,
+    "string_selection": false,
+    "hand_position_control": false,
+    "native_legato_samples": false,
+    "native_strum_engine": false,
+    "polyphonic_independent_bend": false,
+    "semantic_fallbacks": [
+      "note_overlap",
+      "gate_shaping",
+      "velocity_shaping",
+      "explicit_strum_onset_spread",
+      "partial_chord_voicing",
+      "pitch_bend"
+    ]
+  },
   "articulations": {
     "palm_mute": {"fallback": {"gate_ratio": 0.58, "velocity_delta": -4}},
     "staccato": {"fallback": {"gate_ratio": 0.45, "velocity_delta": 0}},
