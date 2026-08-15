@@ -12,6 +12,45 @@ Use this skill for repeated acoustic-guitar strumming built on a regular or swun
 
 This is a text knowledge and decision skill. It does not require a trained model and it does not define the final guitar timbre. Timbre, layering and production belong in `materials_v2/`.
 
+## Density is a choice, not acoustic-guitar identity
+
+Do **not** equate realistic acoustic strumming with deliberate gaps.
+
+Keep these independent:
+
+```text
+hand-motion continuity
+!=
+audible attack density
+!=
+note sustain / ringing continuity
+```
+
+A convincing part may be:
+
+```text
+dense-continuous
+-> nearly every eighth or sixteenth hand position creates some audible contact
+
+selective-flow
+-> the hand keeps moving while several positions become air strokes
+
+breathing / sparse
+-> larger intentional holes are part of the arrangement
+```
+
+All three are valid. Do not make `breathing / sparse` the default merely because air strokes are available.
+
+For generic `continuous_strumming` with no explicit request for space, prefer an actually continuous audible pulse and create contrast through stroke width, register, dynamics, muting, ghost contact, single-string restrikes and sustain before inserting repeated silence.
+
+Avoid the accidental house pattern:
+
+```text
+strum strum -> pause -> strum strum -> pause
+```
+
+unless that periodic gap is deliberately chosen for the current song.
+
 ## Source evidence
 
 ### Study 1: dense steel-string subdivision pulse
@@ -48,11 +87,13 @@ Directly observed in its main acoustic-guitar track:
 
 This sample supports several reusable ideas:
 
-- a sixteenth-note hand clock can produce a flowing part with deliberate silent slots;
+- one sixteenth-note hand-clock family can produce a flowing part with deliberate silent slots;
 - accompaniment density and chord width are separate controls;
 - inner-sixteenth connective attacks can be narrower than structural anchors;
 - repeated strumming can preserve common tones while changing the sounded subset;
 - one recurring pattern family can remain stable over many bars without making every bar identical.
+
+Its deliberate holes belong to that Material family. They are not a universal rule for acoustic guitar.
 
 The exact source rhythm mask, pitches and harmonic sequence belong to the source library and must not be copied into this Skill.
 
@@ -91,7 +132,8 @@ The following rules are performance conventions, not facts recovered from every 
 
 - choose a subdivision grid appropriate to the part; it may be straight eighths, straight sixteenths, triplet-derived or swung;
 - continuous right-hand motion normally follows a stable physical clock appropriate to that subdivision;
-- a silent grid position may still contain an air stroke or return motion;
+- a grid position may produce a full stroke, partial stroke, ghost/muted contact, single-string restrike, or an air stroke depending on the selected density mode;
+- air strokes are optional performance vocabulary, not a realism requirement;
 - downstrokes often cover more low and middle strings and may carry stronger structural accents;
 - upstrokes are often narrower and lighter, but some groove families intentionally use substantial upstroke returns;
 - chord changes do not automatically reset right-hand direction;
@@ -127,9 +169,9 @@ D   .   U   D   .   U   D   .   U   D   .   U
 
 The triplet example is one useful pattern family, not a universal law for every triplet groove. The middle slot may be silent while the hand resets or travels.
 
-The audible pattern is a subset of the physical clock. Do not restart the direction cycle merely because the bar, chord or phrase changed.
+The audible pattern may equal the physical clock or may be a subset of it. Do not restart the direction cycle merely because the bar, chord or phrase changed.
 
-For flowing sixteenth-grid accompaniment, do not assume every slot should sound. A useful part may leave several positions as air strokes while retaining continuous hand motion.
+For flowing sixteenth-grid accompaniment, choose audible density from the role. Some families leave several positions as air strokes; dense-continuous families may instead make weak positions audible through ghost contacts, narrow partials or single-string restrikes.
 
 ### 2. Stroke action
 
@@ -166,16 +208,17 @@ Do not hard-code sample-library keyswitches into the musical phrase.
 ## Decision procedure
 
 1. Choose the subdivision and swing relationship from the musical task instead of assuming straight eighth notes.
-2. Build the appropriate hand-motion or triplet pulse clock.
-3. Mark which grid positions sound and which are air/reset strokes.
-4. Assign stroke width and register coverage per sounding slot.
-5. Treat structural anchors and connective/return attacks as different roles; their width and weight may differ by style.
-6. Preserve long-short timing in triplet/shuffle grooves instead of quantizing it to equal eighths.
-7. Establish meter-aware dynamics before adding any humanization.
-8. Preserve compatible ringing voices rather than cutting every chord at every attack.
-9. At chord changes, release conflicting voices without resetting the groove clock.
-10. Thin the guitar when a lead or vocal needs space.
-11. Keep repeated bars related. Variation should transform a recognizable pattern rather than randomize every bar.
+2. Choose audible-density mode independently: dense-continuous, selective-flow, or breathing/sparse.
+3. Build the appropriate hand-motion or triplet pulse clock.
+4. Mark each grid position as sounding contact or air/reset motion according to the selected density mode. Do not insert gaps merely to prove that the hand is moving.
+5. Assign stroke width and register coverage per sounding slot.
+6. Treat structural anchors and connective/return attacks as different roles; their width and weight may differ by style.
+7. Preserve long-short timing in triplet/shuffle grooves instead of quantizing it to equal eighths.
+8. Establish meter-aware dynamics before adding any humanization.
+9. Preserve compatible ringing voices rather than cutting every chord at every attack.
+10. At chord changes, release conflicting voices without resetting the groove clock.
+11. When a lead or vocal needs space, thin width, reduce register collision or soften weak contacts before automatically deleting repeated attacks.
+12. Keep repeated bars related. Variation should transform a recognizable pattern rather than randomize every bar.
 
 ## Dynamics
 
@@ -254,7 +297,10 @@ Revise the part when:
 
 - the subdivision was guessed incorrectly from a reference;
 - a triplet/shuffle pattern has been straightened into equal eighths;
-- a sixteenth grid is treated as a requirement to sound all sixteen positions;
+- every generated acoustic part defaults to the same `strum-strum-gap` breathing cadence;
+- air strokes are inserted automatically without an arrangement reason;
+- dense-continuous intent is weakened by periodic silence instead of by narrower/softer contacts;
+- a sixteenth grid is treated as a requirement to sound all sixteen positions with equally broad attacks;
 - every attack uses the same full voicing;
 - connective sixteenths are as broad and heavy as every structural anchor without a style reason;
 - every upstroke is forced to be tiny even when the groove needs a substantial return;
@@ -272,10 +318,12 @@ Revise the part when:
 Before accepting a generated part, verify:
 
 - the declared subdivision matches the intended pattern;
+- the selected density mode matches the arrangement instead of a global acoustic-guitar stereotype;
 - swing/triplet long-short spacing is preserved when required;
 - the hand or pulse clock is internally coherent;
 - sounding and silent slots are intentional;
-- a sixteenth-grid part has deliberate holes when the style calls for flow rather than maximum density;
+- dense-continuous mode is not silently converted into a repeating-gap pattern;
+- selective-flow or breathing mode uses holes because the role calls for them, not because every acoustic pattern is expected to breathe the same way;
 - stroke width varies meaningfully;
 - structural and connective/return attacks have sensible width relationships;
 - dynamics form a readable meter and phrase;
@@ -292,7 +340,7 @@ This skill documents reusable acoustic-guitar strumming behavior across straight
 
 The first MIDI study contributed evidence for dense chord-pulse attacks, compact chord groups, strong velocity variation and note overlap.
 
-The second strumming study added evidence for warm flowing sixteenth-grid accompaniment with deliberate holes, variable 1-5-note attack width, narrower connective sixteenths, common-tone retention and stable multi-bar pattern families.
+The second strumming study added evidence for one warm flowing sixteenth-grid accompaniment family with deliberate holes, variable 1-5-note attack width, narrower connective sixteenths, common-tone retention and stable multi-bar pattern families. Its gaps are family-specific rather than a universal acoustic-guitar default.
 
 The third strumming study added evidence for rolling long-short triplet timing, substantial late-triplet return strokes, ringing note lengths and recoverable low-to-high / high-to-low sweep direction when the MIDI actually preserves within-stroke onset order.
 
