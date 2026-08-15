@@ -5,69 +5,160 @@ Branch: `agent/skills-v2-clean-slate`
 
 ## Current architecture
 
-The repository now uses one canonical knowledge path:
+The repository now uses one canonical knowledge path plus a hard creative-context firewall:
 
 ```text
+config/creative_context.json
 skills_v2/
 materials_v2/
-source_library/
 profiles/
+docs/agent_api/
 projects/<active-project>/
-src + scripts + tests
 ```
 
-The former `skills/` and `references/` knowledge systems, old instrument-research / long-form playbooks and clearly obsolete proof/demo projects have been removed from the current tree. They remain recoverable from Git history only when the user explicitly requests legacy recovery.
+Implementation, tests, scripts and original-source evidence remain available for explicit non-composition modes but are excluded from ordinary creative context.
 
-## Active knowledge policy
+## Creative-context isolation
+
+Ordinary `composition` mode is deny-by-default outside its allowlist.
+
+Allowed by default:
+
+```text
+canonical root instructions and registries
+skills_v2/
+materials_v2/
+profiles/
+docs/agent_api/
+projects/<active-project>/ only
+```
+
+Excluded by default:
+
+```text
+src/
+scripts/
+tests/
+source_library/
+projects/<non-active-project>/
+other docs/
+```
+
+Explicit wider modes:
+
+```text
+implementation_debug
+source_study
+test_maintenance
+```
+
+The former policy of opening demo/build scripts for mechanics while trying to ignore their musical constants is retired. Stable mechanics are documented under `docs/agent_api/` instead.
+
+## Concrete pollution cleanup
+
+The current tree removes the concrete long-form melody teaching fixtures that could leak into creative context:
+
+```text
+scripts/build_melody_skeleton_v2.py
+scripts/build_long_form_phrase_demos.py
+tests/test_melody_skeleton_v2.py
+tests/fixtures/lead_guitar_long_form_v2/
+```
+
+Long-form tests now use synthetic neutral data instead of a reusable example tune.
+
+## Authored-only melody execution
+
+Canonical mode:
+
+```text
+phrase_generation_mode: long_form_authored
+```
+
+Compatibility aliases `long_form_experimental` and `long_form` route to the same authored-only executor.
+
+The executor no longer performs hidden composition from semantic labels. Removed implicit behavior includes:
+
+- automatic transposition because a relationship is named `sequence` or `climax`;
+- automatic ending-degree changes;
+- automatic final tonic/root resolution;
+- automatic rising contour toward `peak_bar`;
+- automatic forcing of `delayed_target`;
+- automatic post-peak descent;
+- automatic peak/final note relocation or lengthening;
+- automatic peak/final vibrato;
+- automatic peak velocity boost;
+- automatic bar-line clipping used as a phrase-style rule;
+- default guitar gate-cycle rewriting.
+
+Relationship labels and `motif_operations` are descriptive metadata only.
+
+Musical changes must now be explicit project data. Supported authored operations include concrete `transform` fields and `note_overrides`. Exact mechanics are documented in `docs/agent_api/README.md`.
+
+## Tonality / pitch neutrality
+
+Long-form melody no longer silently falls back to E natural minor when tonal information is missing.
+
+A project must provide either:
+
+```text
+tonality
+```
+
+or an explicit legacy compatibility `key_root`.
+
+`pitch_quantization` is explicit and defaults to `none` for authored long-form material.
+
+## Validation neutrality
+
+The long-form validator still measures phrase behavior, but aesthetic warnings are activated only when the project explicitly declares corresponding `long_form_phrase_rules`.
+
+Examples:
+
+```text
+require_delayed_peak
+require_delayed_resolution
+minimum_cross_bar_notes_per_8_bars
+minimum_motif_developments_per_section
+maximum_strong_cadences_per_8_bars
+```
+
+Missing rule means measure only, not judge.
+
+This prevents validator targets from feeding a single house arc back into composition.
+
+## Existing V2 knowledge policy
 
 - `skills_v2/` contains reusable procedures and decision rules.
 - `materials_v2/` contains reusable musical vocabulary promoted from evidence or validated experiments.
 - `source_library/` contains original study sources and is explicit-study only.
 - `profiles/` declares sound/performance implementation capabilities.
 - `projects/` contains song-specific work and is not a default knowledge library.
-
-## Current notable state
-
-- `instrumentation-role-planning` is the thin default planning step for multi-instrument composition.
-- Instrumentation and section roles are resolved before detailed Material retrieval.
-- Genre tags are compatibility hints only; genre must not select instruments or imply energy.
-- Broad Material shortlists should be expanded when one instrument family dominates without an explicit user constraint.
-- Acoustic-guitar Materials now include broader `pop-rock` compatibility where the existing behavior already supports it.
-- The shared ambiguous `guitar` render fallback no longer defaults to overdrive; new projects should use explicit guitar mappings.
-- Demo/full-song scripts remain implementation examples only and are not creative templates.
-- `lead-guitar-phrase-design` now teaches phrase-level lead-guitar writing: target-note arrivals, local motion, repeated-pitch permission, duration contrast, phrase-level space and arrangement-aware density.
-- `expressive-target-note` is an active electric-guitar Material for developing important held arrivals through early pitch shaping, target establishment, delayed modulation/vibrato growth and optional same-pitch re-articulation.
-- The user-provided `Still-Got-The-Blues-(For-You)-1.mid` study is registered as explicit-study source evidence for pitch-wheel/CC1 timing relationships; it does not establish universal bend intervals, slide labels or real finger-vibrato rate/depth.
-- `projects/gpt_etude_no_1/` is completed and archived.
-- `skills_v2/chiptune_8bit/` provides the chiptune routing scaffold.
-- `profiles/chiptune_basic/` is a generic scaffold and does not claim real-console accuracy.
-- `projects/_templates/chiptune_8bit/` is available for future 8-bit projects.
-- Chiptune Materials must still be learned and validated before activation.
+- `instrumentation-role-planning` remains the default planning step for multi-instrument composition.
+- Genre tags remain compatibility hints only; genre must not select instruments or imply energy.
 
 ## Agent rule
 
-For ordinary multi-instrument composition, use:
+For ordinary composition:
 
 ```text
 user request
+-> creative-context allowlist
 -> active project
 -> skills_v2 registry
 -> instrumentation / role / section-entry plan
 -> materials_v2 registry by chosen instrument + role + behavior
--> relevant profiles / implementation
+-> Profiles
+-> docs/agent_api contract
+-> execute without reading scripts/src
 -> render / validate / listen
 ```
 
 Do not reverse this into `genre -> Material -> instrument`.
-
-Do not search Git history, deleted legacy files, unrelated complete projects or original source material during ordinary work.
-
-Use `source_library` only for explicit study. Use Git history only for explicit legacy recovery.
+Do not use unrelated projects, tests, fixtures or demo builders as creative memory.
 
 ## Execution boundary
 
-The cleanup intentionally preserves implementation under `src/`, `scripts/`, `config/`, `profiles/` and `tests/`. Removing old Agent knowledge must not be confused with removing the deterministic execution layer.
-
-Some preserved demo/full-song scripts may be inspected for schema/API/mechanics when necessary, but their instrumentation, form, harmony, density and mix decisions are not reusable creative authority.
-
-No test-pass claim is recorded in this checkpoint. Run the repository's current validators/tests when a code change requires it.
+A successful compile means the pipeline accepted the data. It does not prove the music sounds good.
+A validator proves only declared invariants and explicit project rules.
+Listening feedback remains the final musical test.
