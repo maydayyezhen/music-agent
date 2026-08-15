@@ -22,11 +22,42 @@ Implementation may be inspected under `src/`, `scripts/`, `config/` and `tests/`
 2. the user's request and active project
 3. `skills_v2/registry.json`
 4. relevant Skill files only
-5. `materials_v2/registry.json`
-6. relevant Material cards
-7. required Profile and implementation files
+5. for multi-instrument composition, resolve instrumentation + role + section entry/exit before Material retrieval
+6. `materials_v2/registry.json`
+7. relevant Material cards for the chosen instruments/roles
+8. required Profile and implementation files
 
 Do not browse unrelated projects for creative inspiration.
+
+## Arrangement routing rule
+
+For multi-instrument composition, use the thin `instrumentation-role-planning` Skill before selecting detailed Materials.
+
+The order is:
+
+```text
+brief
+-> required musical functions
+-> instrument palette
+-> per-section roles / entry / exit
+-> Material retrieval by instrument + role + behavior
+```
+
+Do **not** reverse this into `genre -> Material -> instrument`.
+
+Keep these dimensions separate:
+
+```text
+genre           stylistic compatibility
+instrumentation chosen sound sources
+role            musical function
+energy          density / motion / register / weight / foreground pressure
+texture         articulation / sustain / rhythmic surface / timbre
+```
+
+Never use shortcuts such as `rock = loud`, `rock = distortion`, or `rock = electric guitar only`.
+
+A sparse Material library for one instrument is not evidence that the instrument should be excluded. If the arrangement needs that role and the implementation supports it, write the part project-specifically and promote reusable knowledge only after validation.
 
 ## Hard no-legacy rule
 
@@ -51,6 +82,8 @@ Do not put complete songs, fixed chord progressions, signature riffs or renderer
 
 Materials may be numerous and stylistic. They should contain reusable musical vocabulary learned from a reference study or controlled experiment.
 
+Genre words in a Material id or tag describe provenance or compatible context, not a claim that the Material is the standard answer for that genre.
+
 Prefer:
 
 ```text
@@ -71,6 +104,20 @@ A project is song-specific state, not reusable knowledge.
 - `_templates/` is structural scaffolding only.
 - Archived/completed projects remain closed unless explicitly reopened.
 - Never load all projects to "learn the house style".
+- Benchmark, reconstruction, demo and finished-song code may be inspected only for a concrete schema/API/conversion/mechanical question; never inherit its instrumentation, form, density, harmony, melody or mix hierarchy into a new composition.
+
+## Script / implementation-example boundary
+
+Some files under `scripts/` have names such as `build_*demo.py` or `build_*full_song.py`. Their presence does not make them active creative guidance.
+
+When such a file is required to understand an API or execution path:
+
+```text
+keep: schema, function calls, file layout, compiler/renderer mechanics
+ignore: instrument lineup, chord loop, section form, density, melody, dynamics, mix choices
+```
+
+Prefer generic execution entry points over old demo builders for new work.
 
 ## Source-library policy
 
