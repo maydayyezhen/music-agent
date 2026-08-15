@@ -1,6 +1,6 @@
 ---
 name: classical-melody-practice
-description: Layer common-practice and historical melody-writing conventions onto the generic melody structure workflow when the brief explicitly calls for classical tonal practice or historically grounded exercise writing.
+description: Layer classical/common-practice melody, phrase-form, cadence and traditional embellishing-tone conventions onto the generic melody workflow when historically grounded tonal practice is explicitly requested.
 status: active
 ---
 
@@ -8,15 +8,16 @@ status: active
 
 ## Purpose
 
-Use this Skill only when the active brief explicitly calls for a style or exercise context such as:
+Use this Skill only when the active brief explicitly calls for a classical/common-practice style or exercise context such as:
 
 ```text
 classical melody
 common-practice tonal writing
 traditional tonal melody exercise
 Goetschius-style melody exercise
-antecedent / consequent period practice
-traditional cadence-focused melody writing
+Sentence / Period practice
+antecedent / consequent
+traditional cadence-focused writing
 ```
 
 This Skill is a **style-conditioned layer**. It does not replace `melody-structure-development`.
@@ -25,153 +26,338 @@ Use the order:
 
 ```text
 generic melody structure
--> classical/common-practice constraints when requested
+-> classical/common-practice practice layer
+-> melody-harmony coordination when needed
 -> instrument realization
 ```
 
-The central rule is:
+Historical pedagogy belongs to historical or style-specific practice, not to the global definition of a good melody.
 
-> historical pedagogy belongs to historical or style-specific practice, not to the global definition of a good melody.
+---
 
-## Why this Skill exists
+## Source boundary
 
-The Goetschius study contains two kinds of knowledge:
+This Skill currently draws from two repository studies:
 
-1. structural ideas that remain broadly useful across styles;
-2. restrictions and preferences belonging to early-20th-century common-practice pedagogy.
+```text
+Percy Goetschius, Exercises in Melody-Writing (1903)
+Harlow et al., Comprehensive Musicianship, A Practical Resource (2022)
+```
 
-The first category remains in `melody-structure-development`.
-The second category is routed here instead of being discarded or treated as universal law.
+The sources overlap on phrase syntax, recurrence, cadence and embellishment but differ in pedagogical organization.
+
+Where a source study does not preserve an exact historical table or prohibition, do not reconstruct it from memory.
+
+---
 
 ## Phrase and form practice
 
-When the task explicitly requests traditional exercise form, it is reasonable to use textbook spans such as:
+Traditional practice may use familiar spans such as:
 
 ```text
 4-bar Phrase
 8-bar Period
-16-bar Double-period
+16-bar Double Period
 ```
 
-Treat these as **practice frames and stylistic defaults**, not metaphysical laws of melody.
+Treat them as common practice frames, not mandatory lengths.
 
-Useful classical-practice reasoning includes:
+The 2022 source explicitly notes that phrases may have other lengths and discusses asymmetrical phrases and periods.
+
+### Sentence
+
+Use Sentence form when the brief calls for it or when it clearly fits the intended idiom.
+
+A useful simplified pattern from the source is:
+
+```text
+statement a
+-> repeated / transposed or varied statement a'
+-> contrasting continuation / conclusion b
+-> cadence
+```
+
+Do not force every classical phrase into this template.
+
+### Period
+
+A Period is defined more by **cadential dependency** than by a bare 4+4 count.
 
 ```text
 Antecedent
--> Consequent
+-> weaker / progressive closure
+-> creates need to continue
 
-parallel relation
--> modified relation
--> more contrasting relation
+Consequent
+-> stronger / more conclusive closure
 ```
 
-Cadence placement may be used to articulate these phrase functions when the requested style depends on traditional tonal syntax.
-
-Do not force these lengths onto modern pop, rock, game music, modal writing, jazz-derived melody or other styles merely because the generic melody has phrases.
-
-## Cadential and tonal resolution discipline
-
-Common-practice exercise writing may use stronger expectations for:
-
-- clear phrase-ending tonal function;
-- conventional cadence placement;
-- active scale-degree resolution;
-- tonal closure at structurally important endings.
-
-These expectations should be activated only when the project asks for historically grounded tonal practice.
-
-The current source study records the existence of source-specific active-scale-step restrictions but does not preserve the full original resolution tables. Therefore:
+### Parallel and contrasting Periods
 
 ```text
-do not invent a detailed mandatory resolution table from memory
+Parallel Period:
+  consequent begins with similar melodic material
+
+Contrasting Period:
+  consequent begins with different material
 ```
 
-If exact Goetschius exercise compliance is required, reopen the original source in `source_study` mode and verify the relevant rule.
+### Phrase Group
 
-## Leap discipline
+Allow several phrases to belong together without forcing an antecedent/consequent interpretation when their motivic, durational and cadential relationships create a coherent larger group.
+
+### Double Period
+
+For four-phrase common-practice organization:
+
+```text
+phrase 1 + phrase 2
+-> larger antecedent
+
+phrase 3 + phrase 4
+-> larger consequent
+```
+
+Cadential function at the end of the second and fourth phrases carries the main larger-scale dependency.
+
+Do not treat Double Period as a universal four-phrase template.
+
+---
+
+## Asymmetry, elision and extension
+
+Classical practice does not require perfect phrase symmetry.
+
+Useful historically grounded operations include:
+
+### Asymmetrical phrase / period
+
+The consequent or another phrase may be extended beyond an expected span.
+
+### Phrase elision
+
+```text
+expected end of phrase A
+=
+beginning of phrase B
+```
+
+This can shorten or overlap the apparent boundary.
+
+### Pre-cadential extension
+
+Delay the expected cadence before closure.
+
+### Post-cadential extension
+
+Allow the cadence to occur, then add a tag or reiteration after it.
+
+These operations are also available generically, but in this Skill they may be interpreted through traditional cadence logic.
+
+---
+
+## Cadence and closure discipline
+
+Common-practice writing places stronger expectations on tonal closure and phrase-ending function.
+
+Relevant cadence families from the 2022 source include:
+
+```text
+PAC  Perfect Authentic Cadence
+IAC  Imperfect Authentic Cadence
+HC   Half Cadence
+PHC  Phrygian Half Cadence
+DC   Deceptive Cadence
+PC   Plagal Cadence
+```
+
+Use these only in contexts where common-practice tonal analysis is relevant.
+
+The more general principle remains:
+
+```text
+cadences have relative strength / finality
+```
+
+An antecedent should normally create weaker or progressive closure than its consequent.
+
+Final closure should be planned relative to earlier cadences rather than selected by label alone.
+
+---
+
+## Active-scale-degree and tonal resolution discipline
+
+Traditional tonal exercises may use stronger expectations for:
+
+- clear phrase-ending tonal function;
+- active scale-degree resolution;
+- tonal closure at important endings;
+- leading-tone and dominant-function behavior.
+
+The Goetschius study records source-specific active-scale-step restrictions but does not preserve a complete original resolution table.
+
+Therefore:
+
+```text
+do not invent a mandatory resolution table from memory
+```
+
+If exact Goetschius exercise compliance is required, reopen the original source and verify the rule.
+
+---
+
+## Leap and interval discipline
 
 The early Goetschius training sequence regulates skips more tightly than the generic Skill.
 
-For a deliberately traditional exercise, a wide leap may be treated more conservatively, including a preference in early training for compensating or reversing direction after the leap.
+For a deliberately traditional exercise, wide leaps may be treated more conservatively, including the early-training preference for compensating or reversing direction after a wide leap.
 
-This is a pedagogical/style tendency, not a universal melodic invariant.
+The source also contains historical restrictions on particular augmented intervals.
 
-Do not use it to reject a leap that is structurally justified in another style.
+These are pedagogical/style tendencies, not universal melodic invariants.
 
-## Interval restrictions
+Do not fabricate a complete interval-prohibition table when the active source evidence does not contain one.
 
-The source contains historical restrictions on particular augmented intervals.
-
-For classical exercise writing, interval vocabulary may therefore be filtered more conservatively than in the generic Skill.
-
-The current study note does not preserve a complete interval-by-interval prohibition table, so do not fabricate one. Exact source compliance requires source verification.
+---
 
 ## Metric regularity
 
-The historical pedagogy begins from regular metric organization and treats irregular placement more cautiously before allowing broader freedom through recurrence and structural explanation.
-
-In a traditional exercise context:
+Traditional pedagogy gives greater weight to:
 
 ```text
 metrical regularity
 clear phrase punctuation
 recurring rhythmic design
+cadence placement
 ```
 
-may be given more weight than they would receive in syncopation-heavy modern styles.
+than many syncopation-heavy modern styles.
 
-Do not convert this into:
+This does not mean:
 
 ```text
 syncopation = error
 irregular rhythm = bad
 ```
 
-outside the historical practice context.
+Even within classical practice, asymmetry and phrase extension can be intentional.
+
+---
 
 ## Chromaticism and modulation
 
-The source distinguishes altered scale steps from true modulation and gives priority to common-practice tonal relationships before later expanding to broader chromatic and modulatory procedures.
-
 For traditional tonal practice, useful style-conditioned concerns include:
 
-- clear distinction between local chromatic alteration and key change;
-- related-key priority in elementary modulation work;
-- common tones, pauses, sequences or cadential context as support for reinterpretation;
-- stronger expectations for tonal legibility than in freely chromatic modern writing.
+- distinguish local chromatic alteration from a real key change;
+- give related-key relationships greater priority in elementary modulation practice;
+- use common tones, sequences, pauses or cadential context to support reinterpretation;
+- keep tonal direction legible.
 
-Do not treat `out of scale` as an automatic error even here. Chromatic tones still require functional interpretation.
+Do not treat every out-of-scale tone as an error.
 
-The original study records source-specific altered-scale-step tables and common-practice modulation procedures, but not their complete detailed contents. Verify the original source before claiming exact rule compliance.
+Exact altered-scale-step tables or source-specific modulation procedures require source verification when strict historical compliance is requested.
 
-## Embellishing tones in classical practice
+---
 
-The generic Skill already defines passing, neighboring, anticipatory, delaying and appoggiatura-like functions.
+## Traditional embellishing-tone vocabulary
 
-In a classical/common-practice task, these functions may be realized with stricter harmonic and metric placement according to the requested historical idiom.
+The generic Skill treats embellishments primarily as surface functions.
 
-Relevant families include:
+This Skill may use the stricter common-practice distinctions from *Comprehensive Musicianship*.
+
+### Passing Tone
+
+Fills stepwise space between two tones. It may be diatonic or chromatic, accented or unaccented.
+
+### Neighbor Tone
 
 ```text
-passing motion
-neighbor motion
-suspension
-anticipation
-appoggiatura-family approach
+principal
+-> adjacent upper / lower neighbor
+-> principal
 ```
 
-Do not invent a universal accent, duration or chromatic placement rule from this Skill. The source study intentionally promoted those devices only at the functional level.
+### Double Neighbor / Enclosure
 
-When exact historical placement matters, verify the original source or another explicit classical reference.
+Two neighbor tones decorate a structural center in succession.
 
-## Style-character claims
+### Appoggiatura
 
-The source contains period-specific characterizations of major/minor, meter and tempo.
+In the source's traditional classification:
 
-These may be useful as evidence about historical pedagogy or for recreating that pedagogical mindset, but they are not reliable universal mappings from musical parameter to emotion.
+```text
+approached by leap
+resolved by step
+NCT is metrically stronger than the following resolution
+```
 
-Therefore:
+### Incomplete Neighbor
+
+Also approached by leap and resolved by step, but the NCT is metrically weaker than its following resolution.
+
+### Escape Tone
+
+```text
+approached by step
+left by leap
+```
+
+The source treats it as usually unaccented.
+
+### Anticipation
+
+A member of the next harmony arrives early and normally remains or reappears when the new harmony arrives.
+
+### Pedal Tone
+
+A sustained pitch remains while harmonies change around it.
+
+Traditional tonic and dominant pedal functions may be used in common-practice contexts.
+
+### Suspension
+
+Traditional suspension structure:
+
+```text
+Preparation
+-> Suspension
+-> Resolution down by step
+```
+
+The source places suspensions on accented metric positions.
+
+Common labels include:
+
+```text
+9-8 / 2-1
+7-6
+4-3
+2-3 bass suspension
+```
+
+The source also discusses embellished suspensions and chains of suspensions.
+
+### Retardation
+
+Suspension-like delay that resolves **upward by step** instead of downward.
+
+---
+
+## Embellishment boundary
+
+The strict approach/departure and accent classifications above are useful for traditional tonal writing and analysis.
+
+Do not use them to reject a modern pop, rock, jazz-derived, game or modal melody merely because its ornamental behavior does not fit these categories.
+
+The generic melody Skill should continue to use broader surface-function descriptions.
+
+---
+
+## Historical style-character claims
+
+Period-specific descriptions of major/minor, meter, tempo or contour may be useful as evidence about historical pedagogy.
+
+They are not universal mappings from musical parameter to emotion.
 
 ```text
 historical characterization
@@ -179,68 +365,73 @@ historical characterization
 != universal emotional truth
 ```
 
+---
+
 ## Vocal setting
 
 For historically oriented text setting, lexical stress and semantic importance may be aligned more strongly with musical prominence.
 
-Possible correspondences include stronger metric placement, duration or registral emphasis, but the exact mapping remains style-conditioned.
+Possible correspondences include metric placement, duration or register, but the exact mapping remains style-conditioned.
 
-Modern vocal writing may intentionally violate these tendencies.
+---
 
 ## Decision procedure
 
-1. Run `melody-structure-development` first to establish structural targets, germ, motif identity, phrase relation and surface hierarchy.
-2. Confirm that the brief actually requests classical/common-practice practice before activating this Skill.
+1. Run `melody-structure-development` first to establish structural targets, register plan, germ, motif identity, CREATE/VARY/REPEAT relation and phrase shape.
+2. Confirm that the brief actually requests classical/common-practice practice.
 3. Decide whether the task is free classical-style composition or a stricter pedagogical exercise.
-4. For an exercise, choose an explicit phrase frame such as Phrase, Period or Double-period when appropriate.
-5. Plan antecedent/consequent relation and cadential function before surface decoration.
-6. Apply more conservative leap, interval, metric and tonal-resolution discipline only to the extent supported by the requested historical style.
+4. If form practice is requested, choose Sentence, Period, Phrase Group or Double Period intentionally.
+5. Plan cadence hierarchy and relative closure strength before surface decoration.
+6. Apply more conservative leap, interval, metric and tonal-resolution discipline only to the extent supported by the requested idiom.
 7. Distinguish chromatic color from modulation and keep tonal reinterpretation legible.
-8. Apply embellishing tones with awareness of their harmonic and metric role.
-9. Do not invent exact historical tables or prohibitions that are absent from the active evidence.
-10. If exact source compliance matters, switch to `source_study`, verify the original rule, then return to the composition task.
+8. Apply traditional embellishing-tone categories when useful.
+9. Use asymmetry, elision and pre/post-cadential extension when they serve the phrase rather than forcing symmetry.
+10. If harmony selection is part of the task, route coordination to `melody-harmony-coordination` and keep detailed four-part/common-practice harmonization rules separate.
+11. If exact historical rule compliance matters, verify the original source instead of inventing missing tables.
+
+---
 
 ## Failure modes
 
 ### Historical rules leaking into modern composition
 
-Symptom: a pop, rock, game, jazz-derived or modal melody is rejected for violating a traditional exercise convention.
+A pop, rock, game, jazz-derived or modal melody is rejected for violating a traditional convention.
 
-Fix: remove this Skill from the active style stack and keep only the generic structural layer.
+Fix: remove this Skill from the active style stack.
 
 ### Fake historical precision
 
-Symptom: the Agent claims an exact scale-degree, interval or ornament rule that is not recorded in the active source evidence.
+The Agent claims an exact scale-degree, interval or ornament rule not preserved in active source evidence.
 
-Fix: verify the original source instead of reconstructing a table from memory.
+Fix: reopen the source.
 
 ### Classical as fixed bar counts
 
-Symptom: every classical-style melody is forced into 4+4 bars regardless of musical intent.
+Every classical-style melody is forced into 4+4 bars.
 
-Fix: treat Phrase/Period/Double-period lengths as practice frames and common examples, not the complete space of classical form.
+Fix: use form and cadence function, not a bar-count stencil. Allow asymmetry and extension.
+
+### Cadence label without hierarchy
+
+The Agent chooses a technically named cadence but fails to shape weaker versus stronger closure across phrases.
+
+Fix: plan relative closure strength first.
 
 ### Rule compliance without musical syntax
 
-Symptom: every local interval is legal but the melody lacks motif identity, phrase direction or structural hierarchy.
+Every local interval is legal but the melody lacks motif identity, direction or structural hierarchy.
 
-Fix: return to `melody-structure-development`; this Skill is a style layer, not a substitute for composition.
+Fix: return to `melody-structure-development`.
+
+---
 
 ## Provenance
 
-This Skill reorganizes the common-practice-era material explicitly marked as historical or not universal in the repository study of Percy Goetschius, *Exercises in Melody-Writing* (1903).
+Detailed source evidence is stored under:
 
-The source study supports the presence of historical constraints or preferences involving:
+```text
+source_library/studies/goetschius_exercises_in_melody_writing.md
+source_library/studies/comprehensive_musicianship_practical_resource.md
+```
 
-- early leap regulation;
-- regular versus irregular metric hierarchy;
-- four-bar Phrase, eight-bar Period and sixteen-bar Double-period practice frames;
-- traditional cadence placement and tonal closure;
-- active-scale-degree resolution rules;
-- restrictions on particular augmented intervals;
-- related-key priority and common-practice modulation procedures;
-- stricter historical realization of embellishing tones;
-- period-specific characterizations of mode, meter and tempo;
-- stronger lexical-stress-to-musical-prominence tendencies in vocal setting.
-
-Where the study note does not preserve the source's detailed tables or exact formulations, this Skill deliberately records the boundary instead of inventing specifics.
+This Skill contains only the style-conditioned subset suitable for classical/common-practice melody work.
