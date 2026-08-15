@@ -31,42 +31,43 @@ def _interval_list(value: Any, field: str) -> list[int]:
 
 
 def resolve_tonality(phrase: dict[str, Any]) -> tuple[set[int], dict[str, Any]]:
-    """Resolve the pitch-class palette for long-form melody generation.
+    """Resolve an explicitly declared pitch-class palette.
 
-    Existing compositions that only provide ``key_root`` retain the old natural-minor
-    behavior. New compositions may provide an explicit ``tonality`` object:
-
-    {
-      "tonic": "D",
-      "mode": "major",
-      "additional_intervals": [10]
-    }
-
-    ``scale_intervals`` overrides the named mode. Additional/excluded intervals are
-    relative to the tonic and make borrowed colors explicit instead of silently forcing
-    every song through one fixed scale.
+    Long-form execution must not invent a key or mode. New authored phrases should
+    provide ``tonality``. The old ``key_root`` field remains a compatibility route only
+    when it is itself explicitly present in the project.
     """
     raw = phrase.get("tonality")
     legacy = raw is None
     if raw is None:
+        if "key_root" not in phrase:
+            raise ValueError(
+                "long-form melody requires explicit tonality or explicit legacy key_root"
+            )
         raw = {
-            "tonic": phrase.get("key_root", "E"),
+            "tonic": phrase["key_root"],
             "mode": phrase.get("mode", "natural_minor"),
         }
     if not isinstance(raw, dict):
         raise ValueError("long-form tonality must be an object")
+    if "tonic" not in raw:
+        raise ValueError("tonality.tonic is required")
 
-    tonic = str(raw.get("tonic", phrase.get("key_root", "E")))
-    mode = MODE_ALIASES.get(str(raw.get("mode", "natural_minor")).lower(),
-                            str(raw.get("mode", "natural_minor")).lower())
+    tonic = str(raw["tonic"])
 
     if "scale_intervals" in raw:
         intervals = _interval_list(raw["scale_intervals"], "scale_intervals")
         mode_name = "custom"
     else:
+        if "mode" not in raw:
+            raise ValueError("tonality.mode or tonality.scale_intervals is required")
+        requested_mode = str(raw["mode"]).lower()
+        mode = MODE_ALIASES.get(requested_mode, requested_mode)
         if mode not in MODE_INTERVALS:
             supported = ", ".join(sorted(MODE_INTERVALS))
-            raise ValueError(f"unsupported long-form tonality mode {mode!r}; supported: {supported}")
+            raise ValueError(
+                f"unsupported long-form tonality mode {mode!r}; supported: {supported}"
+            )
         intervals = list(MODE_INTERVALS[mode])
         mode_name = mode
 
