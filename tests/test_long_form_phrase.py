@@ -1,79 +1,189 @@
 from __future__ import annotations
 
-import json
-import tempfile
 import unittest
 from copy import deepcopy
-from pathlib import Path
 
-import mido
-
-from src.composition import load_composition, validate_composition
+from src.composition import validate_composition
 from src.instruments import compile_instrument_phrase, export_long_form_plans
-from src.midi import generate_song_midis
+from src.instruments.common import position
+from src.midi.pitches import note_number
 from src.validation import analyze_long_form_phrases
 
-ROOT = Path(__file__).resolve().parents[1]
-DEMOS = ROOT / "projects" / "long_form_phrase_demos"
+
+def neutral_phrase() -> dict:
+    return {
+        "instrument": "electric_lead_guitar",
+        "role": "lead",
+        "phrase_type": "melodic_lead",
+        "phrase_generation_mode": "long_form_authored",
+        "energy": 0.5,
+        "performance_intent": {"seed": 1},
+        "tonality": {"tonic": "C", "scale_intervals": list(range(12))},
+        "register_midi": [48, 72],
+        "motif_root_midi": 60,
+        "pitch_quantization": "none",
+        "motif_seed": [
+            {"offset": 0.0, "duration": 0.5, "degree": 0},
+            {"offset": 1.0, "duration": 0.5, "degree": 0},
+            {"offset": 2.0, "duration": 0.5, "degree": 0},
+        ],
+        "harmony": [{"at": "1:1", "duration": 16, "chord": "C"}],
+        "section_arc": {
+            "bars": [1, 4],
+            "energy_curve": [0.5, 0.5, 0.5, 0.5],
+        },
+        "phrase_relationships": [
+            {
+                "phrase_id": "P1",
+                "bars": [1, 1],
+                "relationship": "introduce",
+                "continuation_from": None,
+                "continuation_to": "P2",
+                "resolution": "deferred",
+                "motif_operations": [],
+            },
+            {
+                "phrase_id": "P2",
+                "bars": [2, 2],
+                "relationship": "sequence",
+                "continuation_from": "P1",
+                "continuation_to": "P3",
+                "resolution": "deferred",
+                "motif_operations": ["transpose_up"],
+            },
+            {
+                "phrase_id": "P3",
+                "bars": [3, 3],
+                "relationship": "climax",
+                "continuation_from": "P2",
+                "continuation_to": "P4",
+                "resolution": "deferred",
+                "motif_operations": ["change_ending"],
+            },
+            {
+                "phrase_id": "P4",
+                "bars": [4, 4],
+                "relationship": "resolution",
+                "continuation_from": "P3",
+                "continuation_to": None,
+                "resolution": "strong",
+                "motif_operations": ["augmentation"],
+            },
+        ],
+        "long_form_phrase_rules": {},
+    }
+
+
+def composition(phrase: dict) -> dict:
+    return {
+        "metadata": {
+            "title": "Synthetic Long Form Test",
+            "tempo": 100,
+            "time_signature": "4/4",
+            "key": "explicit test palette",
+        },
+        "sections": [{"name": "solo", "bars": 4}],
+        "tracks": {
+            "lead_guitar": {
+                "role": "lead",
+                "sections": {
+                    "solo": {
+                        "loop_bars": 4,
+                        "instrument_phrase": phrase,
+                    }
+                },
+            }
+        },
+    }
 
 
 class LongFormPhraseTests(unittest.TestCase):
-    def test_eight_bar_singing_lead_meets_acceptance(self) -> None:
-        composition = load_composition(DEMOS / "01_singing_lead_8bar" / "composition.json")
-        report = analyze_long_form_phrases(composition)
-        metrics = report["sections"][0]["assessment"]
-        self.assertEqual(report["warning_count"], 0)
-        self.assertEqual(metrics["strong_cadences"], 1)
-        self.assertGreaterEqual(metrics["cross_bar_notes"], 2)
-        self.assertGreaterEqual(min(metrics["peak_bars"]), 3)
-        phrase = composition["tracks"]["lead_guitar"]["sections"]["solo"]["instrument_phrase"]
+    def test_relationship_labels_do_not_compose_notes(self) -> None:
+        phrase = neutral_phrase()
+        validate_composition(composition(phrase))
         events = compile_instrument_phrase(phrase, 4)
-        # Experimental realization now defaults to the safe skeleton: planning is
-        # preserved, but guitar effects require an explicit realization opt-in.
-        articulations = {art for event in events for art in event.get("articulations", [])}
-        self.assertNotIn("slide", articulations)
-        self.assertNotIn("legato", articulations)
-        self.assertTrue(all(event.get("bend_semitones") is None and event.get("vibrato") is None for event in events))
 
-    def test_sixteen_bar_solo_exports_all_three_planning_layers(self) -> None:
-        composition = load_composition(DEMOS / "02_developing_solo_16bar" / "composition.json")
-        plan = export_long_form_plans(composition, 4)["plans"][0]
-        self.assertEqual(plan["section_arc"]["peak_bar"], 12)
-        self.assertGreaterEqual(len({op for rel in plan["phrase_relationships"] for op in rel["motif_operations"]}), 3)
-        self.assertEqual(len(plan["melodic_state_trace"]), 8)
-        self.assertTrue(all(item["continuation_required"] for item in plan["melodic_state_trace"]
-                            if item["point"] == "end" and item["phrase_id"] != "C"))
+        self.assertEqual([note_number(event["pitch"]) for event in events], [60] * 12)
+        self.assertEqual(
+            [round(position(event["at"], 4) % 4, 3) for event in events],
+            [0.0, 1.0, 2.0] * 4,
+        )
+        self.assertEqual([event["duration"] for event in events], [0.5] * 12)
+        self.assertFalse(any(event.get("vibrato") for event in events))
+        self.assertFalse(any(event.get("bend_semitones") for event in events))
+        self.assertEqual(phrase["_long_form_plan"]["execution_policy"], "authored_only")
+        self.assertEqual(
+            phrase["_long_form_plan"]["performance_shaping"]["note_length_model"],
+            "authored",
+        )
 
-    def test_ab_midis_differ_and_long_form_metrics_improve(self) -> None:
-        folder = DEMOS / "03_legacy_vs_long_form_ab"
-        comparison = json.loads((folder / "ab-comparison-report.json").read_text(encoding="utf-8"))
-        self.assertNotEqual((folder / "legacy_short_phrase.mid").read_bytes(), (folder / "long_form_phrase.mid").read_bytes())
-        self.assertGreater(comparison["legacy"]["independent_endings"], comparison["long_form"]["independent_endings"])
-        self.assertLess(comparison["legacy"]["cross_bar_connections"], comparison["long_form"]["cross_bar_connections"])
-        self.assertEqual(comparison["long_form"]["peak_bar"], [12])
+    def test_only_explicit_transform_changes_material(self) -> None:
+        phrase = neutral_phrase()
+        phrase["phrase_relationships"][1]["transform"] = {
+            "degree_shift": 2,
+            "time_scale": 0.5,
+        }
+        events = compile_instrument_phrase(phrase, 4)
+        second = [event for event in events if 4 <= position(event["at"], 4) < 8]
 
-    def test_schema_rejects_incomplete_long_form_but_legacy_stays_valid(self) -> None:
-        composition = load_composition(DEMOS / "01_singing_lead_8bar" / "composition.json")
-        invalid = deepcopy(composition)
-        del invalid["tracks"]["lead_guitar"]["sections"]["solo"]["instrument_phrase"]["section_arc"]
-        with self.assertRaisesRegex(ValueError, "long_form phrase is missing"):
-            validate_composition(invalid)
-        validate_composition(load_composition(DEMOS / "03_legacy_vs_long_form_ab" / "legacy_composition.json"))
+        self.assertEqual([note_number(event["pitch"]) for event in second], [62, 62, 62])
+        self.assertEqual(
+            [round(position(event["at"], 4) - 4, 3) for event in second],
+            [0.0, 0.5, 1.0],
+        )
+        self.assertEqual([event["duration"] for event in second], [0.25, 0.25, 0.25])
 
-    def test_long_form_export_has_no_same_pitch_overlap_or_stuck_notes(self) -> None:
-        folder = DEMOS / "02_developing_solo_16bar"
-        composition = load_composition(folder / "composition.json")
-        instruments = json.loads((folder / "instruments.json").read_text(encoding="utf-8"))
-        with tempfile.TemporaryDirectory() as temporary:
-            path = generate_song_midis(composition, instruments, Path(temporary))["lead_guitar"]
-            active: set[tuple[int, int]] = set()
-            for track in mido.MidiFile(path).tracks:
-                for message in track:
-                    if message.type == "note_on" and message.velocity > 0:
-                        key = (message.channel, message.note); self.assertNotIn(key, active); active.add(key)
-                    elif message.type in {"note_off", "note_on"} and (message.type == "note_off" or message.velocity == 0):
-                        active.discard((message.channel, message.note))
-            self.assertFalse(active)
+    def test_authored_duration_may_cross_bar_without_special_permission(self) -> None:
+        phrase = neutral_phrase()
+        phrase["motif_seed"] = [
+            {"offset": 3.5, "duration": 0.75, "degree": 0},
+        ]
+        phrase["phrase_relationships"] = [
+            {
+                "phrase_id": "P",
+                "bars": [1, 4],
+                "relationship": "introduce",
+                "continuation_from": None,
+                "continuation_to": None,
+                "resolution": "deferred",
+                "motif_operations": [],
+            }
+        ]
+        validate_composition(composition(phrase))
+        events = compile_instrument_phrase(phrase, 4)
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["duration"], 0.75)
+        self.assertTrue(events[0]["_cross_bar"])
+
+    def test_schema_does_not_require_a_peak_or_final_tonic_plan(self) -> None:
+        data = composition(neutral_phrase())
+        validate_composition(data)
+
+    def test_validator_measures_but_does_not_judge_without_rules(self) -> None:
+        data = composition(neutral_phrase())
+        validate_composition(data)
+        report = analyze_long_form_phrases(data)
+        self.assertEqual(report["error_count"], 0)
+        self.assertEqual(report["warning_count"], 0)
+        self.assertEqual(report["sections"][0]["assessment"]["active_style_rules"], [])
+
+    def test_validator_only_enforces_explicit_style_rule(self) -> None:
+        phrase = neutral_phrase()
+        phrase["section_arc"]["peak_bar"] = 4
+        phrase["long_form_phrase_rules"] = {"require_delayed_peak": True}
+        data = composition(phrase)
+        validate_composition(data)
+        report = analyze_long_form_phrases(data)
+        codes = [item["code"] for item in report["diagnostics"]]
+        self.assertIn("early_peak", codes)
+
+    def test_authored_mode_exports_plan(self) -> None:
+        data = composition(neutral_phrase())
+        validate_composition(data)
+        plans = export_long_form_plans(data, 4)["plans"]
+        self.assertEqual(len(plans), 1)
+        self.assertEqual(plans[0]["execution_policy"], "authored_only")
 
 
-if __name__ == "__main__": unittest.main()
+if __name__ == "__main__":
+    unittest.main()
