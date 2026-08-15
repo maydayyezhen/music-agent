@@ -4,7 +4,6 @@ from copy import deepcopy
 from typing import Any
 
 from src.midi.pitches import note_number
-
 from src.instruments.common import assign_guitar_note, note, position, root_pc
 from src.melody.tonality import resolve_tonality
 
@@ -15,12 +14,25 @@ RELATIONSHIPS = {
 
 
 def _nearest_scale_pitch(target: int, scale_pcs: set[int], low: int, high: int) -> int:
-    target = max(low, min(high, target))
-    for distance in range(13):
-        for value in (target, target - distance, target + distance):
+    if not low <= target <= high:
+        raise ValueError(f"authored long-form pitch {target} is outside register {low}..{high}")
+    if target % 12 in scale_pcs:
+        return target
+    for distance in range(1, 13):
+        for value in (target - distance, target + distance):
             if low <= value <= high and value % 12 in scale_pcs:
                 return value
-    return target
+    raise ValueError("could not quantize authored long-form pitch inside configured register")
+
+
+def _resolve_pitch(target: int, scale_pcs: set[int], low: int, high: int, quantization: str) -> int:
+    if not low <= target <= high:
+        raise ValueError(f"authored long-form pitch {target} is outside register {low}..{high}")
+    if quantization == "none":
+        return target
+    if quantization == "scale":
+        return _nearest_scale_pitch(target, scale_pcs, low, high)
+    raise ValueError("pitch_quantization must be 'none' or 'scale'")
 
 
 def _chord_at(phrase: dict[str, Any], beat: float, beats_per_bar: int) -> str:
@@ -34,38 +46,91 @@ def _chord_at(phrase: dict[str, Any], beat: float, beats_per_bar: int) -> str:
     return str(selected)
 
 
-def _operations(base: list[dict[str, Any]], relationship: dict[str, Any], phrase_index: int) -> list[dict[str, Any]]:
+def _apply_explicit_transform(
+    base: list[dict[str, Any]],
+    relationship: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Apply only transformations explicitly authored in the project.
+
+    Relationship labels and motif_operations are descriptive metadata. They never
+    change pitch, rhythm, register, phrase endings, or cadence targets by themselves.
+    """
     result = deepcopy(base)
-    operations = set(relationship.get("motif_operations", []))
-    if "fragmentation" in operations:
-        result = result[len(result) // 2:]
-    if "compression" in operations:
-        for item in result:
-            item["offset"] *= 0.75
-            item["duration"] *= 0.75
-    if "augmentation" in operations:
-        for item in result:
-            item["offset"] *= 1.25
-            item["duration"] *= 1.25
-    transpose = 0
-    if "transpose_up" in operations or relationship["relationship"] in {"sequence", "climax"}:
-        transpose += 2 + min(phrase_index, 2)
-    if "transpose_down" in operations:
-        transpose -= 2
+    transform = relationship.get("transform", {})
+    if transform is None:
+        transform = {}
+    if not isinstance(transform, dict):
+        raise ValueError("long-form relationship transform must be an object")
+
+    slice_spec = transform.get("slice")
+    if slice_spec is not None:
+        if (
+            not isinstance(slice_spec, list)
+            or len(slice_spec) != 2
+            or any(not isinstance(value, int) for value in slice_spec)
+        ):
+            raise ValueError("long-form transform.slice must be [start_index, end_index]")
+        start_index, end_index = slice_spec
+        result = result[start_index:end_index]
+        if not result:
+            raise ValueError("long-form transform.slice removed the entire motif")
+
+    time_scale = float(transform.get("time_scale", 1.0))
+    if time_scale <= 0:
+        raise ValueError("long-form transform.time_scale must be positive")
+    offset_shift = float(transform.get("offset_shift_beats", 0.0))
+    degree_shift = int(transform.get("degree_shift", 0))
+
     for item in result:
-        item["degree"] = int(item["degree"]) + transpose
-    if "rhythmic_extension" in operations or "extension" in operations:
-        result[-1]["duration"] += 0.75
-    if "change_ending" in operations:
-        result[-1]["degree"] += 2 if phrase_index % 2 else -1
-    if relationship["relationship"] == "resolution":
-        result[-1]["degree"] = 0
+        item["offset"] = float(item["offset"]) * time_scale + offset_shift
+        item["duration"] = float(item["duration"]) * time_scale
+        if "degree" in item:
+            item["degree"] = int(item["degree"]) + degree_shift
+
+    if result and "ending_degree_delta" in transform:
+        if "degree" not in result[-1]:
+            raise ValueError("ending_degree_delta requires a degree-based final motif note")
+        result[-1]["degree"] = int(result[-1]["degree"]) + int(transform["ending_degree_delta"])
+
+    if result and "ending_duration_delta" in transform:
+        result[-1]["duration"] = float(result[-1]["duration"]) + float(transform["ending_duration_delta"])
+        if result[-1]["duration"] <= 0:
+            raise ValueError("ending_duration_delta produced a non-positive duration")
+
+    overrides = relationship.get("note_overrides", [])
+    if overrides is None:
+        overrides = []
+    if not isinstance(overrides, list):
+        raise ValueError("long-form note_overrides must be a list")
+    for override in overrides:
+        if not isinstance(override, dict) or not isinstance(override.get("index"), int):
+            raise ValueError("long-form note_overrides entries need integer index")
+        index = int(override["index"])
+        if not 0 <= index < len(result):
+            raise ValueError("long-form note_overrides index is outside transformed motif")
+        allowed = {
+            "offset", "duration", "degree", "pitch", "action", "gesture", "velocity",
+            "velocity_delta", "cross_bar_reason", "rest_type_after", "bend_semitones",
+            "slide_from_semitones", "vibrato",
+        }
+        for key, value in override.items():
+            if key != "index":
+                if key not in allowed:
+                    raise ValueError(f"unsupported long-form note override field: {key}")
+                result[index][key] = value
+
     return result
 
 
-def _velocity_delta(action: str, gesture: str, note_index: int, start: float,
-                    beats_per_bar: int, item: dict[str, Any]) -> int:
-    """Make the attack pattern describe guitar technique instead of a flat piano roll."""
+def _velocity_delta(
+    action: str,
+    gesture: str,
+    note_index: int,
+    start: float,
+    beats_per_bar: int,
+    item: dict[str, Any],
+) -> int:
+    """Optional performance shaping. This never runs unless explicitly enabled."""
     if action in {"hammer_on", "pull_off"}:
         delta = -13
     elif action == "slide":
@@ -84,15 +149,12 @@ def _velocity_delta(action: str, gesture: str, note_index: int, start: float,
     return delta + int(item.get("velocity_delta", 0))
 
 
-def _shape_note_lengths(events: list[dict[str, Any]], phrase: dict[str, Any],
-                        beats_per_bar: int) -> list[dict[str, Any]]:
-    """Turn grid durations into guitar-like gates while keeping the line monophonic-safe.
-
-    Repeated pitches need a short release so the next pick can speak. Entering hammer-ons,
-    pull-offs and slides are held almost to the next onset, while target holds keep their
-    authored length. The old implementation simply clipped every note at the next onset,
-    making very different gestures sound like identical rectangular blocks.
-    """
+def _shape_note_lengths(
+    events: list[dict[str, Any]],
+    phrase: dict[str, Any],
+    beats_per_bar: int,
+) -> list[dict[str, Any]]:
+    """Optional guitar gate shaping, enabled only by realization.shape_note_lengths."""
     realization = phrase.get("realization", {})
     repeated_cycle = tuple(float(value) for value in realization.get(
         "repeated_pick_gate_cycle", [0.58, 0.82, 0.68]
@@ -131,88 +193,107 @@ def _shape_note_lengths(events: list[dict[str, Any]], phrase: dict[str, Any],
     return ordered
 
 
-def compile_long_form_lead(phrase: dict[str, Any], beats_per_bar: int,
-                           tuning: list[int], max_fret: int, base_velocity: int) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+def compile_long_form_lead(
+    phrase: dict[str, Any],
+    beats_per_bar: int,
+    tuning: list[int],
+    max_fret: int,
+    base_velocity: int,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Realize an authored long-form melody without inventing compositional content.
+
+    The executor may map authored material to the instrument, but it does not infer a
+    rising contour, delayed peak, sequence transposition, cadence pitch, final tonic,
+    vibrato ending, or other musical decision from semantic labels.
+    """
     arc = phrase["section_arc"]
     relationships = phrase["phrase_relationships"]
     motif = phrase["motif_seed"]
     rules = phrase.get("long_form_phrase_rules", {})
     bars = int(arc["bars"][1]) - int(arc["bars"][0]) + 1
     scale_pcs, tonality = resolve_tonality(phrase)
-    low, high = [int(value) for value in phrase.get("register_midi", [57, 88])]
-    root = _nearest_scale_pitch(int(phrase.get("motif_root_midi", 64)), scale_pcs, low, high)
-    target_pitch = note_number(arc["delayed_target"]["pitch"])
-    target_bar = int(arc["delayed_target"]["bar"])
+    low, high = [int(value) for value in phrase["register_midi"]]
+    motif_root = int(phrase.get("motif_root_midi", 0))
+    quantization = str(phrase.get("pitch_quantization", "none"))
     realization = phrase.get("realization", {})
-    peak_hold_beats = float(realization.get("peak_hold_beats", 1.5))
-    final_resolution_beats = float(realization.get("final_resolution_beats", 1.5))
+    if not isinstance(realization, dict):
+        raise ValueError("long-form realization must be an object")
+
+    energy_curve = arc.get("energy_curve")
+    if energy_curve is None:
+        energy_curve = [float(phrase.get("energy", 0.5))] * bars
+
+    delayed_target = arc.get("delayed_target")
+    target_pitch = note_number(delayed_target["pitch"]) if isinstance(delayed_target, dict) and "pitch" in delayed_target else None
+    target_bar = int(delayed_target["bar"]) if isinstance(delayed_target, dict) and "bar" in delayed_target else None
+
     state: dict[str, Any] = {
-        "active_motif": phrase.get("motif_id", "motif_A"), "motif_version": 0,
-        "current_register": arc["opening_register"], "direction": "ascending",
-        "tension": float(arc["energy_curve"][0]), "resolved": False,
-        "continuation_required": True, "target_pitch": target_pitch, "target_bar": target_bar,
-        "last_interval": 0, "last_note_function": "chord_tone",
-        "phrase_breath_remaining": 0.0, "cadence_strength": 0.0,
+        "active_motif": phrase.get("motif_id", "motif_A"),
+        "motif_version": 0,
+        "current_register": arc.get("opening_register", "unspecified"),
+        "direction": "unknown",
+        "tension": float(energy_curve[0]),
+        "resolved": False,
+        "continuation_required": True,
+        "target_pitch": target_pitch,
+        "target_bar": target_bar,
+        "last_interval": 0,
+        "last_note_function": "unknown",
+        "phrase_breath_remaining": 0.0,
+        "cadence_strength": 0.0,
     }
+
     events: list[dict[str, Any]] = []
     state_trace: list[dict[str, Any]] = []
     preferred_fret = 7
-    previous_pitch = root
-    peak_bar = int(arc["peak_bar"])
+    previous_pitch: int | None = None
 
     for phrase_index, relation in enumerate(relationships):
         start_bar, end_bar = [int(value) for value in relation["bars"]]
-        state_trace.append({"phrase_id": relation["phrase_id"], "point": "start", **deepcopy(state)})
-        transformed = _operations(motif, relation, phrase_index)
+        state_trace.append({
+            "phrase_id": relation["phrase_id"],
+            "point": "start",
+            **deepcopy(state),
+        })
+        transformed = _apply_explicit_transform(motif, relation)
         phrase_start = (start_bar - 1) * beats_per_bar
         phrase_end = end_bar * beats_per_bar
+
         for note_index, item in enumerate(transformed):
-            is_relation_end = note_index == len(transformed) - 1
-            is_peak_target = relation["relationship"] == "climax" and is_relation_end
-            is_final = relation["relationship"] == "resolution" and is_relation_end
             start = phrase_start + float(item["offset"])
-            if is_peak_target:
-                start = max(phrase_start, phrase_end - peak_hold_beats)
-            if is_final:
-                start = max(phrase_start, phrase_end - final_resolution_beats)
-            if start >= phrase_end - 0.1:
-                continue
+            if start < phrase_start - 1e-8 or start >= phrase_end - 1e-8:
+                raise ValueError(
+                    f"authored long-form note starts outside phrase {relation['phrase_id']}: {start}"
+                )
             bar = int(start // beats_per_bar) + 1
-            progress = (bar - 1) / max(1, bars - 1)
-            contour = round((peak_bar - 1) * progress * 5 / max(1, peak_bar - 1))
-            desired = root + int(item["degree"]) + contour
-            if bar < target_bar:
-                desired = min(desired, target_pitch - max(2, target_bar - bar))
-            if bar == target_bar and is_peak_target:
-                desired = target_pitch
-            if bar > peak_bar:
-                desired -= round((bar - peak_bar) * 0.7)
-            if is_final:
-                desired = root
-            pitch = _nearest_scale_pitch(desired, scale_pcs, low, high)
+
+            if "pitch" in item:
+                pitch = note_number(item["pitch"])
+                if not low <= pitch <= high:
+                    raise ValueError(
+                        f"authored long-form pitch {item['pitch']} is outside register {low}..{high}"
+                    )
+            else:
+                desired = motif_root + int(item["degree"])
+                pitch = _resolve_pitch(desired, scale_pcs, low, high, quantization)
+
             chord = _chord_at(phrase, start, beats_per_bar)
             chord_pc = root_pc(chord)
             function = "chord_tone" if pitch % 12 in {
-                chord_pc, (chord_pc + 3) % 12, (chord_pc + 4) % 12, (chord_pc + 7) % 12
+                chord_pc,
+                (chord_pc + 3) % 12,
+                (chord_pc + 4) % 12,
+                (chord_pc + 7) % 12,
             } else "non_chord_tone"
-            duration = min(float(item["duration"]), phrase_end - start)
-            if is_peak_target:
-                duration = min(max(duration, peak_hold_beats), phrase_end - start)
-            if is_final:
-                duration = min(max(duration, final_resolution_beats), phrase_end - start)
-            cross_bar_reason = item.get("cross_bar_reason")
-            bar_end = (int(start // beats_per_bar) + 1) * beats_per_bar
-            if cross_bar_reason:
-                requested = bar_end - start + float(item.get("cross_bar_tail_beats", 0.2))
-                duration = min(max(duration, requested), float(item["duration"]) + 0.5, phrase_end - start)
-            elif not (is_peak_target or is_final):
-                duration = min(duration, bar_end - start)
+
+            authored_duration = float(item["duration"])
+            duration = min(authored_duration, phrase_end - start)
+            if duration <= 0:
+                raise ValueError("authored long-form duration must be positive")
 
             allow_articulations = bool(realization.get("enable_articulations", False))
             allow_pitch_bend = bool(realization.get("enable_pitch_bend", False))
             action = str(item.get("action", "pick")) if allow_articulations else "pick"
-            if is_peak_target or is_final:
-                action = "vibrato"
             arts: list[str] = []
             if action in {"hammer_on", "pull_off"}:
                 arts.extend([action, "legato"])
@@ -222,77 +303,116 @@ def compile_long_form_lead(phrase: dict[str, Any], beats_per_bar: int,
                 arts.append(action)
             elif action == "vibrato":
                 arts.extend(["vibrato", "sustain"])
-            if is_final:
-                arts.append("resolution")
 
             string, fret = assign_guitar_note(pitch, tuning, max_fret, preferred_fret)
             preferred_fret = fret
             gesture = str(item.get("gesture", ""))
-            velocity = (
-                base_velocity
-                + round(float(arc["energy_curve"][bar - 1]) * 10)
-                + (5 if bar == peak_bar else 0)
-                + _velocity_delta(action, gesture, note_index, start, beats_per_bar, item)
-            )
+
+            if "velocity" in item:
+                velocity = int(item["velocity"])
+            else:
+                velocity = base_velocity + round(float(energy_curve[bar - 1]) * 10)
+                if bool(realization.get("velocity_shaping", False)):
+                    velocity += _velocity_delta(action, gesture, note_index, start, beats_per_bar, item)
+                else:
+                    velocity += int(item.get("velocity_delta", 0))
+            velocity = max(1, min(127, velocity))
+
             event = note(
-                pitch, start, duration, velocity, beats_per_bar, arts,
-                _string=string, _fret=fret, _phrase_id=relation["phrase_id"],
-                _relationship=relation["relationship"], _motif_version=phrase_index,
-                _note_function=function, _cross_bar=bool(cross_bar_reason),
-                _cross_bar_reason=cross_bar_reason,
+                pitch,
+                start,
+                duration,
+                velocity,
+                beats_per_bar,
+                arts,
+                _string=string,
+                _fret=fret,
+                _phrase_id=relation["phrase_id"],
+                _relationship=relation["relationship"],
+                _motif_version=phrase_index,
+                _note_function=function,
+                _cross_bar=start + duration > (int(start // beats_per_bar) + 1) * beats_per_bar + 1e-8,
+                _cross_bar_reason=item.get("cross_bar_reason"),
                 _rest_type_after=item.get("rest_type_after"),
-                _gesture=gesture, _action=action,
-                _authored_duration=round(float(item["duration"]), 3),
+                _gesture=gesture,
+                _action=action,
+                _authored_duration=round(authored_duration, 3),
             )
-            if "bend" in arts or "bend_release" in arts:
+
+            if action in {"bend", "bend_release"} and allow_pitch_bend:
                 event["bend_semitones"] = float(item.get("bend_semitones", 2.0))
-            if "slide" in arts and item.get("slide_from_semitones") is not None:
+            if action == "slide" and item.get("slide_from_semitones") is not None:
                 event["slide_from_semitones"] = float(item["slide_from_semitones"])
-            if action in {"hammer_on", "pull_off"} and allow_pitch_bend:
+            if action in {"hammer_on", "pull_off"} and allow_pitch_bend and previous_pitch is not None:
                 transition = previous_pitch - pitch
                 if 0 < abs(transition) <= 2:
                     event["slide_from_semitones"] = float(transition)
                     event["_legato_pitch_fallback"] = True
-            if "vibrato" in arts:
+            if action == "vibrato":
                 event["vibrato"] = item.get(
                     "vibrato",
-                    {"delay": 0.28 if is_peak_target or is_final else 0.35,
-                     "depth": 0.30, "rate": 5.0},
+                    {"delay": 0.35, "depth": 0.30, "rate": 5.0},
                 )
+
             events.append(event)
-            state["last_interval"] = pitch - previous_pitch
-            state["direction"] = "ascending" if pitch > previous_pitch else (
-                "descending" if pitch < previous_pitch else "level"
-            )
+            if previous_pitch is not None:
+                state["last_interval"] = pitch - previous_pitch
+                state["direction"] = (
+                    "ascending" if pitch > previous_pitch else
+                    "descending" if pitch < previous_pitch else
+                    "level"
+                )
             state["last_note_function"] = function
-            state["tension"] = float(arc["energy_curve"][bar - 1])
-            state["current_register"] = "high" if pitch >= 76 else ("mid_high" if pitch >= 69 else "mid")
+            state["tension"] = float(energy_curve[bar - 1])
+            state["current_register"] = (
+                "high" if pitch >= 76 else "mid_high" if pitch >= 69 else "mid"
+            )
             previous_pitch = pitch
+
         resolution = relation["resolution"]
         state["motif_version"] = phrase_index + 1
         state["resolved"] = resolution == "strong"
-        state["continuation_required"] = not state["resolved"] and relation.get("continuation_to") is not None
-        state["cadence_strength"] = 1.0 if resolution == "strong" else (0.45 if resolution == "weak" else 0.15)
-        state["phrase_breath_remaining"] = 0.5 if end_bar in arc.get("breath_bars", []) else 0.0
+        state["continuation_required"] = (
+            not state["resolved"] and relation.get("continuation_to") is not None
+        )
+        state["cadence_strength"] = (
+            1.0 if resolution == "strong" else 0.45 if resolution == "weak" else 0.15
+        )
+        state["phrase_breath_remaining"] = (
+            0.5 if end_bar in arc.get("breath_bars", []) else 0.0
+        )
         state_trace.append({
-            "phrase_id": relation["phrase_id"], "point": "end", **deepcopy(state),
+            "phrase_id": relation["phrase_id"],
+            "point": "end",
+            **deepcopy(state),
             "rest_type": "structural_end" if state["resolved"] else "breath",
         })
 
+    if bool(realization.get("shape_note_lengths", False)):
+        events = _shape_note_lengths(events, phrase, beats_per_bar)
+        note_length_model = "explicit_guitar_gate_cycles"
+    else:
+        events = sorted(events, key=lambda event: position(event["at"], beats_per_bar))
+        note_length_model = "authored"
+
     plan = {
-        "schema_version": 3,
+        "schema_version": 4,
+        "execution_policy": "authored_only",
         "section_arc": deepcopy(arc),
         "phrase_relationships": deepcopy(relationships),
         "melodic_state_trace": state_trace,
         "long_form_phrase_rules": deepcopy(rules),
         "tonality": tonality,
         "performance_shaping": {
-            "velocity_by_action": True,
-            "note_length_model": "guitar_gate_cycles",
-            "general_midi_legato_fallback": "soft_attack_plus_pitch_curve",
+            "velocity_by_action": bool(realization.get("velocity_shaping", False)),
+            "note_length_model": note_length_model,
+            "general_midi_legato_fallback": (
+                "soft_attack_plus_pitch_curve"
+                if bool(realization.get("enable_pitch_bend", False))
+                else "disabled"
+            ),
         },
     }
-    events = _shape_note_lengths(events, phrase, beats_per_bar)
     return events, plan
 
 
