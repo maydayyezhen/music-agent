@@ -176,8 +176,9 @@ Therefore do not define lead density from the lead track alone.
 6. Use nearby connective motion by default in lyrical phrases; reserve larger jumps for a clear registral or structural reason.
 7. End the phrase deliberately. Decide whether it resolves, hangs, repeats, descends, lifts register or leaves a rest.
 8. Check the backing arrangement before deciding how much phrase-level space is safe.
-9. Only after the phrase works as notes and rhythm, add articulation supported by the chosen Profile or source evidence.
-10. Do not invent bend, slide, vibrato, hammer-on or pull-off merely to make the MIDI look more guitar-like.
+9. Only after the phrase works as notes and rhythm, add articulation supported by the chosen Profile, active Material or source evidence.
+10. For an expressive held target, `expressive-target-note` is the current validated Material for conservative bend-arrival behavior.
+11. Do not invent slide, vibrato, hammer-on or pull-off merely to make the MIDI look more guitar-like. Do not assume CC1 is a safe guitar-vibrato fallback without renderer-specific listening validation.
 
 ## Failure modes
 
@@ -223,6 +224,12 @@ Symptom: bends, slides and vibrato are sprayed onto notes without source evidenc
 
 Fix: keep phrase design and articulation separate; only realize gestures that the Profile can support and the musical context motivates.
 
+### Target overshoot masquerading as bend
+
+Symptom: the written note is already the intended target, then pitch bend pushes it above the destination and the lead sounds sharp or alarm-like.
+
+Fix: route the chosen held target through `expressive-target-note`; a bend-in gesture must distinguish the lower base pitch from the intended target pitch.
+
 ## Validation
 
 Before accepting a lead-guitar part, inspect:
@@ -236,7 +243,10 @@ Before accepting a lead-guitar part, inspect:
 - relationship of longer or emphasized targets to the active harmony;
 - whether rests line up with phrase syntax rather than a mechanical periodic mask;
 - whether lead density makes sense against the backing arrangement;
-- whether articulation claims are actually present in the source or supported by the target Profile.
+- whether articulation claims are actually present in the source or supported by the target Profile / active Material;
+- for bend-in targets, whether the realized destination equals the intended musical target instead of overshooting it;
+- whether pitch-wheel reset changes the audible note tail before note-off;
+- whether any CC-based modulation has been validated for the actual renderer.
 
 Do not convert one source's percentages into universal quality targets.
 
@@ -264,17 +274,27 @@ The source's exact melody, note sequence, harmony, phrase transcription and song
 
 ## Current boundary
 
-This Skill currently teaches the **phrase layer only**.
+This Skill still teaches the **phrase layer only**. It now routes expressive held targets to the separate active Material `expressive-target-note` after the phrase itself works.
 
-It does not yet claim a validated grammar for:
+Current validated downstream knowledge includes a conservative bend-arrival semantic pattern:
 
-- bends;
-- bend release;
+```text
+lower base pitch
+-> bend reaches intended target
+-> hold target through note-off
+-> reset pitch wheel after note-off
+```
+
+That downstream Material also records a listening-validated bend-only baseline for the current generic GM workflow.
+
+This Skill does not itself claim a general validated grammar for:
+
+- physical slide technique;
 - vibrato rate or depth;
-- slides;
+- CC1 as a universal vibrato implementation;
 - hammer-ons / pull-offs;
 - pick-direction logic;
 - string / fret choice;
 - feedback or amp interaction.
 
-Those should be promoted only after separate evidence from MIDI that encodes them, tablature/performance data, renderer capability studies, or other inspectable sources.
+Those should be promoted only after separate inspectable evidence and, where realization is renderer-dependent, listening validation on the target Profile.
