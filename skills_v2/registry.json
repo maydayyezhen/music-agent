@@ -16,6 +16,29 @@
       ]
     },
     {
+      "id": "music-practice-navigation",
+      "path": "skills_v2/music_practice_navigation/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "music style",
+        "genre",
+        "style",
+        "soundtrack",
+        "BGM",
+        "background music",
+        "game music",
+        "film music",
+        "dance music",
+        "underscoring",
+        "studio-produced music",
+        "rock",
+        "pop",
+        "jazz",
+        "folk",
+        "reggae"
+      ]
+    },
+    {
       "id": "instrumentation-role-planning",
       "path": "skills_v2/instrumentation_arrangement/SKILL.md",
       "status": "active",
