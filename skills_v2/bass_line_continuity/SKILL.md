@@ -1,6 +1,6 @@
 ---
 name: bass-line-continuity
-description: Write bass parts that feel like continuous musical lines through contour, connective motion, motif identity and controlled articulation instead of root-note pogo or forced note overlap.
+description: Write bass parts as supportive musical lines with harmonic anchors, contour, connective motion, motif identity and controlled articulation instead of default root-note reporting.
 status: active
 ---
 
@@ -8,7 +8,19 @@ status: active
 
 ## Purpose
 
-Use this Skill when an electric or synth bass part should feel connected, supportive and slightly melodic rather than behaving as isolated root-note attacks.
+Use this Skill for ordinary electric/synth bass writing, not only for explicitly "smooth" or "melodic" bass requests.
+
+Default posture:
+
+```text
+bass foundation
++
+small amount of phrase identity
+```
+
+Unless the user or style explicitly asks for a mechanical root pulse, drone, pedal, ostinato or deliberately minimal bass part, the bass should usually contain at least a little contour, approach motion, pickup behavior or recurring melodic identity.
+
+This does **not** mean turning the bass into a solo instrument. The amount of melodic information is an arrangement parameter.
 
 The central distinction is:
 
@@ -73,7 +85,7 @@ Think of a bass phrase as three interacting layers.
 
 Anchors establish the current harmonic floor. They may be roots, chord tones or stable pedal tones.
 
-Anchors should not consume the entire phrase. A line that only reports the root at every beat usually sounds functional but inert.
+Anchors should remain easy to hear, but they should not automatically consume every attack in the phrase. A line that only reports the root at every beat is valid when deliberately requested, but should not be the universal default.
 
 ### 2. Connective motion
 
@@ -90,7 +102,7 @@ For a smooth supportive style, prefer local motion most of the time and make lar
 
 ### 3. Phrase identity
 
-The bass should retain a recognizable rhythmic or contour idea across a section.
+The bass should normally retain at least a small recognizable rhythmic or contour idea across a section.
 
 A motif may be defined by:
 
@@ -100,20 +112,73 @@ A motif may be defined by:
 - characteristic approach movement;
 - occasional octave lift or drop.
 
-Do not randomize every bar. Variation should preserve enough identity that the bass still sounds like one player developing one idea.
+Phrase identity can be extremely small. A recurring two-note pickup, a characteristic descent, one approach gesture before chord changes, or a repeated rhythmic answer can be enough.
+
+Do not randomize every bar. Variation should preserve enough identity that the bass sounds like one player developing one idea.
+
+## Melodic-information budget
+
+Treat bass melodicism as a continuous control, not an on/off style switch.
+
+A useful conceptual scale is:
+
+```text
+0  = pure anchor / pedal / deliberately mechanical pulse
+1  = mostly anchors with one recurring pickup or approach gesture
+2  = supportive contour with several connective notes
+3  = clearly melodic supporting bass with recognizable motif
+4  = bass-forward riff or hook
+5  = foreground / solo bass
+```
+
+For ordinary accompaniment, start around **1-2**, then adjust to the arrangement. This number is a planning aid, not a validator target.
+
+Section examples:
+
+```text
+quiet verse       -> 1
+normal verse      -> 1-2
+open chorus       -> 1-2, possibly stronger contour but not necessarily more notes
+instrumental gap  -> 2-3
+busy lead section -> keep identity, remove nonessential connectors
+breakdown/pedal   -> 0-1 when musically intentional
+```
+
+Do not equate section energy with more bass notes. A chorus may stay rhythmically simple while its contour or register becomes slightly more expressive.
 
 ## Decision procedure
 
-1. Decide the bass role: foundation, smooth melodic support, groove motif, fill, or transition.
+1. Decide the bass role and melodic-information budget for the current section.
 2. Mark the harmonic anchors before writing connective notes.
 3. Give the phrase a contour. Ask where it is going over two or more beats, not only which chord is active now.
-4. Add connective notes only where they create direction into or away from an anchor.
+4. Add a small identity device unless the arrangement intentionally calls for pure anchors: pickup, approach, neighboring motion, characteristic descent/ascent, rhythmic answer or motif fragment.
 5. Prefer small interval motion for smooth supportive bass; reserve octave and larger jumps for emphasis, register reset or a deliberate groove gesture.
 6. Build a repeatable rhythmic identity. Avoid default quarter-note root pulses unless the arrangement actually calls for them.
 7. Allow repeated pitches when rhythm or duration makes them meaningful. Melodic does not mean changing pitch on every attack.
 8. Establish phrase logic before adjusting note overlap. Use gate and release to support the line, not to manufacture a line that is compositionally disconnected.
 9. Coordinate with kick and accompaniment, but do not copy either track mechanically. Bass may anticipate, answer or bridge between their attacks.
-10. In busy arrangements, reduce fill density before removing the bass phrase identity.
+10. In busy arrangements, reduce connector/fill density before removing the bass phrase identity itself.
+
+## Default supporting behavior
+
+For ordinary bass accompaniment, a useful baseline is:
+
+```text
+clear harmonic anchors
++ one small recurring contour idea
++ selective nearby connection
++ rhythmic breathing
+```
+
+Examples of tiny identity devices:
+
+- descend by one or two nearby notes before a recurring anchor;
+- use the same two-note pickup at selected phrase endings;
+- approach the next root from a neighboring semitone or whole tone;
+- repeat an anchor rhythmically, then answer with one nearby note;
+- occasionally lift one structural pitch by an octave, then return.
+
+These are options, not a fixed phrase template.
 
 ## Smooth-support starting behavior
 
@@ -145,11 +210,17 @@ Do not import the short-gate behavior into a smooth bass task automatically. Mot
 
 ## Failure modes
 
-### Root-note pogo
+### Root-note autopilot
 
-Symptom: every beat announces the current root with no phrase direction.
+Symptom: the bass reports the correct root repeatedly because no other behavior was considered.
 
-Fix: keep some anchors, then connect or rhythmically reshape selected positions.
+Fix: keep the anchors and add the smallest useful phrase identity: one pickup, approach, neighboring motion or contour turn. Do not rewrite the whole line.
+
+### Mandatory melodicism
+
+Symptom: the Agent forces passing notes into a section whose musical purpose is pedal-like, minimal or mechanically repetitive.
+
+Fix: set the melodic-information budget to 0-1 intentionally. The rule is "consider phrase identity by default," not "decorate every bar."
 
 ### Fake legato
 
@@ -196,10 +267,16 @@ Useful diagnostics include:
 - motif recurrence or transformed recurrence;
 - anchor-note locations relative to harmony;
 - bass/kick attack coincidence versus independent bass attacks;
-- section-specific density and register.
+- section-specific density, register and melodic-information budget.
+
+Also perform a simple musical check:
+
+> If the bass is soloed, can at least one small phrase tendency be recognized, while the harmonic floor remains obvious?
+
+For a deliberately minimal/pedal bass part, explicitly allow the answer to be "no" rather than manufacturing decorative motion.
 
 Do not turn the statistics from either source study into universal target percentages. They are contrasting evidence that several different MIDI articulations can produce coherent bass motion.
 
 ## Provenance
 
-Promoted from user-provided MIDI studies of two contrasting smooth/groove bass references. Exact source melodies, harmony and full rhythmic masks are intentionally excluded. Reusable source-specific patterns live in `materials_v2/` rather than in this Skill.
+Promoted from user-provided MIDI studies of two contrasting smooth/groove bass references, plus subsequent listening comparison between fretless and finger-bass renderings. The studies support the separation between line design and timbre; they do not establish one mandatory bass sound. Exact source melodies, harmony and full rhythmic masks are intentionally excluded. Reusable source-specific patterns live in `materials_v2/` rather than in this Skill.
