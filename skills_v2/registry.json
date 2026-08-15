@@ -16,6 +16,24 @@
       ]
     },
     {
+      "id": "instrumentation-role-planning",
+      "path": "skills_v2/instrumentation_arrangement/SKILL.md",
+      "status": "active",
+      "default_for_multi_instrument_composition": true,
+      "triggers": [
+        "instrumentation",
+        "arrangement",
+        "instrument roles",
+        "section entry",
+        "section exit",
+        "full song",
+        "compose song",
+        "song composition",
+        "rock",
+        "pop-rock"
+      ]
+    },
+    {
       "id": "acoustic-guitar-continuous-strumming",
       "path": "skills_v2/acoustic_strumming/SKILL.md",
       "status": "active",
