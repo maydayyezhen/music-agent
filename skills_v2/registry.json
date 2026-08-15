@@ -34,6 +34,26 @@
       ]
     },
     {
+      "id": "melody-structure-development",
+      "path": "skills_v2/melody_structure_development/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "melody",
+        "melody writing",
+        "melodic composition",
+        "compose melody",
+        "main melody",
+        "foreground melody",
+        "vocal melody",
+        "lead melody",
+        "hook melody",
+        "melodic phrase",
+        "motif",
+        "phrase development",
+        "melody revision"
+      ]
+    },
+    {
       "id": "acoustic-guitar-continuous-strumming",
       "path": "skills_v2/acoustic_strumming/SKILL.md",
       "status": "active",
