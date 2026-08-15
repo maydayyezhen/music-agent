@@ -35,6 +35,9 @@ The former `skills/` and `references/` knowledge systems, old instrument-researc
 - Acoustic-guitar Materials now include broader `pop-rock` compatibility where the existing behavior already supports it.
 - The shared ambiguous `guitar` render fallback no longer defaults to overdrive; new projects should use explicit guitar mappings.
 - Demo/full-song scripts remain implementation examples only and are not creative templates.
+- `lead-guitar-phrase-design` now teaches phrase-level lead-guitar writing: target-note arrivals, local motion, repeated-pitch permission, duration contrast, phrase-level space and arrangement-aware density.
+- `expressive-target-note` is an active electric-guitar Material for developing important held arrivals through early pitch shaping, target establishment, delayed modulation/vibrato growth and optional same-pitch re-articulation.
+- The user-provided `Still-Got-The-Blues-(For-You)-1.mid` study is registered as explicit-study source evidence for pitch-wheel/CC1 timing relationships; it does not establish universal bend intervals, slide labels or real finger-vibrato rate/depth.
 - `projects/gpt_etude_no_1/` is completed and archived.
 - `skills_v2/chiptune_8bit/` provides the chiptune routing scaffold.
 - `profiles/chiptune_basic/` is a generic scaffold and does not claim real-console accuracy.
