@@ -58,6 +58,21 @@
         "hardware inspired game music",
         "chip performance"
       ]
+    },
+    {
+      "id": "bass-line-continuity",
+      "path": "skills_v2/bass_line_continuity/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "smooth bass",
+        "melodic bass",
+        "connected bass",
+        "flowing bass line",
+        "bass contour",
+        "approach notes",
+        "bass motif",
+        "bass continuity"
+      ]
     }
   ]
 }
