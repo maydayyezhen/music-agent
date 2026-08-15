@@ -1,8 +1,23 @@
 {
   "id": "shreddage_stratus_free",
-  "description": "Capability placeholder. Exact triggers must be filled only from the installed-version manual.",
+  "description": "Capability placeholder for Shreddage 3 Stratus FREE. Exact installed-version trigger mappings remain intentionally conservative.",
   "supports": {"keyswitch": true, "cc": [], "pitch_bend": true, "mpe": false},
   "pitch_bend_range": 2,
+  "performance_capabilities": {
+    "automatic_fingering": true,
+    "virtual_hand_position": true,
+    "preferred_fret_range": true,
+    "string_selection": true,
+    "fretting_modes": ["natural", "sweep", "moving_lead", "polyphonic"],
+    "picking_modes": ["up", "down", "alternate", "economy"],
+    "mono_lead_mode": true,
+    "native_legato_logic": true,
+    "native_strum_engine": true,
+    "partial_strum": true,
+    "graded_palm_mute": true,
+    "release_articulations": true,
+    "attack_density_processing": true
+  },
   "articulations": {
     "sustain": {"fallback": {"gate_ratio": 1.0, "velocity_delta": 0}},
     "palm_mute": {"fallback": {"gate_ratio": 0.55, "velocity_delta": -4}},
