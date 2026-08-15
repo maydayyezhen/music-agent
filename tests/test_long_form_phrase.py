@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import unittest
-from copy import deepcopy
 
 from src.composition import validate_composition
 from src.instruments import compile_instrument_phrase, export_long_form_plans
@@ -132,6 +131,23 @@ class LongFormPhraseTests(unittest.TestCase):
             [0.0, 0.5, 1.0],
         )
         self.assertEqual([event["duration"] for event in second], [0.25, 0.25, 0.25])
+
+    def test_validator_counts_only_explicit_development(self) -> None:
+        plain = composition(neutral_phrase())
+        plain_report = analyze_long_form_phrases(plain)
+        self.assertEqual(
+            plain_report["sections"][0]["assessment"]["motif_developments"],
+            0,
+        )
+
+        transformed_phrase = neutral_phrase()
+        transformed_phrase["phrase_relationships"][1]["transform"] = {"degree_shift": 1}
+        transformed = composition(transformed_phrase)
+        transformed_report = analyze_long_form_phrases(transformed)
+        self.assertEqual(
+            transformed_report["sections"][0]["assessment"]["motif_developments"],
+            1,
+        )
 
     def test_authored_duration_may_cross_bar_without_special_permission(self) -> None:
         phrase = neutral_phrase()
