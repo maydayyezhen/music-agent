@@ -25,11 +25,6 @@
       "path": "render.json",
       "authority": "derived"
     },
-    "vocal_score": {
-      "standard": "Music Agent vocal score JSON",
-      "path": "vocals.json",
-      "authority": "derived"
-    },
     "execution_midi": {
       "standard": "MIDI 1.0 Standard MIDI File",
       "path": "output/full_song.mid",
@@ -38,11 +33,6 @@
     "instrumental_mix": {
       "standard": "PCM WAV",
       "path": "output/mix.wav",
-      "authority": "derived"
-    },
-    "vocal_mix": {
-      "standard": "PCM WAV",
-      "path": "output/vocal_mix.wav",
       "authority": "derived"
     }
   },
