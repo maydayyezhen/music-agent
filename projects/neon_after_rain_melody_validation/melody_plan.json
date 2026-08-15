@@ -1,0 +1,137 @@
+{
+  "schema": "music-agent-melody-structure-plan",
+  "schema_version": 1,
+  "metadata": {
+    "title": "Neon After Rain",
+    "purpose": "Validate generic melody-structure-development with a non-guitar lead",
+    "tempo_bpm": 92,
+    "time_signature": "4/4",
+    "key": "E minor",
+    "bars": 20
+  },
+  "intent": {
+    "style_context": "night-city game BGM / restrained synth-pop",
+    "mood": "cool, reflective, quietly hopeful",
+    "test_question": "Can one small identity survive recurrence, selective variation, register lift, embellishment and return without relying on guitar-specific articulation?"
+  },
+  "instrumentation": [
+    {
+      "instrument": "GM Marimba",
+      "program_zero_based": 12,
+      "channel": 0,
+      "role": "foreground_melody",
+      "sections": "bars 1-20"
+    },
+    {
+      "instrument": "GM Electric Piano 1",
+      "program_zero_based": 4,
+      "channel": 1,
+      "role": "harmonic_bed",
+      "sections": "bars 1-20"
+    }
+  ],
+  "harmony": [
+    {"bar": 1, "chord": "Em9", "voicing": ["E3", "B3", "D4", "F#4", "G4"]},
+    {"bar": 2, "chord": "Cmaj7", "voicing": ["C3", "G3", "B3", "E4"]},
+    {"bar": 3, "chord": "G6", "voicing": ["G2", "D3", "E3", "B3"]},
+    {"bar": 4, "chord": "Dadd9", "voicing": ["D3", "A3", "E4", "F#4"]},
+    {"bar": 5, "chord": "Em9", "voicing": ["E3", "B3", "D4", "F#4", "G4"]},
+    {"bar": 6, "chord": "Cmaj7", "voicing": ["C3", "G3", "B3", "E4"]},
+    {"bar": 7, "chord": "Am7", "voicing": ["A2", "E3", "G3", "C4"]},
+    {"bar": 8, "chord": "B7", "voicing": ["B2", "F#3", "A3", "D#4"]},
+    {"bar": 9, "chord": "Cmaj7", "voicing": ["C3", "G3", "B3", "E4"]},
+    {"bar": 10, "chord": "G/B", "voicing": ["B2", "D3", "G3", "B3"]},
+    {"bar": 11, "chord": "D", "voicing": ["D3", "A3", "D4", "F#4"]},
+    {"bar": 12, "chord": "Em", "voicing": ["E3", "B3", "E4", "G4"]},
+    {"bar": 13, "chord": "Am7", "voicing": ["A2", "E3", "G3", "C4"]},
+    {"bar": 14, "chord": "Cmaj7", "voicing": ["C3", "G3", "B3", "E4"]},
+    {"bar": 15, "chord": "G", "voicing": ["G2", "D3", "G3", "B3"]},
+    {"bar": 16, "chord": "B7", "voicing": ["B2", "F#3", "A3", "D#4"]},
+    {"bar": 17, "chord": "Em", "voicing": ["E3", "B3", "E4", "G4"]},
+    {"bar": 18, "chord": "Cmaj7", "voicing": ["C3", "G3", "B3", "E4"]},
+    {"bar": 19, "chord": "Am7", "voicing": ["A2", "E3", "G3", "C4"]},
+    {"bar": 20, "chord": "Em(add9)", "voicing": ["E3", "B3", "F#4", "G4"]}
+  ],
+  "motif": {
+    "id": "A",
+    "identity_axes": [
+      "rise-fall contour",
+      "syncopated pickup",
+      "arrival after short connective motion"
+    ],
+    "germ_description": "small upward reach to an arrival, then a short retreat; identity survives even when rhythm or interval detail changes",
+    "not_a_fixed_template": true
+  },
+  "phrase_plan": [
+    {
+      "id": "A",
+      "bars": [1, 4],
+      "relationship": "introduce",
+      "operations": ["original", "sequence_fragment", "changed_ending"],
+      "closure": "open"
+    },
+    {
+      "id": "A_prime",
+      "bars": [5, 8],
+      "relationship": "modified_return",
+      "source": "A",
+      "operations": ["rhythm_variation", "one_axis_variation", "sequence_up", "changed_ending"],
+      "closure": "tension"
+    },
+    {
+      "id": "B",
+      "bars": [9, 12],
+      "relationship": "expanded_sequence",
+      "source": "A",
+      "operations": ["sequence_up", "fragment_and_revoice", "register_lift", "release"],
+      "closure": "partial"
+    },
+    {
+      "id": "A_return",
+      "bars": [13, 16],
+      "relationship": "recognizable_return",
+      "source": "A",
+      "operations": ["return_with_ornament", "contour_preserved_rhythm_changed", "sequence_up", "changed_ending"],
+      "closure": "open"
+    },
+    {
+      "id": "Coda",
+      "bars": [17, 20],
+      "relationship": "augmentation_and_resolution",
+      "source": "A",
+      "operations": ["augmentation", "resolution", "final_resolution"],
+      "closure": "strong"
+    }
+  ],
+  "structural_targets": [
+    {"id": "t01", "bar": 1, "pitch": "E5", "role": "phrase_target"},
+    {"id": "t02", "bar": 2, "pitch": "G4", "role": "phrase_target"},
+    {"id": "t03", "bar": 3, "pitch": "G5", "role": "phrase_target"},
+    {"id": "t04", "bar": 4, "pitch": "F#4", "role": "phrase_target"},
+    {"id": "t05", "bar": 5, "pitch": "E5", "role": "phrase_target"},
+    {"id": "t06", "bar": 6, "pitch": "E5", "role": "phrase_target"},
+    {"id": "t07", "bar": 7, "pitch": "G5", "role": "phrase_target"},
+    {"id": "t08", "bar": 8, "pitch": "B4", "role": "phrase_target"},
+    {"id": "t09", "bar": 9, "pitch": "B5", "role": "phrase_target"},
+    {"id": "t10", "bar": 10, "pitch": "B5", "role": "phrase_target"},
+    {"id": "t11", "bar": 11, "pitch": "D6", "role": "climax"},
+    {"id": "t12", "bar": 12, "pitch": "E5", "role": "phrase_target"},
+    {"id": "t13", "bar": 13, "pitch": "E5", "role": "phrase_target"},
+    {"id": "t14", "bar": 14, "pitch": "E5", "role": "phrase_target"},
+    {"id": "t15", "bar": 15, "pitch": "G5", "role": "phrase_target"},
+    {"id": "t16", "bar": 16, "pitch": "F#5", "role": "phrase_target"},
+    {"id": "t17", "bar": 17, "pitch": "E5", "role": "phrase_target"},
+    {"id": "t18", "bar": 18, "pitch": "E5", "role": "phrase_target"},
+    {"id": "t19", "bar": 19, "pitch": "A4", "role": "phrase_target"},
+    {"id": "t20", "bar": 20, "pitch": "E4", "role": "final_resolution"}
+  ],
+  "validation_principles": [
+    "identity before novelty",
+    "selective variation rather than total rewrite",
+    "small local motion as connective default without fixed quotas",
+    "structural and surface tones are distinct",
+    "ornaments serve targets instead of filling every subdivision",
+    "apex timing and note density are descriptive, not universal pass/fail rules",
+    "instrument performance technique remains outside the generic melody layer"
+  ]
+}
