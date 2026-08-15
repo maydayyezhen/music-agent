@@ -28,31 +28,43 @@ The former `skills/` and `references/` knowledge systems, old instrument-researc
 
 ## Current notable state
 
+- `instrumentation-role-planning` is the thin default planning step for multi-instrument composition.
+- Instrumentation and section roles are resolved before detailed Material retrieval.
+- Genre tags are compatibility hints only; genre must not select instruments or imply energy.
+- Broad Material shortlists should be expanded when one instrument family dominates without an explicit user constraint.
+- Acoustic-guitar Materials now include broader `pop-rock` compatibility where the existing behavior already supports it.
+- The shared ambiguous `guitar` render fallback no longer defaults to overdrive; new projects should use explicit guitar mappings.
+- Demo/full-song scripts remain implementation examples only and are not creative templates.
 - `projects/gpt_etude_no_1/` is completed and archived.
-- `skills_v2/chiptune_8bit/` provides the new chiptune routing scaffold.
+- `skills_v2/chiptune_8bit/` provides the chiptune routing scaffold.
 - `profiles/chiptune_basic/` is a generic scaffold and does not claim real-console accuracy.
 - `projects/_templates/chiptune_8bit/` is available for future 8-bit projects.
 - Chiptune Materials must still be learned and validated before activation.
 
 ## Agent rule
 
-For ordinary work, do not search Git history, deleted legacy files, unrelated complete projects or original source material.
-
-Use:
+For ordinary multi-instrument composition, use:
 
 ```text
 user request
 -> active project
 -> skills_v2 registry
--> materials_v2 registry
+-> instrumentation / role / section-entry plan
+-> materials_v2 registry by chosen instrument + role + behavior
 -> relevant profiles / implementation
 -> render / validate / listen
 ```
+
+Do not reverse this into `genre -> Material -> instrument`.
+
+Do not search Git history, deleted legacy files, unrelated complete projects or original source material during ordinary work.
 
 Use `source_library` only for explicit study. Use Git history only for explicit legacy recovery.
 
 ## Execution boundary
 
 The cleanup intentionally preserves implementation under `src/`, `scripts/`, `config/`, `profiles/` and `tests/`. Removing old Agent knowledge must not be confused with removing the deterministic execution layer.
+
+Some preserved demo/full-song scripts may be inspected for schema/API/mechanics when necessary, but their instrumentation, form, harmony, density and mix decisions are not reusable creative authority.
 
 No test-pass claim is recorded in this checkpoint. Run the repository's current validators/tests when a code change requires it.
