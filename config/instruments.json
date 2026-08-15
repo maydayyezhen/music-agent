@@ -14,6 +14,26 @@
   "guitar": {
     "engine": "fluidsynth",
     "bank": 0,
+    "program": 27,
+    "gm_name": "Electric Guitar (clean)",
+    "legacy_ambiguous_alias": true,
+    "selection_note": "Backward-compatible fallback only. New projects should choose an explicit acoustic_guitar, electric_guitar, or overdriven_guitar mapping instead of treating generic guitar as a style decision."
+  },
+  "acoustic_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 25,
+    "gm_name": "Acoustic Guitar (steel)"
+  },
+  "electric_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
+    "program": 27,
+    "gm_name": "Electric Guitar (clean)"
+  },
+  "overdriven_guitar": {
+    "engine": "fluidsynth",
+    "bank": 0,
     "program": 29,
     "gm_name": "Overdriven Guitar"
   },
