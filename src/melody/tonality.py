@@ -35,7 +35,7 @@ def resolve_tonality(phrase: dict[str, Any]) -> tuple[set[int], dict[str, Any]]:
 
     Long-form execution must not invent a key or mode. New authored phrases should
     provide ``tonality``. The old ``key_root`` field remains a compatibility route only
-    when it is itself explicitly present in the project.
+    when both its root and mode are explicitly present in the project.
     """
     raw = phrase.get("tonality")
     legacy = raw is None
@@ -44,9 +44,13 @@ def resolve_tonality(phrase: dict[str, Any]) -> tuple[set[int], dict[str, Any]]:
             raise ValueError(
                 "long-form melody requires explicit tonality or explicit legacy key_root"
             )
+        if "mode" not in phrase:
+            raise ValueError(
+                "legacy long-form key_root requires an explicit mode; no mode is inferred"
+            )
         raw = {
             "tonic": phrase["key_root"],
-            "mode": phrase.get("mode", "natural_minor"),
+            "mode": phrase["mode"],
         }
     if not isinstance(raw, dict):
         raise ValueError("long-form tonality must be an object")
