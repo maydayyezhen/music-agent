@@ -7,6 +7,8 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "skills_v2" / "registry.json"
+MATERIAL_REGISTRY = ROOT / "materials_v2" / "registry.json"
+INSTRUMENT_CONFIG = ROOT / "config" / "instruments.json"
 FORBIDDEN_SKILL_REFERENCES = (
     "references/",
     "skills/",
@@ -77,6 +79,39 @@ class SkillsV2IsolationTests(unittest.TestCase):
             text = path.read_text(encoding="utf-8")
             for forbidden in FORBIDDEN_SKILL_REFERENCES:
                 self.assertNotIn(forbidden, text, f"{skill_id}: {forbidden}")
+
+    def test_instrumentation_planning_is_default_for_multi_instrument_composition(self) -> None:
+        registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
+        rows = {row["id"]: row for row in registry["active_skills"]}
+        planner = rows["instrumentation-role-planning"]
+        self.assertTrue(planner["default_for_multi_instrument_composition"])
+
+    def test_material_retrieval_does_not_use_genre_as_instrument_selector(self) -> None:
+        registry = json.loads(MATERIAL_REGISTRY.read_text(encoding="utf-8"))
+        policy = registry["retrieval_policy"]
+        self.assertTrue(policy["instrumentation_before_materials"])
+        self.assertTrue(policy["genre_tags_are_compatibility_hints"])
+        self.assertTrue(policy["genre_tags_must_not_select_instrumentation"])
+        self.assertTrue(policy["do_not_infer_energy_from_genre"])
+        self.assertTrue(policy["expand_if_one_instrument_family_dominates_without_user_constraint"])
+
+    def test_pop_rock_retrieval_keeps_acoustic_candidates(self) -> None:
+        registry = json.loads(MATERIAL_REGISTRY.read_text(encoding="utf-8"))
+        rows = {row["id"]: row for row in registry["materials"]}
+        for material_id in (
+            "warm-pop-sixteenth-strum",
+            "gentle-steel-strum-picking",
+            "multi-take-acoustic-stack",
+        ):
+            self.assertIn("pop-rock", rows[material_id]["genre_tags"])
+
+    def test_ambiguous_guitar_fallback_is_not_overdriven(self) -> None:
+        config = json.loads(INSTRUMENT_CONFIG.read_text(encoding="utf-8"))
+        self.assertTrue(config["guitar"]["legacy_ambiguous_alias"])
+        self.assertNotEqual(config["guitar"]["program"], config["overdriven_guitar"]["program"])
+        self.assertIn("acoustic_guitar", config)
+        self.assertIn("electric_guitar", config)
+        self.assertIn("overdriven_guitar", config)
 
     def test_removed_legacy_knowledge_paths_stay_removed(self) -> None:
         for path in REMOVED_LEGACY_PATHS:
