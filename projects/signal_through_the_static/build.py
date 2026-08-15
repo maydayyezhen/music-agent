@@ -40,6 +40,49 @@ CHORDS = {
 SECTION_BARS = {name: bars for name, bars, _ in SECTIONS}
 SECTION_ENERGY = {name: energy for name, _, energy in SECTIONS}
 
+# This used to be the vocal topline. It is now instrument-only melodic data:
+# absolute start beat, pitch sequence, duration sequence. Repeated adjacent notes
+# are merged below so the clean guitar phrases breathe like guitar rather than
+# re-articulating every former lyric syllable.
+MELODY_PHRASES: list[tuple[float, list[str], list[float]]] = [
+    (20, ["F#4", "F#4", "A4", "B4", "A4", "F#4", "E4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
+    (30, ["F#4", "A4", "B4", "D5", "B4", "A4", "F#4"], [0.5, 0.75, 0.5, 1.0, 0.75, 0.5, 1.5]),
+    (40, ["E4", "F#4", "A4", "B4", "A4", "F#4", "E4", "F#4", "D4"], [0.5, 0.5, 0.75, 0.75, 0.5, 0.5, 0.5, 0.5, 1.5]),
+    (50, ["F#4", "A4", "B4", "A4", "D5", "B4", "A4"], [0.5, 0.5, 0.75, 0.5, 1.25, 0.75, 1.75]),
+    (66, ["G4", "A4", "B4", "B4", "A4", "G4", "A4", "B4"], [0.75, 0.75, 0.5, 0.5, 0.5, 0.5, 1.0, 1.5]),
+    (74, ["A4", "B4", "D5", "B4", "A4", "B4"], [0.5, 0.5, 1.0, 0.75, 0.5, 2.0]),
+    (82, ["B4", "D5", "E5", "D5", "B4", "A4"], [0.5, 0.5, 0.75, 1.0, 0.5, 2.0]),
+    (90, ["A4", "A4", "B4", "D5", "D5", "B4", "A4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
+    (98, ["F#4", "A4", "B4", "D5", "B4", "A4", "F#4", "E4"], [0.5, 0.5, 0.75, 0.75, 0.75, 0.5, 0.5, 1.25]),
+    (106, ["A4", "B4", "D5", "E5", "D5", "B4"], [0.5, 0.5, 0.75, 0.75, 0.75, 2.0]),
+    (114, ["F#4", "A4", "B4", "D5", "E5", "D5"], [0.5, 0.5, 1.0, 0.5, 1.0, 2.0]),
+    (122, ["B4", "D5", "E5", "D5", "B4", "A4"], [0.75, 0.75, 0.5, 1.0, 0.75, 1.75]),
+    (130, ["A4", "B4", "D5", "E5", "D5", "D5"], [0.75, 0.5, 0.5, 0.75, 0.75, 2.25]),
+    (140, ["F#4", "A4", "B4", "A4", "F#4", "E4", "F#4", "D4"], [0.5, 0.5, 0.75, 1.0, 0.5, 0.5, 0.75, 1.5]),
+    (150, ["F#4", "A4", "B4", "D5", "B4", "A4", "F#4"], [0.5, 0.5, 1.0, 0.5, 0.5, 1.0, 1.5]),
+    (160, ["E4", "F#4", "A4", "B4", "A4", "F#4", "A4", "B4"], [0.5, 0.5, 1.0, 0.75, 0.5, 0.5, 0.5, 1.5]),
+    (170, ["F#4", "A4", "B4", "A4", "D5", "B4", "A4", "F#4"], [0.5, 0.5, 0.75, 0.5, 1.0, 0.75, 0.75, 1.5]),
+    (186, ["G4", "A4", "B4", "D5", "B4", "A4", "B4"], [0.75, 0.5, 0.5, 1.0, 0.5, 0.75, 1.75]),
+    (194, ["A4", "B4", "D5", "B4", "A4", "B4"], [0.5, 0.5, 1.0, 0.75, 0.5, 2.0]),
+    (202, ["B4", "D5", "E5", "D5", "B4", "A4"], [0.5, 0.5, 0.75, 1.0, 0.5, 2.0]),
+    (210, ["B4", "B4", "D5", "E5", "E5", "D5", "B4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
+    (218, ["A4", "B4", "D5", "E5", "D5", "B4", "A4", "F#4"], [0.5, 0.5, 0.75, 0.75, 0.75, 0.5, 0.5, 1.25]),
+    (226, ["B4", "D5", "E5", "F#5", "E5", "D5"], [0.5, 0.5, 0.75, 0.75, 0.75, 2.0]),
+    (234, ["A4", "B4", "D5", "E5", "F#5", "E5"], [0.5, 0.5, 1.0, 0.5, 1.0, 2.0]),
+    (242, ["D5", "E5", "F#5", "E5", "D5", "B4"], [0.75, 0.75, 0.5, 1.0, 0.75, 1.75]),
+    (250, ["B4", "D5", "E5", "F#5", "E5", "E5"], [0.75, 0.5, 0.5, 0.75, 0.75, 2.25]),
+    (273, ["G4", "A4", "B4", "D5", "B4", "A4", "G4", "A4"], [0.75, 0.5, 0.5, 0.5, 0.5, 0.5, 0.75, 1.75]),
+    (281, ["A4", "B4", "D5", "E5", "D5", "B4", "A4", "B4", "D5"], [0.5, 0.75, 0.75, 0.5, 0.5, 0.5, 0.5, 0.5, 1.5]),
+    (290, ["B4", "B4", "D5", "E5", "E5", "D5", "B4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
+    (298, ["A4", "B4", "D5", "E5", "D5", "B4", "A4", "F#4"], [0.5, 0.5, 0.75, 0.75, 0.75, 0.5, 0.5, 1.25]),
+    (306, ["B4", "D5", "E5", "F#5", "E5", "D5"], [0.5, 0.5, 0.75, 0.75, 0.75, 2.0]),
+    (314, ["A4", "B4", "D5", "E5", "F#5", "E5"], [0.5, 0.5, 1.0, 0.5, 1.0, 2.0]),
+    (322, ["D5", "E5", "F#5", "E5", "D5", "B4"], [0.75, 0.75, 0.5, 1.0, 0.75, 1.75]),
+    (330, ["B4", "D5", "E5", "F#5", "E5", "E5"], [0.75, 0.5, 0.5, 0.75, 0.75, 2.25]),
+    (338, ["B4", "D5", "E5", "F#5", "E5", "D5", "B4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
+    (346, ["B4", "D5", "E5", "F#5", "E5", "D5"], [0.75, 0.5, 0.5, 0.75, 0.75, 2.25]),
+]
+
 
 def harmony(name: str) -> list[dict[str, object]]:
     return [
@@ -97,36 +140,7 @@ def lead_intro() -> list[dict[str, object]]:
     ]
 
 
-def chorus_fills(*, lift: bool = False, final: bool = False) -> list[dict[str, object]]:
-    notes: list[dict[str, object]] = [
-        {"at": "4:3", "pitch": "A4", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "4:3.5", "pitch": "B4", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "4:4", "pitch": "D5", "duration": 1.5, "articulations": ["sustain", "accent"]},
-        {"at": "8:3", "pitch": "F#4", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "8:3.5", "pitch": "A4", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "8:4", "pitch": "B4", "duration": 1.5, "articulations": ["sustain", "accent"]},
-        {"at": "12:2.5", "pitch": "A4", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "12:3", "pitch": "F#4", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "12:3.5", "pitch": "E4", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "12:4", "pitch": "D4", "duration": 1.0, "articulations": ["sustain", "accent"]},
-    ]
-    if lift:
-        replacement = {"D5": "F#5", "B4": "D5"}
-        for item in notes:
-            item["pitch"] = replacement.get(str(item["pitch"]), item["pitch"])
-    if final:
-        notes.extend([
-            {"at": "15:3", "pitch": "A4", "duration": 0.5, "articulations": ["sustain"]},
-            {"at": "15:3.5", "pitch": "B4", "duration": 0.5, "articulations": ["sustain"]},
-            {"at": "15:4", "pitch": "D5", "duration": 1.0, "articulations": ["sustain", "accent"]},
-            {"at": "16:2", "pitch": "F#5", "duration": 0.5, "articulations": ["sustain"]},
-            {"at": "16:2.5", "pitch": "E5", "duration": 0.5, "articulations": ["sustain"]},
-            {"at": "16:3", "pitch": "D5", "duration": 2.0, "articulations": ["sustain", "accent"]},
-        ])
-    return notes
-
-
-def bridge_solo() -> list[dict[str, object]]:
+def bridge_solo_first_half() -> list[dict[str, object]]:
     return [
         {"at": "1:1", "pitch": "E4", "duration": 0.5, "articulations": ["sustain"]},
         {"at": "1:1.5", "pitch": "F#4", "duration": 0.5, "articulations": ["sustain"]},
@@ -140,27 +154,85 @@ def bridge_solo() -> list[dict[str, object]]:
         {"at": "4:1", "pitch": "A4", "duration": 0.5, "articulations": ["sustain"]},
         {"at": "4:1.5", "pitch": "F#4", "duration": 0.5, "articulations": ["sustain"]},
         {"at": "4:2", "pitch": "D5", "duration": 2.0, "articulations": ["sustain", "accent"]},
-        {"at": "5:3", "pitch": "E5", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "5:3.5", "pitch": "D5", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "5:4", "pitch": "B4", "duration": 1.0, "articulations": ["sustain"]},
-        {"at": "6:2", "pitch": "F#4", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "6:2.5", "pitch": "A4", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "6:3", "pitch": "B4", "duration": 1.5, "articulations": ["sustain", "accent"]},
-        {"at": "7:1", "pitch": "D5", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "7:1.5", "pitch": "E5", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "7:2", "pitch": "F#5", "duration": 1.5, "articulations": ["sustain", "accent"]},
-        {"at": "8:2", "pitch": "E5", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "8:2.5", "pitch": "D5", "duration": 0.5, "articulations": ["sustain"]},
-        {"at": "8:3", "pitch": "A4", "duration": 1.5, "articulations": ["sustain", "accent"]},
     ]
+
+
+def section_windows() -> dict[str, tuple[float, float]]:
+    windows: dict[str, tuple[float, float]] = {}
+    cursor = 0.0
+    for name, bars, _ in SECTIONS:
+        end = cursor + bars * 4.0
+        windows[name] = (cursor, end)
+        cursor = end
+    return windows
+
+
+def format_at(absolute_beat: float, section_start: float) -> str:
+    local = absolute_beat - section_start
+    bar = int(local // 4.0) + 1
+    beat = (local % 4.0) + 1.0
+    if abs(beat - round(beat)) < 1e-9:
+        beat_text = str(int(round(beat)))
+    else:
+        beat_text = f"{beat:.2f}".rstrip("0").rstrip(".")
+    return f"{bar}:{beat_text}"
+
+
+def melody_motifs_by_section() -> dict[str, list[dict[str, object]]]:
+    windows = section_windows()
+    result: dict[str, list[dict[str, object]]] = {name: [] for name, _, _ in SECTIONS}
+
+    for phrase_start, pitches, durations in MELODY_PHRASES:
+        if len(pitches) != len(durations):
+            raise ValueError("melody phrase pitches and durations must have equal length")
+
+        cursor = float(phrase_start)
+        merged: list[dict[str, object]] = []
+        for pitch, duration in zip(pitches, durations):
+            duration = float(duration)
+            if merged and merged[-1]["pitch"] == pitch:
+                previous_end = float(merged[-1]["absolute_start"]) + float(merged[-1]["duration"])
+                if abs(previous_end - cursor) < 1e-9:
+                    merged[-1]["duration"] = float(merged[-1]["duration"]) + duration
+                    cursor += duration
+                    continue
+            merged.append({"absolute_start": cursor, "pitch": pitch, "duration": duration})
+            cursor += duration
+
+        for note_index, note in enumerate(merged):
+            absolute_start = float(note["absolute_start"])
+            duration = float(note["duration"])
+            section_name = next(
+                (name for name, (start, end) in windows.items() if start <= absolute_start < end),
+                None,
+            )
+            if section_name is None:
+                raise ValueError(f"melody note at absolute beat {absolute_start} is outside the song")
+
+            section_start, section_end = windows[section_name]
+            if absolute_start + duration > section_end + 1e-9:
+                raise ValueError(f"melody note crosses section boundary at beat {absolute_start}")
+
+            articulations = ["sustain"]
+            if duration >= 1.5 or note_index == len(merged) - 1:
+                articulations.append("accent")
+            result[section_name].append({
+                "at": format_at(absolute_start, section_start),
+                "pitch": str(note["pitch"]),
+                "duration": duration,
+                "articulations": articulations,
+            })
+
+    return {name: motif for name, motif in result.items() if motif}
 
 
 def build_composition() -> dict[str, object]:
     tracks: dict[str, dict[str, object]] = {
-        "acoustic_guitar": {"role": "steel-string acoustic guitar rhythmic bed / vocal support", "sections": {}},
+        "acoustic_guitar": {"role": "steel-string acoustic guitar rhythmic bed / primary melody support", "sections": {}},
         "muted_guitar": {"role": "palm-muted electric guitar verse/pre drive", "sections": {}},
         "rhythm_guitar": {"role": "overdriven electric guitar open-section bed", "sections": {}},
-        "lead_guitar": {"role": "electric lead guitar hook / answer / bridge solo", "sections": {}},
+        "melody_guitar": {"role": "clean electric guitar primary melody / vocal substitute", "sections": {}},
+        "lead_guitar": {"role": "distorted electric lead intro hook / bridge handoff / outro tail", "sections": {}},
         "bass": {"role": "finger bass foundation with connective motion", "sections": {}},
         "drums": {"role": "drum kit pulse and section lift", "sections": {}},
         "organ": {"role": "thin sustained harmonic color", "sections": {}},
@@ -173,7 +245,7 @@ def build_composition() -> dict[str, object]:
     for index, name in enumerate(acoustic_sections):
         tracks["acoustic_guitar"]["sections"][name] = clip(phrase(
             "acoustic_guitar",
-            "rhythmic_accompaniment_vocal_support",
+            "rhythmic_accompaniment_primary_melody_support",
             "continuous_strumming",
             max(0.25, SECTION_ENERGY[name] - 0.07),
             1100 + index,
@@ -182,7 +254,7 @@ def build_composition() -> dict[str, object]:
             strumming_pattern="sixteenth_flow",
             strumming_continuity="selective-flow",
             four_bar_variation=True,
-            foreground_aware=False,
+            foreground_aware=True,
             strum_spread=0.032,
             gate=0.88,
             articulations=["sustain"],
@@ -223,28 +295,30 @@ def build_composition() -> dict[str, object]:
             articulations=["sustain", "accent"],
         ), SECTION_BARS[name])
 
+    melody_sections = melody_motifs_by_section()
+    for index, (name, motif) in enumerate(melody_sections.items()):
+        tracks["melody_guitar"]["sections"][name] = clip(phrase(
+            "electric_lead_guitar",
+            "primary_melody",
+            "melodic_lead",
+            min(0.98, SECTION_ENERGY[name] + 0.10),
+            1350 + index,
+            motif=motif,
+            articulations=["sustain"],
+        ), SECTION_BARS[name])
+
+    # The distorted lead no longer competes with the primary melody in choruses.
+    # It frames the song, then hands the bridge to the clean melody guitar.
     tracks["lead_guitar"]["sections"]["intro"] = clip(phrase(
         "electric_lead_guitar", "hook", "melodic_lead", 0.58, 1400,
         motif=lead_intro(), articulations=["sustain"],
     ), 4)
-    tracks["lead_guitar"]["sections"]["chorus_1"] = clip(phrase(
-        "electric_lead_guitar", "answer_phrase", "melodic_lead", 0.68, 1401,
-        motif=chorus_fills(), articulations=["sustain"],
-    ), 12)
-    tracks["lead_guitar"]["sections"]["chorus_2"] = clip(phrase(
-        "electric_lead_guitar", "answer_phrase", "melodic_lead", 0.74, 1402,
-        motif=chorus_fills(lift=True), articulations=["sustain"],
-    ), 12)
     tracks["lead_guitar"]["sections"]["bridge"] = clip(phrase(
-        "electric_lead_guitar", "bridge_solo", "melodic_lead", 0.80, 1403,
-        motif=bridge_solo(), articulations=["sustain"],
+        "electric_lead_guitar", "bridge_solo_handoff", "melodic_lead", 0.77, 1401,
+        motif=bridge_solo_first_half(), articulations=["sustain"],
     ), 8)
-    tracks["lead_guitar"]["sections"]["final_chorus"] = clip(phrase(
-        "electric_lead_guitar", "climax_answer", "melodic_lead", 0.88, 1404,
-        motif=chorus_fills(final=True), articulations=["sustain"],
-    ), 16)
     tracks["lead_guitar"]["sections"]["outro"] = clip(phrase(
-        "electric_lead_guitar", "phrase_tail", "melodic_lead", 0.42, 1405,
+        "electric_lead_guitar", "phrase_tail", "melodic_lead", 0.42, 1402,
         motif=[
             {"at": "1:1", "pitch": "F#4", "duration": 0.5, "articulations": ["sustain"]},
             {"at": "1:1.5", "pitch": "A4", "duration": 0.5, "articulations": ["sustain"]},
@@ -337,78 +411,12 @@ def build_composition() -> dict[str, object]:
     }
 
 
-def vocal_phrase(
-    start_beat: float,
-    words: list[str],
-    pitches: list[str],
-    durations: list[float],
-) -> dict[str, object]:
-    if not (len(words) == len(pitches) == len(durations)):
-        raise ValueError("vocal phrase arrays must be the same length")
-    return {
-        "start_beat": start_beat,
-        "notes": [
-            {"lyric": word, "pitch": pitch, "duration": duration}
-            for word, pitch, duration in zip(words, pitches, durations)
-        ],
-    }
-
-
-def build_vocals() -> dict[str, object]:
-    lines: list[tuple[float, list[str], list[str], list[float]]] = [
-        (20, ["City", "lights", "are", "bleeding", "through", "the", "rain"], ["F#4", "F#4", "A4", "B4", "A4", "F#4", "E4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
-        (30, ["Your", "name", "keeps", "ringing", "in", "the", "wires"], ["F#4", "A4", "B4", "D5", "B4", "A4", "F#4"], [0.5, 0.75, 0.5, 1.0, 0.75, 0.5, 1.5]),
-        (40, ["I", "was", "running", "circles", "from", "the", "same", "old", "fear"], ["E4", "F#4", "A4", "B4", "A4", "F#4", "E4", "F#4", "D4"], [0.5, 0.5, 0.75, 0.75, 0.5, 0.5, 0.5, 0.5, 1.5]),
-        (50, ["Now", "the", "night", "is", "opening", "like", "fire"], ["F#4", "A4", "B4", "A4", "D5", "B4", "A4"], [0.5, 0.5, 0.75, 0.5, 1.25, 0.75, 1.75]),
-        (66, ["Hold", "on", "do", "not", "let", "the", "moment", "fall"], ["G4", "A4", "B4", "B4", "A4", "G4", "A4", "B4"], [0.75, 0.75, 0.5, 0.5, 0.5, 0.5, 1.0, 1.5]),
-        (74, ["We", "are", "closer", "than", "we", "think"], ["A4", "B4", "D5", "B4", "A4", "B4"], [0.5, 0.5, 1.0, 0.75, 0.5, 2.0]),
-        (82, ["Hear", "the", "room", "begin", "to", "sing"], ["B4", "D5", "E5", "D5", "B4", "A4"], [0.5, 0.5, 0.75, 1.0, 0.5, 2.0]),
-        (90, ["Send", "me", "a", "signal", "through", "the", "static"], ["A4", "A4", "B4", "D5", "D5", "B4", "A4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
-        (98, ["I", "can", "hear", "you", "under", "all", "the", "noise"], ["F#4", "A4", "B4", "D5", "B4", "A4", "F#4", "E4"], [0.5, 0.5, 0.75, 0.75, 0.75, 0.5, 0.5, 1.25]),
-        (106, ["If", "the", "whole", "world", "turns", "automatic"], ["A4", "B4", "D5", "E5", "D5", "B4"], [0.5, 0.5, 0.75, 0.75, 0.75, 2.0]),
-        (114, ["I", "will", "follow", "that", "imperfect", "voice"], ["F#4", "A4", "B4", "D5", "E5", "D5"], [0.5, 0.5, 1.0, 0.5, 1.0, 2.0]),
-        (122, ["Stay", "until", "the", "morning", "finds", "us"], ["B4", "D5", "E5", "D5", "B4", "A4"], [0.75, 0.75, 0.5, 1.0, 0.75, 1.75]),
-        (130, ["Maybe", "we", "are", "not", "too", "late"], ["A4", "B4", "D5", "E5", "D5", "D5"], [0.75, 0.5, 0.5, 0.75, 0.75, 2.25]),
-        (140, ["I", "kept", "every", "answer", "in", "a", "locked", "room"], ["F#4", "A4", "B4", "A4", "F#4", "E4", "F#4", "D4"], [0.5, 0.5, 0.75, 1.0, 0.5, 0.5, 0.75, 1.5]),
-        (150, ["Made", "a", "habit", "out", "of", "missing", "trains"], ["F#4", "A4", "B4", "D5", "B4", "A4", "F#4"], [0.5, 0.5, 1.0, 0.5, 0.5, 1.0, 1.5]),
-        (160, ["Then", "the", "window", "shakes", "and", "starts", "to", "move"], ["E4", "F#4", "A4", "B4", "A4", "F#4", "A4", "B4"], [0.5, 0.5, 1.0, 0.75, 0.5, 0.5, 0.5, 1.5]),
-        (170, ["And", "I", "want", "to", "try", "this", "road", "again"], ["F#4", "A4", "B4", "A4", "D5", "B4", "A4", "F#4"], [0.5, 0.5, 0.75, 0.5, 1.0, 0.75, 0.75, 1.5]),
-        (186, ["Hold", "on", "the", "distance", "is", "getting", "small"], ["G4", "A4", "B4", "D5", "B4", "A4", "B4"], [0.75, 0.5, 0.5, 1.0, 0.5, 0.75, 1.75]),
-        (194, ["We", "are", "closer", "than", "we", "think"], ["A4", "B4", "D5", "B4", "A4", "B4"], [0.5, 0.5, 1.0, 0.75, 0.5, 2.0]),
-        (202, ["Hear", "the", "room", "begin", "to", "sing"], ["B4", "D5", "E5", "D5", "B4", "A4"], [0.5, 0.5, 0.75, 1.0, 0.5, 2.0]),
-        (210, ["Send", "me", "a", "signal", "through", "the", "static"], ["B4", "B4", "D5", "E5", "E5", "D5", "B4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
-        (218, ["I", "can", "hear", "you", "under", "all", "the", "noise"], ["A4", "B4", "D5", "E5", "D5", "B4", "A4", "F#4"], [0.5, 0.5, 0.75, 0.75, 0.75, 0.5, 0.5, 1.25]),
-        (226, ["If", "the", "whole", "world", "turns", "automatic"], ["B4", "D5", "E5", "F#5", "E5", "D5"], [0.5, 0.5, 0.75, 0.75, 0.75, 2.0]),
-        (234, ["I", "will", "follow", "that", "imperfect", "voice"], ["A4", "B4", "D5", "E5", "F#5", "E5"], [0.5, 0.5, 1.0, 0.5, 1.0, 2.0]),
-        (242, ["Stay", "until", "the", "morning", "finds", "us"], ["D5", "E5", "F#5", "E5", "D5", "B4"], [0.75, 0.75, 0.5, 1.0, 0.75, 1.75]),
-        (250, ["Maybe", "we", "are", "not", "too", "late"], ["B4", "D5", "E5", "F#5", "E5", "E5"], [0.75, 0.5, 0.5, 0.75, 0.75, 2.25]),
-        (273, ["Maybe", "I", "do", "not", "need", "a", "map", "tonight"], ["G4", "A4", "B4", "D5", "B4", "A4", "G4", "A4"], [0.75, 0.5, 0.5, 0.5, 0.5, 0.5, 0.75, 1.75]),
-        (281, ["One", "small", "sound", "can", "pull", "me", "back", "to", "life"], ["A4", "B4", "D5", "E5", "D5", "B4", "A4", "B4", "D5"], [0.5, 0.75, 0.75, 0.5, 0.5, 0.5, 0.5, 0.5, 1.5]),
-        (290, ["Send", "me", "a", "signal", "through", "the", "static"], ["B4", "B4", "D5", "E5", "E5", "D5", "B4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
-        (298, ["I", "can", "hear", "you", "under", "all", "the", "noise"], ["A4", "B4", "D5", "E5", "D5", "B4", "A4", "F#4"], [0.5, 0.5, 0.75, 0.75, 0.75, 0.5, 0.5, 1.25]),
-        (306, ["If", "the", "whole", "world", "turns", "automatic"], ["B4", "D5", "E5", "F#5", "E5", "D5"], [0.5, 0.5, 0.75, 0.75, 0.75, 2.0]),
-        (314, ["I", "will", "follow", "that", "imperfect", "voice"], ["A4", "B4", "D5", "E5", "F#5", "E5"], [0.5, 0.5, 1.0, 0.5, 1.0, 2.0]),
-        (322, ["Stay", "until", "the", "morning", "finds", "us"], ["D5", "E5", "F#5", "E5", "D5", "B4"], [0.75, 0.75, 0.5, 1.0, 0.75, 1.75]),
-        (330, ["Maybe", "we", "are", "not", "too", "late"], ["B4", "D5", "E5", "F#5", "E5", "E5"], [0.75, 0.5, 0.5, 0.75, 0.75, 2.25]),
-        (338, ["Send", "me", "a", "signal", "through", "the", "static"], ["B4", "D5", "E5", "F#5", "E5", "D5", "B4"], [0.5, 0.5, 0.5, 1.0, 0.75, 0.5, 1.75]),
-        (346, ["Maybe", "we", "are", "not", "too", "late"], ["B4", "D5", "E5", "F#5", "E5", "D5"], [0.75, 0.5, 0.5, 0.75, 0.75, 2.25]),
-    ]
-    return {
-        "enabled": True,
-        "language": "en",
-        "engine": "soulx_singer",
-        "device": "cuda",
-        "seed": 8086,
-        "phrases": [vocal_phrase(*line) for line in lines],
-        "mix": {"volume_db": -2.5, "pan": 0.0, "mute": False},
-    }
-
-
 def build_instruments() -> dict[str, object]:
     return {
         "acoustic_guitar": {"engine": "fluidsynth", "bank": 0, "program": 25},
         "muted_guitar": {"engine": "fluidsynth", "bank": 0, "program": 28},
         "rhythm_guitar": {"engine": "fluidsynth", "bank": 0, "program": 29},
+        "melody_guitar": {"engine": "fluidsynth", "bank": 0, "program": 27},
         "lead_guitar": {"engine": "fluidsynth", "bank": 0, "program": 30},
         "bass": {"engine": "fluidsynth", "bank": 0, "program": 33},
         "drums": {"engine": "fluidsynth", "channel": 10, "bank": 128, "program": 0},
@@ -424,10 +432,11 @@ def build_render() -> dict[str, object]:
         "tail_seconds": 4,
         "master_peak_db": -1,
         "mix": {
-            "acoustic_guitar": {"volume_db": -7.0, "pan": -0.32, "mute": False},
+            "acoustic_guitar": {"volume_db": -7.5, "pan": -0.34, "mute": False},
             "muted_guitar": {"volume_db": -9.0, "pan": 0.30, "mute": False},
-            "rhythm_guitar": {"volume_db": -8.0, "pan": 0.42, "mute": False},
-            "lead_guitar": {"volume_db": -4.2, "pan": 0.10, "mute": False},
+            "rhythm_guitar": {"volume_db": -8.2, "pan": 0.42, "mute": False},
+            "melody_guitar": {"volume_db": -3.2, "pan": -0.05, "mute": False},
+            "lead_guitar": {"volume_db": -5.4, "pan": 0.14, "mute": False},
             "bass": {"volume_db": -5.0, "pan": 0.0, "mute": False},
             "drums": {"volume_db": -6.5, "pan": 0.0, "mute": False},
             "organ": {"volume_db": -12.0, "pan": -0.14, "mute": False},
@@ -440,7 +449,6 @@ def write_project_files() -> None:
         "composition.json": build_composition(),
         "instruments.json": build_instruments(),
         "render.json": build_render(),
-        "vocals.json": build_vocals(),
     }
     for filename, data in files.items():
         (PROJECT / filename).write_text(
@@ -448,6 +456,11 @@ def write_project_files() -> None:
             encoding="utf-8",
         )
         print(f"[OK] wrote {PROJECT / filename}")
+
+    stale_vocals = PROJECT / "vocals.json"
+    if stale_vocals.exists():
+        stale_vocals.unlink()
+        print(f"[OK] removed stale {stale_vocals}")
 
 
 def run(command: list[str]) -> None:
@@ -457,22 +470,21 @@ def run(command: list[str]) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build Signal Through the Static from its project-local song specification.")
+    parser = argparse.ArgumentParser(
+        description="Build Signal Through the Static with clean electric guitar as the primary melody."
+    )
     parser.add_argument("--write-only", action="store_true", help="write project JSON files but do not render")
-    parser.add_argument("--with-vocals", action="store_true", help="render the optional English SoulX vocal score too")
     args = parser.parse_args()
 
     write_project_files()
     bars = sum(bars for _, bars, _ in SECTIONS)
     seconds = bars * 4 * 60.0 / TEMPO
     print(f"[INFO] score length: {bars} bars, {seconds:.2f}s before render tail")
+    print("[INFO] primary melody: clean electric guitar (GM program 27); no vocal renderer")
     if args.write_only:
         return 0
 
-    command = [sys.executable, str(ROOT / "scripts" / "render_song.py"), PROJECT_NAME]
-    if args.with_vocals:
-        command.append("--with-vocals")
-    run(command)
+    run([sys.executable, str(ROOT / "scripts" / "render_song.py"), PROJECT_NAME])
 
     for script in ("critic_instruments.py", "critic_complexity.py", "critic_continuity.py"):
         run([sys.executable, str(ROOT / "scripts" / script), PROJECT_NAME, "--write"])
