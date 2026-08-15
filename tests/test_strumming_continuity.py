@@ -45,6 +45,24 @@ class StrummingContinuityTests(unittest.TestCase):
         self.assertEqual(len(groups), 12)
         self.assertTrue(all("_hand_step" in event and "_strum_action" in event for event in events))
 
+    def test_generic_continuous_strumming_does_not_default_to_breathing_gaps(self):
+        source = phrase()
+        source.pop("strumming_pattern")
+        compile_instrument_phrase(source, 4)
+        bars = source["_strumming_debug"]["bars"]
+        self.assertTrue(all(bar["pattern_id"] == "steady_eighths" for bar in bars))
+        self.assertTrue(all(bar["sounding_strum_count"] == 8 for bar in bars))
+        self.assertTrue(all("air_strum" not in bar["actions"] for bar in bars))
+
+    def test_explicit_breathing_mode_can_request_gaps_without_a_pattern_id(self):
+        source = phrase()
+        source.pop("strumming_pattern")
+        source["strumming_continuity"] = "breathing"
+        compile_instrument_phrase(source, 4)
+        bars = source["_strumming_debug"]["bars"]
+        self.assertTrue(all(bar["pattern_id"] == "verse_a" for bar in bars))
+        self.assertTrue(all("air_strum" in bar["actions"] for bar in bars))
+
     def test_hand_direction_continues_across_bar_and_chord(self):
         source = phrase(pattern="steady_eighths")
         events = compile_instrument_phrase(source, 4)
@@ -88,6 +106,15 @@ class StrummingContinuityTests(unittest.TestCase):
             self.assertEqual(bar["hand_motion_count"], 16)
             self.assertEqual(bar["hand_motion"], ["down" if step % 2 == 0 else "up" for step in range(16)])
             self.assertIn("air_strum", bar["actions"])
+
+    def test_generic_sixteenth_continuous_strumming_starts_dense_not_gapped(self):
+        source = sixteenth_phrase()
+        source.pop("strumming_pattern")
+        compile_instrument_phrase(source, 4)
+        bars = source["_strumming_debug"]["bars"]
+        self.assertTrue(all(bar["pattern_id"] == "sixteenth_continuous" for bar in bars))
+        self.assertEqual(bars[0]["sounding_strum_count"], 16)
+        self.assertNotIn("air_strum", bars[0]["actions"])
 
     def test_four_bar_variants_are_related_not_random_replacements(self):
         source = sixteenth_phrase()
