@@ -56,14 +56,41 @@ projects/        only the project explicitly being edited
 2. root `SKILL.md`
 3. the user's request and active project
 4. `skills_v2/registry.json`
-5. relevant Skill files only
-6. for multi-instrument composition, resolve instrumentation + role + section entry/exit before Material retrieval
-7. `materials_v2/registry.json`
-8. relevant Material cards for chosen instruments/roles
-9. required Profiles
-10. `docs/agent_api/` when execution mechanics are needed
+5. if the work is long, multi-section, multi-instrument or otherwise context-heavy, consider `complex-composition-orchestration` before detailed writing when the host supports subagents
+6. relevant Skill files only
+7. for multi-instrument composition, resolve instrumentation + role + section entry/exit before Material retrieval
+8. `materials_v2/registry.json`
+9. relevant Material cards for chosen instruments/roles
+10. required Profiles
+11. `docs/agent_api/` when execution mechanics are needed
 
 Do not browse examples to discover schemas or APIs.
+
+## Host-agent orchestration rule
+
+This repository is intended to be used by capable host coding agents such as Codex-style harnesses. The repository should not grow its own custom multi-agent runtime merely to compose music.
+
+For short or narrow tasks, work directly.
+
+For long, multi-section, multi-instrument or high-detail composition, a host that supports subagents should consider delegating focused musical responsibilities using `complex-composition-orchestration`.
+
+```text
+host agent
+-> shared project blueprint
+-> minimum useful set of focused subagents
+-> structured active-project artifacts
+-> parent integration
+-> performance realization
+-> build / render / inspect / patch
+```
+
+Prefer musical responsibility ownership over arbitrary time slicing. A melody worker should usually own foreground melody development across the piece rather than "minute one" while another unrelated worker writes "minute two".
+
+The parent host agent remains responsible for final coherence. Child completion is not acceptance. The parent may thin, delete, rewrite or return a narrow repair task when parts conflict.
+
+Do not satisfy a long duration target primarily by copying low-information material. More duration should create room for intentional recurrence, development, role evolution, contrast, return and breathing space without forcing novelty every few bars.
+
+Every child remains inside the same creative-context firewall. Do not give subagents unrelated projects, tests, source studies or implementation internals merely because parallel context is available.
 
 ## Arrangement routing rule
 
