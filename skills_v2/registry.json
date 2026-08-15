@@ -39,6 +39,21 @@
       ]
     },
     {
+      "id": "britpop-style-routing",
+      "path": "skills_v2/britpop_style/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "britpop",
+        "brit pop",
+        "british pop rock",
+        "british guitar pop",
+        "90s british rock",
+        "1990s british rock",
+        "british melodic rock",
+        "british melodic pop"
+      ]
+    },
+    {
       "id": "instrumentation-role-planning",
       "path": "skills_v2/instrumentation_arrangement/SKILL.md",
       "status": "active",
