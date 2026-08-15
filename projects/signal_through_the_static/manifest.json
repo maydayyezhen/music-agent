@@ -1,0 +1,50 @@
+{
+  "schema": "music-agent-project-facade",
+  "schema_version": 1,
+  "project": {
+    "title": "Signal Through the Static"
+  },
+  "artifacts": {
+    "song_spec": {
+      "standard": "Python project-local song specification",
+      "path": "build.py",
+      "authority": "authoritative"
+    },
+    "composition": {
+      "standard": "Music Agent V2 composition JSON",
+      "path": "composition.json",
+      "authority": "derived"
+    },
+    "instrument_routing": {
+      "standard": "Music Agent instrument routing JSON",
+      "path": "instruments.json",
+      "authority": "derived"
+    },
+    "render_config": {
+      "standard": "Music Agent render configuration JSON",
+      "path": "render.json",
+      "authority": "derived"
+    },
+    "vocal_score": {
+      "standard": "Music Agent vocal score JSON",
+      "path": "vocals.json",
+      "authority": "derived"
+    },
+    "execution_midi": {
+      "standard": "MIDI 1.0 Standard MIDI File",
+      "path": "output/full_song.mid",
+      "authority": "derived"
+    },
+    "instrumental_mix": {
+      "standard": "PCM WAV",
+      "path": "output/mix.wav",
+      "authority": "derived"
+    },
+    "vocal_mix": {
+      "standard": "PCM WAV",
+      "path": "output/vocal_mix.wav",
+      "authority": "derived"
+    }
+  },
+  "conversion_reports": []
+}
