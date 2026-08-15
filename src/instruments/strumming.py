@@ -18,6 +18,7 @@ ALLOWED_STRUM_ACTIONS = {
 
 PATTERNS: dict[str, list[str]] = {
     "single_hit": ["accent_strum", "air_strum", "air_strum", "air_strum", "air_strum", "air_strum", "air_strum", "air_strum"],
+    # Explicit breathing family. Do not use this merely because a part is a verse.
     "verse_a": ["partial_strum", "air_strum", "partial_strum", "light_upstroke", "air_strum", "light_upstroke", "accent_strum", "light_upstroke"],
     "steady_eighths": ["partial_strum", "light_upstroke", "muted_strum", "light_upstroke", "partial_strum", "light_upstroke", "accent_strum", "light_upstroke"],
     "classic_pop": ["partial_strum", "air_strum", "accent_strum", "light_upstroke", "air_strum", "light_upstroke", "partial_strum", "light_upstroke"],
@@ -25,17 +26,36 @@ PATTERNS: dict[str, list[str]] = {
     "bass_continuous": ["bass_note", "air_strum", "partial_strum", "light_upstroke", "bass_note", "light_upstroke", "accent_strum", "light_upstroke"],
 }
 
-# This is an original neutral skeleton, not a transcription of any reference song.
+# These are original neutral skeletons, not transcriptions of any reference song.
 SIXTEENTH_PATTERNS: dict[str, list[str]] = {
+    # Selective-sounding family with deliberate air strokes.
     "sixteenth_flow": [
         "full_strum", "air_strum", "partial_strum", "single_string_restrike",
         "partial_strum", "air_strum", "partial_strum", "ghost_strum",
         "full_strum", "single_string_restrike", "partial_strum", "air_strum",
         "muted_strum", "partial_strum", "air_strum", "partial_strum",
     ],
+    # Dense connected family. Every hand position may create an audible contact, but
+    # weak positions use narrow/ghost/restrike actions rather than sixteen block chords.
+    "sixteenth_continuous": [
+        "full_strum", "single_string_restrike", "partial_strum", "single_string_restrike",
+        "partial_strum", "ghost_strum", "partial_strum", "single_string_restrike",
+        "full_strum", "single_string_restrike", "partial_strum", "single_string_restrike",
+        "muted_strum", "partial_strum", "single_string_restrike", "partial_strum",
+    ],
 }
 
 SOUNDING_ACTIONS = set(PATTERNS["chorus_open"] + PATTERNS["steady_eighths"] + PATTERNS["bass_continuous"]) - {"air_strum"}
+
+
+def _requests_breathing_gaps(phrase: dict[str, Any]) -> bool:
+    mode = str(
+        phrase.get(
+            "strumming_continuity",
+            phrase.get("density_mode", phrase.get("spacing_mode", "")),
+        )
+    ).lower()
+    return any(token in mode for token in ("breathing", "spaced", "sparse", "gapped", "air"))
 
 
 def _pattern_ids(phrase: dict[str, Any], bars: int) -> list[str]:
@@ -55,8 +75,12 @@ def _pattern_ids(phrase: dict[str, Any], bars: int) -> list[str]:
             pattern_ids = ["chorus_open"]
         elif "bass" in phrase_type:
             pattern_ids = ["bass_continuous"]
-        else:
+        elif _requests_breathing_gaps(phrase):
             pattern_ids = ["verse_a"]
+        else:
+            # Generic continuous strumming should actually be continuous. Air strokes
+            # are a texture choice, not an automatic verse/default identity.
+            pattern_ids = ["steady_eighths"]
     unknown = [name for name in pattern_ids if name not in PATTERNS]
     if unknown:
         raise ValueError(f"unknown strumming pattern(s): {unknown}")
@@ -163,9 +187,11 @@ def _thin_for_foreground(
 
 
 def _build_sixteenth_grid(phrase: dict[str, Any], bars: int) -> dict[str, Any]:
-    configured = phrase.get("strumming_pattern", phrase.get("strumming_patterns", "sixteenth_flow"))
+    configured = phrase.get("strumming_pattern", phrase.get("strumming_patterns"))
     if isinstance(configured, list):
-        configured = configured[0] if configured else "sixteenth_flow"
+        configured = configured[0] if configured else None
+    if configured is None:
+        configured = "sixteenth_flow" if _requests_breathing_gaps(phrase) else "sixteenth_continuous"
     pattern_id = str(configured)
     if pattern_id not in SIXTEENTH_PATTERNS:
         raise ValueError(f"unknown sixteenth strumming pattern: {pattern_id!r}")
