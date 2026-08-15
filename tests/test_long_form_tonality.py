@@ -10,6 +10,10 @@ class LongFormTonalityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "explicit tonality"):
             resolve_tonality({})
 
+    def test_legacy_key_root_does_not_infer_minor_mode(self) -> None:
+        with self.assertRaisesRegex(ValueError, "explicit mode"):
+            resolve_tonality({"key_root": "C"})
+
     def test_explicit_tonality_requires_tonic(self) -> None:
         with self.assertRaisesRegex(ValueError, "tonality.tonic"):
             resolve_tonality({"tonality": {"mode": "major"}})
