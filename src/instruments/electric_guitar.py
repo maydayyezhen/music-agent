@@ -6,6 +6,7 @@ from .common import assign_guitar_chord, assign_guitar_note, harmony, note, powe
 from .strumming import compile_continuous_strumming
 
 STANDARD_TUNING = [40, 45, 50, 55, 59, 64]  # E2 A2 D3 G3 B3 E4
+LONG_FORM_MODES = {"long_form_authored", "long_form_experimental", "long_form"}
 
 
 def _settings(phrase: dict[str, Any]) -> tuple[list[int], int, int]:
@@ -116,7 +117,7 @@ def compile_phrase(phrase: dict[str, Any], beats_per_bar: int) -> list[dict[str,
     if phrase_type == "open_power_chords":
         return _rhythm_chords(phrase, beats_per_bar, True)
     if phrase_type in {"melodic_lead", "lead_melody"}:
-        if phrase.get("phrase_generation_mode", "legacy_stable") in {"long_form_experimental", "long_form"}:
+        if phrase.get("phrase_generation_mode", "legacy_stable") in LONG_FORM_MODES:
             return _long_form_lead(phrase, beats_per_bar)
         return _lead(phrase, beats_per_bar)
     raise ValueError(f"unsupported electric guitar phrase_type: {phrase_type!r}")
