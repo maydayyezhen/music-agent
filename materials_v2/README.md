@@ -43,16 +43,73 @@ The directories may grow gradually. Do not create empty ceremony before useful m
 
 ## Retrieval policy
 
-For an ordinary composition task:
+For an ordinary multi-instrument composition task, Material retrieval is **not** the first orchestration step.
 
-1. read `registry.json`;
-2. search by instrument, role, texture, energy, genre and current failure;
-3. retrieve several cards from different relevant categories;
-4. compare compatible and contrasting candidates;
-5. combine useful features rather than following one card mechanically;
-6. retrieve more material when the first result sounds generic or structurally weak.
+Use this order:
+
+1. resolve the song's required musical functions;
+2. choose an instrument palette and per-section roles;
+3. read `registry.json`;
+4. search primarily by chosen instrument, role, desired behavior/texture and current problem;
+5. use genre as a compatibility/ranking hint, not as an instrument selector;
+6. retrieve several cards from different relevant categories;
+7. compare compatible and contrasting candidates;
+8. combine useful features rather than following one card mechanically;
+9. retrieve more material when the first result sounds generic or structurally weak.
 
 There is no rule that only one material may be loaded. Large retrieval is acceptable when it adds useful vocabulary.
+
+### Shortlist diversity
+
+For a broad genre request with no locked instrumentation, inspect the shortlist before treating it as an arrangement.
+
+If most returned cards belong to one instrument family, do not conclude that the genre requires that family. Expand the search to other instruments capable of the required roles.
+
+This matters especially while the library is uneven. A mature acoustic-guitar or electric-guitar section of the library should not crowd keyboard, piano, synth, strings or other valid instrumentation out of the composition simply because those instruments currently have fewer cards.
+
+**Missing Material coverage is not an instrumentation veto.**
+
+## Tag semantics
+
+Keep retrieval dimensions separate.
+
+```text
+instruments   = which instruments can reasonably realize the behavior
+roles         = what musical function the behavior serves
+texture_tags  = articulation / motion / sustain / density / sonic surface
+problem_tags  = failure or repair context
+genre_tags    = compatible stylistic contexts, not prescriptions
+energy        = an arrangement decision; never infer it directly from genre
+```
+
+Important consequences:
+
+```text
+rock != electric guitar
+rock != distortion
+rock != high energy
+pop-rock != fixed rhythm section
+```
+
+A Material tagged `rock` or `pop-rock` means **it can be useful there**, not **that rock should use this Material**.
+
+Do not rank a genre-only match above a strong instrument + role + behavior match.
+
+## Material naming
+
+Prefer behavior-first names for new cards.
+
+Good names describe what the material does, for example a motion, articulation, texture, role relationship or production behavior.
+
+Some existing stable ids contain genre words because they were created from earlier studies. Treat those ids as stable identifiers, not style standards. Do not rename them casually if other files already reference them; instead keep their card text and retrieval policy explicit about the behavior they actually represent.
+
+Avoid creating names that imply:
+
+```text
+this genre -> this exact pattern
+```
+
+unless the card truly describes a narrowly style-specific behavior and the evidence supports that scope.
 
 ## How materials should be used
 
@@ -122,4 +179,4 @@ Projects   = the current piece's actual notes, automation and decisions
 Profiles   = mappings from materials to available tools or renderers
 ```
 
-A Skill may ask the Agent to consult the materials library. A material card does not need to be style-neutral. Accumulation is the point.
+A Skill may ask the Agent to consult the materials library. A material card does not need to be style-neutral. Accumulation is the point, but genre compatibility must never become a hidden instrumentation template.
