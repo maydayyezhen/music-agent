@@ -54,6 +54,24 @@
       ]
     },
     {
+      "id": "melody-harmony-coordination",
+      "path": "skills_v2/melody_harmony_coordination/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "harmonize melody",
+        "harmonize a melody",
+        "reharmonize melody",
+        "melody harmony",
+        "melody and harmony",
+        "harmonic rhythm",
+        "chords under melody",
+        "choose chords for melody",
+        "melody chord relationship",
+        "cadence support",
+        "closure strength"
+      ]
+    },
+    {
       "id": "classical-melody-practice",
       "path": "skills_v2/classical_melody_practice/SKILL.md",
       "status": "active",
@@ -66,9 +84,11 @@
         "melody exercise",
         "Goetschius",
         "antecedent consequent",
+        "sentence form",
         "period form",
         "double period",
-        "traditional cadence"
+        "traditional cadence",
+        "suspension exercise"
       ]
     },
     {
