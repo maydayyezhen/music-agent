@@ -2,32 +2,68 @@
 
 This file is the coding/composition Agent entry point for the current repository.
 
-## Canonical context
+## First rule: choose a context mode
 
-Use only these knowledge surfaces by default:
+Read `config/creative_context.json` first.
+
+For ordinary music creation use `composition` mode. It is deny-by-default outside this allowlist:
+
+```text
+skills_v2/
+materials_v2/
+profiles/
+docs/agent_api/
+projects/<active-project>/ only
+canonical root instructions / registries
+```
+
+Do not open or repo-wide search `src/`, `scripts/`, `tests/`, `source_library/`, unrelated projects or arbitrary docs during ordinary composition.
+
+The separation is structural. Do not rely on a prompt such as "ignore the example melody" after loading a demo into context.
+
+## Explicit mode changes
+
+Use a wider surface only when the task itself requires it:
+
+```text
+composition          creative work, default
+implementation_debug add src/ only for a concrete implementation problem
+source_study         add source_library/ only for explicit source study
+test_maintenance     add tests/ and scripts/ for explicit maintenance/regression work
+```
+
+After implementation investigation, prefer documenting the neutral execution contract in `docs/agent_api/` so future composition Agents do not need the implementation source.
+
+Running a documented command does not mean reading the script that implements it.
+
+## Canonical creative context
+
+Use these knowledge surfaces by default:
 
 ```text
 skills_v2/       reusable procedures and decision rules
 materials_v2/    reusable musical vocabulary
 profiles/        declared sound/performance capabilities
+docs/agent_api/  neutral execution contract
 projects/        only the project explicitly being edited
-source_library/  only when explicit source study is requested
 ```
 
-Implementation may be inspected under `src/`, `scripts/`, `config/` and `tests/` when required to execute or debug a task.
+`source_library/` is evidence and explicit-study only.
 
-## Required read order
+## Required composition read order
 
-1. root `SKILL.md`
-2. the user's request and active project
-3. `skills_v2/registry.json`
-4. relevant Skill files only
-5. for multi-instrument composition, resolve instrumentation + role + section entry/exit before Material retrieval
-6. `materials_v2/registry.json`
-7. relevant Material cards for the chosen instruments/roles
-8. required Profile and implementation files
+1. `config/creative_context.json`
+2. root `SKILL.md`
+3. the user's request and active project
+4. `skills_v2/registry.json`
+5. relevant Skill files only
+6. for multi-instrument composition, resolve instrumentation + role + section entry/exit before Material retrieval
+7. `materials_v2/registry.json`
+8. relevant Material cards for chosen instruments/roles
+9. required Profiles
+10. `docs/agent_api/` when execution mechanics are needed
 
-Do not browse unrelated projects for creative inspiration.
+Do not browse examples to discover schemas or APIs.
 
 ## Arrangement routing rule
 
@@ -57,20 +93,59 @@ texture         articulation / sustain / rhythmic surface / timbre
 
 Never use shortcuts such as `rock = loud`, `rock = distortion`, or `rock = electric guitar only`.
 
-A sparse Material library for one instrument is not evidence that the instrument should be excluded. If the arrangement needs that role and the implementation supports it, write the part project-specifically and promote reusable knowledge only after validation.
+## Melody authorship boundary
 
-## Hard no-legacy rule
+The Agent composes; the executor executes.
 
-The former `skills/`, `references/`, old instrument research, long-form playbooks and legacy proof projects are not part of the current architecture.
+Canonical semantic mode:
+
+```text
+phrase_generation_mode: long_form_authored
+```
+
+The old names `long_form_experimental` and `long_form` remain compatibility aliases but use the same authored-only semantics.
+
+The execution layer must not infer musical content from semantic labels. In particular:
+
+```text
+relationship = sequence    != transpose automatically
+relationship = climax      != move upward automatically
+relationship = resolution  != force tonic automatically
+peak_bar                   != force highest note there
+delayed_target             != rewrite a note into that pitch
+motif_operations           != executable transform
+```
+
+A desired musical change must be represented concretely in project data. For long-form motifs use explicit `transform` / `note_overrides`, or author the resulting material directly.
+
+Do not silently quantize authored melody. `pitch_quantization` is explicit. Do not silently add guitar expression or alter note gates; realization shaping is opt-in.
+
+## Validator boundary
+
+Validators may compute measurements, but aesthetic requirements are not defaults.
+
+Only enforce a style-sensitive condition when the active project declares the corresponding `long_form_phrase_rules` entry.
+
+```text
+undeclared aesthetic -> no warning
+explicit project rule -> validate it
+```
+
+This prevents validation targets from becoming a hidden house melody style.
+
+## Hard no-example rule for composition
+
+`tests/`, fixtures, demo builders, regression songs and unrelated finished projects are not composition memory.
 
 Do not:
 
-- search Git history for them during normal work;
-- reconstruct them because an old filename is mentioned in stale code comments;
-- treat old project statistics as quality targets;
-- recover old composition rules because the V2 library seems sparse.
+- open a builder to learn the API;
+- search for a working melody schema across projects;
+- use a fixture as a seed;
+- retrieve an unrelated project because it has a similar genre;
+- inspect implementation source just to get creative ideas.
 
-Legacy recovery is allowed only when the user explicitly asks to recover a named old capability. In that case, recover the smallest relevant fact, rewrite it into V2 form, validate it, and keep the old artifact out of default context.
+Use `docs/agent_api/` for mechanics. If that contract is incomplete, fix the contract in an explicit implementation task.
 
 ## Skill policy
 
@@ -80,19 +155,9 @@ Do not put complete songs, fixed chord progressions, signature riffs or renderer
 
 ## Material policy
 
-Materials may be numerous and stylistic. They should contain reusable musical vocabulary learned from a reference study or controlled experiment.
+Materials may be numerous and stylistic. They should contain reusable musical vocabulary learned from evidence or controlled experiments.
 
 Genre words in a Material id or tag describe provenance or compatible context, not a claim that the Material is the standard answer for that genre.
-
-Prefer:
-
-```text
-observed failure or source evidence
--> reusable invariant
--> narrow Material
--> project validation
--> registry activation
-```
 
 Do not promote exact source melody, full rhythm sequence, full harmony or complete arrangement.
 
@@ -104,35 +169,19 @@ A project is song-specific state, not reusable knowledge.
 - `_templates/` is structural scaffolding only.
 - Archived/completed projects remain closed unless explicitly reopened.
 - Never load all projects to "learn the house style".
-- Benchmark, reconstruction, demo and finished-song code may be inspected only for a concrete schema/API/conversion/mechanical question; never inherit its instrumentation, form, density, harmony, melody or mix hierarchy into a new composition.
-
-## Script / implementation-example boundary
-
-Some files under `scripts/` have names such as `build_*demo.py` or `build_*full_song.py`. Their presence does not make them active creative guidance.
-
-When such a file is required to understand an API or execution path:
-
-```text
-keep: schema, function calls, file layout, compiler/renderer mechanics
-ignore: instrument lineup, chord loop, section form, density, melody, dynamics, mix choices
-```
-
-Prefer generic execution entry points over old demo builders for new work.
 
 ## Source-library policy
 
 `source_library/` contains original evidence. It is not composition memory.
 
-Open it only for requests such as study, compare, verify, analyze or revisit an original source. Promote only the abstract reusable result to V2.
+Open it only for requests such as study, compare, verify, analyze or revisit an original source. Promote only abstract reusable results to V2.
 
 ## Profile policy
 
 Profiles declare available implementation capabilities. Never invent unsupported keyswitches, CC mappings, chip modes, plugin behavior or hardware limits.
 
-For chiptune, `chiptune_basic` is only a generic scaffold until validated platform profiles and renderers exist.
-
 ## Execution honesty
 
 A successful compile means the pipeline accepted the data. It does not prove the music sounds good.
 A validator proves only its declared invariants.
-Listening feedback may override a technically valid but musically poor result, and successful fixes should be abstracted only when they generalize.
+Listening feedback may override a technically valid but musically poor result.
