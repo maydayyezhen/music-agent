@@ -54,6 +54,24 @@
       ]
     },
     {
+      "id": "classical-melody-practice",
+      "path": "skills_v2/classical_melody_practice/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "classical melody",
+        "classical composition",
+        "common-practice",
+        "common practice melody",
+        "traditional tonal melody",
+        "melody exercise",
+        "Goetschius",
+        "antecedent consequent",
+        "period form",
+        "double period",
+        "traditional cadence"
+      ]
+    },
+    {
       "id": "acoustic-guitar-continuous-strumming",
       "path": "skills_v2/acoustic_strumming/SKILL.md",
       "status": "active",
