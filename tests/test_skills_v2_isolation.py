@@ -4,11 +4,15 @@ import json
 from pathlib import Path
 import unittest
 
+from src.context_policy import creative_context_allowed
+
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "skills_v2" / "registry.json"
 MATERIAL_REGISTRY = ROOT / "materials_v2" / "registry.json"
 INSTRUMENT_CONFIG = ROOT / "config" / "instruments.json"
+CONTEXT_POLICY = ROOT / "config" / "creative_context.json"
+
 FORBIDDEN_SKILL_REFERENCES = (
     "references/",
     "skills/",
@@ -30,6 +34,10 @@ REMOVED_LEGACY_PATHS = (
     ROOT / "docs" / "long_form_tonality.md",
     ROOT / "docs" / "long_form_v2_change_list.md",
     ROOT / "docs" / "pmt_gesture_ir_experiment.md",
+    ROOT / "scripts" / "build_melody_skeleton_v2.py",
+    ROOT / "scripts" / "build_long_form_phrase_demos.py",
+    ROOT / "tests" / "test_melody_skeleton_v2.py",
+    ROOT / "tests" / "fixtures" / "lead_guitar_long_form_v2",
 )
 
 REMOVED_LEGACY_PROJECTS = (
@@ -112,6 +120,71 @@ class SkillsV2IsolationTests(unittest.TestCase):
         self.assertIn("acoustic_guitar", config)
         self.assertIn("electric_guitar", config)
         self.assertIn("overdriven_guitar", config)
+
+    def test_composition_context_is_allowlist_based(self) -> None:
+        policy = json.loads(CONTEXT_POLICY.read_text(encoding="utf-8"))
+        self.assertFalse(policy["modes"]["composition"]["default_allow"])
+
+        for path in (
+            "SKILL.md",
+            "skills_v2/melody_structure_development/SKILL.md",
+            "materials_v2/registry.json",
+            "profiles/general_midi/profile.json",
+            "docs/agent_api/README.md",
+        ):
+            self.assertTrue(creative_context_allowed(path), path)
+
+        for path in (
+            "scripts/build_any_demo.py",
+            "tests/test_anything.py",
+            "src/melody/long_form.py",
+            "source_library/private_reference.mid",
+            "projects/unrelated_song/composition.json",
+            "docs/random_demo_notes.md",
+        ):
+            self.assertFalse(creative_context_allowed(path), path)
+
+    def test_only_active_project_enters_composition_context(self) -> None:
+        self.assertTrue(
+            creative_context_allowed(
+                "projects/current_song/composition.json",
+                active_project="current_song",
+            )
+        )
+        self.assertFalse(
+            creative_context_allowed(
+                "projects/other_song/composition.json",
+                active_project="current_song",
+            )
+        )
+
+    def test_debug_and_source_modes_require_explicit_mode_change(self) -> None:
+        self.assertFalse(creative_context_allowed("src/melody/long_form.py"))
+        self.assertTrue(
+            creative_context_allowed(
+                "src/melody/long_form.py",
+                mode="implementation_debug",
+            )
+        )
+        self.assertFalse(creative_context_allowed("source_library/reference.mid"))
+        self.assertTrue(
+            creative_context_allowed(
+                "source_library/reference.mid",
+                mode="source_study",
+            )
+        )
+        self.assertFalse(
+            creative_context_allowed(
+                "scripts/build_any_demo.py",
+                mode="implementation_debug",
+            )
+        )
+        self.assertTrue(
+            creative_context_allowed(
+                "scripts/build_any_demo.py",
+                mode="test_maintenance",
+            )
+        )
 
     def test_removed_legacy_knowledge_paths_stay_removed(self) -> None:
         for path in REMOVED_LEGACY_PATHS:
