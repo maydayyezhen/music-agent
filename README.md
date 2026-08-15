@@ -7,7 +7,8 @@
 ```text
 user intent
 -> skills_v2/                 reusable decision procedures
--> materials_v2/              reusable musical vocabulary
+-> instrumentation / roles    choose musical functions before patterns
+-> materials_v2/              reusable musical vocabulary for chosen roles
 -> projects/<active-project>/ song-specific structured source
 -> profiles/                  renderer / instrument capability mapping
 -> src + scripts              deterministic execution layer
@@ -29,9 +30,25 @@ source_library/
 2. root `SKILL.md`
 3. the active project explicitly named by the user
 4. `skills_v2/registry.json` and relevant Skills
-5. `materials_v2/registry.json` and relevant Materials
-6. the required Profile and implementation code
-7. `source_library/registry.json` only for explicit reference study
+5. for multi-instrument composition, resolve instrumentation + role + section entry/exit
+6. `materials_v2/registry.json` and relevant Materials for those chosen roles
+7. the required Profile and implementation code
+8. `source_library/registry.json` only for explicit reference study
+
+## Retrieval principle
+
+Do not use genre as a hidden instrument selector.
+
+```text
+genre != instrumentation
+genre != energy
+rock != distortion
+rock != electric-guitar-only
+```
+
+Genre tags are compatibility hints. Instrument choice comes from the musical functions and the active brief; Material choice comes after instrument/role planning.
+
+A missing Material card does not prove an instrument is unsuitable. It may simply mean that area of the library has not been studied yet.
 
 ## Hard boundaries
 
@@ -41,6 +58,7 @@ source_library/
 - Do not browse `source_library/` during ordinary composition.
 - Do not infer a renderer, plugin or hardware capability that a Profile does not declare.
 - Do not recover deleted legacy material from Git history unless the user explicitly asks for legacy recovery.
+- Demo, benchmark and full-song builder code may teach schema/API/mechanics only; do not inherit its instrumentation, form, density or arrangement into a new piece.
 
 ## Current special extension
 
@@ -64,7 +82,7 @@ source_library/  original evidence, explicit-study only
 profiles/        sound/performance capability mappings
 projects/        active or archived song-specific work
 src/             implementation
-scripts/         narrow command entry points
+scripts/         execution tools and non-authoritative implementation examples
 tests/           execution-layer regression tests
 docs/            current architecture/policy documentation only
 ```
