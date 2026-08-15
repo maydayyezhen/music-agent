@@ -1,78 +1,57 @@
-# Clean-Slate Skill Bootstrap
+# Clean-Slate Bootstrap
 
-This document defines the temporary reset used while the Music Agent knowledge system is rebuilt.
+This repository has completed the first cleanup step of the V2 reset.
 
-## What stays active
+## Active default context
 
-- project facade and manifest routing;
-- native artifacts such as PMT, MIDI and sidecars;
-- existing compilers, renderers, validators and tests as callable implementation tools;
-- project-local source files explicitly named by the user;
-- the new `skills_v2/` directory.
+```text
+root SKILL.md
+AGENTS.md
+skills_v2/
+materials_v2/
+profiles/
+the explicitly active project
+required implementation under src/ scripts/ config/ tests/
+```
 
-## What is inactive by default
+`source_library/` is explicit-study only.
 
-The following are cold storage and must not be read, searched, summarized or used as creative
-references unless the user explicitly names a file or asks to recover knowledge from the legacy
-library:
+## Removed legacy context
 
-- `references/`;
-- `skills/`;
-- `docs/instrument_research/`;
-- old style/playbook documents outside `skills_v2/`;
-- complete projects under `projects/` other than the project currently being edited;
-- prior motifs, harmony plans, build scripts and validation statistics from example songs.
+The current tree no longer carries the former default creative knowledge system:
 
-Inactive means unavailable to default reasoning, not deleted from Git history.
+- old `skills/`;
+- old `references/` composition/style guides;
+- old instrument-research documents;
+- long-form phrase/playbook experiments that were replaced by the V2 reset;
+- clearly obsolete proof/demo projects.
 
-## Minimal active workflow
-
-For a new task:
-
-1. Read the user brief.
-2. Inspect only schemas, APIs and code paths required to make the requested artifact run.
-3. Create a project-local brief with explicit assumptions.
-4. Author the smallest structured source that expresses the request.
-5. Compile, validate and render.
-6. Record concrete failures.
-7. Add or revise a `skills_v2/` skill only when the failure reveals reusable knowledge.
-
-No legacy document may be consulted merely because it is nearby or shares an instrument name.
-
-## Rebuilding skills
-
-A new skill must begin from an observed task and contain only reusable decisions.
-
-Each skill should separate:
-
-- capability facts;
-- input/output contract;
-- decision procedure;
-- failure modes;
-- validation checks;
-- optional examples.
-
-Examples must be tiny and synthetic. Complete songs, exact forms, signature chord loops and full
-melodic phrases do not belong in default skill context.
-
-## Promotion rule
-
-New knowledge is promoted into `skills_v2/` only when all are true:
-
-1. it solved or prevented a concrete failure;
-2. it applies to more than one project;
-3. it can be expressed without copying a finished work;
-4. it has a test, validator or inspectable success criterion;
-5. it does not silently prescribe style.
+Do not recreate these paths simply because old commits or stale comments mention them.
 
 ## Legacy recovery
 
-When the user explicitly requests legacy recovery:
+Git history is archival storage, not default Agent context.
 
-1. identify the exact question;
-2. open the smallest relevant legacy file;
-3. extract the implementation fact;
-4. rewrite it into style-neutral language;
-5. add a test or validation criterion;
-6. place the cleaned result in `skills_v2/`;
-7. record provenance in the new skill without importing the old example material.
+Only when the user explicitly requests recovery of a named old capability:
+
+1. identify the exact missing capability;
+2. inspect the smallest relevant old commit/file;
+3. extract only the reusable fact;
+4. verify it against the current implementation or a controlled experiment;
+5. rewrite it as a V2 Skill, Material or Profile change;
+6. keep obsolete project-specific material out of the current tree.
+
+## Growth rule
+
+Grow V2 through evidence:
+
+```text
+concrete task
+-> failure or source observation
+-> narrow fix
+-> validation / listening success
+-> reusable abstraction
+-> Skill / Material / Profile promotion
+```
+
+Do not refill the repository with broad speculative playbooks merely to replace what was deleted.

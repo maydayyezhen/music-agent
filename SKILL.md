@@ -1,95 +1,83 @@
 ---
-name: music-agent-clean-slate
-description: Build structured, editable music projects through native artifacts, thin adapters and a newly rebuilt skill and materials library.
+name: music-agent-v2
+description: Route structured music work through the current V2 Skills, Materials, Profiles, project artifacts and deterministic execution layer.
 ---
 
-# Music Agent Clean Slate
+# Music Agent V2
 
-Read:
+## Default route
+
+```text
+user request
+-> active project
+-> relevant skills_v2
+-> relevant materials_v2
+-> profile / project extension
+-> compiler / renderer
+-> MIDI / audio / report
+-> listening feedback
+```
+
+## Read
 
 1. `AGENTS.md`
-2. `docs/clean_slate_bootstrap.md`
-3. the relevant skill or skills from `skills_v2/`
-4. `materials_v2/registry.json`
-5. any material cards that may help with harmony, voicing, accompaniment, phrasing, timbre or production
-6. the active project being edited
-7. implementation code or schema needed to execute the current task
+2. the active project explicitly named by the user
+3. `skills_v2/registry.json` and relevant Skills
+4. `materials_v2/registry.json` and relevant Materials
+5. required Profile and implementation files
 
-Read `source_library/registry.json` only when the task explicitly asks to study, compare, verify or revisit an original reference source.
+Read `source_library/registry.json` only when the user explicitly asks to study, compare, verify or revisit an original source.
 
-The previous knowledge and skill library is inactive. Do not search or read it unless the user explicitly asks to recover a specific capability.
-
-`materials_v2/` is an active external memory library. It may be browsed during composition even when the user does not name an exact recipe. Start from the registry, retrieve several plausible cards, compare them, and combine compatible ideas.
-
-`source_library/` is different. It catalogs original user-provided research sources. It is **not** composition memory and should not be browsed by default during creation.
-
-Do not treat a large material context as a failure. For harmony, accompaniment and timbre, broad exposure is often more useful than asking the model to invent every detail from first principles.
-
-## Architecture kept during the reset
+## Knowledge authority
 
 ```text
-user intent
--> skills and retrieved material memory
--> thin Agent operation layer
--> native/structured project artifacts
--> adapter or compiler
--> MIDI / audio renderer
--> validation and conversion report
+Skill       -> how to reason / operate
+Material    -> reusable musical vocabulary
+Project     -> concrete song decisions
+Profile     -> implementation capability mapping
+Source      -> original study evidence
+Renderer    -> derived execution
 ```
 
-Research sources remain outside that default creative chain:
+Keep those layers separate.
+
+## Legacy boundary
+
+The legacy Skill/reference/playbook architecture is removed from the current tree.
+Do not search Git history or reconstruct it during normal work.
+
+Only explicit user-requested legacy recovery may reopen old commits. Recover the smallest useful fact, translate it into V2 terminology, validate it, and promote it only when it still deserves to exist.
+
+## Composition behavior
+
+During composition, browse `materials_v2/registry.json`, retrieve several relevant candidates, and combine compatible ideas rather than inventing every detail from zero or copying one complete example project.
+
+Do not browse unrelated completed projects as creative references.
+
+## Source-study behavior
+
+When studying an original source:
 
 ```text
-source_library
--> explicit study / comparison
--> abstract reusable observation
--> materials_v2 or skills_v2 when justified
+source evidence
+-> measured / inspectable observation
+-> perceptual interpretation
+-> reusable invariant
+-> Skill or Material when justified
 ```
 
-The project facade indexes artifacts and routes adapters. It must not become a new universal music format.
+Keep exact source melody, full harmony, full rhythmic sequence and complete arrangement source-specific.
 
-Keep these distinctions:
+## Failure-driven growth
 
-- original research sources in `source_library/`;
-- authoritative source artifacts for the active project;
-- reusable material cards and reference fragments;
-- sidecars that preserve unsupported native data;
-- derived MIDI/audio outputs;
-- conversion reports that disclose quantization, degradation or loss.
+Prefer this loop:
 
-## Default workflow
+```text
+make / render
+-> hear or inspect a concrete failure
+-> fix the smallest responsible layer
+-> validate
+-> promote reusable knowledge only after success
+```
 
-1. Read the user request.
-2. Inspect the active project and required APIs.
-3. Select the relevant `skills_v2/` behavior guidance.
-4. Read `materials_v2/registry.json` and retrieve a useful set of material cards.
-5. Compare and combine material cards instead of forcing a single recipe to solve the whole task.
-6. Write the smallest editable source that can express the request.
-7. Compile, validate and render.
-8. Listen or inspect concrete failures and revise the responsible layer.
-9. Add a new Skill or material card when the task reveals reusable knowledge.
-
-When the user explicitly asks to study an original source, temporarily enter the source-study path, keep source-specific facts separate from abstractions, and return only reusable knowledge to the material or skill libraries.
-
-The Agent may browse broadly inside `materials_v2/`. It should still avoid copying one finished source wholesale. Recombine, transpose, revoice, vary, thin, expand and adapt materials to the current project.
-
-## Skill rebuilding rule
-
-A V2 Skill should teach a reusable operation, decision procedure, failure mode or validation method. Skills can be narrow and style-neutral, while materials provide concrete musical vocabulary and sound references.
-
-## Material library rule
-
-A V2 material card may describe reusable:
-
-- chord voicings and voicing families;
-- harmonic colors and chord-motion tendencies;
-- accompaniment patterns and texture grids;
-- instrument gestures and phrasing shapes;
-- orchestration combinations;
-- timbre and production recipes;
-- transition, fill, pickup and cadence devices;
-- small synthetic examples and parameterized fragments.
-
-Material cards may be stylistic and numerous. Their value comes from accumulation, contrast and recombination.
-
-Do not store a complete copyrighted song as a reusable template. A card may record abstracted observations, short lawful examples, parameterized patterns and implementation advice. Approximate settings must be labeled as practical starting points rather than objective measurements unless they were actually measured.
+Do not grow the library with stereotyped or untested rules merely to make it look complete.

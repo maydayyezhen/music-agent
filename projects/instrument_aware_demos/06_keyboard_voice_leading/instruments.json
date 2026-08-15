@@ -1,7 +1,0 @@
-{
-  "piano": {
-    "engine": "fluidsynth",
-    "bank": 0,
-    "program": 0
-  }
-}

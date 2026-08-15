@@ -1,8 +1,0 @@
-{
-  "drums": {
-    "engine": "fluidsynth",
-    "channel": 10,
-    "bank": 128,
-    "program": 16
-  }
-}

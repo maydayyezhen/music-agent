@@ -1,123 +1,91 @@
-# Music Agent Clean-Slate Instructions
+# Music Agent V2 Instructions
 
-Read the root `SKILL.md` and `docs/clean_slate_bootstrap.md`.
+This file is the coding/composition Agent entry point for the current repository.
 
-## Active context
+## Canonical context
 
-These sources are active by default:
-
-- the user's current request;
-- the current project being edited;
-- `manifest.json` and registered native artifacts;
-- implementation code and schemas required to run the task;
-- relevant Skills under `skills_v2/`;
-- `materials_v2/registry.json`;
-- multiple relevant material cards under `materials_v2/`.
-
-The previous knowledge library, prior instrument playbooks and complete example projects are cold storage. Do not search or imitate them unless the user explicitly requests recovery of a named capability.
-
-The V2 materials library is not cold storage. It is active external musical memory. Browse its registry during composition, retrieve several plausible cards, and use them as vocabulary for harmony, voicing, accompaniment, instrument behavior, texture and production.
-
-Large material retrieval is acceptable when it improves the result. Prefer a coherent shortlist over arbitrary context limits.
-
-## Preserve the new architecture
-
-The facade is thin:
+Use only these knowledge surfaces by default:
 
 ```text
-skills + retrieved materials
--> manifest/index
--> native artifact
--> adapter/compiler
--> renderer
--> derived output and report
+skills_v2/       reusable procedures and decision rules
+materials_v2/    reusable musical vocabulary
+profiles/        declared sound/performance capabilities
+projects/        only the project explicitly being edited
+source_library/  only when explicit source study is requested
 ```
 
-Do not move notes, automation, plugin state or other rich native data into the manifest merely to make one schema appear universal.
+Implementation may be inspected under `src/`, `scripts/`, `config/` and `tests/` when required to execute or debug a task.
 
-Prefer existing mature standards and project-native files. Add custom data only as a clearly named extension or sidecar when no mature representation fits.
+## Required read order
 
-## Task workflow
+1. root `SKILL.md`
+2. the user's request and active project
+3. `skills_v2/registry.json`
+4. relevant Skill files only
+5. `materials_v2/registry.json`
+6. relevant Material cards
+7. required Profile and implementation files
 
-1. Resolve the user's requested artifact and constraints.
-2. Inspect the active project and necessary code path.
-3. Select relevant `skills_v2/` Skills for operations and constraints.
-4. Read `materials_v2/registry.json`.
-5. Retrieve material cards across all relevant dimensions, including harmony, voicing, accompaniment, phrasing, timbre and production.
-6. Compare candidate materials and decide which ideas can coexist.
-7. Adapt materials through transposition, revoicing, rhythmic variation, density changes, orchestration changes and section-aware development.
-8. Create or edit the structured source artifact.
-9. Preserve a prior version for material changes.
-10. Compile and render through the registered adapter.
-11. Run relevant data-integrity checks.
-12. Describe concrete audible or structural failures.
-13. Fix the smallest responsible layer or retrieve additional material when the vocabulary is insufficient.
+Do not browse unrelated projects for creative inspiration.
 
-Do not require a universal form, motif process, harmony system, density curve, climax location or instrument hierarchy.
+## Hard no-legacy rule
 
-## Rebuilding `skills_v2/`
+The former `skills/`, `references/`, old instrument research, long-form playbooks and legacy proof projects are not part of the current architecture.
 
-Create a Skill when a concrete task exposes a reusable operation or decision procedure.
+Do not:
 
-Every Skill should define:
+- search Git history for them during normal work;
+- reconstruct them because an old filename is mentioned in stale code comments;
+- treat old project statistics as quality targets;
+- recover old composition rules because the V2 library seems sparse.
 
-- trigger and scope;
-- capability boundary;
-- inputs and outputs;
-- decision procedure;
-- failure modes;
-- validation method;
-- provenance.
+Legacy recovery is allowed only when the user explicitly asks to recover a named old capability. In that case, recover the smallest relevant fact, rewrite it into V2 form, validate it, and keep the old artifact out of default context.
 
-Skills teach how to work. Materials provide concrete things worth trying.
+## Skill policy
 
-## Growing `materials_v2/`
+Create or revise a Skill only for a reusable operation, decision procedure, capability boundary, failure mode or validation method.
 
-Create or extend material cards whenever a listening, MIDI, score or production study exposes reusable musical vocabulary.
+Do not put complete songs, fixed chord progressions, signature riffs or renderer presets into a Skill.
 
-The library may contain:
+## Material policy
 
-- chord voicing families;
-- harmonic colors and chord-motion tendencies;
-- accompaniment and rhythm-pattern families;
-- instrument gestures and articulation combinations;
-- phrase shapes, pickups, fills, transitions and cadence devices;
-- orchestration and register combinations;
-- texture and production recipes;
-- renderer-specific mappings;
-- small synthetic examples and parameterized fragments.
+Materials may be numerous and stylistic. They should contain reusable musical vocabulary learned from a reference study or controlled experiment.
 
-Each material card should define searchable tags, applicability, transformation options, incompatibilities, failure modes and provenance.
+Prefer:
 
-Materials may be stylistic. Multiple overlapping cards are welcome because comparison and accumulation improve the Agent's choices.
+```text
+observed failure or source evidence
+-> reusable invariant
+-> narrow Material
+-> project validation
+-> registry activation
+```
 
-Do not convert one complete copyrighted song into a default reusable template. Do not copy a source's full melody, chord progression, form, exact rhythm sequence or production automation wholesale. Extract, label, transform and recombine the useful parts.
+Do not promote exact source melody, full rhythm sequence, full harmony or complete arrangement.
 
-## Retrieval behavior
+## Project policy
 
-During composition:
+A project is song-specific state, not reusable knowledge.
 
-1. search by instrument, role, texture, energy, genre and musical problem;
-2. retrieve several cards, not necessarily only one;
-3. include contrasting candidates when the direction is uncertain;
-4. prefer cards with concrete examples and listening checks;
-5. explain which cards informed the result when that matters;
-6. add a new card after a successful experiment reveals a reusable result.
+- Open only the active project named by the user.
+- `_templates/` is structural scaffolding only.
+- Archived/completed projects remain closed unless explicitly reopened.
+- Never load all projects to "learn the house style".
 
-Do not avoid the material library merely to keep context small. Context is a resource to manage, not an enemy to starve.
+## Source-library policy
 
-## Legacy recovery
+`source_library/` contains original evidence. It is not composition memory.
 
-Legacy recovery is opt-in. When explicitly requested:
+Open it only for requests such as study, compare, verify, analyze or revisit an original source. Promote only the abstract reusable result to V2.
 
-1. identify the useful capability or material;
-2. inspect the smallest relevant legacy source;
-3. extract the reusable fact or pattern;
-4. rewrite it into V2 terminology;
-5. place it in `skills_v2/` or `materials_v2/` according to whether it describes an operation or musical material;
-6. retain provenance and uncertainty;
-7. do not import a complete finished composition as the reusable object.
+## Profile policy
 
-## Honesty boundary
+Profiles declare available implementation capabilities. Never invent unsupported keyswitches, CC mappings, chip modes, plugin behavior or hardware limits.
 
-A successful compile proves that the pipeline accepted the data. It does not prove that the music sounds good. A validator passing proves only the invariants it checks. A material card is a candidate vocabulary item, not a guarantee that every arrangement, sample library or mix will respond the same way.
+For chiptune, `chiptune_basic` is only a generic scaffold until validated platform profiles and renderers exist.
+
+## Execution honesty
+
+A successful compile means the pipeline accepted the data. It does not prove the music sounds good.
+A validator proves only its declared invariants.
+Listening feedback may override a technically valid but musically poor result, and successful fixes should be abstracted only when they generalize.
