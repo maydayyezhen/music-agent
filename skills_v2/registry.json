@@ -48,6 +48,23 @@
       ]
     },
     {
+      "id": "lead-guitar-phrase-design",
+      "path": "skills_v2/lead_guitar_phrase_design/SKILL.md",
+      "status": "active",
+      "triggers": [
+        "lead guitar",
+        "lead guitar melody",
+        "guitar solo",
+        "solo guitar",
+        "electric guitar lead",
+        "guitar melodic fill",
+        "guitar phrase",
+        "guitar hook",
+        "guitar target note",
+        "guitar phrase continuity"
+      ]
+    },
+    {
       "id": "midi-reference-articulation-analysis",
       "path": "skills_v2/midi_reference_analysis/SKILL.md",
       "status": "active",
