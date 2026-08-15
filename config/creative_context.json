@@ -1,0 +1,72 @@
+{
+  "schema": "music-agent-creative-context-policy",
+  "schema_version": 1,
+  "default_mode": "composition",
+  "principle": "ordinary composition uses an allowlist; examples, tests, implementation internals and unrelated projects are excluded unless the task explicitly changes mode",
+  "modes": {
+    "composition": {
+      "allowed_exact": [
+        "AGENTS.md",
+        "SKILL.md",
+        "README.md",
+        "PROJECT_CHECKPOINT.md",
+        "config/creative_context.json",
+        "skills_v2/registry.json",
+        "materials_v2/registry.json"
+      ],
+      "allowed_prefixes": [
+        "skills_v2/",
+        "materials_v2/",
+        "profiles/",
+        "docs/agent_api/"
+      ],
+      "allow_active_project": true,
+      "denied_prefixes": [
+        "scripts/",
+        "tests/",
+        "src/",
+        "source_library/",
+        "projects/",
+        "docs/"
+      ],
+      "default_allow": false
+    },
+    "implementation_debug": {
+      "extends": "composition",
+      "allowed_prefixes": [
+        "src/"
+      ],
+      "allow_active_project": true,
+      "default_allow": false
+    },
+    "source_study": {
+      "extends": "composition",
+      "allowed_prefixes": [
+        "source_library/"
+      ],
+      "allow_active_project": true,
+      "default_allow": false
+    },
+    "test_maintenance": {
+      "extends": "implementation_debug",
+      "allowed_prefixes": [
+        "tests/",
+        "scripts/"
+      ],
+      "allow_active_project": true,
+      "default_allow": false
+    }
+  },
+  "hard_denies_during_composition": [
+    "scripts/build_*",
+    "tests/**",
+    "projects/<non-active>/**",
+    "source_library/**",
+    "src/**"
+  ],
+  "notes": [
+    "Invocation is not retrieval: a composition agent may run a documented command without reading the script source.",
+    "Do not repo-wide code-search during composition. Scope retrieval to paths allowed by composition mode.",
+    "Relationship labels such as sequence, climax and resolution are semantic metadata and must not be treated as pitch instructions by the execution layer."
+  ]
+}
