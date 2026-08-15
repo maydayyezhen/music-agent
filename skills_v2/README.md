@@ -16,6 +16,8 @@ skills_v2/
 │   └── SKILL.md
 ├── instrumentation_arrangement/
 │   └── SKILL.md
+├── melody_structure_development/
+│   └── SKILL.md
 ├── acoustic_strumming/
 │   └── SKILL.md
 ├── lead_guitar_phrase_design/
@@ -32,7 +34,9 @@ Load Skills through `registry.json` and only when their triggers/scope match the
 
 `instrumentation-role-planning` is intentionally thin and is the default planning step for multi-instrument composition. It chooses musical functions, instrument roles and section entry/exit before detailed Material retrieval; it must not grow into fixed genre instrumentation templates.
 
-`lead-guitar-phrase-design` currently covers the phrase layer only: contour, target-note arrival, duration contrast, repeated-pitch permission, within-phrase continuity and phrase-level space. Bend, slide, vibrato and other guitar-specific articulations require separate evidence or Profile capability and must not be inferred merely because the instrument is a guitar.
+`melody-structure-development` is the generic melody-composition layer. It separates structural targets from surface notes, develops small germs through recurrence and controlled transformation, plans phrase relationships, and adds embellishment only after the underlying line works. It is style-neutral and must not invent instrument articulation or turn historical common-practice exercise rules into universal constraints.
+
+`lead-guitar-phrase-design` remains the lead-guitar-specific phrase layer: contour, target-note arrival, duration contrast, repeated-pitch permission, within-phrase continuity and phrase-level space. It may be used alongside the generic melody Skill, but bend, slide, vibrato and other guitar-specific articulations still require separate evidence or Profile capability and must not be inferred merely because the instrument is a guitar.
 
 ## Skill properties
 
@@ -62,6 +66,8 @@ concrete task or source study
 
 Do not add a broad Skill merely because the library looks sparse.
 
+A broad source study may justify a generic Skill when it produces stable decision procedures, but it does **not** automatically justify activating many Materials. Style-specific phrase devices, density choices and ornament habits should still be validated against real projects, MIDI / score sources or listening tests before registry activation.
+
 ## Forbidden shortcuts
 
 Do not:
@@ -73,6 +79,7 @@ Do not:
 - load all Skills for every task;
 - encode renderer, plugin or hardware-specific parameters as universal composition rules;
 - duplicate Material cards inside Skills;
-- encode `genre -> fixed instrument lineup` or `genre -> fixed energy` shortcuts into a Skill.
+- encode `genre -> fixed instrument lineup` or `genre -> fixed energy` shortcuts into a Skill;
+- turn one historical pedagogy source into universal modern style law.
 
 The V2 library should grow slowly enough that every active file has a clear reason to exist.
