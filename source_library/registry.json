@@ -127,6 +127,18 @@
       "study_status": "studied",
       "current_relevance": "active",
       "notes": "Studied for expressive lead-guitar target-note behavior. The file is Type 0 at 384 ticks per beat and contains multiple guitar channels with dense controller information. Zero-based channel 3 used GM program 29 with 428 note attacks, 1440 pitch-wheel events and 2233 CC1 events; zero-based channel 7 used GM program 29 with 784 note attacks, 1129 pitch-wheel events and 853 CC1 events. Long notes strongly concentrated expression: channel 3 had 110 notes lasting at least 0.7 beat and none lacked both pitch-wheel and CC1 activity in the study window; channel 7 had 82 such long notes and only one lacked both. Non-zero pitch shaping typically began near the arrival, while positive CC1 modulation usually entered later: median first pitch-wheel delay was about 0.016 beat on channel 3 and 0.083 beat on channel 7, while median first positive CC1 delay was about 0.56 and 0.48 beat respectively. When both were present, pitch shaping usually preceded CC1. Positive CC1 commonly grew over roughly a third of a beat before reaching the local maximum. The source supports expressive-target-note but does not establish universal bend intervals, physical slide labels, true finger-vibrato rate/depth, or fixed timing constants. Exact melody, harmony and controller curves remain source-specific."
+    },
+    {
+      "id": "goetschius-exercises-in-melody-writing",
+      "title": "Exercises in Melody-Writing",
+      "artist": "Percy Goetschius",
+      "source_type": "book",
+      "expected_local_path": "source_library/books/Exercises in Melody-Writing.pdf",
+      "provided_by_user": false,
+      "research_tags": ["melody", "melody_writing", "motif", "phrase", "recurrence", "sequence", "embellishment", "structural_tones", "melodic_germ", "vocal_setting"],
+      "study_status": "studied",
+      "current_relevance": "active",
+      "notes": "Complete readable main text studied in three batches. Promoted only broad style-neutral structural principles to melody-structure-development: structural vs surface tones, germ-first reasoning, recurrence and modified recurrence, phrase relation, hierarchical embellishment, and generic melody/style/instrument separation. Common-practice-era fixed phrase lengths, cadence formulas, active-scale-step rules, interval prohibitions and related-key modulation restrictions were not promoted as universal rules. Detailed study note: source_library/studies/goetschius_exercises_in_melody_writing.md."
     }
   ]
 }
